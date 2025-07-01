@@ -2,6 +2,7 @@
 
 import { Card, Image } from "antd";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 interface Sponsor {
   category: string;
@@ -267,10 +268,9 @@ const sponsors: Sponsor[] = [
   },
 ];
 
-export default function SponsorsPage() {
+function SponsorsPageContent() {
   const searchParams = useSearchParams();
-  const activeCategory =
-    searchParams.get("category") || "Ed-Tech Partners";
+  const activeCategory = searchParams.get("category") || "Ed-Tech Partners";
 
   return (
     <div className="w-full font-inter">
@@ -345,5 +345,13 @@ export default function SponsorsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SponsorsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SponsorsPageContent />
+    </Suspense>
   );
 }
