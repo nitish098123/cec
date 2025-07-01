@@ -26,7 +26,7 @@ export default {
         },
       },
       animation: {
-        scroll: "scroll 23s linear infinite",
+        scroll: "scroll 35s linear infinite",
         sponsor: "sponsor 1s linear infinite",
         "testimonial-scroll": "testimonial-scroll 30s linear infinite",
       },

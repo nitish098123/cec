@@ -32,6 +32,9 @@ const RemunerationForm = () => {
             </div>
 
             <div className="container mx-auto p-8 bg-white mt-4">
+                <div className="flex justify-end mb-4">
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/3.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                </div>
                 <Form layout="vertical" name="remuneration_form">
                     <Row justify="end" className="mb-4">
                         <Col>
@@ -104,12 +107,8 @@ const RemunerationForm = () => {
                         <p className="mt-4">Paid by Cheque no.............................. Dated ..............................section In charge</p>
                     </div>
 
-
                     <Form.Item className="mt-8 text-center">
-                        <Space>
-                            <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit</Button>
-                            <Button onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/3.pdf', '_blank')}>Download PDF</Button>
-                        </Space>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

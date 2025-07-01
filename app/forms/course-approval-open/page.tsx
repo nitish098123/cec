@@ -33,6 +33,9 @@ const CourseApprovalFormOpen = () => {
             </div>
 
             <div className="container mx-auto p-8">
+                <div className="flex justify-end mb-4">
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/1.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                </div>
                 <div className="bg-yellow-200 text-yellow-800 p-4 rounded-md mb-6 border border-yellow-400">
                     <p><strong>Note:</strong> Please do not delete any item in the form, provide details as applicable, wherever information is not available mention N.A. The form may need to be sent back for corrections if any item is changed or deleted.</p>
                 </div>
@@ -305,12 +308,9 @@ const CourseApprovalFormOpen = () => {
                     <p className="text-right mt-8">Dean, SRIC</p>
 
                     <Form.Item className="mt-12 text-center">
-                        <Space>
-                            <Button type="primary" htmlType="submit" size="large" className="bg-blue-600">
-                                Submit Application
-                            </Button>
-                            <Button size="large" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/1.pdf', '_blank')}>Download PDF</Button>
-                        </Space>
+                        <Button type="primary" htmlType="submit" size="large" className="bg-blue-600">
+                            Submit & Download Application
+                        </Button>
                     </Form.Item>
                 </Form>
             </div>

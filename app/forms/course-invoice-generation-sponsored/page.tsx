@@ -21,6 +21,9 @@ const CourseInvoiceGenerationSponsoredForm = () => {
             </div>
             
             <div className="container mx-auto p-8">
+                <div className="flex justify-end mb-4">
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/6.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                </div>
                 <Form layout="vertical" name="invoice_generation_sponsored">
                     <Row justify="space-between" align="middle">
                         <Col>
@@ -132,10 +135,7 @@ const CourseInvoiceGenerationSponsoredForm = () => {
                     </div>
 
                     <Form.Item className="mt-8 text-center">
-                        <Space>
-                            <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit</Button>
-                            <Button onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/6.pdf', '_blank')}>Download PDF</Button>
-                        </Space>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

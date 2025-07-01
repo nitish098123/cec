@@ -99,6 +99,7 @@ export const Footer: React.FC = () => {
                 { name: "PG Admission", href: "#" },
                 { name: "PhD Admissions", href: "#" },
                 { name: "Webmail", href: "https://newwebmail.iitr.ac.in/?session=f9d8c490c90d969687b99fed91ea214a70efdf2ec9b086079795c442636b55fb46b2d4e450e72ddc9433083f15c23a4a70efdf2ec9b086079795c442636b55fb", target: "_blank" },
+                { name: "TOH (Trainee Officer Hostel)", href: "/trainee-officer-hostel" },
               ].map((link, index) => (
                 <li key={index}>
                   <Link

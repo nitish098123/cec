@@ -2,8 +2,104 @@
 
 import { Image } from "antd";
 import { DoubleLeftOutlined, DoubleRightOutlined } from "@ant-design/icons";
+import { useEffect, useState } from "react";
 
 export default function GalleryPage() {
+  const galleryData = [
+    {
+      year: "2025-26",
+      images: [
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2025-26/2025-26_Photo1.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2025-26/2025-26_Photo2.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2025-26/2025-26_Photo3.jpg",
+      ],
+      captions: [
+        "MoU signing between IIT Roorkee and Scaler",
+        "Lecture session in the Campus Immersion of Applied Data Science and AI",
+        "MoU signing between IIT Roorkee and Indian Army at Shimla",
+      ],
+    },
+    {
+      year: "2024-25",
+      images: [
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2024-25/2024-25_Photo1.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2024-25/2024-25_Photo2.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2024-25/2024-25_Photo3.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2024-25/2024-25_Photo4.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2024-25/2024-25_Photo5.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2024-25/2024-25_Photo6.jpg",
+      ],
+      captions: [
+        "Course Inauguration - Capacity Building of Civil Engineers",
+        "Course Inauguration - HRM & Analytics",
+        "Group Photo - Training on MY Bharat and Digital Literacy",
+        "Group Photo - Training program on AI & Deep Learning",
+        "Training program on Automative Embedded System",
+        "Group Photo- Big Data Analytics for ITS Officers",
+      ],
+    },
+    {
+      year: "2023-24",
+      images: [
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_Photo1.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_photo2.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_Photo3.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_Photo4.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_Photo5.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_Photo6.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_Photo7.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2023-24/2023-24_Photo8.jpg",
+      ],
+      captions: [
+        "Certificate distribution in Digital Marketing course",
+        "Course inaugural for the RASTER 2023 sponsored by ISRO Disaster Management Support Programme",
+        "MoU signing - CEC IITR & Protecon BTG",
+        "MoU between CEC IITR and Protecon BTG",
+        "Flipkart Augmentation of Industrial Relations program sponsored by Flipkart",
+        "Electricity (power) markets program sponsored by NTPC",
+        "New Technologies including FDR program sponsored by PMGSY Cell",
+        "Certificate distribution ceremony in PMGSY Cell sponsored program",
+      ],
+    },
+    {
+      year: "2022-23",
+      images: [
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2022-23/2022-23_Photo1.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2022-23/2022-23_Photo2.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2022-23/2022-23_Photo3.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2022-23/2022-23_Photo4.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2022-23/2022-23_Photo5.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2022-23/2022-23_Photo6.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2022-23/2022-23_Photo7.jpg",
+      ],
+      captions: [],
+    },
+    {
+      year: "2021-22",
+      images: [
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo1.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo2.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo3.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo4.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo5.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo6.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo7.jpg",
+        "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CECGallery/2021-22/2021-22_Photo8.jpg",
+      ],
+      captions: [],
+    },
+  ];
+
+  const [activeTab, setActiveTab] = useState(0);
+
+  // Auto-switch tabs every 7 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % galleryData.length);
+    }, 7000);
+    return () => clearInterval(interval);
+  }, [galleryData.length]);
+
   return (
     <div className="w-full font-inter">
       <section className="relative w-full h-[80vh] flex items-center justify-center">
@@ -34,111 +130,43 @@ export default function GalleryPage() {
       <section className="py-6">
         <div className="container mx-auto p-6">
           <h2 className="text-center text-4xl font-semibold mb-8">
-          Snapshots of Joy: Capturing CEC Memories
+            Snapshots of Joy: Capturing CEC Memories
           </h2>
-          <p className="text-center space-x-4 text-3xl mb-16 text-gray-500">
-            <DoubleLeftOutlined /> <span className="">2024-2025</span>{" "}
-            <DoubleRightOutlined />
-          </p>
+          {/* Year Tabs */}
+          <div className="flex justify-center gap-4 mb-8">
+            {galleryData.map((year, idx) => (
+              <button
+                key={year.year}
+                className={`px-6 py-2 rounded-t-lg font-semibold text-lg focus:outline-none transition-colors duration-200 ${
+                  activeTab === idx ? "bg-[#b3dafc] text-black" : "bg-gray-200 text-gray-600"
+                }`}
+                onClick={() => setActiveTab(idx)}
+              >
+                {year.year}
+              </button>
+            ))}
+          </div>
+          {/* Gallery Grid */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="relative col-span-2">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
-              <Image
-                src="/gallery-1.png"
-                width="100%"
-                height="100%"
-                className="aspect-video object-cover"
-                alt="Image"
-              />
-              <div className="absolute bottom-4 left-4 text-white font-medium text-sm md:text-xl z-30">
-                MOU Signing: CEC IITR and Protecon BTG{" "}
+            {galleryData[activeTab].images.map((img, i) => (
+              <div className="relative overflow-hidden rounded-xl" key={img}>
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none"></div>
+                <Image
+                  src={img}
+                  width="100%"
+                  height="100%"
+                  className="aspect-square object-cover"
+                  alt={`Gallery ${galleryData[activeTab].year} Image ${i + 1}`}
+                />
+                {/* Caption Overlay if available */}
+                {galleryData[activeTab].captions && galleryData[activeTab].captions[i] && (
+                  <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-xs md:text-base font-medium px-2 py-2 z-30 rounded-b-xl">
+                    {galleryData[activeTab].captions[i]}
+                  </div>
+                )}
               </div>
-            </div>
-            <div className="relative">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
-              <Image
-                src="/gallery-2.png"
-                width="100%"
-                height="100%"
-                className="aspect-square object-cover"
-                alt="Image"
-              />
-              <div className="absolute bottom-4 left-4 text-white font-medium text-sm md:text-xl z-30">
-                CEC Meet 2024{" "}
-              </div>
-            </div>
-            <div className="relative">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
-              <Image
-                src="/gallery-3.png"
-                width="100%"
-                height="100%"
-                className="aspect-square object-cover"
-                alt="Image"
-              />
-              <div className="absolute bottom-4 left-4 text-white font-medium text-sm md:text-xl z-30">
-                Siemeons Authorization{" "}
-              </div>
-            </div>
-            <div className="relative">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
-              <Image
-                src="/gallery-4.png"
-                width="100%"
-                height="100%"
-                className="aspect-square object-cover"
-                alt="Image"
-              />
-              <div className="absolute bottom-4 left-4 text-white font-medium text-sm md:text-xl z-30">
-                HRM & Analytics Session{" "}
-              </div>
-            </div>
-            <div className="relative">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
-              <Image
-                src="/gallery-5.png"
-                width="100%"
-                height="100%"
-                className="aspect-square object-cover"
-                alt="Image"
-              />
-              <div className="absolute bottom-4 left-4 text-white font-medium text-sm md:text-xl z-30">
-                Internship Certificate{" "}
-              </div>
-            </div>
-            <div className="relative">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
-              <Image
-                src="/gallery-6.png"
-                width="100%"
-                height="100%"
-                className="aspect-square object-cover"
-                alt="Image"
-              />
-              <div className="absolute bottom-4 left-4 text-white font-medium text-sm md:text-xl z-30">
-                Research Awards{" "}
-              </div>
-            </div>
-            <div className="relative col-span-2">
-              {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20"></div>
-              <Image
-                src="/gallery-7.png"
-                width="100%"
-                height="100%"
-                className="aspect-video object-cover"
-                alt="Image"
-              />
-              <div className="absolute bottom-4 left-4 text-white font-medium text-sm md:text-xl z-30">
-                Academic Meeting : CEC IITR 2024{" "}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

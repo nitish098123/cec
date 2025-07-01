@@ -251,11 +251,8 @@ const newsData: NewsItem[] = [
   },
 ];
 
-const items: string[] = [
-  "Notice for B.Tech 2024 Admission Lateral entry batch",
-  "Notice for B.Tech 2024 Admission Lateral entry batch",
-  "Notice for B.Tech 2024 Admission Lateral entry batch",
-];
+const noticeText = "AICTE QIP PG Certificate Program on Wireless Technology and IoT at IIT Roorkee ";
+const items: string[] = Array(10).fill(noticeText);
 
 export default function HomePage() {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
@@ -284,19 +281,18 @@ export default function HomePage() {
   ];
 
   useEffect(() => {
-    let filtered = courses.filter((course) => course.category === activeCategory);
-    
-    // Apply search filter if search term exists
+    let filtered: Course[] = [];
     if (searchTerm.trim()) {
       const searchLower = searchTerm.toLowerCase();
-      filtered = filtered.filter((course) =>
+      filtered = courses.filter((course) =>
         course.name.toLowerCase().includes(searchLower) ||
         course.partner.toLowerCase().includes(searchLower) ||
         course.category.toLowerCase().includes(searchLower) ||
         course.duration.toLowerCase().includes(searchLower)
       );
+    } else {
+      filtered = courses.filter((course) => course.category === activeCategory);
     }
-    
     setFilteredCourses(filtered);
   }, [activeCategory, searchTerm]);
 
@@ -378,28 +374,7 @@ export default function HomePage() {
             aria-hidden="true"
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
-
-        {/* Content */}
-        <div className="relative flex items-center z-20 px-4">
-          <Image
-            preview={false}
-            src="/IITR_logo.png"
-            alt="IITR Logo"
-            className="w-24 h-24 md:w-40 md:h-40"
-          />
-          <div className="border-l pl-2 md:pl-4 text-white">
-            <div className="text-xl md:text-2xl min-h-[1.5rem] md:min-h-[2rem]">{lines[0] || ""}</div>
-            <div className="text-2xl md:text-4xl min-h-[2rem] md:min-h-[3rem]">{lines[1] || ""}</div>
-            <div className="text-2xl md:text-4xl min-h-[2rem] md:min-h-[3rem]">{lines[2] || ""}</div>
-            <div className="text-2xl md:text-4xl min-h-[2rem] md:min-h-[3rem]">{lines[3] || ""}</div>
-            <div className="text-2xl md:text-4xl min-h-[2rem] md:min-h-[3rem]">{lines[4] || ""}</div>
-            {/* Blinking cursor */}
-            {isTyping && (
-              <span className="inline-block w-0.5 md:w-1 h-6 md:h-8 bg-white ml-1 animate-pulse"></span>
-            )}
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent via-50% to-transparent z-10"></div>
 
         {/* Image Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
@@ -550,8 +525,41 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* New section: Message from the Co-ordinator */}
+        <section className="py-16 bg-[#E2F1FF]">
+          <div className="container mx-auto px-4">
+            <div className="mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a237e] mb-2">Message from the Co-ordinator</h2>
+            </div>
+            <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12">
+              <div className="flex-shrink-0 flex flex-col items-center w-full md:w-auto">
+                <img
+                  src="/staff/kaushik-ghosh.png"
+                  alt="Prof. Kaushik Ghosh"
+                  className="object-cover rounded-2xl w-80 h-96 shadow-xl border-4 border-white"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+                <div className="mt-4 text-center">
+                  <p className="text-xl md:text-2xl font-semibold text-black mb-1">Prof. Kaushik Ghosh</p>
+                  <p className="text-base md:text-lg font-normal text-gray-700 mb-1">Coordinator, Continuing Education Centre</p>
+                  <p className="text-base md:text-lg font-normal text-gray-700 mb-1">IIT Roorkee</p>
+                  <p className="text-base md:text-lg font-normal text-gray-700 mb-1">Phone no.: 01332-285227/5545</p>
+                  <p className="text-base md:text-lg font-normal text-gray-700 mb-0">Email id: coordinator.cec.qip@iitr.ac.in</p>
+                </div>
+              </div>
+              <div className="flex-1">
+                <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl h-full flex items-center">
+                  <p className="text-gray-800 text-base md:text-lg leading-relaxed">
+                    CEC IIT Roorkee, we are committed to making high-quality and transformational education accessible to all. Our programs are designed to provide executives, professionals, and aspiring individuals a launchpad for taking them to next level in their career. In addition to sponsored short-term courses, which form a large part of the training and upskilling effort, CEC IITR has launched a new major initiative to offer the longer duration programs (up to a year) having PG and Advanced Certifications. CEC IITR courses are available in both asynchronous and hybrid learning modes. Our courses are designed to provide learners a specialization, which will enable them to master in-demand skills needed to work on the latest problems in industry and research. These include Data Science, Machine Learning, Artificial Intelligence, 5G, Cyber Security, VLSI, DevOps, as well as emerging technologies in engineering, science, and management. Through these open participation programs, we aim to reach out to aspiring individuals and professionals to develop cutting-edge competencies in their professional careers. CEC has signed partnership MoUs with many organizations to offer courses and training programs in diverse areas. Some of our major partners for sponsored courses are SAIL, TATA Steel, NTPC, BEL, SAARC, NIC, etc. In the year 2024-2025, the CEC has introduced new sponsored courses for many organizations Department of Income Tax (Systems), New Delhi, IRDE Dehradun, DRDO, MeraYuva Bharat (MY BHARAT), New Delhi, Navodaya Vidyalaya Samiti, National Health Mission, Odisha, Tata Tisconm, National Mission for Clean Ganga (NMCG), New Delhi etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Courses Section */}
-        <section className="px-4 sm:px-8 md:px-16 py-8 md:py-12">
+        <section id="explore-courses" className="px-4 sm:px-8 md:px-16 py-8 md:py-12">
           <div className="flex flex-col md:flex-row justify-between md:items-end mb-8 container mx-auto">
             <div className="mb-4 md:mb-0">
               <h1 className="text-3xl md:text-4xl font-semibold mb-2">
@@ -950,200 +958,6 @@ export default function HomePage() {
                   src="/international-sponsors/vio.png"
                   style={{ flexShrink: 0 }}
                 />
-                
-                {/* Duplicate set for seamless scrolling */}
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Futurense"
-                  preview={false}
-                  src="/ed-tech-partners/futurense.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="CloudxLab"
-                  preview={false}
-                  src="/ed-tech-partners/cloudxlab.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Jaro Education"
-                  preview={false}
-                  src="/ed-tech-partners/jaro.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Imarticus"
-                  preview={false}
-                  src="/ed-tech-partners/imarticus.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Coursera"
-                  preview={false}
-                  src="/ed-tech-partners/coursera.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Simplilearn"
-                  preview={false}
-                  src="/ed-tech-partners/simplilearn.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Futurewiz"
-                  preview={false}
-                  src="/ed-tech-partners/futurewiz.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="EduXLL"
-                  preview={false}
-                  src="/ed-tech-partners/eduxll.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="BHEL"
-                  preview={false}
-                  src="/national-sponsors/bhel.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="NHPC"
-                  preview={false}
-                  src="/national-sponsors/nhpc.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="NTPC"
-                  preview={false}
-                  src="/national-sponsors/ntpc.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="ONGC"
-                  preview={false}
-                  src="/national-sponsors/ongc.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="DST"
-                  preview={false}
-                  src="/national-sponsors/dst.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="CWC"
-                  preview={false}
-                  src="/national-sponsors/cwc.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="CPCB"
-                  preview={false}
-                  src="/national-sponsors/cpcb.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Alstom"
-                  preview={false}
-                  src="/national-sponsors/alstom.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="JICA"
-                  preview={false}
-                  src="/international-sponsors/jica.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="ADB"
-                  preview={false}
-                  src="/international-sponsors/adb.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="IRENA"
-                  preview={false}
-                  src="/international-sponsors/irena.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="MEA"
-                  preview={false}
-                  src="/international-sponsors/mea.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="SAARC"
-                  preview={false}
-                  src="/international-sponsors/saarc.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="NTU Singapore"
-                  preview={false}
-                  src="/international-sponsors/ntu.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="Loughborough"
-                  preview={false}
-                  src="/international-sponsors/loughborough.png"
-                  style={{ flexShrink: 0 }}
-                />
-                <Image
-                  height="40px"
-                  className="object-contain mx-6 md:mx-8"
-                  alt="VIO"
-                  preview={false}
-                  src="/international-sponsors/vio.png"
-                  style={{ flexShrink: 0 }}
-                />
               </div>
             </div>
             
@@ -1435,12 +1249,12 @@ export default function HomePage() {
                 >
                   Download Course Brochure
                 </a>
-                <Link
-                  href="/courses"
+                <a
+                  href="#explore-courses"
                   className="border-2 border-[#FFAE0E] text-[#FFAE0E] px-6 py-3 rounded-lg font-medium hover:bg-[#FFAE0E] hover:text-black transition-colors duration-200"
                 >
                   View All Courses
-                </Link>
+                </a>
               </div>
             </div>
           </div>

@@ -2,7 +2,6 @@
 
 import { Card, Image } from "antd";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 interface Sponsor {
   category: string;
@@ -268,9 +267,10 @@ const sponsors: Sponsor[] = [
   },
 ];
 
-function SponsorsPageContent() {
+export default function SponsorsPage() {
   const searchParams = useSearchParams();
-  const activeCategory = searchParams.get("category") || "Ed-Tech Partners";
+  const activeCategory =
+    searchParams.get("category") || "Ed-Tech Partners";
 
   return (
     <div className="w-full font-inter">
@@ -322,17 +322,19 @@ function SponsorsPageContent() {
                       <Card
                         key={name}
                         hoverable
-                        className="group overflow-hidden flex flex-col items-center justify-center p-4"
+                        className="group overflow-hidden flex flex-col items-center justify-center p-4 min-h-[210px] md:min-h-[250px]"
                         styles={{ body: { padding: 0 } }}
                       >
-                        <Image
-                          src={imageUrl}
-                          alt={name}
-                          preview={false}
-                          className="!w-24 !h-24 md:!w-32 md:!h-32 object-contain transition-transform duration-300 group-hover:scale-110"
-                        />
-                        <div className="mt-4 text-center">
-                          <p className="font-semibold text-xs md:text-sm">{name}</p>
+                        <div className="flex items-center justify-center w-full h-24 md:h-32">
+                          <Image
+                            src={imageUrl}
+                            alt={name}
+                            preview={false}
+                            className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
+                          />
+                        </div>
+                        <div className="mt-7 text-center w-full">
+                          <p className="font-semibold text-xs md:text-sm leading-tight h-8 md:h-10 overflow-hidden text-ellipsis whitespace-normal line-clamp-2">{name}</p>
                         </div>
                       </Card>
                     ))}
@@ -343,13 +345,5 @@ function SponsorsPageContent() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function SponsorsPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <SponsorsPageContent />
-    </Suspense>
   );
 }

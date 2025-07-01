@@ -40,6 +40,9 @@ const CourseClosingForm = () => {
             </div>
 
             <div className="container mx-auto p-8 bg-white mt-4">
+                <div className="flex justify-end mb-4">
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/4.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                </div>
                 <Form layout="vertical" name="course_closing_form">
                     <Title level={4} className="text-center border border-black p-2">PROPOSAL FOR DISTRIBUTION OF HRD/ CONSULTANCY COURSE FUND</Title>
 
@@ -150,10 +153,7 @@ const CourseClosingForm = () => {
                     </div>
 
                     <Form.Item className="mt-8 text-center">
-                        <Space>
-                            <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit</Button>
-                            <Button onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/4.pdf', '_blank')}>Download PDF</Button>
-                        </Space>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

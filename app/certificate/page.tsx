@@ -38,29 +38,12 @@ export default function CertificatePage() {
         </div>
       </section>
       <section className="bg-[#FFFAF1] pb-6">
-        <div className="w-full grid grid-cols-2 mb-6">
+        <div className="w-full mb-6">
           <div
-            className={`flex-grow pt-6 pb-4 cursor-pointer ${
-              tab === "download"
-                ? "bg-[#FFE3AC] border-b-4 border-[#FFAE0E]"
-                : "border-b-black border-b"
-            }`}
-            onClick={() => setTab("download")}
+            className={`flex-grow pt-6 pb-4 cursor-pointer bg-[#FFE3AC] border-b-4 border-[#FFAE0E]`}
           >
             <h2 className="text-2xl font-medium text-center tracking-wide">
               Download Certificate
-            </h2>
-          </div>
-          <div
-            className={`flex-grow pt-6 pb-4 cursor-pointer ${
-              tab === "verify"
-                ? "bg-[#FFE3AC] border-b-4 border-[#FFAE0E]"
-                : "border-b-black border-b"
-            }`}
-            onClick={() => setTab("verify")}
-          >
-            <h2 className="text-2xl text-center tracking-wide">
-              Verify Certificate
             </h2>
           </div>
         </div>
@@ -71,7 +54,8 @@ export default function CertificatePage() {
             onFinish={onFinish}
             className="space-y-4"
           >
-            {tab === "download" ? (
+            {/* Only show Download Certificate for now. Keep Verify Certificate code for future use. */}
+            {true ? (
               <>
                 <Form.Item
                   label="Course Name"
@@ -176,11 +160,26 @@ export default function CertificatePage() {
                   htmlType="submit"
                   className="border-none w-full py-2.5 px-6 text-black text-lg font-normal tracking-wide"
                 >
-                  {tab === "download" ? "Download Certificate" : "Verify Certificate"}
+                  {/* Only show Download Certificate for now. Keep Verify Certificate code for future use. */}
+                  {true ? "Download Certificate" : "Verify Certificate"}
                 </Button>
               </ConfigProvider>
             </Form.Item>
           </Form>
+        </div>
+        {/* Sample Certificate Section */}
+        <div className="p-6 max-w-md mx-auto container mt-4">
+          <div className="flex flex-col items-center bg-[#FFF6E0] rounded-lg shadow-md py-6">
+            <h2 className="text-xl font-semibold mb-4 text-center">Sample Certificate</h2>
+            <a
+              href="https://d1bm918zlnq37v.cloudfront.net/CECTemp/sample_cert (1).pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#FFAE0E] hover:bg-[#E5893C] text-black font-medium px-6 py-3 rounded-lg transition-colors duration-200 text-lg shadow"
+            >
+              View Sample Certificate
+            </a>
+          </div>
         </div>
       </section>
     </div>

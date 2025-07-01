@@ -50,18 +50,27 @@ export const Navbar: React.FC = () => {
       label: "Courses",
       href: "",
       submenu: [
-        { title: "2024-25", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/2024-25.pdf", target: "_blank" },
-        { title: "2023-24", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/STC-CEC-2023-24.pdf", target: "_blank" },
-        { title: "2022-23", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/List_of_courses-2022-23.pdf", target: "_blank" },
-        { title: "2021-22", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_2021-22.pdf", target: "_blank" },
-        { title: "2020-21", href: "/course-2020-21" },
-        { title: "2019-20", href: "/course-2019-20" },
-        { title: "2018-19", href: "/course-2018-19" },
-        { title: "2017-18", href: "/course-2017-18" },
-        { title: "2016-17", href: "/course-2016-17" },
-        { title: "2015-16", href: "/course-2015-16" },
-        { title: "2014-15", href: "/course-2014-15" },
-        { title: "2013-14", href: "/course-2013-14" },
+        {
+          title: "Current Courses",
+          href: "/#explore-courses",
+        },
+        {
+          title: "Past Courses",
+          submenu: [
+            { title: "2024-25", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/2024-25.pdf", target: "_blank" },
+            { title: "2023-24", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/STC-CEC-2023-24.pdf", target: "_blank" },
+            { title: "2022-23", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/List_of_courses-2022-23.pdf", target: "_blank" },
+            { title: "2021-22", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_2021-22.pdf", target: "_blank" },
+            { title: "2020-21", href: "/course-2020-21" },
+            { title: "2019-20", href: "/course-2019-20" },
+            { title: "2018-19", href: "/course-2018-19" },
+            { title: "2017-18", href: "/course-2017-18" },
+            { title: "2016-17", href: "/course-2016-17" },
+            { title: "2015-16", href: "/course-2015-16" },
+            { title: "2014-15", href: "/course-2014-15" },
+            { title: "2013-14", href: "/course-2013-14" },
+          ],
+        },
       ],
     },
     {
@@ -75,25 +84,22 @@ export const Navbar: React.FC = () => {
     },
     {
       label: "QIP",
-      href: "",
+      href: "/qip",
+      target: "_blank",
       submenu: [
-        { title: "About", href: "/" },
-        {
-          title: "Selected Candidates (Sponsored)",
-          href: "/",
-        },
-        {
-          title: "Selected Candidates (Self-Financed)",
-          href: "/",
-        },
-        { title: "NQCC Members", href: "/" },
+        { title: "About", href: "/qip", target: "_blank" },
+        { title: "Selected Candidates (Sponsored)", href: "/qip", target: "_blank" },
+        { title: "Selected Candidates (Self-Financed)", href: "/qip", target: "_blank" },
+        { title: "NQCC Members", href: "/qip", target: "_blank" },
       ],
     },
-    { label: "TOH", href: "/trainee-officer-hostel", submenu: [] },
     {
       label: "People",
       href: "/staff",
-      submenu: [{ title: "CEC Staff", href: "/staff" }],
+      submenu: [
+        { title: "Co-ordinator", href: "/staff?tab=coordinator" },
+        { title: "CEC Staff", href: "/staff?tab=staff" },
+      ],
     },
     {
       label: "Newsletter",
@@ -118,20 +124,26 @@ export const Navbar: React.FC = () => {
       ],
     },
     {
-      label: "Download",
+      label: "Apply Forms",
       href: "/forms",
       submenu: [
         { title: "CEC new forms", href: "/forms" },
         { title: "CEC old forms", href: "/old-forms" },
+        { title: "Calendar", href: "/" },
+      ],
+    },
+    {
+      label: "Certificate",
+      href: "/certificate",
+      submenu: [
+        { title: "Download Certificate", href: "/certificate" },
         {
           title: "Sample Certificate",
           href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/sample_cert (1).pdf",
           target: "_blank",
         },
-        { title: "Calendar", href: "/" },
       ],
     },
-    { label: "Certificate", href: "/certificate", submenu: [] },
     { label: "Gallery", href: "/gallery", submenu: [] },
   ];
 
@@ -149,11 +161,8 @@ export const Navbar: React.FC = () => {
             alt="IITR Logo"
           />
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span className="font-bold text-xs text-white">
-              Quality Improvement
-            </span>
-            <span className="font-bold text-xs text-white">
-              & Continuing Education Center
+            <span className="font-bold text-lg md:text-2xl text-white">
+              CEC IITR
             </span>
           </div>
         </Link>
@@ -176,16 +185,42 @@ export const Navbar: React.FC = () => {
               {item.submenu.length > 0 && (
                 <div className="absolute left-0 top-full w-48 bg-[#1f2937] text-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 invisible group-hover:visible z-50">
                   <div className="absolute h-2 w-full -top-2 bg-transparent"></div>
-                  {item.submenu.map((subItem) => (
-                    <Link
-                      key={subItem.title}
-                      href={subItem.href}
-                      target={subItem.target || undefined}
-                      className="block px-4 py-2 hover:bg-[#374151] uppercase cursor-pointer text-sm"
-                    >
-                      {subItem.title}
-                    </Link>
-                  ))}
+                  {item.submenu.map((subItem) =>
+                    'submenu' in subItem && Array.isArray(subItem.submenu) ? (
+                      <div key={subItem.title} className="relative group/submenu">
+                        <span className="block px-4 py-2 hover:bg-[#374151] uppercase cursor-pointer text-sm flex justify-between items-center">
+                          {subItem.title}
+                          <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                        </span>
+                        <div className="absolute left-full top-0 w-48 bg-[#1f2937] text-white shadow-lg rounded-lg opacity-0 group-hover/submenu:opacity-100 transition-opacity duration-200 invisible group-hover/submenu:visible z-50">
+                          <div className="absolute h-2 w-full -top-2 bg-transparent"></div>
+                          {subItem.submenu.map((yearItem: any) => (
+                            typeof yearItem.href === 'string' ? (
+                              <Link
+                                key={yearItem.title}
+                                href={yearItem.href}
+                                {...('target' in yearItem ? { target: yearItem.target } : {})}
+                                className="block px-4 py-2 hover:bg-[#374151] uppercase cursor-pointer text-sm"
+                              >
+                                {yearItem.title}
+                              </Link>
+                            ) : null
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      typeof subItem.href === 'string' ? (
+                        <Link
+                          key={subItem.title}
+                          href={subItem.href}
+                          {...('target' in subItem ? { target: subItem.target } : {})}
+                          className="block px-4 py-2 hover:bg-[#374151] uppercase cursor-pointer text-sm"
+                        >
+                          {subItem.title}
+                        </Link>
+                      ) : null
+                    )
+                  )}
                 </div>
               )}
             </div>
@@ -216,16 +251,41 @@ export const Navbar: React.FC = () => {
               </Link>
               {item.submenu.length > 0 && (
                 <div className="pl-4 mt-2">
-                  {item.submenu.map((subItem) => (
-                    <Link
-                      key={subItem.title}
-                      href={subItem.href}
-                      target={subItem.target || undefined}
-                      className="block py-1 text-sm text-gray-300 hover:text-white"
-                    >
-                      {subItem.title}
-                    </Link>
-                  ))}
+                  {item.submenu.map((subItem) =>
+                    'submenu' in subItem && Array.isArray(subItem.submenu) ? (
+                      <div key={subItem.title}>
+                        <span className="block py-1 text-sm text-gray-300 hover:text-white cursor-pointer flex justify-between items-center">
+                          {subItem.title}
+                          <svg className="w-3 h-3 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
+                        </span>
+                        <div className="pl-4 mt-2">
+                          {subItem.submenu.map((yearItem: any) => (
+                            typeof yearItem.href === 'string' ? (
+                              <Link
+                                key={yearItem.title}
+                                href={yearItem.href}
+                                {...('target' in yearItem ? { target: yearItem.target } : {})}
+                                className="block py-1 text-sm text-gray-300 hover:text-white"
+                              >
+                                {yearItem.title}
+                              </Link>
+                            ) : null
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      typeof subItem.href === 'string' ? (
+                        <Link
+                          key={subItem.title}
+                          href={subItem.href}
+                          {...('target' in subItem ? { target: subItem.target } : {})}
+                          className="block py-1 text-sm text-gray-300 hover:text-white"
+                        >
+                          {subItem.title}
+                        </Link>
+                      ) : null
+                    )
+                  )}
                 </div>
               )}
             </div>
