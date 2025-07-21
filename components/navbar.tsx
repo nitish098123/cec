@@ -155,13 +155,13 @@ export const Navbar: React.FC = () => {
           <Image
             preview={false}
             src="/IITR_logo.png"
-            width="60px"
-            height="60px"
+            width="80px"
+            height="80px"
             className=""
             alt="IITR Logo"
           />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <span className="font-bold text-lg md:text-2xl text-white">
+          <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '18px' }}>
+            <span className="font-bold text-2xl md:text-4xl text-white">
               CEC IITR
             </span>
           </div>

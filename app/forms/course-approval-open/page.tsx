@@ -8,8 +8,36 @@ const { TextArea } = Input;
 const { Title } = Typography;
 
 const CourseApprovalFormOpen = () => {
-    const onFinish = (values: any) => {
-        console.log('Received values of form: ', values);
+    const onFinish = async (values: any) => {
+        // Prepare data for PDF
+        const payload = {
+            courseCoordinator: values.courseCoordinator,
+            designation: values.coordinatorDesignation,
+            title: values.courseTitle,
+            batchNo: values.batchNo,
+            partner: values.programPartner,
+            commencement: values.commencementDate?.format?.('YYYY-MM-DD') || '',
+            // Add more fields as needed
+        };
+        try {
+            const res = await fetch('/api/generate-pdf', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+            if (!res.ok) throw new Error('Failed to generate PDF');
+            const blob = await res.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'course-approval-form.pdf';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+        } catch (err) {
+            alert('Error generating PDF.');
+        }
     };
 
     const normFile = (e: any) => {
@@ -308,8 +336,8 @@ const CourseApprovalFormOpen = () => {
                     <p className="text-right mt-8">Dean, SRIC</p>
 
                     <Form.Item className="mt-12 text-center">
-                        <Button type="primary" htmlType="submit" size="large" className="bg-blue-600">
-                            Submit & Download Application
+                        <Button type="primary" htmlType="submit" className="bg-[#FFAE0E] text-black font-semibold w-full mt-6">
+                            Submit and Download Form
                         </Button>
                     </Form.Item>
                 </Form>
