@@ -1,5 +1,6 @@
 "use client";
 
+import { Suspense } from "react";
 import { Card, Image } from "antd";
 import { useSearchParams } from "next/navigation";
 
@@ -267,7 +268,7 @@ const sponsors: Sponsor[] = [
   },
 ];
 
-export default function SponsorsPage() {
+function SponsorsPageContent() {
   const searchParams = useSearchParams();
   const activeCategory =
     searchParams.get("category") || "Ed-Tech Partners";
@@ -345,5 +346,13 @@ export default function SponsorsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SponsorsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SponsorsPageContent />
+    </Suspense>
   );
 }
