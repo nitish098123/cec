@@ -5,29 +5,7 @@ import { Form, Input, Row, Col, Typography, Button, DatePicker, Table, Radio, Ch
 const { Title, Text } = Typography;
 
 const CourseClosingForm = () => {
-
-    const distributionColumns = [
-        { 
-            title: 'To be filled by P.I.',
-            children: [
-                { title: 'Name', dataIndex: 'name', key: 'name', render: () => <Input/> },
-                { title: 'Designation', dataIndex: 'designation', key: 'designation', render: () => <Input/> },
-                { title: 'Employee code', dataIndex: 'emp_code', key: 'emp_code', render: () => <Input/> },
-                { title: 'Bank A/C No.', dataIndex: 'bank_ac', key: 'bank_ac', render: () => <Input/> },
-                { title: 'Amount ₹', dataIndex: 'amount', key: 'amount', render: () => <Input/> },
-            ]
-        },
-        {
-            title: 'To be filled by SRIC accounts office',
-            children: [
-                { title: 'Income tax', dataIndex: 'income_tax', key: 'income_tax', render: () => <Input/> },
-                { title: 'Net amount', dataIndex: 'net_amount', key: 'net_amount', render: () => <Input/> },
-                { title: 'Token no.', dataIndex: 'token_no', key: 'token_no', render: () => <Input/> },
-            ]
-        }
-    ];
-
-    const distributionData = [ {key: '1'}, {key: '2'}, {key: '3'} ];
+    const [form] = Form.useForm();
 
     return (
         <div className="font-inter">
@@ -58,20 +36,157 @@ const CourseClosingForm = () => {
                     <Form.Item name="department" label="Department/Centre"><Input /></Form.Item>
 
                     <Title level={5}>A. PROJECT FUND POSITION</Title>
-                    <Form.Item label="Gross amount including service tax 'G'"><Input addonAfter="₹" /></Form.Item>
-                    <Form.Item label="Less GST as applicable 'L' (presently @18%)"><Input addonAfter="₹" /></Form.Item>
-                    <Form.Item label="Total Contracted amount 'T' (=G-L)"><Input addonAfter="₹" /></Form.Item>
-                    <Form.Item label="Amount payable to Institute (Institute Share) 'P' (@20%T)"><Input addonAfter="₹" /></Form.Item>
-                    <Form.Item label="Remaining amount 'F'( = T-P) (@80%T)"><Input addonAfter="₹" /></Form.Item>
-                    <Form.Item label="Expenditure already done 'E'"><Input addonAfter="₹" /></Form.Item>
-                    <Form.Item label="Balance Amount for Distribution 'S' = F-E"><Input addonAfter="₹" /></Form.Item>
+                    <Form.Item name="gross_amount" label="Gross amount including service tax 'G'"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="less_gst" label="Less GST as applicable 'L' (presently @18%)"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="total_contracted" label="Total Contracted amount 'T' (=G-L)"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="institute_share" label="Amount payable to Institute (Institute Share) 'P' (@20%T)"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="remaining_amount" label="Remaining amount 'F'( = T-P) (@80%T)"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="expenditure_done" label="Expenditure already done 'E'"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="balance_amount" label="Balance Amount for Distribution 'S' = F-E"><Input addonAfter="Rs." /></Form.Item>
                     
                     <Title level={5}>B. DETAILS OF AMOUNT TO BE DISTRIBUTED, 'S'</Title>
-                    <Form.Item label="Coordination Fee 'C'(= maximum 20% of 'F')" ><Input addonAfter="₹" /></Form.Item>
+                    <Form.Item name="coordination_fee" label="Coordination Fee 'C'(= maximum 20% of 'F')" ><Input addonAfter="Rs." /></Form.Item>
                     <p>Details of distribution among Coordinators, Technical and other staff</p>
                     <p>Mention all the names as per approval even if the amount to be disbursed is NIL.</p>
-                    <Table columns={distributionColumns} dataSource={distributionData} bordered pagination={false} className="mb-4" />
-                    <Form.Item label="Remaining amount (if any) to DDF of CEC"><Input addonAfter="₹" /></Form.Item>
+                    
+                    {/* Distribution Details */}
+                    <Title level={5}>Distribution Details:</Title>
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="distribution_name_1" label="Name">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_designation_1" label="Designation">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_employee_code_1" label="Employee code">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_bank_ac_1" label="Bank A/C No.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="distribution_amount_1" label="Amount Rs.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_income_tax_1" label="Income tax">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_net_amount_1" label="Net amount">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_token_no_1" label="Token no.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="distribution_name_2" label="Name">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_designation_2" label="Designation">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_employee_code_2" label="Employee code">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_bank_ac_2" label="Bank A/C No.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="distribution_amount_2" label="Amount Rs.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_income_tax_2" label="Income tax">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_net_amount_2" label="Net amount">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_token_no_2" label="Token no.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="distribution_name_3" label="Name">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_designation_3" label="Designation">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_employee_code_3" label="Employee code">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_bank_ac_3" label="Bank A/C No.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="distribution_amount_3" label="Amount Rs.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_income_tax_3" label="Income tax">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_net_amount_3" label="Net amount">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="distribution_token_no_3" label="Token no.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    
+                    <Form.Item name="remaining_amount_ddf" label="Remaining amount (if any) to DDF of CEC"><Input addonAfter="Rs." /></Form.Item>
                     
                     <Text strong>Certified that</Text>
                     <Form.Item name="certify_a" valuePropName='checked'><Checkbox>(a) The amount distributed is within the prescribed limit for each individual.</Checkbox></Form.Item>
@@ -117,28 +232,28 @@ const CourseClosingForm = () => {
 
                         <p className="mt-8">For distribution of total Institute share into IDF/CEC Account . DDF, PDF and incentive to staff, SWF etc. on getting full payment only at the time of closing the project (on final distribution only):</p>
 
-                        <Form.Item label="Total Institute Share deducted (P)"><Input addonAfter="₹" /></Form.Item>
-                        <Row gutter={16} align="middle"><Col span={10}>(a) RDF (CEC Account ) [CED-IDF-001]</Col><Col span={6}>50% of P</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
-                        <Row gutter={16} align="middle"><Col span={10}>(b) DDF of CEC [CEC-DDF-001]</Col><Col span={6}>15% of P</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
-                        <Row gutter={16} align="middle"><Col span={10}>(c) Electricity Charges [CEC-DDF-001]</Col><Col span={6}>5% of P</Col><Col span={8}><Input addonAfter="£" /></Col></Row>
-                        <Row gutter={16} align="middle"><Col span={10}>(d) PDF</Col><Col span={6}>25 % of P</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
-                        <Form.Item label="(i) PDF of Dr. "><Input addonAfter="₹" /></Form.Item>
-                        <Form.Item label="(ii) PDF of Dr. "><Input addonAfter="₹" /></Form.Item>
-                        <Form.Item label="(iii) PDF of Dr. "><Input addonAfter="₹" /></Form.Item>
-                        <Form.Item label="Total"><Input addonAfter="₹" /></Form.Item>
+                        <Form.Item name="total_institute_share" label="Total Institute Share deducted (P)"><Input addonAfter="Rs." /></Form.Item>
+                        <Row gutter={16} align="middle"><Col span={10}>(a) RDF (CEC Account ) [CED-IDF-001]</Col><Col span={6}>50% of P</Col><Col span={8}><Input name="rdf_50_percent" addonAfter="Rs." /></Col></Row>
+                        <Row gutter={16} align="middle"><Col span={10}>(b) DDF of CEC [CEC-DDF-001]</Col><Col span={6}>15% of P</Col><Col span={8}><Input name="ddf_15_percent" addonAfter="Rs." /></Col></Row>
+                        <Row gutter={16} align="middle"><Col span={10}>(c) Electricity Charges [CEC-DDF-001]</Col><Col span={6}>5% of P</Col><Col span={8}><Input name="electricity_5_percent" addonAfter="Rs." /></Col></Row>
+                        <Row gutter={16} align="middle"><Col span={10}>(d) PDF</Col><Col span={6}>25 % of P</Col><Col span={8}><Input name="pdf_25_percent" addonAfter="Rs." /></Col></Row>
+                        <Form.Item name="pdf_dr_1" label="(i) PDF of Dr. "><Input addonAfter="Rs." /></Form.Item>
+                        <Form.Item name="pdf_dr_2" label="(ii) PDF of Dr. "><Input addonAfter="Rs." /></Form.Item>
+                        <Form.Item name="pdf_dr_3" label="(iii) PDF of Dr. "><Input addonAfter="Rs." /></Form.Item>
+                        <Form.Item name="pdf_total" label="Total"><Input addonAfter="Rs." /></Form.Item>
                         
-                        <Form.Item label="Distribution of incentive to office staff and SWF etc. ...5.% etc. ........ of P"><Input addonBefore="Rs." /></Form.Item>
-                        <Row gutter={16} align="middle"><Col span={10}>(i) Staff Welfare Fund</Col><Col span={6}>(5%)</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
-                        <Row gutter={16} align="middle"><Col span={10}>(ii) Departmental Office</Col><Col span={6}>(20%)</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
-                        <Row gutter={16} align="middle"><Col span={10}>(iii) CEC Staff</Col><Col span={6}>(30%)</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
-                        <Row gutter={16} align="middle"><Col span={10}>(iv) Fund for Community Activities</Col><Col span={6}>(10%)</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
-                        <Row gutter={16} align="middle"><Col span={10}>(v) Central Administrative Fund</Col><Col span={6}>(35%)</Col><Col span={8}><Input addonAfter="₹" /></Col></Row>
+                        <Form.Item name="incentive_distribution" label="Distribution of incentive to office staff and SWF etc. ...5.% etc. ........ of P"><Input addonBefore="Rs." /></Form.Item>
+                        <Row gutter={16} align="middle"><Col span={10}>(i) Staff Welfare Fund</Col><Col span={6}>(5%)</Col><Col span={8}><Input name="staff_welfare_5_percent" addonAfter="Rs." /></Col></Row>
+                        <Row gutter={16} align="middle"><Col span={10}>(ii) Departmental Office</Col><Col span={6}>(20%)</Col><Col span={8}><Input name="departmental_office_20_percent" addonAfter="Rs." /></Col></Row>
+                        <Row gutter={16} align="middle"><Col span={10}>(iii) CEC Staff</Col><Col span={6}>(30%)</Col><Col span={8}><Input name="cec_staff_30_percent" addonAfter="Rs." /></Col></Row>
+                        <Row gutter={16} align="middle"><Col span={10}>(iv) Fund for Community Activities</Col><Col span={6}>(10%)</Col><Col span={8}><Input name="community_activities_10_percent" addonAfter="Rs." /></Col></Row>
+                        <Row gutter={16} align="middle"><Col span={10}>(v) Central Administrative Fund</Col><Col span={6}>(35%)</Col><Col span={8}><Input name="central_admin_35_percent" addonAfter="Rs." /></Col></Row>
 
                         <p className="text-right mt-8">(Signature of Course Coordinator)</p>
 
                         <Row justify="space-between" className="mt-8">
-                            <Col>No. CEC/</Col>
-                            <Col>Dated:</Col>
+                            <Col><Form.Item name="cec_number">No. CEC/</Form.Item></Col>
+                            <Col><Form.Item name="cec_dated">Dated:</Form.Item></Col>
                         </Row>
 
                         <p className="mt-8">Copy forwarded for taking further action to:</p>
@@ -153,7 +268,39 @@ const CourseClosingForm = () => {
                     </div>
 
                     <Form.Item className="mt-8 text-center">
-                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
+                            try {
+                                const values = await form.validateFields();
+                                
+                                // Import the configuration mapping function
+                                const { mapCourseClosingOldDataToConfig } = await import('../../api/generate-pdf/course-closing-old-config');
+                                
+                                // Create the form configuration
+                                const formConfig = mapCourseClosingOldDataToConfig(values);
+                                
+                                const res = await fetch('/api/generate-pdf', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        formData: values,
+                                        formConfig: formConfig
+                                    }),
+                                });
+                                if (!res.ok) throw new Error('Failed to generate PDF');
+                                
+                                const blob = await res.blob();
+                                const url = window.URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = 'course-closing-old-form.pdf';
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                document.body.removeChild(a);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }}>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

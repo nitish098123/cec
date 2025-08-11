@@ -9,21 +9,70 @@ const { Title } = Typography;
 
 const CourseApprovalFormOpen = () => {
     const onFinish = async (values: any) => {
-        // Prepare data for PDF
+        // Prepare complete data for PDF - including all form fields (filled and unfilled)
         const payload = {
+            // Course Coordinator Information
             courseCoordinator: values.courseCoordinator,
-            designation: values.coordinatorDesignation,
-            title: values.courseTitle,
+            coordinatorDesignation: values.coordinatorDesignation,
+            
+            // Co-coordinator Information
+            cocoordinator1Name: values.cocoordinator1Name,
+            cocoordinator1Dept: values.cocoordinator1Dept,
+            cocoordinator1Designation: values.cocoordinator1Designation,
+            cocoordinator2Name: values.cocoordinator2Name,
+            cocoordinator2Dept: values.cocoordinator2Dept,
+            cocoordinator2Designation: values.cocoordinator2Designation,
+            
+            // Course Details
+            courseTitle: values.courseTitle,
             batchNo: values.batchNo,
-            partner: values.programPartner,
-            commencement: values.commencementDate?.format?.('YYYY-MM-DD') || '',
-            // Add more fields as needed
+            programPartner: values.programPartner,
+            gstDetails: values.gstDetails,
+            paymentTerms: values.paymentTerms,
+            commencementDate: values.commencementDate?.format?.('YYYY-MM-DD') || '',
+            completionDate: values.completionDate?.format?.('YYYY-MM-DD') || '',
+            duration: values.duration,
+            modeOfDelivery: values.modeOfDelivery,
+            expectedParticipants: values.expectedParticipants,
+            scheduleAttached: values.scheduleAttached,
+            
+            // Course Fee Information
+            courseFee: values.courseFee,
+            paymentPortal: values.paymentPortal,
+            totalFeeReceipt: values.totalFeeReceipt,
+            mouReceipts: values.mouReceipts,
+            
+            // Faculty Details
+            faculty: values.faculty || [],
+            
+            // Additional Information
+            eligibility: values.eligibility,
+            brochureLink: values.brochureLink,
+            certificateCriteria: values.certificateCriteria,
+            refundProcess: values.refundProcess,
+            otherInfo: values.otherInfo,
+            otherInfoAttachment: values.otherInfoAttachment,
+            scheduleAttachment: values.scheduleAttachment,
+            
+            // Lecture and Hands-on Details
+            lectures: values.lectures || [],
+            hands_on: values.hands_on || [],
         };
+        
         try {
+            // Import the configuration mapping function
+            const { mapFormDataToConfig } = await import('../../api/generate-pdf/course-approval-open-config');
+            
+            // Create the form configuration
+            const formConfig = mapFormDataToConfig(payload);
+            
             const res = await fetch('/api/generate-pdf', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload),
+                body: JSON.stringify({
+                    formData: payload,
+                    formConfig: formConfig
+                }),
             });
             if (!res.ok) throw new Error('Failed to generate PDF');
             const blob = await res.blob();
@@ -36,7 +85,8 @@ const CourseApprovalFormOpen = () => {
             a.remove();
             window.URL.revokeObjectURL(url);
         } catch (err) {
-            alert('Error generating PDF.');
+            console.error('PDF generation error:', err);
+            alert('Error generating PDF. Please try again.');
         }
     };
 

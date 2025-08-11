@@ -172,7 +172,53 @@ const CourseOpeningForm = () => {
                 <h3 className="text-lg font-semibold text-center mb-2">(Open Participation/Sponsored)</h3>
                 <p className='text-center mb-6'>(To be filled after receipt of funds or transfer from an alternate source like PDF or to generate the course invoice)</p>
 
-                <Form form={form} name="course_opening_budget" layout="vertical">
+                <Form form={form} name="course_opening_budget" layout="vertical" onFinish={async (values) => {
+                    // Prepare complete data for PDF
+                    const payload = {
+                        courseCode: values.courseCode || '',
+                        courseNameAndDate: values.courseNameAndDate,
+                        courseBudget: values.courseBudget,
+                        grossAmount: values.grossAmount,
+                        lessGst: values.lessGst,
+                        contractedAmount: values.contractedAmount,
+                        instituteOverhead: values.instituteOverhead,
+                        coordinationFee: values.coordinationFee,
+                        cecOperationalCost: values.cecOperationalCost,
+                        tdsDeduction: values.tdsDeduction,
+                        expenses: values.expenses || {},
+                        honorarium: values.honorarium,
+                    };
+                    
+                    try {
+                        // Import the configuration mapping function
+                        const { mapCourseOpeningWithActualBudgetDataToConfig } = await import('../../api/generate-pdf/course-opening-with-actual-budget-config');
+                        
+                        // Create the form configuration
+                        const formConfig = mapCourseOpeningWithActualBudgetDataToConfig(payload);
+                        
+                        const res = await fetch('/api/generate-pdf', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                formData: payload,
+                                formConfig: formConfig
+                            }),
+                        });
+                        if (!res.ok) throw new Error('Failed to generate PDF');
+                        const blob = await res.blob();
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'course-opening-with-actual-budget-form.pdf';
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                        window.URL.revokeObjectURL(url);
+                    } catch (err) {
+                        console.error('PDF generation error:', err);
+                        alert('Error generating PDF. Please try again.');
+                    }
+                }}>
                      <Row gutter={24}>
                         <Col span={12}>
                              <Form.Item label="1. Course Code (To be filled by CEC Office)">

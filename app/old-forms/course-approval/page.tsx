@@ -6,51 +6,8 @@ import { UploadOutlined } from '@ant-design/icons';
 const { Text, Title } = Typography;
 
 const CourseApprovalOldForm = () => {
+    const [form] = Form.useForm();
 
-    const facultyColumns = [
-        { title: 'Name of faculty', dataIndex: 'name', key: 'name', render: () => <Input /> },
-        { title: 'Designation', dataIndex: 'designation', key: 'designation', render: () => <Input /> },
-        { title: 'Employees No.', dataIndex: 'employee_no', key: 'employee_no', render: () => <Input /> },
-        { title: 'Department/Centre', dataIndex: 'department', key: 'department', render: () => <Input /> },
-        { title: 'Signature', dataIndex: 'signature', key: 'signature', render: () => <Input /> },
-    ];
-    const facultyData = [ {key: '1'}, {key: '2'} ];
-
-    const technicalStaffColumns = [
-        { title: 'Technical Staff', dataIndex: 'name', key: 'name', render: () => <Input /> },
-        { title: 'Designation', dataIndex: 'designation', key: 'designation', render: () => <Input /> },
-        { title: 'Employee No.', dataIndex: 'employee_no', key: 'employee_no', render: () => <Input /> },
-        { title: 'Department / Centre', dataIndex: 'department', key: 'department', render: () => <Input /> },
-    ];
-    const technicalStaffData = [ {key: '1'}, {key: '2'} ];
-
-    const budgetColumns = [
-        { title: 'SL. No.', dataIndex: 'sl_no', key: 'sl_no' },
-        { title: 'Budget head-wise Description', dataIndex: 'description', key: 'description', width: '60%' },
-        { title: 'Amount ₹', dataIndex: 'amount', key: 'amount', render: () => <Input /> },
-    ];
-
-    const budgetData = [
-        { key: '1', sl_no: '1.', description: 'Gross amount including service Tax = (G) received' },
-        { key: '2', sl_no: '2.', description: 'Less GST as applicable (presently GST @ 18%) (L)' },
-        { key: '3', sl_no: '3.', description: <div><p>(a) Contracted amount T = (G – L)</p><p>(b) Institute Share in the beginning (P) (20% of T)</p></div> },
-        { key: '4', sl_no: '4.', description: 'Honorarium to outside/internal experts' },
-        { key: '5', sl_no: '5.', description: <div>
-            <p>Expenses on:</p>
-            <ul className="list-disc pl-5">
-                <li>(i) Course design and material development</li>
-                <li>(ii) Cost of registration course material (stationery, pen pad, bags, Xeroxing, typing etc.)</li>
-                <li>(iii) Contingency / miscellaneous expenses</li>
-                <li>(iv) Infrastructure charges including hall and equipment charges</li>
-                <li>(v) Accommodation, boarding and lodging</li>
-                <li>(vi) Transportation: TA / DA to outside experts/participants</li>
-                <li>(vii) Local travel / field trip / tour</li>
-                <li>(viii) Research /Office Staff (if required please specify)</li>
-            </ul>
-        </div> },
-        { key: '6', sl_no: '6.', description: 'If any' },
-    ];
-    
     const normFile = (e: any) => {
         if (Array.isArray(e)) {
           return e;
@@ -94,7 +51,7 @@ const CourseApprovalOldForm = () => {
                         <Input placeholder="Specify if others" />
                     </Form.Item>
                     <Form.Item name="sponsor_details" label="4. Name and Address of Sponsor's with GST Details :"><Input.TextArea /></Form.Item>
-                    <Form.Item label="5. GST details" valuePropName="fileList" getValueFromEvent={normFile}>
+                    <Form.Item name="gst_details" label="5. GST details" valuePropName="fileList" getValueFromEvent={normFile}>
                         <Upload><Button icon={<UploadOutlined />}>Pl. attach. Copy</Button></Upload>
                     </Form.Item>
                     <Form.Item name="payment_received_in" label="6. Payment to be received in:">
@@ -109,19 +66,197 @@ const CourseApprovalOldForm = () => {
                     </Row>
                     
                     <Title level={5}>8. Details of Faculty/Staff who shall be associated:</Title>
-                    <Table columns={facultyColumns} dataSource={facultyData} pagination={false} bordered className="mb-4" />
-                    <Table columns={technicalStaffColumns} dataSource={technicalStaffData} pagination={false} bordered className="mb-8" />
+                    
+                    {/* Faculty Details */}
+                    <Title level={5}>Faculty:</Title>
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="faculty_name_1" label="Name of faculty">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="faculty_designation_1" label="Designation">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="faculty_employee_no_1" label="Employees No.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="faculty_department_1" label="Department/Centre">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Form.Item name="faculty_signature_1" label="Signature">
+                        <Input />
+                    </Form.Item>
+                    
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="faculty_name_2" label="Name of faculty">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="faculty_designation_2" label="Designation">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="faculty_employee_no_2" label="Employees No.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="faculty_department_2" label="Department/Centre">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Form.Item name="faculty_signature_2" label="Signature">
+                        <Input />
+                    </Form.Item>
+                    
+                    {/* Technical Staff Details */}
+                    <Title level={5}>Technical Staff:</Title>
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_name_1" label="Technical Staff">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_designation_1" label="Designation">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_employee_no_1" label="Employee No.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_department_1" label="Department / Centre">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    
+                    <Row gutter={16}>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_name_2" label="Technical Staff">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_designation_2" label="Designation">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_employee_no_2" label="Employee No.">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={6}>
+                            <Form.Item name="technical_staff_department_2" label="Department / Centre">
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                    </Row>
                     
                     <Title level={5}>8. Budget (should conform to the contract/agreement with the sponsor) :</Title>
-                    <Table columns={budgetColumns} dataSource={budgetData} pagination={false} bordered className="mb-8" />
+                    <Row gutter={16}>
+                        <Col span={12}>
+                            <Form.Item name="gross_amount" label="1. Gross amount including service Tax = (G) received">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                            <Form.Item name="less_gst" label="2. Less GST as applicable (presently GST @ 18%) (L)">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={16}>
+                        <Col span={12}>
+                            <Form.Item name="contracted_amount" label="3. (a) Contracted amount T = (G – L)">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                            <Form.Item name="institute_share" label="(b) Institute Share in the beginning (P) (20% of T)">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Form.Item name="honorarium" label="4. Honorarium to outside/internal experts">
+                        <Input addonAfter="Rs." />
+                    </Form.Item>
+                    <Title level={5}>5. Expenses on:</Title>
+                    <Row gutter={16}>
+                        <Col span={12}>
+                            <Form.Item name="expenses_course_design" label="(i) Course design and material development">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                            <Form.Item name="expenses_registration" label="(ii) Cost of registration course material (stationery, pen pad, bags, Xeroxing, typing etc.)">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={16}>
+                        <Col span={12}>
+                            <Form.Item name="expenses_contingency" label="(iii) Contingency / miscellaneous expenses">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                            <Form.Item name="expenses_infrastructure" label="(iv) Infrastructure charges including hall and equipment charges">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={16}>
+                        <Col span={12}>
+                            <Form.Item name="expenses_accommodation" label="(v) Accommodation, boarding and lodging">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                            <Form.Item name="expenses_transportation" label="(vi) Transportation: TA / DA to outside experts/participants">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Row gutter={16}>
+                        <Col span={12}>
+                            <Form.Item name="expenses_local_travel" label="(vii) Local travel / field trip / tour">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                        <Col span={12}>
+                            <Form.Item name="expenses_research_staff" label="(viii) Research /Office Staff (if required please specify)">
+                                <Input addonAfter="Rs." />
+                            </Form.Item>
+                        </Col>
+                    </Row>
+                    <Form.Item name="other_expenses" label="6. If any">
+                        <Input addonAfter="Rs." />
+                    </Form.Item>
                     
                     <p className="text-right font-bold">P.T.O.</p>
 
                     <div className="mt-8 pt-8 border-t-2">
                          <Title level={5}>9. Other relevant information (attach sheet, if necessary)</Title>
-                         <Form.Item label="i) Correspondence with sponsor" valuePropName="fileList" getValueFromEvent={normFile}><Upload><Button icon={<UploadOutlined />}>Attach</Button></Upload></Form.Item>
-                         <Form.Item label="ii) Request letter for special approval, if any" valuePropName="fileList" getValueFromEvent={normFile}><Upload><Button icon={<UploadOutlined />}>Attach</Button></Upload></Form.Item>
-                         <Form.Item name="bank_draft_transaction" label="iii) Bank Draft /Transaction No.__________ dated ___________ of ₹___________"><Input/></Form.Item>
+                         <Form.Item name="correspondence_attachment" label="i) Correspondence with sponsor" valuePropName="fileList" getValueFromEvent={normFile}><Upload><Button icon={<UploadOutlined />}>Attach</Button></Upload></Form.Item>
+                         <Form.Item name="approval_letter_attachment" label="ii) Request letter for special approval, if any" valuePropName="fileList" getValueFromEvent={normFile}><Upload><Button icon={<UploadOutlined />}>Attach</Button></Upload></Form.Item>
+                         <Form.Item name="bank_draft_transaction" label="iii) Bank Draft /Transaction No.__________ dated ___________ of Rs.___________"><Input/></Form.Item>
 
                         <p className="mt-4"><Text strong>The following documents will be required at the closing time of course in CD /Pen-Drive:</Text></p>
                         <p>(1) Name, address, phone, fax etc. of the sponsoring agency (2) List of internal and external faculty / experts with address (3) List of the participants with full address (5) Time table copy, (6) Soft / hard copy of the group-photo.</p>
@@ -168,7 +303,39 @@ const CourseApprovalOldForm = () => {
                     </div>
 
                     <Form.Item className="mt-8 text-center">
-                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
+                            try {
+                                const values = await form.validateFields();
+                                
+                                // Import the configuration mapping function
+                                const { mapCourseApprovalOldDataToConfig } = await import('../../api/generate-pdf/course-approval-old-config');
+                                
+                                // Create the form configuration
+                                const formConfig = mapCourseApprovalOldDataToConfig(values);
+                                
+                                const res = await fetch('/api/generate-pdf', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        formData: values,
+                                        formConfig: formConfig
+                                    }),
+                                });
+                                if (!res.ok) throw new Error('Failed to generate PDF');
+                                
+                                const blob = await res.blob();
+                                const url = window.URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = 'course-approval-old-form.pdf';
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                document.body.removeChild(a);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }}>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

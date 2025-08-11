@@ -251,8 +251,25 @@ const newsData: NewsItem[] = [
   },
 ];
 
-const noticeText = "AICTE QIP PG Certificate Program on Wireless Technology and IoT at IIT Roorkee ";
-const items: string[] = Array(10).fill(noticeText);
+const noticeItems = [
+  {
+    text: "AICTE QIP PG Certificate Program on Wireless Technology and IoT at IIT Roorkee ",
+    link: "https://qippg.aicte.gov.in/"
+  },
+  {
+    text: "AICTE QIP PG Certificate Program on Advanced Digital Manufacturing: Integrating Precision, Composites, and Manufacturing Technology for Industry 4.0 ",
+    link: "https://qippg.aicte.gov.in/"
+  },
+  {
+    text: "Signed the partnership MoU with Jaro Education (EdTech) ",
+    link: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/JaroEducation.jpg"
+  },
+  {
+    text: "Signed the partnership MoU with Truechip (EdTech) ",
+    link: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Truechip.jpg"
+  }
+];
+const items = Array(10).fill(noticeItems).flat();
 
 export default function HomePage() {
   const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
@@ -264,9 +281,10 @@ export default function HomePage() {
   const [isTyping, setIsTyping] = useState(true);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [showNoticePopup, setShowNoticePopup] = useState(false);
 
   const heroImages = [
-    "/home_background.png",
+    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HeroPhoto.JPG",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header1.png",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header2.png",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header3.png",
@@ -394,19 +412,79 @@ export default function HomePage() {
       </section>
 
       {/* Notice section */}
-      <section className="bg-[#F5F5F5]">
+      <section className="bg-[#F5F5F5] relative">
         <div className="w-full overflow-hidden">
           <div className="flex animate-scroll whitespace-nowrap py-2.5">
             <ul className="flex list-disc">
               {items.map((item, index) => (
                 <li key={index} className="mx-6 text-xl font-normal list-disc">
-                  {item}
+                  <a 
+                    href={item.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-[#FFAE0E] transition-colors duration-200 cursor-pointer"
+                  >
+                    {item.text}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
+        
+        {/* View All Button */}
+        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10">
+          <button
+            onClick={() => setShowNoticePopup(true)}
+            className="bg-[#FFAE0E] hover:bg-[#E5893C] text-black px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-[0_4px_12px_rgba(255,174,14,0.3)] hover:shadow-[0_8px_20px_rgba(255,174,14,0.4)]"
+          >
+            View All
+          </button>
+        </div>
       </section>
+
+      {/* Notice Popup */}
+      {showNoticePopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="flex justify-between items-center p-6 border-b">
+              <h2 className="text-2xl font-semibold text-gray-800">All Notices</h2>
+              <button
+                onClick={() => setShowNoticePopup(false)}
+                className="text-gray-500 hover:text-gray-700 text-2xl font-bold"
+              >
+                ×
+              </button>
+            </div>
+            <div className="p-6">
+              <div className="space-y-4">
+                {noticeItems.map((item, index) => (
+                  <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0">
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="block hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-[#FFAE0E] rounded-full mt-3 flex-shrink-0"></div>
+                        <div className="flex-1">
+                          <p className="text-lg font-medium text-gray-800 hover:text-[#FFAE0E] transition-colors duration-200">
+                            {item.text}
+                          </p>
+                          <p className="text-sm text-gray-500 mt-1">
+                            Click to view details →
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/*  */}
       <section className="py-8 md:py-16 space-y-8 md:space-y-16">

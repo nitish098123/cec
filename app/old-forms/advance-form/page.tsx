@@ -5,6 +5,7 @@ import { Form, Input, Row, Col, Typography, Button, DatePicker, Table, Checkbox,
 const { Title, Text } = Typography;
 
 const AdvanceForm = () => {
+    const [form] = Form.useForm();
 
     const outstandingAdvanceColumns = [
         { title: 'S.No', dataIndex: 'sno', key: 'sno', render: () => <Input /> },
@@ -104,7 +105,39 @@ const AdvanceForm = () => {
                     </div>
 
                     <Form.Item className="mt-8 text-center">
-                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
+                            try {
+                                const values = await form.validateFields();
+                                
+                                // Import the configuration mapping function
+                                const { mapAdvanceFormOldDataToConfig } = await import('../../api/generate-pdf/advance-form-old-config');
+                                
+                                // Create the form configuration
+                                const formConfig = mapAdvanceFormOldDataToConfig(values);
+                                
+                                const res = await fetch('/api/generate-pdf', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        formData: values,
+                                        formConfig: formConfig
+                                    }),
+                                });
+                                if (!res.ok) throw new Error('Failed to generate PDF');
+                                
+                                const blob = await res.blob();
+                                const url = window.URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = 'advance-form-old.pdf';
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                document.body.removeChild(a);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }}>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

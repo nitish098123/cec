@@ -24,7 +24,50 @@ const CourseInvoiceGenerationSponsoredForm = () => {
                 <div className="flex justify-end mb-4">
                     <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/6.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
                 </div>
-                <Form layout="vertical" name="invoice_generation_sponsored">
+                <Form layout="vertical" name="invoice_generation_sponsored" onFinish={async (values) => {
+                    // Prepare complete data for PDF
+                    const payload = {
+                        sponsoring_agency_details: values.sponsoring_agency_details,
+                        course_code: values.course_code,
+                        course_name: values.course_name,
+                        batch_no: values.batch_no,
+                        duration: values.duration,
+                        num_participants: values.num_participants,
+                        batch_budget: values.batch_budget,
+                        total_invoice_amount: values.total_invoice_amount,
+                        total_invoice_amount_words: values.total_invoice_amount_words,
+                    };
+                    
+                    try {
+                        // Import the configuration mapping function
+                        const { mapCourseInvoiceGenerationSponsoredDataToConfig } = await import('../../api/generate-pdf/course-invoice-generation-sponsored-config');
+                        
+                        // Create the form configuration
+                        const formConfig = mapCourseInvoiceGenerationSponsoredDataToConfig(payload);
+                        
+                        const res = await fetch('/api/generate-pdf', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                formData: payload,
+                                formConfig: formConfig
+                            }),
+                        });
+                        if (!res.ok) throw new Error('Failed to generate PDF');
+                        const blob = await res.blob();
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'course-invoice-generation-sponsored-form.pdf';
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                        window.URL.revokeObjectURL(url);
+                    } catch (err) {
+                        console.error('PDF generation error:', err);
+                        alert('Error generating PDF. Please try again.');
+                    }
+                }}>
                     <Row justify="space-between" align="middle">
                         <Col>
                             <Text strong>CEC-05</Text>

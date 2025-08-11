@@ -5,6 +5,7 @@ import { Form, Input, Row, Col, Typography, Button, DatePicker, Table, Radio, Ch
 const { Text, Title } = Typography;
 
 const CourseClosureForm = () => {
+    const [form] = Form.useForm();
 
     const distributionColumns = [
         { title: 'Name', dataIndex: 'name', key: 'name', render: () => <Input /> },
@@ -68,26 +69,26 @@ const CourseClosureForm = () => {
                     <div className="my-8">
                         <Title level={5}>A. COURSE FUND POSITION</Title>
                         <Row gutter={16}>
-                            <Col span={12}><Form.Item name="gross_amount" label="a. Gross amount including GST `G`"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="less_gst" label="b. Less GST as applicable `L` (presently @18%) (G/1.18*18%)"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="total_contracted" label="c. Total Contracted amount `T` (=G-L)"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="overhead_charges" label="d. Amount payable to Institute Overhead Charges `P` (@20%of T)"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="cec_operational_cost" label="e. CEC operational/establishment cost `O`(@10%of T-P)"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="tds_deduction" label="f. TDS Deduction (if any) `TD`"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="honorarium" label="g. Honorarium to Instructor/s/Experts `H`"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="expenditure_done" label="h. Expenditure already done `E`"><Input addonAfter="₹" /></Form.Item></Col>
-                            <Col span={12}><Form.Item name="balance_amount" label="i. Balance amount available (T-P-O-TD-H-E)"><Input addonAfter="₹" /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="gross_amount" label="a. Gross amount including GST G"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="less_gst" label="b. Less GST as applicable L (presently @18%) (G/1.18*18%)"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="total_contracted" label="c. Total Contracted amount T (=G-L)"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="overhead_charges" label="d. Amount payable to Institute Overhead Charges P (@20%of T)"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="cec_operational_cost" label="e. CEC operational/establishment cost O(@10%of T-P)"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="tds_deduction" label="f. TDS Deduction (if any) TD"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="honorarium" label="g. Honorarium to Instructor/s/Experts H"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="expenditure_done" label="h. Expenditure already done E"><Input addonAfter="Rs." /></Form.Item></Col>
+                            <Col span={12}><Form.Item name="balance_amount" label="i. Balance amount available (T-P-O-TD-H-E)"><Input addonAfter="Rs." /></Form.Item></Col>
                         </Row>
                     </div>
 
                     <div className="my-8">
                         <Title level={5}>B. Details of amount to be distributed</Title>
-                        <Form.Item name="cec_ddf_component" label="i. CEC DDF component CEC-DDF-001 (in case of Open Participation course, if coordination fee amount is above Rs. 8 Lacs)"><Input addonAfter="₹" /></Form.Item>
-                        <Form.Item name="coordination_fee" label="ii. Coordination fee C max@20% of 20% of (T-P)* (Note: whole or part can be transferred to PDF)"><Input addonAfter="₹" /></Form.Item>
+                        <Form.Item name="cec_ddf_component" label="i. CEC DDF component CEC-DDF-001 (in case of Open Participation course, if coordination fee amount is above Rs. 8 Lacs)"><Input addonAfter="Rs." /></Form.Item>
+                        <Form.Item name="coordination_fee" label="ii. Coordination fee C max@20% of 20% of (T-P)* (Note: whole or part can be transferred to PDF)"><Input addonAfter="Rs." /></Form.Item>
                         <p>Details of distribution among Coordinators</p>
                         <p>Mention all the names as per approval even if the amount to be disbursed is NIL.</p>
                         <Table columns={distributionColumns} dataSource={distributionData} pagination={false} bordered className="mb-4" />
-                        <Form.Item name="remaining_amount" label="Remaining amount (if any) to DDF of CEC [CEC-DDF-001] ="><Input addonAfter="₹" /></Form.Item>
+                        <Form.Item name="remaining_amount" label="Remaining amount (if any) to DDF of CEC [CEC-DDF-001] ="><Input addonAfter="Rs." /></Form.Item>
                     </div>
 
                     <div className="mt-8 pt-8 border-t-2">
@@ -125,10 +126,10 @@ const CourseClosureForm = () => {
                         </Row>
                         
                         <div className="mt-8">
-                           <Form.Item name="dist_to_idf" label="Distribution of total institute share into IDF/CEC DDF Account , Total Institute Overhead Charges deducted (P)"><Input addonAfter="₹" /></Form.Item>
-                           <Form.Item name="dist_50_idf" label="(i) 50% to IDF [CEC-IDF-001]"><Input addonAfter="₹" /></Form.Item>
-                           <Form.Item name="dist_45_cec" label="(ii) 45% to CEC [CEC-DDF-001]"><Input addonAfter="₹" /></Form.Item>
-                           <Form.Item name="dist_5_electricity" label="(iii) 5% Electricity [CEC-DDF-001]"><Input addonAfter="₹" /></Form.Item>
+                           <Form.Item name="dist_to_idf" label="Distribution of total institute share into IDF/CEC DDF Account , Total Institute Overhead Charges deducted (P)"><Input addonAfter="Rs." /></Form.Item>
+                           <Form.Item name="dist_50_idf" label="(i) 50% to IDF [CEC-IDF-001]"><Input addonAfter="Rs." /></Form.Item>
+                           <Form.Item name="dist_45_cec" label="(ii) 45% to CEC [CEC-DDF-001]"><Input addonAfter="Rs." /></Form.Item>
+                           <Form.Item name="dist_5_electricity" label="(iii) 5% Electricity [CEC-DDF-001]"><Input addonAfter="Rs." /></Form.Item>
                         </div>
                         
                         <div className="text-right">
@@ -144,7 +145,39 @@ const CourseClosureForm = () => {
                     </div>
 
                     <Form.Item className="mt-8 text-center">
-                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
+                            try {
+                                const values = await form.validateFields();
+                                
+                                // Import the configuration mapping function
+                                const { mapCoordinationFeeCourseClosureDataToConfig } = await import('../../api/generate-pdf/coordination-fee-course-closure-config');
+                                
+                                // Create the form configuration
+                                const formConfig = mapCoordinationFeeCourseClosureDataToConfig(values);
+                                
+                                const res = await fetch('/api/generate-pdf', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        formData: values,
+                                        formConfig: formConfig
+                                    }),
+                                });
+                                if (!res.ok) throw new Error('Failed to generate PDF');
+                                
+                                const blob = await res.blob();
+                                const url = window.URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = 'coordination-fee-course-closure-form.pdf';
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                document.body.removeChild(a);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }}>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

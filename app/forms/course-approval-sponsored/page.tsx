@@ -7,8 +7,76 @@ const { TextArea } = Input;
 const { Title, Text } = Typography;
 
 const CourseApprovalFormSponsored = () => {
-    const onFinish = (values: any) => {
-        console.log('Received values of form: ', values);
+    const onFinish = async (values: any) => {
+        // Prepare complete data for PDF - including all form fields (filled and unfilled)
+        const payload = {
+            // Course Coordinator Information
+            courseCoordinator: values.courseCoordinator,
+            coordinatorDesignation: values.coordinatorDesignation,
+            coordinatorDept: values.coordinatorDept,
+            
+            // Co-coordinator Information
+            cocoordinator1Name: values.cocoordinator1Name,
+            cocoordinator1Designation: values.cocoordinator1Designation,
+            cocoordinator1Dept: values.cocoordinator1Dept,
+            cocoordinator2Name: values.cocoordinator2Name,
+            cocoordinator2Designation: values.cocoordinator2Designation,
+            cocoordinator2Dept: values.cocoordinator2Dept,
+            
+            // Course Details
+            courseTitle: values.courseTitle,
+            batchNo: values.batchNo,
+            sponsorshipType: values.sponsorshipType,
+            sponsorshipOther: values.sponsorshipOther,
+            sponsorDetails: values.sponsorDetails,
+            gstDetails: values.gstDetails,
+            paymentTerms: values.paymentTerms,
+            commencementDate: values.commencementDate?.format?.('YYYY-MM-DD') || '',
+            completionDate: values.completionDate?.format?.('YYYY-MM-DD') || '',
+            duration: values.duration,
+            modeOfDelivery: values.modeOfDelivery,
+            expectedParticipants: values.expectedParticipants,
+            scheduleAttached: values.scheduleAttached,
+            proposedBudget: values.proposedBudget,
+            mouCopy: values.mouCopy,
+            
+            // Instructor Details
+            instructors: values.instructors || [],
+            
+            // Other Information
+            correspondence: values.correspondence,
+            specialApproval: values.specialApproval,
+        };
+        
+        try {
+            // Import the configuration mapping function
+            const { mapCourseApprovalSponsoredDataToConfig } = await import('../../api/generate-pdf/course-approval-sponsored-config');
+            
+            // Create the form configuration
+            const formConfig = mapCourseApprovalSponsoredDataToConfig(payload);
+            
+            const res = await fetch('/api/generate-pdf', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    formData: payload,
+                    formConfig: formConfig
+                }),
+            });
+            if (!res.ok) throw new Error('Failed to generate PDF');
+            const blob = await res.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'course-approval-sponsored-form.pdf';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+        } catch (err) {
+            console.error('PDF generation error:', err);
+            alert('Error generating PDF. Please try again.');
+        }
     };
 
     const normFile = (e: any) => {

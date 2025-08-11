@@ -6,6 +6,7 @@ import { UploadOutlined } from '@ant-design/icons';
 const { Text, Title } = Typography;
 
 const CourseExtensionForm = () => {
+    const [form] = Form.useForm();
 
     const budgetColumns = [
         { title: 'Budget Head / Description', dataIndex: 'description', key: 'description' },
@@ -108,7 +109,39 @@ const CourseExtensionForm = () => {
                     </div>
 
                     <Form.Item className="mt-8 text-center">
-                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
+                            try {
+                                const values = await form.validateFields();
+                                
+                                // Import the configuration mapping function
+                                const { mapCourseExtensionDataToConfig } = await import('../../api/generate-pdf/course-extension-config');
+                                
+                                // Create the form configuration
+                                const formConfig = mapCourseExtensionDataToConfig(values);
+                                
+                                const res = await fetch('/api/generate-pdf', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        formData: values,
+                                        formConfig: formConfig
+                                    }),
+                                });
+                                if (!res.ok) throw new Error('Failed to generate PDF');
+                                
+                                const blob = await res.blob();
+                                const url = window.URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = 'course-extension-form.pdf';
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                document.body.removeChild(a);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }}>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

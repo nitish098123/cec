@@ -5,6 +5,7 @@ import { Form, Input, Row, Col, Typography, Button, DatePicker, Table, Space } f
 const { Text, Title } = Typography;
 
 const RequestForLoanForm = () => {
+    const [form] = Form.useForm();
     const outstandingLoanColumns = [
         { title: 'S. No.', dataIndex: 'sno', key: 'sno', render: (text: any, record: any, index: number) => index + 1 },
         { title: 'Amount', dataIndex: 'amount', key: 'amount', render: () => <Input /> },
@@ -90,7 +91,39 @@ const RequestForLoanForm = () => {
                     <p className="mt-8">Forwarded to the Coordinator CEC for needful.</p>
 
                     <Form.Item className="mt-8 text-center">
-                        <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
+                        <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
+                            try {
+                                const values = await form.validateFields();
+                                
+                                // Import the configuration mapping function
+                                const { mapRequestForLoanDataToConfig } = await import('../../api/generate-pdf/request-for-loan-config');
+                                
+                                // Create the form configuration
+                                const formConfig = mapRequestForLoanDataToConfig(values);
+                                
+                                const res = await fetch('/api/generate-pdf', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        formData: values,
+                                        formConfig: formConfig
+                                    }),
+                                });
+                                if (!res.ok) throw new Error('Failed to generate PDF');
+                                
+                                const blob = await res.blob();
+                                const url = window.URL.createObjectURL(blob);
+                                const a = document.createElement('a');
+                                a.href = url;
+                                a.download = 'request-for-loan-form.pdf';
+                                document.body.appendChild(a);
+                                a.click();
+                                window.URL.revokeObjectURL(url);
+                                document.body.removeChild(a);
+                            } catch (error) {
+                                console.error('Error:', error);
+                            }
+                        }}>Submit & Download Application</Button>
                     </Form.Item>
                 </Form>
             </div>

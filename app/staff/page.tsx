@@ -3,7 +3,6 @@
 import { Image } from "antd";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 // Define the type for the card data
 interface CardData {
@@ -61,7 +60,7 @@ const cardData: CardData[] = [
   },
 ];
 
-function StaffPageContent() {
+export default function StaffPage() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
   const tab = tabParam === "coordinator" ? "coordinator" : "staff";
@@ -148,13 +147,5 @@ function StaffPageContent() {
         </section>
       )}
     </div>
-  );
-}
-
-export default function StaffPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <StaffPageContent />
-    </Suspense>
   );
 }

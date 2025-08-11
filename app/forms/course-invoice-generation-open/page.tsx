@@ -32,7 +32,55 @@ const CourseInvoiceGenerationOpenForm = () => {
                 <div className="flex justify-end mb-4">
                     <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/5.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
                 </div>
-                <Form layout="vertical" name="invoice_generation_open">
+                <Form layout="vertical" name="invoice_generation_open" onFinish={async (values) => {
+                    // Prepare complete data for PDF
+                    const payload = {
+                        partner_details: values.partner_details,
+                        course_code: values.course_code,
+                        course_name: values.course_name,
+                        batch_no: values.batch_no,
+                        duration: values.duration,
+                        instalment_no: values.instalment_no,
+                        fee_per_participant: values.fee_per_participant,
+                        num_students: values.num_students,
+                        total_fee_collected_amount: values.total_fee_collected_amount,
+                        participants_list: values.participants_list,
+                        iitr_fee_percent: values.iitr_fee_percent,
+                        iitr_fee_amount: values.iitr_fee_amount,
+                        total_invoice_amount: values.total_invoice_amount,
+                        total_invoice_amount_words: values.total_invoice_amount_words,
+                    };
+                    
+                    try {
+                        // Import the configuration mapping function
+                        const { mapCourseInvoiceGenerationOpenDataToConfig } = await import('../../api/generate-pdf/course-invoice-generation-open-config');
+                        
+                        // Create the form configuration
+                        const formConfig = mapCourseInvoiceGenerationOpenDataToConfig(payload);
+                        
+                        const res = await fetch('/api/generate-pdf', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                formData: payload,
+                                formConfig: formConfig
+                            }),
+                        });
+                        if (!res.ok) throw new Error('Failed to generate PDF');
+                        const blob = await res.blob();
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'course-invoice-generation-open-form.pdf';
+                        document.body.appendChild(a);
+                        a.click();
+                        a.remove();
+                        window.URL.revokeObjectURL(url);
+                    } catch (err) {
+                        console.error('PDF generation error:', err);
+                        alert('Error generating PDF. Please try again.');
+                    }
+                }}>
                     <Row justify="space-between" align="middle">
                         <Col>
                             <Text strong>CEC-04</Text>
