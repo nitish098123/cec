@@ -3,6 +3,7 @@
 import { Image } from "antd";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 // Define the type for the card data
 interface CardData {
@@ -60,7 +61,7 @@ const cardData: CardData[] = [
   },
 ];
 
-export default function StaffPage() {
+function StaffContent() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
   const tab = tabParam === "coordinator" ? "coordinator" : "staff";
@@ -147,5 +148,35 @@ export default function StaffPage() {
         </section>
       )}
     </div>
+  );
+}
+
+export default function StaffPage() {
+  return (
+    <Suspense fallback={
+      <div className="w-full font-inter bg-white">
+        <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-[url('/staff_background.jpeg')] bg-cover bg-center"
+            aria-hidden="true"
+          ></div>
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          <div className="relative z-30 flex flex-col items-center text-center text-white">
+            <span className="text-2xl md:text-3xl font-medium">IIT Roorkee</span>
+            <span className="text-4xl md:text-5xl font-bold">CEC</span>
+            <span className="text-2xl md:text-3xl font-medium">Staff</span>
+          </div>
+        </section>
+        <div className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="flex justify-center">
+              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-[#1a237e]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }>
+      <StaffContent />
+    </Suspense>
   );
 }
