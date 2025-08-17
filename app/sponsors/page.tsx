@@ -2,6 +2,7 @@
 
 import { Card, Image } from "antd";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 interface Sponsor {
   category: string;
@@ -267,7 +268,7 @@ const sponsors: Sponsor[] = [
   },
 ];
 
-export default function SponsorsPage() {
+function SponsorsContent() {
   const searchParams = useSearchParams();
   const activeCategory =
     searchParams.get("category") || "Ed-Tech Partners";
@@ -345,5 +346,35 @@ export default function SponsorsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SponsorsPage() {
+  return (
+    <Suspense fallback={
+      <div className="w-full font-inter">
+        <div className="relative w-full h-[30vh] md:h-[40vh] flex items-center justify-center">
+          <div
+            className="absolute inset-0 bg-[url('/sponsors_background.jpeg')] bg-cover bg-center brightness-[0.5]"
+            aria-hidden="true"
+          ></div>
+          <div className="relative z-10 text-white text-center px-4">
+            <h1 className="text-3xl md:text-5xl font-bold">Our Sponsors</h1>
+            <p className="text-sm md:text-lg mt-2">
+              Partners in our mission to provide continuing education.
+            </p>
+          </div>
+        </div>
+        <div className="px-4 sm:px-8 md:px-16 py-12 md:py-16">
+          <div className="container mx-auto">
+            <div className="flex justify-center">
+              <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-[#0B2447]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }>
+      <SponsorsContent />
+    </Suspense>
   );
 }
