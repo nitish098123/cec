@@ -39,7 +39,7 @@ export default function CertificatePage() {
       <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center">
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-[url('/TOH_background.jpeg')] bg-cover bg-center brightness-[0.7]"
+          className="absolute inset-0 bg-[url('https://d1bm918zlnq37v.cloudfront.net/CECTemp/TOH_Image0.jpg')] bg-cover bg-center brightness-[0.7]"
           aria-hidden="true"
         ></div>
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
@@ -239,7 +239,7 @@ export default function CertificatePage() {
             <div className="flex justify-center items-center lg:justify-start row-start-2 lg:row-start-1">
               <Image
                 preview={false}
-                src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/TOH_Image3.jpg"
+                src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/Toh_Image3.jpg"
                 alt="AC Room Charges Image"
                 className="w-full max-w-md object-cover rounded-lg"
               />

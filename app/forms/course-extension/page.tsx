@@ -77,36 +77,7 @@ const CourseExtensionForm = () => {
                         </Upload>
                     </Form.Item>
 
-                    <div className="text-right mt-16">
-                        <p>_________________________</p>
-                        <p><Text strong>Signature of Principal Investigator (with date)</Text></p>
-                    </div>
 
-                    <div className="mt-16">
-                        <Row gutter={16} className="text-center">
-                            <Col span={8}><p>...................................</p><p>Dealing Asstt.</p></Col>
-                            <Col span={8}><p>...................................</p><p>Superintendent, CEC</p></Col>
-                            <Col span={8}><p>...................................</p><p>Coordinator, CEC</p></Col>
-                        </Row>
-                        <p className="text-center mt-2"><Text strong>CEC Office, IIT Roorkee</Text><span className="float-right"><Text strong>Recommended/Not Recommended</Text></span></p>
-                    </div>
-
-                    <div className="mt-16 border-t-2 border-dotted pt-8">
-                        <Row gutter={16} className="text-center">
-                            <Col span={8}><p>...................................</p><p>Supdt. (SRIC – Admn),</p></Col>
-                            <Col span={8}><p>...................................</p><p>AR/DR (SRIC-Admn.),</p></Col>
-                            <Col span={8}><p>...................................</p><p>Assoc. Dean (SRIC) / Dean (SRIC)</p></Col>
-                        </Row>
-                         <p className="text-center mt-2"><Text strong>SRIC Office, IIT Roorkee</Text><span className="float-right"><Text strong>Approved /Not Approved</Text></span></p>
-                    </div>
-
-                    <div className="mt-16">
-                        <Row>
-                            <Col span={12}><p>Copy to: 1.Principal Investigator</p></Col>
-                            <Col span={12}><p>2. AR SRIC A/c</p></Col>
-                        </Row>
-                        <p>C:SRIC/SRICCON/05</p>
-                    </div>
 
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {

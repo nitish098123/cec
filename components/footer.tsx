@@ -35,7 +35,8 @@ export const Footer: React.FC = () => {
             <p>
               Address:{" "}
               <span className="font-normal">
-                Sector 15 Kothrud, Pune, Maharashtra
+                Continuing Education Centre,<br />
+                IIT Roorkee
               </span>
             </p>
             <p>

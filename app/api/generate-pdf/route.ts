@@ -55,14 +55,12 @@ export async function POST(req: NextRequest) {
       
       // Only add underline if specifically requested (for form field values)
       if (showUnderline) {
-        const minLineLength = 120; // Minimum underline length
-        const maxX = pageWidth - margin - 20; // Leave 20px from right border
+        const maxX = pageWidth - margin - 20; // Leave 20px from right border as requested
         
         if (displayText !== '') {
-          // Add underline for filled text - start from the beginning of the text
+          // For filled text: underline should go under the text AND extend to 20px from border
           const textWidth = selectedFont.widthOfTextAtSize(displayText, size);
-          const lineLength = Math.max(textWidth, minLineLength);
-          const lineEndX = Math.min(x + lineLength, maxX);
+          const lineEndX = maxX; // Go all the way to 20px from border
           
           page.drawLine({
             start: { x, y: y - 3 },
@@ -71,10 +69,12 @@ export async function POST(req: NextRequest) {
             color: rgb(0, 0, 0),
           });
         } else {
-          // Draw blank line for empty text (fill-in-the-blank style)
-          const lineEndX = Math.min(x + minLineLength, maxX);
+          // For empty text: start line 6px after label ends, go to 20px from border
+          const lineStartX = x + 6; // 6px gap after label position
+          const lineEndX = maxX;
+          
           page.drawLine({
-            start: { x, y: y - 3 },
+            start: { x: lineStartX, y: y - 3 },
             end: { x: lineEndX, y: y - 3 },
             thickness: 1,
             color: rgb(0, 0, 0),
@@ -291,7 +291,40 @@ export async function POST(req: NextRequest) {
         
         if (formConfig.subtitle) {
           drawText(formConfig.subtitle, centerX - (font.widthOfTextAtSize(formConfig.subtitle, 10) / 2), currentY, 10, false, currentPage);
-          currentY = currentY - 30; // Reduced gap to 30px before note section
+          currentY = currentY - 30;
+        }
+        
+        // Add form name based on title (case-insensitive)
+        let formName = '';
+        const title = formConfig.title.toLowerCase();
+        
+        if (title.includes('open participation courses')) {
+          formName = 'CEC-01-A';
+        } else if (title.includes('sponsored courses')) {
+          formName = 'CEC-01-B';
+        } else if (title.includes('course opening form')) {
+          formName = 'CEC-02';
+        } else if (title.includes('revised budget')) {
+          formName = 'CEC-03';
+        } else if (title.includes('invoice generation') && title.includes('open')) {
+          formName = 'CEC-04';
+        } else if (title.includes('invoice generation') && title.includes('sponsored')) {
+          formName = 'CEC-05';
+        } else if (title.includes('remuneration/honorarium')) {
+          formName = 'CEC-06';
+        } else if (title.includes('ta/lab staff') || title.includes('ta/lab') || title.includes('teaching assistant/technical assistant/lab staff')) {
+          formName = 'CEC-07';
+        } else if (title.includes('request for loan')) {
+          formName = 'CEC-08';
+        } else if (title.includes('coordination fee')) {
+          formName = 'CEC-09';
+        } else if (title.includes('course extension') || title.includes('extension of time / revision of project amount')) {
+          formName = 'SRIC/10';
+        }
+        
+        if (formName) {
+          drawText(formName, margin + 20, currentY, 12, true, currentPage);
+          currentY = currentY - 30;
         }
     } else {
         // No logo - start with header text with light red background
@@ -352,11 +385,7 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // Important Note section - No background, just text with proper spacing
-    const noteText = 'Note: Please do not delete any item in the form, provide details as applicable, wherever information is not available mention N.A. The form may need to be sent back for corrections if any item is changed or deleted.';
-    const noteResult = drawMultilineText(noteText, margin + 20, currentY, 450, 12, currentPage, false);
-    currentPage = noteResult.page;
-    currentY = noteResult.currentY - 40; // Reduced space to 40px after note section
+
 
     // Process form fields based on configuration
     for (const field of formConfig.fields) {

@@ -51,7 +51,7 @@ export default function AboutCECSection() {
         </div>
         <div className="flex justify-center items-center">
           <img
-            src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/AboutUsImage.png"
+            src="/AboutUsImage.png?v=2"
             alt="About CEC Image"
             width="350"
             className="object-cover aspect-square rounded-xl shadow-xl"

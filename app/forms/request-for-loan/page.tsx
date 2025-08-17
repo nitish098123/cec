@@ -80,15 +80,7 @@ const RequestForLoanForm = () => {
                          <p><Text strong>Note:</Text> Loan for the course will be settled from Course Code as mentioned at s.no. 8 once we receive the course fee.</p>
                     </div>
 
-                    <div className="mt-16">
-                        <p>(Signature of Course Coordinator)</p>
-                    </div>
 
-                    <div className="text-center mt-16">
-                        <p className="font-bold">(Recommendation of the Coordinator, CEC)</p>
-                    </div>
-
-                    <p className="mt-8">Forwarded to the Coordinator CEC for needful.</p>
 
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {

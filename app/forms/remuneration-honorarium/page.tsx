@@ -140,24 +140,7 @@ const RemunerationHonorariumForm = () => {
                     </Form.Item>
                      <p>(amount to be transferred if per hour rate is more than Rs. 18,000/- as mentioned at**)</p>
                      
-                     <Row justify="space-between" className="mt-8">
-                        <Col><Text strong>BILL VERIFIED</Text></Col>
-                        <Col><Text strong>Signature</Text></Col>
-                     </Row>
-                     <p className="mt-4">Signature of Course Coordinator</p>
-                     
-                     <div className="border p-4 mt-4">
-                        <p>Passed for Payment for Rs. : ____________________</p>
-                        <p>Rupees : ____________________________________</p>
-                        <p>Please debit to Course A/C No. : ______________</p>
-                        <p>Ledger Code No. : __________________________</p>
-                     </div>
-                     
-                     <Row justify="space-between" className="mt-8 border p-4">
-                         <Col><strong>Date</strong></Col>
-                         <Col><strong>Asstt/Supdt.</strong></Col>
-                         <Col><strong>Coordinator, CEC</strong></Col>
-                     </Row>
+
                      
                      <Row justify="end" className="mt-4">
                         <Col><Text strong>PTO</Text></Col>

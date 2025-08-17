@@ -42,19 +42,27 @@ export default function OldFormsPage() {
       render: (text: string) => <span>{text}</span>,
     },
     {
-      title: "Apply",
+      title: "Download PDF",
       dataIndex: "apply_link",
       key: "apply_link",
-      render: (link: string) => (
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#FFAE0E] hover:text-[#FFAE0E] hover:underline"
-        >
-          Apply now
-        </a>
-      ),
+      render: (link: string) => {
+        const pdfLinks = {
+          "/old-forms/course-approval": "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/1.pdf",
+          "/old-forms/advance-form": "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/2.pdf",
+          "/old-forms/remuneration": "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/3.pdf",
+          "/old-forms/course-closing": "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/4.pdf",
+        };
+        return (
+          <a
+            href={pdfLinks[link as keyof typeof pdfLinks]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#FFAE0E] hover:text-[#FFAE0E] hover:underline"
+          >
+            Download PDF
+          </a>
+        );
+      },
     },
   ];
 

@@ -104,38 +104,7 @@ const CourseClosureForm = () => {
                             <Col span={12}><p>(v) Group-photo.</p></Col>
                         </Row>
                         
-                        <div className="text-right mt-8">
-                           <p>Signature of the Course Coordinator (with date)</p>
-                           <p>Extn. (O)__________Mobile__________</p>
-                           <p>Email :_________________________</p>
-                        </div>
-                        
-                        <Title level={5} className="mt-8">Endorsement by CEC/SRIC Office, I.I.T. Roorkee</Title>
-                        <p>The above is submitted for approval as recommended by Coordinator, CEC</p>
-                        
-                        <Row className="mt-8">
-                            <Col span={12}><Title level={5}>Recommended /Not Recommended</Title></Col>
-                            <Col span={12}><Title level={5}>Approved/Not Approved</Title></Col>
-                        </Row>
 
-                        <Row className="mt-8 text-center" gutter={[16, 40]}>
-                            <Col span={6}>D.A /Sr. Supdt. C.E.C.</Col>
-                            <Col span={6}>Coordinator, CEC</Col>
-                            <Col span={6}>D.A. /Supdt. SRIC</Col>
-                            <Col span={6}>A.R./Dy. Registrar (SRIC) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dean, SRIC</Col>
-                        </Row>
-                        
-                        <div className="mt-8">
-                           <Form.Item name="dist_to_idf" label="Distribution of total institute share into IDF/CEC DDF Account , Total Institute Overhead Charges deducted (P)"><Input addonAfter="Rs." /></Form.Item>
-                           <Form.Item name="dist_50_idf" label="(i) 50% to IDF [CEC-IDF-001]"><Input addonAfter="Rs." /></Form.Item>
-                           <Form.Item name="dist_45_cec" label="(ii) 45% to CEC [CEC-DDF-001]"><Input addonAfter="Rs." /></Form.Item>
-                           <Form.Item name="dist_5_electricity" label="(iii) 5% Electricity [CEC-DDF-001]"><Input addonAfter="Rs." /></Form.Item>
-                        </div>
-                        
-                        <div className="text-right">
-                           <p>________________</p>
-                           <p>Coordinator, CEC</p>
-                        </div>
                         
                         <div className="mt-8">
                            <p><Text strong>* Coordination Fee</Text></p>

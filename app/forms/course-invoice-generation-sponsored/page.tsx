@@ -151,31 +151,6 @@ const CourseInvoiceGenerationSponsoredForm = () => {
                     <div className="mt-8">
                         <Text>Certified that the particulars given above are true and correct.</Text>
                     </div>
-                    
-                    <Row justify="end" className="mt-8">
-                        <Col>
-                           <p>___________________</p>
-                           <p>Prof.</p>
-                           <p>Course Coordinator (s)</p>
-                        </Col>
-                    </Row>
-                    
-                     <div className="mt-16">
-                        <Text>Forwarded to Dean SRIC Office</Text>
-                    </div>
-                    
-                    <Row justify="end" className="mt-8">
-                        <Col className="text-center">
-                            <Text strong>Coordinator</Text><br/>
-                            <Text strong>CEC IIT Roorkee</Text>
-                        </Col>
-                    </Row>
-
-                    <div className="mt-4">
-                        <p>___________________</p>
-                        <p>Prof.</p>
-                        <p>Course Coordinator (s)</p>
-                    </div>
 
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>

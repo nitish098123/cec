@@ -376,14 +376,7 @@ const CourseApprovalFormOpen = () => {
                         </Form.List>
                     </Card>
 
-                    <div className="mt-8">
-                        <p>D.A./Supdt. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Asstt. Registrar/Dy. Registrar (SRIC) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dean, SRIC</p>
-                        
-                        <p className="mt-8"><b>Copy after approval to:</b></p>
-                        <p>(1) Course Coordinator (2) Concerned HoD (3) Coordinator, CEC (4) AR SRIC- AC</p>
-                    </div>
 
-                    <p className="text-right mt-8">Dean, SRIC</p>
 
                     <Form.Item className="mt-12 text-center">
                         <Button type="primary" htmlType="submit" className="bg-[#FFAE0E] text-black font-semibold w-full mt-6">

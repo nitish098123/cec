@@ -167,20 +167,6 @@ export default function CertificatePage() {
             </Form.Item>
           </Form>
         </div>
-        {/* Sample Certificate Section */}
-        <div className="p-6 max-w-md mx-auto container mt-4">
-          <div className="flex flex-col items-center bg-[#FFF6E0] rounded-lg shadow-md py-6">
-            <h2 className="text-xl font-semibold mb-4 text-center">Sample Certificate</h2>
-            <a
-              href="https://d1bm918zlnq37v.cloudfront.net/CECTemp/sample_cert (1).pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#FFAE0E] hover:bg-[#E5893C] text-black font-medium px-6 py-3 rounded-lg transition-colors duration-200 text-lg shadow"
-            >
-              View Sample Certificate
-            </a>
-          </div>
-        </div>
       </section>
     </div>
   );

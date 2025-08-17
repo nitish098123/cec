@@ -413,7 +413,7 @@ export default function HomePage() {
 
       {/* Notice section */}
       <section className="bg-[#F5F5F5] relative">
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden pr-32">
           <div className="flex animate-scroll whitespace-nowrap py-2.5">
             <ul className="flex list-disc">
               {items.map((item, index) => (
@@ -433,10 +433,10 @@ export default function HomePage() {
         </div>
         
         {/* View All Button */}
-        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10">
+        <div className="absolute right-0 top-0 h-full z-10">
           <button
             onClick={() => setShowNoticePopup(true)}
-            className="bg-[#FFAE0E] hover:bg-[#E5893C] text-black px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-[0_4px_12px_rgba(255,174,14,0.3)] hover:shadow-[0_8px_20px_rgba(255,174,14,0.4)]"
+            className="bg-[#FFAE0E] hover:bg-[#E5893C] text-black px-6 h-full font-medium text-lg underline transition-all duration-200 shadow-[0_4px_12px_rgba(255,174,14,0.3)] hover:shadow-[0_8px_20px_rgba(255,174,14,0.4)]"
           >
             View All
           </button>
@@ -495,8 +495,8 @@ export default function HomePage() {
               <div className="bg-[#E2F1FF] p-4 max-w-sm -rotate-2 space-y-1">
                 <Image
                   preview={false}
-                  src="/TOH-1.png"
-                  alt="Trainee Officer's Hostel"
+                  src="/AboutUsImage.png?v=2"
+                  alt="Continuing Education Center"
                   className="w-full object-cover aspect-square"
                 />
                 <p className="font-semibold text-lg md:text-xl">

@@ -262,59 +262,7 @@ const CourseOpeningForm = () => {
                         <InputNumber style={{width: '100%'}} />
                     </Form.Item>
 
-                    <div className="mt-8">
-                        <Row justify="end" align="middle">
-                            <Col>
-                                <p className="font-bold">Name of Course Coordinator/PI</p>
-                                <p className="font-bold">Signature of Course Coordinator/PI (with date)</p>
-                            </Col>
-                        </Row>
-                    </div>
 
-                    <Card title="CEC Office, IIT Roorkee" className="mt-8">
-                         <Row justify="space-between">
-                            <Col>
-                                <p>Recommended/Not Recommended</p>
-                                <br/>
-                                <p>...................................</p>
-                                <p>Dealing Asstt.</p>
-                            </Col>
-                             <Col>
-                                <br/><br/>
-                                <p>...................................</p>
-                                <p>Sr. Superintendent, CEC</p>
-                            </Col>
-                             <Col>
-                                <br/><br/>
-                                <p>...................................</p>
-                                <p>Coordinator, CEC</p>
-                            </Col>
-                        </Row>
-                    </Card>
-                    <Card title="SRIC Office, IIT Roorkee" className="mt-8">
-                         <Row justify="space-between">
-                            <Col>
-                                <p>Approved / Not Approved</p>
-                                <br/>
-                                <p>...................................</p>
-                                <p>Supdt. (SRIC – Admn).</p>
-                            </Col>
-                             <Col>
-                                <br/><br/>
-                                <p>...................................</p>
-                                <p>AR (SRIC-Admn.),</p>
-                            </Col>
-                             <Col>
-                                <br/><br/>
-                                <p>...................................</p>
-                                <p>Assoc. Dean (SRIC) / Dean (SRIC)</p>
-                            </Col>
-                        </Row>
-                    </Card>
-
-                    <div className="mt-8">
-                        <p>Copy to: Asstt. Reg. (SRIC-A/Cs)</p>
-                    </div>
 
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600'>Submit & Download Application</Button>
