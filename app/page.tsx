@@ -163,6 +163,16 @@ const courses: Course[] = [
     category: "Management",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Strategic.jpg",
   },
+  {
+    id: 15,
+    name: "AI Driven Strategic HR Management",
+    duration: "6-8 Months",
+    mode: "Online",
+    students: "400+",
+    partner: "Jaro Education",
+    category: "Management",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HR.jpg",
+  },
   // Sustainability
   {
     id: 13,
@@ -742,10 +752,11 @@ export default function HomePage() {
                       course.id === 12 ? "https://www.jaroeducation.com/strategic-product-certification-iit-roorkee/" :
                       course.id === 13 ? "https://www.eduxll.com/programmes/SUSTAINABILITY-ESG-AND-GRI-STANDARDS" :
                       course.id === 14 ? "https://cec.iitr.ac.in/Brochure/Information_brochure.pdf" :
+                      course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 ? "noopener noreferrer" : undefined}
                     className="block"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md">
