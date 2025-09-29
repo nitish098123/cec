@@ -40,15 +40,15 @@ export const Footer: React.FC = () => {
               </span>
             </p>
             <p>
-              Phone: <span>+91-9087654321</span>
+              Phone: <span>+91-133228-5545</span>
             </p>
             <p>
               Email:{" "}
               <Link
-                href="mailto:contactcec@iitr.com"
+                href="mailto:contd@iitr.ac.in"
                 className="hover:text-[#FFAE0E] hover:underline font-normal"
               >
-                contactcec@iitr.com
+                contd@iitr.ac.in
               </Link>
             </p>
           </address>

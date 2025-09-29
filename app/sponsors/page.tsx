@@ -2,7 +2,6 @@
 
 import { Card, Image } from "antd";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 interface Sponsor {
   category: string;
@@ -268,7 +267,7 @@ const sponsors: Sponsor[] = [
   },
 ];
 
-function SponsorsContent() {
+export default function SponsorsPage() {
   const searchParams = useSearchParams();
   const activeCategory =
     searchParams.get("category") || "Ed-Tech Partners";
@@ -346,43 +345,5 @@ function SponsorsContent() {
         </div>
       </div>
     </div>
-  );
-}
-
-export default function SponsorsPage() {
-  return (
-    <Suspense fallback={
-      <div className="w-full font-inter">
-        <div className="relative w-full h-[30vh] md:h-[40vh] flex items-center justify-center">
-          <div
-            className="absolute inset-0 bg-[url('/sponsors_background.jpeg')] bg-cover bg-center brightness-[0.5]"
-            aria-hidden="true"
-          ></div>
-          <div className="relative z-10 text-white text-center px-4">
-            <h1 className="text-3xl md:text-5xl font-bold">Our Sponsors</h1>
-            <p className="text-sm md:text-lg mt-2">
-              Partners in our mission to provide continuing education.
-            </p>
-          </div>
-        </div>
-        <div className="px-4 sm:px-8 md:px-16 py-12 md:py-16">
-          <div className="container mx-auto">
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
-              {sponsors.map(({ category }) => (
-                <div
-                  key={category}
-                  className="px-4 py-2 text-sm md:text-base font-medium rounded-full bg-gray-200 text-gray-700"
-                >
-                  {category}
-                </div>
-              ))}
-            </div>
-            <div className="text-center text-gray-600">Loading sponsors...</div>
-          </div>
-        </div>
-      </div>
-    }>
-      <SponsorsContent />
-    </Suspense>
   );
 }

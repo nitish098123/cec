@@ -53,13 +53,13 @@ const courses: Course[] = [
   },
   {
     id: 2,
-    name: "Data Science and AI",
-    duration: "12 Months",
+    name: "AI Engineering on Cloud and AIOps",
+    duration: "9 Months",
     mode: "Online",
     students: "800+",
-    partner: "CloudxLab",
+    partner: "Futurense",
     category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_DataSci.jpg",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/cloud.jpg",
   },
   {
     id: 3,
@@ -73,13 +73,13 @@ const courses: Course[] = [
   },
   {
     id: 4,
-    name: "Accelerators for Deep Learning",
-    duration: "3 Months",
+    name: "AI/GenAI Powered Cybersecurity",
+    duration: "7-8 Months",
     mode: "Online",
     students: "600+",
-    partner: "CloudxLab",
+    partner: "Futurense",
     category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Accelerators.png",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Cybersecurity.png",
   },
   {
     id: 5,
@@ -100,6 +100,26 @@ const courses: Course[] = [
     partner: "Times Pro",
     category: "Emerging Technologies",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_DataSci_ML.jpg",
+  },
+  {
+    id: 16,
+    name: "AI for Business Transformation",
+    duration: "4.5 Months",
+    mode: "Online",
+    students: "500+",
+    partner: "Zerozeta",
+    category: "Emerging Technologies",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/AI_business_transformation.jpeg",
+  },
+  {
+    id: 17,
+    name: "IIT Roorkee Advanced Certificate in Quantum Computing: Algorithms & AIML",
+    duration: "6.5 Months",
+    mode: "Online",
+    students: "300+",
+    partner: "Timespro",
+    category: "Emerging Technologies",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Quantum_computing.jpeg",
   },
   // Hardware & IT
   {
@@ -142,16 +162,6 @@ const courses: Course[] = [
     partner: "Imarticus",
     category: "Management",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_SCM.png",
-  },
-  {
-    id: 11,
-    name: "Digital Marketing and MarTech",
-    duration: "4.5 Months",
-    mode: "Online",
-    students: "600+",
-    partner: "Imarticus Learning",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_digital.png",
   },
   {
     id: 12,
@@ -738,25 +748,26 @@ export default function HomePage() {
                   <Link
                     key={course.id}
                     href={
-                      course.id === 1 ? "https://futurense.com/uni/genai" :
-                      course.id === 2 ? "https://cloudxlab.com/course/188/pg-certificate-program-in-data-science-ai-by-cec-iit-roorkee" :
+                      course.id === 1 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
+                      course.id === 2 ? "https://futurense.com/uni/ai-engineering" :
                       course.id === 3 ? "/courses/applied-data-science" :
-                      course.id === 4 ? "/courses/accelerators-deep-learning" :
+                      course.id === 4 ? "https://futurense.com/uni/cybersecurity" :
                       course.id === 5 ? "https://iitroorkee.manufacturing.zerozeta.com/" :
                       course.id === 6 ? "/courses/data-science-ml" :
                       course.id === 7 ? "https://tejasiitr.com/" :
                       course.id === 8 ? "https://imarticus.org/certification-program-in-human-resource-management-and-analytics-iit-roorkee/" :
                       course.id === 9 ? "https://hellopm.co/pm-accelerator-iitr/" :
                       course.id === 10 ? "https://imarticus.org/professional-certification-in-supply-chain-management-and-analytics-by-IIT-Roorkee/" :
-                      course.id === 11 ? "https://imarticus.org/advanced-certification-in-digital-marketing-and-martech-iit-roorkee/" :
                       course.id === 12 ? "https://www.jaroeducation.com/strategic-product-certification-iit-roorkee/" :
                       course.id === 13 ? "https://www.eduxll.com/programmes/SUSTAINABILITY-ESG-AND-GRI-STANDARDS" :
                       course.id === 14 ? "https://cec.iitr.ac.in/Brochure/Information_brochure.pdf" :
                       course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
+                      course.id === 16 ? "https://zzstage.zerozeta.com/ai-organisational-growth" :
+                      course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 ? "noopener noreferrer" : undefined}
                     className="block"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md">
@@ -1286,7 +1297,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-between">
                   <span className="text-[#FFAE0E] font-medium">Futurense</span>
                   <a 
-                    href="https://futurense.com/uni/genai" 
+                    href="https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 font-medium"
