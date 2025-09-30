@@ -464,12 +464,12 @@ export async function POST(req: NextRequest) {
 
     // Serialize the PDFDocument to bytes
     const pdfBytes = await pdfDoc.save();
-    const pdfBuffer = Buffer.from(pdfBytes);
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(pdfBytes, {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
+        'Content-Disposition': 'attachment; filename="form.pdf"',
       },
     });
   } catch (error: any) {

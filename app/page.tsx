@@ -82,16 +82,6 @@ const courses: Course[] = [
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Cybersecurity.png",
   },
   {
-    id: 5,
-    name: "AI/ML Applications in Manufacturing Operations",
-    duration: "30 Hrs",
-    mode: "Online",
-    students: "700+",
-    partner: "ZeroZeta",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_AIML.png",
-  },
-  {
     id: 6,
     name: "Data Science & Machine Learning",
     duration: "8 Months",
@@ -120,6 +110,16 @@ const courses: Course[] = [
     partner: "Timespro",
     category: "Emerging Technologies",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Quantum_computing.jpeg",
+  },
+  {
+    id: 19,
+    name: "GenAI, Agentic AI & Data Science for Enterprises",
+    duration: "7 Months",
+    mode: "Online",
+    students: "600+",
+    partner: "Futurense",
+    category: "Emerging Technologies",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_GenAI.jpg",
   },
   // Hardware & IT
   {
@@ -182,6 +182,16 @@ const courses: Course[] = [
     partner: "Jaro Education",
     category: "Management",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HR.jpg",
+  },
+  {
+    id: 18,
+    name: "AI-Enabled Digital Marketing & MarTech",
+    duration: "6 Months",
+    mode: "Online",
+    students: "500+",
+    partner: "Futurense",
+    category: "Management",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Digital_Marketing&Martech.jpeg",
   },
   // Sustainability
   {
@@ -749,25 +759,26 @@ export default function HomePage() {
                     key={course.id}
                     href={
                       course.id === 1 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
-                      course.id === 2 ? "https://futurense.com/uni/ai-engineering" :
+                      course.id === 2 ? "https://futurense.com/iit-roorkee/aiops" :
                       course.id === 3 ? "/courses/applied-data-science" :
-                      course.id === 4 ? "https://futurense.com/uni/cybersecurity" :
-                      course.id === 5 ? "https://iitroorkee.manufacturing.zerozeta.com/" :
+                      course.id === 4 ? "https://futurense.com/iit-roorkee/ai-genai-cybersecurity-pg" :
                       course.id === 6 ? "/courses/data-science-ml" :
                       course.id === 7 ? "https://tejasiitr.com/" :
                       course.id === 8 ? "https://imarticus.org/certification-program-in-human-resource-management-and-analytics-iit-roorkee/" :
                       course.id === 9 ? "https://hellopm.co/pm-accelerator-iitr/" :
                       course.id === 10 ? "https://imarticus.org/professional-certification-in-supply-chain-management-and-analytics-by-IIT-Roorkee/" :
                       course.id === 12 ? "https://www.jaroeducation.com/strategic-product-certification-iit-roorkee/" :
-                      course.id === 13 ? "https://www.eduxll.com/programmes/SUSTAINABILITY-ESG-AND-GRI-STANDARDS" :
-                      course.id === 14 ? "https://cec.iitr.ac.in/Brochure/Information_brochure.pdf" :
+                      course.id === 13 ? "https://www.eduxll.com/programmes/sustainability-esg-and-gri-standards" :
+                      course.id === 14 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Information_brochure.pdf" :
                       course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
                       course.id === 16 ? "https://zzstage.zerozeta.com/ai-organisational-growth" :
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
+                      course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-in-ai-enabled-digital-marketing-martech-iit-roorkee" :
+                      course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 ? "noopener noreferrer" : undefined}
                     className="block"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md">
@@ -857,7 +868,7 @@ export default function HomePage() {
           {/* Sponsors Section */}
           <div className="mt-12">
             <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center border-b-4 max-w-max mx-auto pb-2 border-b-[#FFC758] tracking-wide">
-              Our Sponsors
+              Sponsors & EdTech Partners
             </h2>
             <div className="w-full overflow-hidden">
               <div className="flex gap-x-12 animate-scroll whitespace-nowrap py-6">
@@ -1067,7 +1078,7 @@ export default function HomePage() {
                 href="/sponsors"
                 className="inline-flex items-center gap-2 text-[#FFAE0E] hover:text-[#E5893C] font-medium transition-colors duration-200"
               >
-                View All Sponsors
+                View All
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
