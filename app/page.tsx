@@ -758,7 +758,7 @@ export default function HomePage() {
                   <Link
                     key={course.id}
                     href={
-                      course.id === 1 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
+                      course.id === 1 ? "https://futurense.com/iit-roorkee/genai-and-agentic-ai-iit-rorkee" :
                       course.id === 2 ? "https://futurense.com/iit-roorkee/aiops" :
                       course.id === 3 ? "/courses/applied-data-science" :
                       course.id === 4 ? "https://futurense.com/iit-roorkee/ai-genai-cybersecurity-pg" :
@@ -773,7 +773,7 @@ export default function HomePage() {
                       course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
                       course.id === 16 ? "https://zzstage.zerozeta.com/ai-organisational-growth" :
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
-                      course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-in-ai-enabled-digital-marketing-martech-iit-roorkee" :
+                      course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
                       course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
                       "#"
                     }
