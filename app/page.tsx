@@ -744,7 +744,7 @@ export default function HomePage() {
           </div>
 
           {/* Courses List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto" style={{ gridAutoRows: '1fr' }}>
             {filteredCourses.length > 0 ? (
               <>
                 {searchTerm && (
@@ -779,9 +779,9 @@ export default function HomePage() {
                     }
                     target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 ? "_blank" : undefined}
                     rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 ? "noopener noreferrer" : undefined}
-                    className="block"
+                    className="block h-full"
                   >
-                    <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md">
+                    <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
                       <Card
                         hoverable={false}
                         className="border rounded-md shadow-md h-full flex flex-col overflow-hidden cursor-pointer"
@@ -791,6 +791,7 @@ export default function HomePage() {
                             display: "flex",
                             flexDirection: "column",
                             flexGrow: 1,
+                            height: "100%",
                           }
                         }}
                       >
@@ -798,11 +799,11 @@ export default function HomePage() {
                           preview={false}
                           src={course.image || "/course.jpeg"}
                           alt={course.name}
-                          className="h-40 w-full object-cover"
+                          className="h-40 w-full object-cover flex-shrink-0"
                           style={{ aspectRatio: "16/9" }}
                         />
 
-                        <div className="p-4 flex flex-col flex-grow">
+                        <div className="p-4 flex flex-col h-full">
                           <div>
                             <h3 className="font-semibold text-xl">{course.name}</h3>
 
@@ -821,6 +822,8 @@ export default function HomePage() {
                               </p>
                             </div>
                           </div>
+
+                          <div className="flex-grow"></div>
 
                           <div>
                             <div className="w-full flex justify-between items-center mt-2">

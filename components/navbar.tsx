@@ -77,9 +77,9 @@ export const Navbar: React.FC = () => {
       label: "Sponsors",
       href: "/sponsors",
       submenu: [
-        { title: "International Sponsors", href: "/sponsors?section=international" },
-        { title: "National Sponsors", href: "/sponsors?section=national" },
-        { title: "Ed-tech sponsers", href: "/sponsors?section=edtech" },
+        { title: "International Sponsors", href: "/sponsors?category=International Sponsors" },
+        { title: "National Sponsors", href: "/sponsors?category=National Sponsors" },
+        { title: "Ed-tech sponsers", href: "/sponsors?category=Ed-Tech Partners" },
       ],
     },
     {
@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
         { title: "About", href: "/qip", target: "_blank" },
         { title: "Selected Candidates (Sponsored)", href: "/qip", target: "_blank" },
         { title: "Selected Candidates (Self-Financed)", href: "/qip", target: "_blank" },
-        { title: "NQCC Members", href: "/qip", target: "_blank" },
+        { title: "NQCC Members", href: "/qip/nqcc-members" },
       ],
     },
     {

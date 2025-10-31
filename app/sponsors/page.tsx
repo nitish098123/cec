@@ -2,6 +2,7 @@
 
 import { Card, Image } from "antd";
 import { useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
 
 interface Sponsor {
   category: string;
@@ -12,44 +13,6 @@ interface Sponsor {
 }
 
 const sponsors: Sponsor[] = [
-  {
-    category: "Ed-Tech Partners",
-    items: [
-      {
-        name: "Futurense Technologies",
-        imageUrl: "/ed-tech-partners/futurense.png",
-      },
-      {
-        name: "Carbon U Turn Technology Private Limited",
-        imageUrl: "/ed-tech-partners/carbon-uturn.png",
-      },
-      { name: "Hunarho", imageUrl: "/ed-tech-partners/hunarho.png" },
-      { name: "Protecon", imageUrl: "/ed-tech-partners/protecon.png" },
-      { name: "CloudxLab", imageUrl: "/ed-tech-partners/cloudxlab.png" },
-      { name: "Coursera Inc.", imageUrl: "/ed-tech-partners/coursera.png" },
-      { name: "Jaro Education", imageUrl: "/ed-tech-partners/jaro.png" },
-      {
-        name: "Imarticus Learning Pvt. Ltd.",
-        imageUrl: "/ed-tech-partners/imarticus.png",
-      },
-      { name: "Simplilearn", imageUrl: "/ed-tech-partners/simplilearn.png" },
-      {
-        name: "Zero Code Technology",
-        imageUrl: "/ed-tech-partners/zerocode.png",
-      },
-      { name: "Futurewiz", imageUrl: "/ed-tech-partners/futurewiz.png" },
-      {
-        name: "Coding Ninjas",
-        imageUrl: "/ed-tech-partners/coding-ninjas.png",
-      },
-      { name: "USAII", imageUrl: "/ed-tech-partners/usaii.png" },
-      {
-        name: "Talent Sprint",
-        imageUrl: "/ed-tech-partners/talent-sprint.png",
-      },
-      { name: "EduXLL", imageUrl: "/ed-tech-partners/eduxll.png" },
-    ],
-  },
   {
     category: "International Sponsors",
     items: [
@@ -265,12 +228,57 @@ const sponsors: Sponsor[] = [
       },
     ],
   },
+  {
+    category: "Ed-Tech Partners",
+    items: [
+      {
+        name: "Futurense Technologies",
+        imageUrl: "/ed-tech-partners/futurense.png",
+      },
+      {
+        name: "Carbon U Turn Technology Private Limited",
+        imageUrl: "/ed-tech-partners/carbon-uturn.png",
+      },
+      { name: "Hunarho", imageUrl: "/ed-tech-partners/hunarho.png" },
+      { name: "Protecon", imageUrl: "/ed-tech-partners/protecon.png" },
+      { name: "CloudxLab", imageUrl: "/ed-tech-partners/cloudxlab.png" },
+      { name: "Coursera Inc.", imageUrl: "/ed-tech-partners/coursera.png" },
+      { name: "Jaro Education", imageUrl: "/ed-tech-partners/jaro.png" },
+      {
+        name: "Imarticus Learning Pvt. Ltd.",
+        imageUrl: "/ed-tech-partners/imarticus.png",
+      },
+      { name: "Simplilearn", imageUrl: "/ed-tech-partners/simplilearn.png" },
+      {
+        name: "Zero Code Technology",
+        imageUrl: "/ed-tech-partners/zerocode.png",
+      },
+      { name: "Futurewiz", imageUrl: "/ed-tech-partners/futurewiz.png" },
+      {
+        name: "Coding Ninjas",
+        imageUrl: "/ed-tech-partners/coding-ninjas.png",
+      },
+      { name: "USAII", imageUrl: "/ed-tech-partners/usaii.png" },
+      {
+        name: "Talent Sprint",
+        imageUrl: "/ed-tech-partners/talent-sprint.png",
+      },
+      { name: "EduXLL", imageUrl: "/ed-tech-partners/eduxll.png" },
+    ],
+  },
 ];
 
 export default function SponsorsPage() {
   const searchParams = useSearchParams();
   const activeCategory =
-    searchParams.get("category") || "Ed-Tech Partners";
+    searchParams.get("category") || "International Sponsors";
+  const categoryRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (categoryRef.current) {
+      categoryRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [activeCategory]);
 
   return (
     <div className="w-full font-inter">
@@ -313,7 +321,7 @@ export default function SponsorsPage() {
             {sponsors
               .filter(({ category }) => category === activeCategory)
               .map(({ category, items }) => (
-                <div key={category}>
+                <div key={category} ref={categoryRef}>
                   <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8">
                     {category}
                   </h2>
