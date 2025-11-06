@@ -17,8 +17,16 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Only run middleware for CA certificate paths - much more efficient
+  // Match all routes except static files and API routes
+  // The middleware logic will efficiently filter for CA paths only
   matcher: [
-    '/CA/:path*',
-  ]
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
 }
