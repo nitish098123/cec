@@ -1,14 +1,122 @@
 "use client";
 
-import { Form, Input, Button, Image, ConfigProvider } from "antd";
+import { Form, Input, Button, Image, ConfigProvider, message } from "antd";
 import { useState } from "react";
+
+// Certificate data
+const certificateData = [
+  {
+    name: "Ojas",
+    email: "ojaspsy@gmail.com",
+    number: "9310313544",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/1.jpg"
+  },
+  {
+    name: "G Saqlain Pasha",
+    email: "gsaqlainpasha@zoho.com",
+    number: "9993864927",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/2.jpg"
+  },
+  {
+    name: "Santhosh MB",
+    email: "santhoshmechery@gmail.com",
+    number: "9446035457",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/3.jpg"
+  },
+  {
+    name: "Dr. Binod Kumar Verma ",
+    email: "drbkverma@gmail.com",
+    number: "7903880832",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/4.jpg"
+  },
+  {
+    name: "Murugeshwari ",
+    email: "murugeshwarim2004@gmail.com",
+    number: "9159400257",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/5.jpg"
+  },
+  {
+    name: "Dr. Khushboo ",
+    email: "khushboo030303@gmail.com",
+    number: "8808459800",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/6.jpg"
+  },
+  {
+    name: "Deepthika Shree",
+    email: "deepthikashree@gmail.com",
+    number: "8248620345",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/7.jpg"
+  },
+  {
+    name: "Mohd. Muzafer Khan",
+    email: "khn_mzfr@yahoo.co.in",
+    number: "9419408588",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/8.jpg"
+  },
+  {
+    name: "Dr. Syed Sajid Husain Kazmi ",
+    email: "dr.shkazmi@gmail.com",
+    number: "8565001786",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/9.jpg"
+  },
+  {
+    name: "Shahana Parveen P.P",
+    email: "shahanapp313@gmail.com",
+    number: "8589922661",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/10.jpg"
+  },
+  {
+    name: "Dr. Santwana Mani",
+    email: "Santwanamani1705@gmail.com",
+    number: "9818489746",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/11.jpg"
+  },
+  {
+    name: "Archie Rathi ",
+    email: "duhh.itzz.archie@gmail.com",
+    number: "9810970849",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/12.jpg"
+  },
+  {
+    name: "Kiranmala Phijam",
+    email: "daisyphijam5@gmail.com",
+    number: "7005666560",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/13.jpg"
+  },
+  {
+    name: "Pragati Katoch ",
+    email: "Pragatikatoch23@gmail.com",
+    number: "8626837917",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/14.jpg"
+  },
+  {
+    name: "Divya Kansal ",
+    email: "divyakansal.0303@gmail.com",
+    number: "9839226365",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/15.jpg"
+  }
+];
 
 export default function CertificatePage() {
   const [form] = Form.useForm();
   const [tab, setTab] = useState<"download" | "verify">("download");
 
-  const onFinish = (values: unknown) => {
-    console.log("Form Values:", values);
+  const onFinish = (values: { phone: string; [key: string]: unknown }) => {
+    const phoneNumber = String(values.phone).trim().replace(/\s+/g, "");
+    
+    // Find matching certificate by phone number
+    const matchedCertificate = certificateData.find(
+      (cert) => String(cert.number).trim() === phoneNumber
+    );
+
+    if (matchedCertificate) {
+      // Redirect to certificate link
+      window.open(matchedCertificate.certificate_links, "_blank");
+      message.success("Certificate found! Opening download...");
+    } else {
+      // Show error message
+      message.error("Mobile number not matched");
+    }
   };
   return (
     <div className="w-full">
