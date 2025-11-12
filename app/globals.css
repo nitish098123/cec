@@ -20,3 +20,19 @@ body {
 .animate-testimonial-scroll:hover {
   animation-play-state: paused;
 }
+
+@keyframes notice-mobile-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.notice-mobile-track {
+  display: flex;
+  animation: notice-mobile-scroll 60s linear infinite;
+  width: max-content;
+  gap: 1.5rem;
+}

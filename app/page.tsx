@@ -83,7 +83,7 @@ const courses: Course[] = [
   },
   {
     id: 6,
-    name: "Data Science & Machine Learning",
+    name: "Data Science, Machine Learning & Generative AI",
     duration: "8 Months",
     mode: "Online",
     students: "900+",
@@ -443,27 +443,60 @@ export default function HomePage() {
 
       {/* Notice section */}
       <section className="bg-[#F5F5F5] relative">
-        <div className="w-full overflow-hidden pr-32">
-          <div className="flex animate-scroll whitespace-nowrap py-2.5">
-            <ul className="flex list-disc">
-              {items.map((item, index) => (
-                <li key={index} className="mx-6 text-xl font-normal list-disc">
-                  <a 
-                    href={item.link} 
-                    target="_blank" 
+        {/* Mobile Notice Ticker */}
+        <div className="md:hidden px-4 py-4">
+          <div className="w-full overflow-hidden">
+            <div className="notice-mobile-track py-2">
+              {[...noticeItems, ...noticeItems].map((item, index) => (
+                <div
+                  key={`${item.text}-${index}`}
+                  className="flex items-center gap-2 pr-6 whitespace-nowrap text-sm"
+                >
+                  <span className="w-2 h-2 bg-[#FFAE0E] rounded-full flex-shrink-0"></span>
+                  <a
+                    href={item.link}
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#FFAE0E] transition-colors duration-200 cursor-pointer"
+                    className="font-medium text-gray-800 hover:text-[#FFAE0E] transition-colors duration-200"
                   >
                     {item.text}
                   </a>
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
+          </div>
+          <button
+            onClick={() => setShowNoticePopup(true)}
+            className="mt-3 w-full bg-[#FFAE0E] hover:bg-[#E5893C] text-black py-2 font-medium text-base underline transition-all duration-200 shadow-[0_4px_12px_rgba(255,174,14,0.3)] hover:shadow-[0_8px_20px_rgba(255,174,14,0.4)]"
+          >
+            View All
+          </button>
+        </div>
+
+        {/* Desktop Notice Ticker */}
+        <div className="hidden md:block">
+          <div className="w-full overflow-hidden pr-32">
+            <div className="flex animate-scroll whitespace-nowrap py-2.5">
+              <ul className="flex list-disc">
+                {items.map((item, index) => (
+                  <li key={index} className="mx-6 text-xl font-normal list-disc">
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-[#FFAE0E] transition-colors duration-200 cursor-pointer"
+                    >
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-        
+
         {/* View All Button */}
-        <div className="absolute right-0 top-0 h-full z-10">
+        <div className="hidden md:block absolute right-0 top-0 h-full z-10">
           <button
             onClick={() => setShowNoticePopup(true)}
             className="bg-[#FFAE0E] hover:bg-[#E5893C] text-black px-6 h-full font-medium text-lg underline transition-all duration-200 shadow-[0_4px_12px_rgba(255,174,14,0.3)] hover:shadow-[0_8px_20px_rgba(255,174,14,0.4)]"

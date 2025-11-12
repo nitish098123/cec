@@ -102,7 +102,7 @@ export default function GalleryPage() {
 
   return (
     <div className="w-full font-inter">
-      <section className="relative w-full h-[80vh] flex items-center justify-center">
+      <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-[url('/gallery_background.jpeg')] bg-cover bg-center brightness-[0.7]"
@@ -111,34 +111,36 @@ export default function GalleryPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10"></div>
 
         {/* Content */}
-        <div className="relative flex items-center z-20">
+        <div className="relative flex flex-col sm:flex-row items-center sm:items-center z-20 px-4 text-center sm:text-left gap-4">
           <Image
             preview={false}
             src="/IITR_logo.png"
-            width="164px"
-            height="164px"
-            className=""
+            width="140px"
+            height="140px"
+            className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px]"
             alt="IITR Logo"
           />
-          <div className="border-l pl-2 text-white">
-            <span className="text-2xl">IIT ROORKEE</span>
-            <p className="text-4xl">CEC</p>
-            <p className="text-4xl">Photo Gallery</p>
+          <div className="sm:border-l sm:pl-2 text-white">
+            <span className="text-xl md:text-2xl">IIT ROORKEE</span>
+            <p className="text-3xl md:text-4xl">CEC</p>
+            <p className="text-3xl md:text-4xl">Photo Gallery</p>
           </div>
         </div>
       </section>
       <section className="py-6">
-        <div className="container mx-auto p-6">
-          <h2 className="text-center text-4xl font-semibold mb-8">
+        <div className="container mx-auto px-4 sm:px-6 py-6">
+          <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 sm:mb-8">
             Snapshots of Joy: Capturing CEC Memories
           </h2>
           {/* Year Tabs */}
-          <div className="flex justify-center gap-4 mb-8">
+          <div className="flex flex-wrap sm:flex-nowrap justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 overflow-x-auto sm:overflow-visible px-2">
             {galleryData.map((year, idx) => (
               <button
                 key={year.year}
-                className={`px-6 py-2 rounded-t-lg font-semibold text-lg focus:outline-none transition-colors duration-200 ${
-                  activeTab === idx ? "bg-[#b3dafc] text-black" : "bg-gray-200 text-gray-600"
+                className={`px-4 sm:px-6 py-2 rounded-t-lg font-semibold text-base sm:text-lg focus:outline-none transition-colors duration-200 whitespace-nowrap ${
+                  activeTab === idx
+                    ? "bg-[#b3dafc] text-black"
+                    : "bg-gray-200 text-gray-600"
                 }`}
                 onClick={() => setActiveTab(idx)}
               >
@@ -147,7 +149,7 @@ export default function GalleryPage() {
             ))}
           </div>
           {/* Gallery Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {galleryData[activeTab].images.map((img, i) => (
               <div className="relative overflow-hidden rounded-xl" key={img}>
                 {/* Gradient Overlay */}
@@ -161,7 +163,7 @@ export default function GalleryPage() {
                 />
                 {/* Caption Overlay if available */}
                 {galleryData[activeTab].captions && galleryData[activeTab].captions[i] && (
-                  <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-xs md:text-base font-medium px-2 py-2 z-30 rounded-b-xl">
+                  <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-xs sm:text-sm md:text-base font-medium px-2 py-2 z-30 rounded-b-xl">
                     {galleryData[activeTab].captions[i]}
                   </div>
                 )}
