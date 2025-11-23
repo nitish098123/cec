@@ -7,19 +7,6 @@ const { Text, Title } = Typography;
 const CourseClosureForm = () => {
     const [form] = Form.useForm();
 
-    const distributionColumns = [
-        { title: 'Name', dataIndex: 'name', key: 'name', render: () => <Input /> },
-        { title: 'Employee code', dataIndex: 'employee_code', key: 'employee_code', render: () => <Input /> },
-        { title: 'Bank A/C No.', dataIndex: 'bank_ac_no', key: 'bank_ac_no', render: () => <Input /> },
-        { title: 'IFSC Code:', dataIndex: 'ifsc_code', key: 'ifsc_code', render: () => <Input /> },
-        { title: 'PDF', dataIndex: 'pdf', key: 'pdf', render: () => <Input /> },
-        { title: 'Amount ₹ \n Bank A/C', dataIndex: 'amount', key: 'amount', render: () => <Input /> },
-    ];
-    
-    const distributionData = [
-        { key: '1' }, { key: '2' }, { key: '3' }, { key: '4' },
-    ];
-
     return (
         <div className="font-inter">
             {/* Header */}
@@ -36,7 +23,7 @@ const CourseClosureForm = () => {
                 <div className="flex justify-end mb-4">
                     <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/10.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
                 </div>
-                <Form layout="vertical" name="course_closure_form">
+                <Form layout="vertical" name="course_closure_form" form={form}>
                     <Row justify="end">
                         <Col><Text strong>CEC-09</Text></Col>
                     </Row>
@@ -87,42 +74,70 @@ const CourseClosureForm = () => {
                         <Form.Item name="coordination_fee" label="ii. Coordination fee C max@20% of 20% of (T-P)* (Note: whole or part can be transferred to PDF)"><Input addonAfter="Rs." /></Form.Item>
                         <p>Details of distribution among Coordinators</p>
                         <p>Mention all the names as per approval even if the amount to be disbursed is NIL.</p>
-                        <Table columns={distributionColumns} dataSource={distributionData} pagination={false} bordered className="mb-4" />
+                        <Form.List name="distribution_details" initialValue={[{}]}>
+                            {(fields, { add, remove }) => (
+                                <>
+                                    <Table 
+                                        dataSource={fields.map((field, index) => ({ key: field.key, fieldName: field.name, index }))}
+                                        pagination={false}
+                                        bordered
+                                        className="mb-4"
+                                        columns={[
+                                            { title: 'Name', dataIndex: 'name', key: 'name', render: (_: any, record: any) => (
+                                                <Form.Item name={[record.fieldName, 'name']} noStyle>
+                                                    <Input />
+                                                </Form.Item>
+                                            )},
+                                            { title: 'Employee code', dataIndex: 'employee_code', key: 'employee_code', render: (_: any, record: any) => (
+                                                <Form.Item name={[record.fieldName, 'employee_code']} noStyle>
+                                                    <Input />
+                                                </Form.Item>
+                                            )},
+                                            { title: 'Bank A/C No.', dataIndex: 'bank_ac_no', key: 'bank_ac_no', render: (_: any, record: any) => (
+                                                <Form.Item name={[record.fieldName, 'bank_ac_no']} noStyle>
+                                                    <Input />
+                                                </Form.Item>
+                                            )},
+                                            { title: 'IFSC Code:', dataIndex: 'ifsc_code', key: 'ifsc_code', render: (_: any, record: any) => (
+                                                <Form.Item name={[record.fieldName, 'ifsc_code']} noStyle>
+                                                    <Input />
+                                                </Form.Item>
+                                            )},
+                                            { title: 'PDF', dataIndex: 'pdf', key: 'pdf', render: (_: any, record: any) => (
+                                                <Form.Item name={[record.fieldName, 'pdf']} noStyle>
+                                                    <Input />
+                                                </Form.Item>
+                                            )},
+                                            { title: 'Amount ₹ \n Bank A/C', dataIndex: 'amount', key: 'amount', render: (_: any, record: any) => (
+                                                <Form.Item name={[record.fieldName, 'amount']} noStyle>
+                                                    <Input />
+                                                </Form.Item>
+                                            )},
+                                            { title: 'Action', key: 'action', render: (_: any, record: any) => (
+                                                <Button type="link" danger onClick={() => remove(record.fieldName)}>Remove</Button>
+                                            )}
+                                        ]}
+                                    />
+                                    <Button type="dashed" onClick={() => add()} block className="mb-4">Add Row</Button>
+                                </>
+                            )}
+                        </Form.List>
                         <Form.Item name="remaining_amount" label="Remaining amount (if any) to DDF of CEC [CEC-DDF-001] ="><Input addonAfter="Rs." /></Form.Item>
-                    </div>
-
-                    <div className="mt-8 pt-8 border-t-2">
-                        <p>Certified that</p>
-                        <p>This is final distribution and that the work has been completed. The final report has been sent vide letter No. _____________ Dated ____________ (Copy enclosed)</p>
-
-                        <Title level={5} className="mt-8">The soft copy of the following documents are required :</Title>
-                        <Row>
-                            <Col span={12}><p>(i) Name, email id and address of the sponsoring agency</p></Col>
-                            <Col span={12}><p>(ii) List of experts with email id and address</p></Col>
-                            <Col span={12}><p>(iii) List of the participants with email id and address</p></Col>
-                            <Col span={12}><p>(iv) Time Table</p></Col>
-                            <Col span={12}><p>(v) Group-photo.</p></Col>
-                        </Row>
-                        
-
-                        
-                        <div className="mt-8">
-                           <p><Text strong>* Coordination Fee</Text></p>
-                           <p><Text strong>(i) Open Participation Course</Text><br/>Coordination Fee is subject to a maximum of Rs. 8 Lakh. If faculty member desires whole or part of this amount can be transferred to the PDF (SRIC) of the faculty member(s). 50% of any left-over amount from coordination fee above Rs. 8 Lakhs will be deposited into the PDF (SRIC) of respective faculty (to be distributed as agreed), while the remaining 50% will be deposited into CEC corpus for developmental activities.</p>
-                           <p><Text strong>(ii) Sponsored Course</Text><br/>Coordination fee is subject to a maximum of Rs. 8 Lakh. If faculty member desires whole or part of this amount can be transferred to the PDF (SRIC) of the faculty member(s). Any left-over amount from coordination fee above Rs. 8 Lacs will be deposited into the PDF (SRIC) of respective faculty (to be distributed as agreed)</p>
-                        </div>
                     </div>
 
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
                             try {
-                                const values = await form.validateFields();
+                                const values = await form.getFieldsValue(true);
+                                console.log('Form values:', values);
+                                console.log('Distribution details:', values.distribution_details);
                                 
                                 // Import the configuration mapping function
                                 const { mapCoordinationFeeCourseClosureDataToConfig } = await import('../../api/generate-pdf/coordination-fee-course-closure-config');
                                 
                                 // Create the form configuration
                                 const formConfig = mapCoordinationFeeCourseClosureDataToConfig(values);
+                                console.log('Mapped form config:', formConfig);
                                 
                                 const res = await fetch('/api/generate-pdf', {
                                     method: 'POST',

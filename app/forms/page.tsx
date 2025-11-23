@@ -1,6 +1,7 @@
 "use client";
 
 import { Image, Table } from "antd";
+import Link from "next/link";
 
 interface DataItem {
   title: string;
@@ -74,14 +75,12 @@ export default function FormsPage() {
       dataIndex: "apply_link",
       key: "apply_link",
       render: (link: string) => (
-        <a
+        <Link
           href={link}
-          target="_blank"
-          rel="noopener noreferrer"
           className="text-[#FFAE0E] hover:text-[#FFAE0E] hover:underline"
         >
           Apply now
-        </a>
+        </Link>
       ),
     },
   ];

@@ -32,20 +32,25 @@ export const courseInvoiceGenerationOpenConfig = {
     
     // 6. Total Invoice Amount in Words
     { label: '6. Total invoice amount in words:', value: '', type: 'text' as const },
-    
-    // 7. Certification and Signatures
-    { label: 'Certified that the particulars given above are true and correct.', value: '', type: 'text' as const },
-    { label: 'Signature of Course Coordinator (s):', value: '', type: 'text' as const },
-    { label: 'Prof.', value: '', type: 'text' as const },
-    { label: 'Course Coordinator (s)', value: '', type: 'text' as const },
-    { label: 'Forwarded to Dean SRIC Office', value: '', type: 'text' as const },
-    { label: 'Coordinator', value: '', type: 'text' as const },
-    { label: 'CEC IIT Roorkee', value: '', type: 'text' as const },
-    { label: 'Coordinator, CEC', value: '', type: 'text' as const },
   ],
   multilineFields: [
     // Program Partner Details
     { label: 'Program Partner Details:', value: '', maxWidth: 450 },
+  ],
+  plainTextSections: [
+    {
+      content: 'Certified that the particulars given above are true and correct.'
+    }
+  ],
+  signatureSections: [
+    {
+      label: 'Prof.',
+      subLabels: ['Course Coordinator (s)']
+    },
+    {
+      label: 'Forwarded to Dean SRIC Office',
+      subLabels: []
+    }
   ]
 };
 
@@ -79,6 +84,9 @@ export function mapCourseInvoiceGenerationOpenDataToConfig(formData: any) {
   
   // Map multiline fields
   config.multilineFields![0].value = formData.partner_details || '';
+  
+  // Plain text sections and signature sections are already configured correctly
+  // No need to map form data to them as they are static
   
   return config;
 }

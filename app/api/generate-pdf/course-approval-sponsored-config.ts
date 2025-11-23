@@ -69,12 +69,48 @@ export const courseApprovalSponsoredConfig = {
   multilineFields: [
     // 5. Sponsor Details
     { label: '5. Name and Address of Sponsor\'s with GST Details:', value: '', maxWidth: 450 },
-  ]
+  ],
+  plainTextSections: [
+    {
+      title: 'The following documents will be required at the closing of course :',
+      content: '(1) Name, address, phone and email id of the sponsoring agency\n(2) List of internal and external faculty /experts with email id and address\n(3) List of the participants with email id and address\n(5) Time table copy,\n(6) Soft / hard copy of the group-photo (if available).'
+    }
+  ],
+  signatureSections: [
+    {
+      label: 'Signature of the Course Coordinator (with date)',
+      subLabels: ['Phone :', 'Mobile :']
+    },
+    {
+      label: 'Signature of Head of the Deptt./Centre (with date & stamp)'
+    }
+  ],
+  officeEndorsement: {
+    note: 'The above request is in accordance with the norms.',
+    table: {
+      columns: [
+        { header: '', width: 150 },
+        { header: '', width: 200 }
+      ],
+      rows: [
+        ['CEC Approval no.', ''],
+        ['Course Code', ''],
+        ['Dated', '']
+      ]
+    },
+    approvalText: 'Approved/Not Approved',
+    signatoryText: 'Dealing Asstt. Sr. Superintendent, CEC Coordinator, CEC',
+    copyToText: '(1) Course Coordinator (2) Concerned HoD (3) Coordinator, CEC',
+    notes: [
+      'Note:',
+      'Certificates format will be as per CEC guidelines.'
+    ]
+  }
 };
 
 // Helper function to map form data to configuration
 export function mapCourseApprovalSponsoredDataToConfig(formData: any) {
-  const config = { ...courseApprovalSponsoredConfig };
+  const config = JSON.parse(JSON.stringify(courseApprovalSponsoredConfig)); // Deep copy to preserve nested arrays
   
   // Map form data to field values
   config.fields[0].value = ''; // Section header

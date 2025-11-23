@@ -38,7 +38,30 @@ export const courseOpeningWithActualBudgetConfig = {
   multilineFields: [
     // Transaction details note
     { label: 'Note:', value: 'Please attach Transaction details of the fund transferred to SRIC/IITR account', maxWidth: 450 },
-  ]
+  ],
+  signatureSections: [
+    {
+      label: 'Name of Course Coordinator/PI',
+      subLabels: []
+    },
+    {
+      label: 'Signature of Course Coordinator/PI (with date)',
+      subLabels: []
+    }
+  ],
+  officeEndorsement: {
+    note: undefined,
+    table: undefined,
+    approvalText: 'Recommended/Not Recommended',
+    signatoryText: 'Dealing Asstt. Sr. Superintendent, CEC Coordinator, CEC',
+    copyToText: undefined,
+    notes: undefined
+  },
+  secondOfficeEndorsement: {
+    title: 'SRIC Office, IIT Roorkee',
+    approvalText: 'Approved /Not Approved',
+    signatoryText: 'Supdt. (SRIC - Admn), AR (SRIC-Admn.), Assoc. Dean (SRIC) / Dean (SRIC)'
+  }
 };
 
 // Helper function to map form data to configuration

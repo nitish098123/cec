@@ -18,25 +18,53 @@ const RemunerationHonorariumForm = () => {
             title: 'Hours',
             dataIndex: 'hours',
             key: 'hours',
-            render: () => <InputNumber />,
+            render: (_: any, record: any) => {
+                const fieldName = record.key === '1' ? 'lectures_hours' : 'pdf_hours';
+                return (
+                    <Form.Item name={fieldName} noStyle>
+                        <InputNumber style={{ width: '100%' }} />
+                    </Form.Item>
+                );
+            },
         },
         {
             title: 'Date',
             dataIndex: 'date',
             key: 'date',
-            render: () => <DatePicker />,
+            render: (_: any, record: any) => {
+                const fieldName = record.key === '1' ? 'lectures_date' : 'pdf_date';
+                return (
+                    <Form.Item name={fieldName} noStyle>
+                        <DatePicker style={{ width: '100%' }} />
+                    </Form.Item>
+                );
+            },
         },
         {
             title: 'Amount per hour (Rs.)',
             dataIndex: 'amountPerHour',
             key: 'amountPerHour',
-            render: () => <InputNumber />,
+            render: (_: any, record: any) => {
+                const fieldName = record.key === '1' ? 'lectures_amount_per_hour' : 'pdf_amount_per_hour';
+                return (
+                    <Form.Item name={fieldName} noStyle>
+                        <InputNumber style={{ width: '100%' }} />
+                    </Form.Item>
+                );
+            },
         },
         {
             title: 'Total Amount (Rs.)',
             dataIndex: 'totalAmount',
             key: 'totalAmount',
-            render: () => <InputNumber />,
+            render: (_: any, record: any) => {
+                const fieldName = record.key === '1' ? 'lectures_total_amount' : 'pdf_total_amount';
+                return (
+                    <Form.Item name={fieldName} noStyle>
+                        <InputNumber style={{ width: '100%' }} />
+                    </Form.Item>
+                );
+            },
         },
     ];
 
@@ -55,13 +83,21 @@ const RemunerationHonorariumForm = () => {
                     title: '(i)',
                     dataIndex: 'pay_i',
                     key: 'pay_i',
-                    render: () => <Input addonBefore="Rs." />
+                    render: () => (
+                        <Form.Item name="pay_i" noStyle>
+                            <Input addonBefore="Rs." />
+                        </Form.Item>
+                    )
                 },
                 {
                     title: '(ii)',
                     dataIndex: 'pay_ii',
                     key: 'pay_ii',
-                    render: () => <Input addonBefore="Rs." />
+                    render: () => (
+                        <Form.Item name="pay_ii" noStyle>
+                            <Input addonBefore="Rs." />
+                        </Form.Item>
+                    )
                 }
             ]
         },
@@ -69,13 +105,21 @@ const RemunerationHonorariumForm = () => {
             title: 'to Sri',
             dataIndex: 'to_sri',
             key: 'to_sri',
-            render: () => <Input />
+            render: () => (
+                <Form.Item name="to_sri" noStyle>
+                    <Input />
+                </Form.Item>
+            )
         },
         {
             title: 'To Tax collected by A/C IITR',
             dataIndex: 'tax_collected',
             key: 'tax_collected',
-            render: () => <Input />
+            render: () => (
+                <Form.Item name="tax_collected" noStyle>
+                    <Input />
+                </Form.Item>
+            )
         }
     ];
 
@@ -97,7 +141,7 @@ const RemunerationHonorariumForm = () => {
                 <div className="flex justify-end mb-4">
                     <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/7.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
                 </div>
-                <Form layout="vertical" name="remuneration_honorarium_form">
+                <Form layout="vertical" name="remuneration_honorarium_form" form={form}>
                      <Row justify="end">
                         <Col>
                             <Text strong>CEC-06</Text>
@@ -132,9 +176,9 @@ const RemunerationHonorariumForm = () => {
                     <p>(Note: For the amounts in (i) to (ii) whole or part can be transferred to PDF)</p>
                     <Form.Item name="amount_to_ac" label="(a) Amount to be transferred in A/C"><Input /></Form.Item>
                     <Form.Item name="amount_to_pdf" label="(b) Amount to be transferred in PDF"><Input /></Form.Item>
-                    <p>(c) Bank A/c No.:</p>
-                    <p>• Bank and Branch:</p>
-                    <p>• IFSC Code:</p>
+                    <Form.Item name="bank_account_no" label="(c) Bank A/c No.:"><Input /></Form.Item>
+                    <Form.Item name="bank_and_branch" label="• Bank and Branch:"><Input /></Form.Item>
+                    <Form.Item name="ifsc_code" label="• IFSC Code:"><Input /></Form.Item>
                     <Form.Item name="amount_to_cec_ddf" label="(d) Amount to be transferred in CEC-DDF-001/DDF Account">
                         <Input addonBefore="Rs." />
                     </Form.Item>
@@ -152,8 +196,23 @@ const RemunerationHonorariumForm = () => {
                          <Table columns={officeUseColumns} dataSource={officeUseData} pagination={false} bordered className="mb-4" />
                          
                          <Row gutter={16}>
-                             <Col span={12}>Paid by Cheque no ___________________</Col>
-                             <Col span={12}>Dated ___________________ section in charge</Col>
+                             <Col span={12}>
+                                 <Form.Item name="cheque_no" label="Paid by Cheque no" noStyle>
+                                     <Input placeholder="Cheque no" />
+                                 </Form.Item>
+                             </Col>
+                             <Col span={12}>
+                                 <Form.Item name="cheque_date" label="Dated" noStyle>
+                                     <DatePicker placeholder="Date" style={{ width: '100%' }} />
+                                 </Form.Item>
+                             </Col>
+                         </Row>
+                         <Row gutter={16} className="mt-2">
+                             <Col span={24}>
+                                 <Form.Item name="chargeable_head" label="Chargeable Head/Course" noStyle>
+                                     <Input placeholder="Chargeable Head/Course" />
+                                 </Form.Item>
+                             </Col>
                          </Row>
                          
                          <div className="mt-8">
@@ -166,7 +225,11 @@ const RemunerationHonorariumForm = () => {
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
                             try {
-                                const values = await form.validateFields();
+                                // First validate the form
+                                await form.validateFields();
+                                
+                                // Use getFieldsValue(true) to get all form data including nested values
+                                const values = form.getFieldsValue(true);
                                 
                                 // Import the configuration mapping function
                                 const { mapRemunerationHonorariumDataToConfig } = await import('../../api/generate-pdf/remuneration-honorarium-config');

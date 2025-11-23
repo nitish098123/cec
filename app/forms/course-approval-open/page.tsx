@@ -8,20 +8,26 @@ const { TextArea } = Input;
 const { Title } = Typography;
 
 const CourseApprovalFormOpen = () => {
+    const [form] = Form.useForm();
+    const courseFee = Form.useWatch('courseFee', form);
+    
     const onFinish = async (values: any) => {
         // Prepare complete data for PDF - including all form fields (filled and unfilled)
         const payload = {
             // Course Coordinator Information
             courseCoordinator: values.courseCoordinator,
             coordinatorDesignation: values.coordinatorDesignation,
+            coordinatorDept: values.coordinatorDept,
             
             // Co-coordinator Information
             cocoordinator1Name: values.cocoordinator1Name,
             cocoordinator1Dept: values.cocoordinator1Dept,
             cocoordinator1Designation: values.cocoordinator1Designation,
+            cocoordinator1Signature: values.cocoordinator1Signature,
             cocoordinator2Name: values.cocoordinator2Name,
             cocoordinator2Dept: values.cocoordinator2Dept,
             cocoordinator2Designation: values.cocoordinator2Designation,
+            cocoordinator2Signature: values.cocoordinator2Signature,
             
             // Course Details
             courseTitle: values.courseTitle,
@@ -118,15 +124,20 @@ const CourseApprovalFormOpen = () => {
                     <p><strong>Note:</strong> Please do not delete any item in the form, provide details as applicable, wherever information is not available mention N.A. The form may need to be sent back for corrections if any item is changed or deleted.</p>
                 </div>
 
-                <Form name="course_approval" onFinish={onFinish} layout="vertical" initialValues={{ faculty: [{}], lectures: [{}], hands_on: [{}] }}>
+                <Form name="course_approval" form={form} onFinish={onFinish} layout="vertical" initialValues={{ faculty: [{}], lectures: [{}], hands_on: [{}] }}>
                     <Row gutter={24}>
-                        <Col span={12}>
+                        <Col span={8}>
                             <Form.Item name="courseCoordinator" label="1. Name of the Course Coordinator/PI" rules={[{ required: true }]}>
                                 <Input />
                             </Form.Item>
                         </Col>
-                        <Col span={12}>
+                        <Col span={8}>
                             <Form.Item name="coordinatorDesignation" label="Designation" rules={[{ required: true }]}>
+                                <Input />
+                            </Form.Item>
+                        </Col>
+                        <Col span={8}>
+                            <Form.Item name="coordinatorDept" label="Deptt./Centre" rules={[{ required: true }]}>
                                 <Input />
                             </Form.Item>
                         </Col>
@@ -134,35 +145,45 @@ const CourseApprovalFormOpen = () => {
                     
                     <Card title="2. Co-coordinator (I)/Co-PI, if any" className="mb-6">
                         <Row gutter={24}>
-                            <Col span={8}>
+                            <Col span={6}>
                                 <Form.Item name="cocoordinator1Name" label="(i) Name">
                                     <Input />
                                 </Form.Item>
                             </Col>
-                            <Col span={8}>
+                            <Col span={6}>
+                                <Form.Item name="cocoordinator1Designation" label="Designation">
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                            <Col span={6}>
                                  <Form.Item name="cocoordinator1Dept" label="Deptt./Centre">
                                     <Input />
                                 </Form.Item>
                             </Col>
-                            <Col span={8}>
-                                <Form.Item name="cocoordinator1Designation" label="Designation">
+                            <Col span={6}>
+                                <Form.Item name="cocoordinator1Signature" label="Signature">
                                     <Input />
                                 </Form.Item>
                             </Col>
                         </Row>
                          <Row gutter={24}>
-                            <Col span={8}>
+                            <Col span={6}>
                                 <Form.Item name="cocoordinator2Name" label="(ii) Name">
                                     <Input />
                                 </Form.Item>
                             </Col>
-                            <Col span={8}>
+                            <Col span={6}>
+                                <Form.Item name="cocoordinator2Designation" label="Designation">
+                                    <Input />
+                                </Form.Item>
+                            </Col>
+                            <Col span={6}>
                                  <Form.Item name="cocoordinator2Dept" label="Deptt./Centre">
                                     <Input />
                                 </Form.Item>
                             </Col>
-                            <Col span={8}>
-                                <Form.Item name="cocoordinator2Designation" label="Designation">
+                            <Col span={6}>
+                                <Form.Item name="cocoordinator2Signature" label="Signature">
                                     <Input />
                                 </Form.Item>
                             </Col>
@@ -244,14 +265,19 @@ const CourseApprovalFormOpen = () => {
                     <Card title="13. Course Fee Per participant" className="mb-6">
                          <p>(Average rate per hour @ Rs. 1000/- + GST & maximum fee per hour @Rs.1500/- +GST)</p>
                         <Row gutter={24} className="mt-4">
-                            <Col span={12}>
+                            <Col span={8}>
                                 <Form.Item name="courseFee" label="Course Fee (Rs.)">
                                     <InputNumber className="w-full"/>
                                 </Form.Item>
                             </Col>
-                            <Col span={12}>
+                            <Col span={8}>
                                  <Form.Item label="Fee with GST @ 18%">
-                                    <InputNumber disabled className="w-full"/>
+                                    <InputNumber disabled className="w-full" value={courseFee ? Math.round(courseFee * 0.18) : undefined}/>
+                                </Form.Item>
+                            </Col>
+                            <Col span={8}>
+                                 <Form.Item label="Total Fee (Rs.)">
+                                    <InputNumber disabled className="w-full" value={courseFee ? courseFee + Math.round(courseFee * 0.18) : undefined}/>
                                 </Form.Item>
                             </Col>
                         </Row>

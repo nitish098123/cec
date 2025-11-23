@@ -8,35 +8,14 @@ export const taLabStaffConfig: FormConfig = {
         { label: "Batch No. :", value: "", type: "text" },
         { label: "Course Name & Dates:", value: "", type: "text" },
         { label: "Name of the Coordinator:", value: "", type: "text" },
-        { label: "Name and details of Teaching Assistant/Technical Assistant/Lab Staff", value: "", type: "multiline" },
-        { label: "S.No.", value: "", type: "text" },
-        { label: "Name", value: "", type: "text" },
-        { label: "Teaching Assistant/Technical Assistant/Lab Staff *", value: "", type: "text" },
-        { label: "Date (Duration)", value: "", type: "text" },
-        { label: "Total Hours", value: "", type: "text" },
-        { label: "Rate per hour", value: "", type: "text" },
-        { label: "Amount Claimed", value: "", type: "text" },
         { label: "Signature of the Course Coordinator", value: "", type: "text" },
-        { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", type: "multiline" },
-        { label: "BILL PROFORMA (TA/Lab Staff)", value: "", type: "text" },
-        { label: "1. Name :", value: "", type: "text" },
-        { label: "2. Course Name :", value: "", type: "text" },
-        { label: "3. Course Code :", value: "", type: "text" },
-        { label: "4. Course Coordinator :", value: "", type: "text" },
-        { label: "5. Department :", value: "", type: "text" },
-        { label: "1. Completion of work assigned to him/her.", value: "", type: "text" },
-        { label: "2. Verified and passed for payment.", value: "", type: "text" },
-        { label: "3. Certified the payment is actually due and being made for the first time.", value: "", type: "text" },
-        { label: "4. It is also confirm that the claimant has not been on un authorized absence during the period of above claims.", value: "", type: "text" },
-        { label: "Course Coordinator", value: "", type: "text" },
-        { label: "Coordinator, CEC", value: "", type: "text" },
-        { label: "Particular of assignment for Teaching Assistant/Technical Assistant/Lab Staff", value: "", type: "multiline" },
-        { label: "Date (Duration)", value: "", type: "text" },
-        { label: "Total Hours", value: "", type: "text" },
-        { label: "Rate per hour", value: "", type: "text" },
-        { label: "Amount Claimed", value: "", type: "text" },
+        // BILL PROFORMA fields
+        { label: "Name :", value: "", type: "text" },
+        { label: "Course Name :", value: "", type: "text" },
+        { label: "Course Code :", value: "", type: "text" },
+        { label: "Course Coordinator :", value: "", type: "text" },
+        { label: "Department :", value: "", type: "text" },
         { label: "Total Rs.", value: "", type: "text" },
-        { label: "(Rupees .................................................................................... only)", value: "", type: "text" },
         { label: "Bank A/c No.:", value: "", type: "text" },
         { label: "Bank and Branch:", value: "", type: "text" },
         { label: "IFSC Code:", value: "", type: "text" },
@@ -44,67 +23,216 @@ export const taLabStaffConfig: FormConfig = {
         { label: "Enroll No.:", value: "", type: "text" },
         { label: "Contact No. :", value: "", type: "text" },
         { label: "Signature of the claimant (with date)", value: "", type: "text" },
-        { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", type: "multiline" }
+        // Certification section fields
+        { label: "1. Completion of work assigned to him/her", value: "", type: "text" },
+        { label: "Course Coordinator", value: "", type: "text" },
+        { label: "Coordinator, CEC", value: "", type: "text" },
     ],
-    multilineFields: [
-        { label: "Name and details of Teaching Assistant/Technical Assistant/Lab Staff", value: "", maxWidth: 400 },
-        { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", maxWidth: 400 },
-        { label: "Particular of assignment for Teaching Assistant/Technical Assistant/Lab Staff", value: "", maxWidth: 400 },
-        { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", maxWidth: 400 }
-    ]
+    tables: [
+        // TA/Lab Staff details table
+        {
+            label: "Name and details of Teaching Assistant/Technical Assistant/Lab Staff",
+            data: {
+                columns: [
+                    { header: "S.No", width: 60 },
+                    { header: "Name", width: 140 },
+                    { header: "Teaching Assistant/Technical Assistant/Lab Staff *", width: 180 },
+                    { header: "Date (Duration)", width: 120 },
+                    { header: "Total Hours", width: 100 },
+                    { header: "Rate per hour", width: 110 },
+                    { header: "Amount Claimed", width: 120 },
+                ],
+                rows: [
+                    ["", "", "", "", "", "", ""],
+                ]
+            }
+        },
+        // BILL PROFORMA table
+        {
+            label: "Particular of assignment for Teaching Assistant/Technical Assistant/Lab Staff",
+            data: {
+                columns: [
+                    { header: "Particular of assignment for Teaching Assistant/Technical Assistant/Lab Staff", width: 200 },
+                    { header: "Date (Duration)", width: 120 },
+                    { header: "Total Hours", width: 100 },
+                    { header: "Rate per hour", width: 110 },
+                    { header: "Amount Claimed", width: 120 },
+                ],
+                rows: [
+                    ["", "", "", "", ""],
+                ]
+            }
+        },
+    ],
+    plainTextSections: [
+        {
+            content: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course."
+        },
+        {
+            title: "BILL PROFORMA (TA/Lab Staff)",
+            content: ""
+        },
+        {
+            content: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course."
+        }
+    ],
+    multilineFields: []
 };
 
 export const mapTALabStaffDataToConfig = (formData: any): FormConfig => {
-    return {
-        ...taLabStaffConfig,
-        fields: [
-            { label: "Course No. :", value: formData.course_no || "", type: "text" },
-            { label: "Batch No. :", value: formData.batch_no || "", type: "text" },
-            { label: "Course Name & Dates:", value: formData.course_name_dates || "", type: "text" },
-            { label: "Name of the Coordinator:", value: formData.coordinator_name || "", type: "text" },
-            { label: "Name and details of Teaching Assistant/Technical Assistant/Lab Staff", value: formData.ta_details || "", type: "multiline" },
-            { label: "S.No.", value: "1", type: "text" },
-            { label: "Name", value: formData.payment_name_1 || "", type: "text" },
-            { label: "Teaching Assistant/Technical Assistant/Lab Staff *", value: formData.payment_role_1 || "", type: "text" },
-            { label: "Date (Duration)", value: formData.payment_date_1 || "", type: "text" },
-            { label: "Total Hours", value: formData.payment_total_hours_1?.toString() || "", type: "text" },
-            { label: "Rate per hour", value: formData.payment_rate_per_hour_1?.toString() || "", type: "text" },
-            { label: "Amount Claimed", value: formData.payment_amount_claimed_1?.toString() || "", type: "text" },
-            { label: "Signature of the Course Coordinator", value: "", type: "text" },
-            { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", type: "multiline" },
-            { label: "BILL PROFORMA (TA/Lab Staff)", value: "", type: "text" },
-            { label: "1. Name :", value: formData.proforma_name || "", type: "text" },
-            { label: "2. Course Name :", value: formData.proforma_course_name || "", type: "text" },
-            { label: "3. Course Code :", value: formData.proforma_course_code || "", type: "text" },
-            { label: "4. Course Coordinator :", value: formData.proforma_course_coordinator || "", type: "text" },
-            { label: "5. Department :", value: formData.proforma_department || "", type: "text" },
-            { label: "1. Completion of work assigned to him/her.", value: "", type: "text" },
-            { label: "2. Verified and passed for payment.", value: "", type: "text" },
-            { label: "3. Certified the payment is actually due and being made for the first time.", value: "", type: "text" },
-            { label: "4. It is also confirm that the claimant has not been on un authorized absence during the period of above claims.", value: "", type: "text" },
-            { label: "Course Coordinator", value: "", type: "text" },
-            { label: "Coordinator, CEC", value: "", type: "text" },
-            { label: "Particular of assignment for Teaching Assistant/Technical Assistant/Lab Staff", value: formData.proforma_particulars || "", type: "multiline" },
-            { label: "Date (Duration)", value: formData.proforma_date || "", type: "text" },
-            { label: "Total Hours", value: formData.proforma_total_hours?.toString() || "", type: "text" },
-            { label: "Rate per hour", value: formData.proforma_rate_per_hour?.toString() || "", type: "text" },
-            { label: "Amount Claimed", value: formData.proforma_amount_claimed?.toString() || "", type: "text" },
-            { label: "Total Rs.", value: formData.total_rs?.toString() || "", type: "text" },
-            { label: "(Rupees .................................................................................... only)", value: "", type: "text" },
-            { label: "Bank A/c No.:", value: formData.bank_ac_no || "", type: "text" },
-            { label: "Bank and Branch:", value: formData.bank_branch || "", type: "text" },
-            { label: "IFSC Code:", value: formData.ifsc_code || "", type: "text" },
-            { label: "Email ID:", value: formData.email_id || "", type: "text" },
-            { label: "Enroll No.:", value: formData.enroll_no || "", type: "text" },
-            { label: "Contact No. :", value: formData.contact_no || "", type: "text" },
-            { label: "Signature of the claimant (with date)", value: "", type: "text" },
-            { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", type: "multiline" }
-        ],
-        multilineFields: [
-            { label: "Name and details of Teaching Assistant/Technical Assistant/Lab Staff", value: formData.ta_details || "", maxWidth: 400 },
-            { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", maxWidth: 400 },
-            { label: "Particular of assignment for Teaching Assistant/Technical Assistant/Lab Staff", value: formData.proforma_particulars || "", maxWidth: 400 },
-            { label: "* The course coordinator and instructors may engage Institute Students (who may or may not be getting fellowship/assistantship) A maximum payment of Rs 5000 per hour, with total number of hours for which the payment can be made equal to number of the lecture hours in a course. Course Coordinator can also engage TA for the maximum of 20% of total number of the lecture hours in a course.", value: "", maxWidth: 400 }
-        ]
-    };
+    const config = JSON.parse(JSON.stringify(taLabStaffConfig)); // Deep copy
+    
+    console.log('TA Lab Staff Form Data:', JSON.stringify(formData, null, 2));
+    
+    // Map basic fields (first form)
+    config.fields[0].value = formData.course_no || "";
+    config.fields[1].value = formData.batch_no || "";
+    config.fields[2].value = formData.course_name_dates || "";
+    config.fields[3].value = formData.coordinator_name || "";
+    
+    // Map BILL PROFORMA fields
+    config.fields[5].value = formData.proforma_name || "";
+    config.fields[6].value = formData.proforma_course_name || "";
+    config.fields[7].value = formData.proforma_course_code || "";
+    config.fields[8].value = formData.proforma_course_coordinator || "";
+    config.fields[9].value = formData.proforma_department || "";
+    config.fields[10].value = formData.total_rs || "";
+    config.fields[11].value = formData.bank_ac_no || "";
+    config.fields[12].value = formData.bank_branch || "";
+    config.fields[13].value = formData.ifsc_code || "";
+    config.fields[14].value = formData.email_id || "";
+    config.fields[15].value = formData.enroll_no || "";
+    config.fields[16].value = formData.contact_no || "";
+    // Map certification section fields
+    config.fields[18].value = formData.completion_of_work || "";
+    config.fields[19].value = formData.course_coordinator_signature || "";
+    config.fields[20].value = formData.coordinator_cec_signature || "";
+    
+    // Map first table (TA/Lab Staff details)
+    if (config.tables && config.tables.length > 0) {
+        const taTable = config.tables[0];
+        if (taTable && taTable.data) {
+            let taEntries: any[] = [];
+            
+            // Try to get TA entries from formData
+            if (formData.ta_entries && Array.isArray(formData.ta_entries)) {
+                taEntries = formData.ta_entries.filter((entry: any) => entry && Object.keys(entry).length > 0);
+            }
+            
+            // If still no entries, add at least one empty row
+            if (taEntries.length === 0) {
+                taEntries.push({
+                    sno: "",
+                    name: "",
+                    role: "",
+                    date: "",
+                    total_hours: "",
+                    rate_per_hour: "",
+                    amount_claimed: "",
+                });
+            }
+            
+            console.log('TA Entries mapped:', taEntries);
+            
+            // Map entries to table rows
+            taTable.data.rows = taEntries.map((entry: any, index: number) => {
+                // Handle date if it's an array (from DatePicker.RangePicker)
+                // Format as DD/MM/YYYY for more compact display
+                let dateStr = "";
+                if (entry.date) {
+                    if (Array.isArray(entry.date)) {
+                        dateStr = entry.date.map((d: any) => {
+                            if (d?.format) {
+                                const date = d.format('YYYY-MM-DD');
+                                const [year, month, day] = date.split('-');
+                                return `${day}/${month}/${year}`;
+                            }
+                            return d;
+                        }).join(' - ');
+                    } else if (entry.date.format) {
+                        const date = entry.date.format('YYYY-MM-DD');
+                        const [year, month, day] = date.split('-');
+                        dateStr = `${day}/${month}/${year}`;
+                    } else {
+                        dateStr = entry.date.toString();
+                    }
+                }
+                
+                return [
+                    entry.sno?.toString() || (index + 1).toString(),
+                    entry.name || "",
+                    entry.role || "",
+                    dateStr,
+                    entry.total_hours?.toString() || entry.totalHours?.toString() || "",
+                    entry.rate_per_hour?.toString() || entry.ratePerHour?.toString() || "",
+                    entry.amount_claimed?.toString() || entry.amountClaimed?.toString() || "",
+                ];
+            });
+            
+            console.log('Table rows:', taTable.data.rows);
+        }
+        
+        // Map second table (BILL PROFORMA table)
+        if (config.tables.length > 1) {
+            const proformaTable = config.tables[1];
+            if (proformaTable && proformaTable.data) {
+                let proformaEntries: any[] = [];
+                
+                // Get proforma entries from formData
+                if (formData.proforma_entries && Array.isArray(formData.proforma_entries)) {
+                    proformaEntries = formData.proforma_entries.filter((entry: any) => entry && Object.keys(entry).length > 0);
+                }
+                
+                // If still no entries, add at least one empty row
+                if (proformaEntries.length === 0) {
+                    proformaEntries.push({
+                        particulars: "",
+                        date: "",
+                        totalHours: "",
+                        ratePerHour: "",
+                        amountClaimed: "",
+                    });
+                }
+                
+                console.log('Proforma Entries mapped:', proformaEntries);
+                
+                // Map entries to table rows
+                proformaTable.data.rows = proformaEntries.map((entry: any, index: number) => {
+                    // Handle date if it's an array (from DatePicker.RangePicker)
+                    // Format as DD/MM/YYYY for more compact display
+                    let dateStr = "";
+                    if (entry.date) {
+                        if (Array.isArray(entry.date)) {
+                            dateStr = entry.date.map((d: any) => {
+                                if (d?.format) {
+                                    const date = d.format('YYYY-MM-DD');
+                                    const [year, month, day] = date.split('-');
+                                    return `${day}/${month}/${year}`;
+                                }
+                                return d;
+                            }).join(' - ');
+                        } else if (entry.date.format) {
+                            const date = entry.date.format('YYYY-MM-DD');
+                            const [year, month, day] = date.split('-');
+                            dateStr = `${day}/${month}/${year}`;
+                        } else {
+                            dateStr = entry.date.toString();
+                        }
+                    }
+                    
+                    return [
+                        entry.particulars || "",
+                        dateStr,
+                        entry.totalHours?.toString() || "",
+                        entry.ratePerHour?.toString() || "",
+                        entry.amountClaimed?.toString() || "",
+                    ];
+                });
+                
+                console.log('Proforma table rows:', proformaTable.data.rows);
+            }
+        }
+    }
+    
+    return config;
 };

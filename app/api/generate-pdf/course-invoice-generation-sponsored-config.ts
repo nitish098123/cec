@@ -26,8 +26,23 @@ export const courseInvoiceGenerationSponsoredConfig = {
     { label: '5. Total invoice amount in words:', value: '', type: 'text' as const },
   ],
   multilineFields: [
-    // Sponsoring Agency Details
-    { label: 'Sponsoring Agency Details:', value: '', maxWidth: 450 },
+    // Sponsoring Agency Details (no label needed)
+    { label: '', value: '', maxWidth: 450 },
+  ],
+  plainTextSections: [
+    {
+      content: 'Certified that the particulars given above are true and correct.'
+    }
+  ],
+  signatureSections: [
+    {
+      label: 'Prof.',
+      subLabels: ['Course Coordinator (s)']
+    },
+    {
+      label: 'Forwarded to Dean SRIC Office',
+      subLabels: ['Coordinator CEC IIT Roorkee']
+    }
   ]
 };
 
@@ -54,6 +69,9 @@ export function mapCourseInvoiceGenerationSponsoredDataToConfig(formData: any) {
   
   // Map multiline fields
   config.multilineFields![0].value = formData.sponsoring_agency_details || '';
+  
+  // Plain text sections and signature sections are already configured correctly
+  // No need to map form data to them as they are static
   
   return config;
 }

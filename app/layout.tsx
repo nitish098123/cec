@@ -11,6 +11,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "CEC",
   description: "",
+  icons: {
+    icon: "/IITR_logo.png",
+    shortcut: "/IITR_logo.png",
+    apple: "/IITR_logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -24,24 +24,34 @@ export const revisedBudgetConfig: FormConfig = {
         { label: "v. Transportation: TA/DA to outside experts/participants", value: "", type: "subfield", indentLevel: 1 },
         { label: "vi. Local travel / field trip / tour", value: "", type: "subfield", indentLevel: 1 },
         { label: "vii. Lab Staff/TA (please specify)", value: "", type: "subfield", indentLevel: 1 },
-        { label: "8. Amount for Honorarium to instructors/experts", value: "", type: "text" },
-        { label: "Attach Correspondence", value: "", type: "text" },
-        { label: "Name of Course Coordinator/PI", value: "", type: "text" },
-        { label: "Signature of Course Coordinator/PI (with date)", value: "", type: "text" },
-        { label: "CEC Office, IIT Roorkee", value: "", type: "text" },
-        { label: "Recommended/Not Recommended", value: "", type: "text" },
-        { label: "Dealing Asstt.", value: "", type: "text" },
-        { label: "Sr. Superintendent, CEC", value: "", type: "text" },
-        { label: "Coordinator, CEC", value: "", type: "text" },
-        { label: "SRIC Office, IIT Roorkee", value: "", type: "text" },
-        { label: "Approved / Not Approved", value: "", type: "text" },
-        { label: "Supdt. (SRIC – Admn).", value: "", type: "text" },
-        { label: "AR (SRIC-Admn.),", value: "", type: "text" },
-        { label: "Assoc. Dean (SRIC) / Dean (SRIC)", value: "", type: "text" }
+        { label: "8. Amount for Honorarium to instructors/experts", value: "", type: "text" }
     ],
     multilineFields: [
         { label: "9. Reason for Extension of Time and /or Revision of amount (correspondence to be attached, if any).", value: "", maxWidth: 350 }
-    ]
+    ],
+    signatureSections: [
+        {
+            label: "Name of Course Coordinator/PI",
+            subLabels: []
+        },
+        {
+            label: "Signature of Course Coordinator/PI (with date)",
+            subLabels: []
+        }
+    ],
+    officeEndorsement: {
+        note: undefined,
+        table: undefined,
+        approvalText: "Recommended/Not Recommended",
+        signatoryText: "Dealing Asstt. Sr. Superintendent, CEC Coordinator, CEC",
+        copyToText: undefined,
+        notes: undefined
+    },
+    secondOfficeEndorsement: {
+        title: "SRIC Office, IIT Roorkee",
+        approvalText: "Approved /Not Approved",
+        signatoryText: "Supdt. (SRIC - Admn), AR (SRIC-Admn.), Assoc. Dean (SRIC)/Dean (SRIC)"
+    }
 };
 
 export const mapRevisedBudgetDataToConfig = (formData: any): FormConfig => {
@@ -68,23 +78,33 @@ export const mapRevisedBudgetDataToConfig = (formData: any): FormConfig => {
             { label: "v. Transportation: TA/DA to outside experts/participants", value: formData.expenses?.transportation?.toString() || "", type: "subfield", indentLevel: 1 },
             { label: "vi. Local travel / field trip / tour", value: formData.expenses?.localTravel?.toString() || "", type: "subfield", indentLevel: 1 },
             { label: "vii. Lab Staff/TA (please specify)", value: formData.expenses?.labStaff?.toString() || "", type: "subfield", indentLevel: 1 },
-            { label: "8. Amount for Honorarium to instructors/experts", value: formData.honorarium?.toString() || "", type: "text" },
-            { label: "Attach Correspondence", value: formData.correspondenceAttachment ? "Attached" : "", type: "text" },
-            { label: "Name of Course Coordinator/PI", value: "", type: "text" },
-            { label: "Signature of Course Coordinator/PI (with date)", value: "", type: "text" },
-            { label: "CEC Office, IIT Roorkee", value: "", type: "text" },
-            { label: "Recommended/Not Recommended", value: "", type: "text" },
-            { label: "Dealing Asstt.", value: "", type: "text" },
-            { label: "Sr. Superintendent, CEC", value: "", type: "text" },
-            { label: "Coordinator, CEC", value: "", type: "text" },
-            { label: "SRIC Office, IIT Roorkee", value: "", type: "text" },
-            { label: "Approved / Not Approved", value: "", type: "text" },
-            { label: "Supdt. (SRIC – Admn).", value: "", type: "text" },
-            { label: "AR (SRIC-Admn.),", value: "", type: "text" },
-            { label: "Assoc. Dean (SRIC) / Dean (SRIC)", value: "", type: "text" }
+            { label: "8. Amount for Honorarium to instructors/experts", value: formData.honorarium?.toString() || "", type: "text" }
         ],
         multilineFields: [
             { label: "9. Reason for Extension of Time and /or Revision of amount (correspondence to be attached, if any).", value: formData.reasonForExtension || "", maxWidth: 350 }
-        ]
+        ],
+        signatureSections: [
+            {
+                label: "Name of Course Coordinator/PI",
+                subLabels: []
+            },
+            {
+                label: "Signature of Course Coordinator/PI (with date)",
+                subLabels: []
+            }
+        ],
+        officeEndorsement: {
+            note: undefined,
+            table: undefined,
+            approvalText: "Recommended/Not Recommended",
+            signatoryText: "Dealing Asstt. Sr. Superintendent, CEC Coordinator, CEC",
+            copyToText: undefined,
+            notes: undefined
+        },
+        secondOfficeEndorsement: {
+            title: "SRIC Office, IIT Roorkee",
+            approvalText: "Approved /Not Approved",
+            signatoryText: "Supdt. (SRIC - Admn), AR (SRIC-Admn.), Assoc. Dean (SRIC)/Dean (SRIC)"
+        }
     };
 };

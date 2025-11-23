@@ -42,7 +42,7 @@ const CourseExtensionForm = () => {
                 <div className="flex justify-end mb-4">
                     <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/11.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
                 </div>
-                <Form layout="vertical" name="course_extension_form">
+                <Form layout="vertical" name="course_extension_form" form={form}>
                     <Row justify="end">
                         <Col><Text strong>SRIC/10</Text></Col>
                     </Row>
@@ -66,15 +66,16 @@ const CourseExtensionForm = () => {
                         <Col span={12}><Form.Item name="revised_budget" label="(b) Revised (Rs.)"><Input /></Form.Item></Col>
                     </Row>
 
-                    <Table columns={budgetColumns} dataSource={budgetData} pagination={false} bordered className="my-8" />
+                    <Title level={5} className="mt-8">Budget Head / Description & Revised Budgeted Amount</Title>
+                    <Form.Item name="gross_amount" label="Gross Amount including Service Tax"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="less_service_tax" label="Less- Service Tax"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="contracted_amount" label="Contracted Amount"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="institute_share" label="Institute Share (20% of Contracted Amount)"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="expenditure_estimated" label="Expenditure (Estimated*)"><Input addonAfter="Rs." /></Form.Item>
+                    <Form.Item name="honorarium_estimated" label="Honorarium (Estimated)"><Input addonAfter="Rs." /></Form.Item>
                     
-                    <Form.Item name="reason" label="7. Reason for Extension of Time and /or Revision of amount (correspondence to be attached, if any). To distribute the honorarium and close the course.">
+                    <Form.Item name="reason" label="Reason for Extension of Time and /or Revision of amount (correspondence to be attached, if any). To distribute the honorarium and close the course.">
                         <Input.TextArea rows={4}/>
-                    </Form.Item>
-                    <Form.Item label="Attach Correspondence (if any)" valuePropName="fileList" getValueFromEvent={normFile}>
-                        <Upload>
-                            <Button icon={<UploadOutlined />}>Attach Correspondence</Button>
-                        </Upload>
                     </Form.Item>
 
 
@@ -82,7 +83,8 @@ const CourseExtensionForm = () => {
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
                             try {
-                                const values = await form.validateFields();
+                                const values = await form.getFieldsValue(true);
+                                console.log('Course Extension Form values:', values);
                                 
                                 // Import the configuration mapping function
                                 const { mapCourseExtensionDataToConfig } = await import('../../api/generate-pdf/course-extension-config');

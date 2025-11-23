@@ -1,7 +1,6 @@
 "use client";
 
 import { Image } from "antd";
-import { DoubleLeftOutlined, DoubleRightOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 
 export default function GalleryPage() {
@@ -91,6 +90,7 @@ export default function GalleryPage() {
   ];
 
   const [activeTab, setActiveTab] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Auto-switch tabs every 7 seconds
   useEffect(() => {
@@ -98,7 +98,17 @@ export default function GalleryPage() {
       setActiveTab((prev) => (prev + 1) % galleryData.length);
     }, 7000);
     return () => clearInterval(interval);
-  }, [galleryData.length]);
+  }, []);
+
+  // Handle tab change with loading state
+  const handleTabChange = (idx: number) => {
+    if (idx !== activeTab) {
+      setIsLoading(true);
+      setActiveTab(idx);
+      // Reset loading state after a brief delay to allow images to start loading
+      setTimeout(() => setIsLoading(false), 100);
+    }
+  };
 
   return (
     <div className="w-full font-inter">
@@ -142,34 +152,48 @@ export default function GalleryPage() {
                     ? "bg-[#b3dafc] text-black"
                     : "bg-gray-200 text-gray-600"
                 }`}
-                onClick={() => setActiveTab(idx)}
+                onClick={() => handleTabChange(idx)}
               >
                 {year.year}
               </button>
             ))}
           </div>
           {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {galleryData[activeTab].images.map((img, i) => (
-              <div className="relative overflow-hidden rounded-xl" key={img}>
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none"></div>
-                <Image
-                  src={img}
-                  width="100%"
-                  height="100%"
-                  className="aspect-square object-cover"
-                  alt={`Gallery ${galleryData[activeTab].year} Image ${i + 1}`}
-                />
-                {/* Caption Overlay if available */}
-                {galleryData[activeTab].captions && galleryData[activeTab].captions[i] && (
-                  <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-xs sm:text-sm md:text-base font-medium px-2 py-2 z-30 rounded-b-xl">
-                    {galleryData[activeTab].captions[i]}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          {isLoading ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {Array.from({ length: galleryData[activeTab].images.length }).map((_, i) => (
+                <div key={i} className="relative overflow-hidden rounded-xl aspect-square bg-gray-200 animate-pulse"></div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {galleryData[activeTab].images.map((img, i) => (
+                <div className="relative overflow-hidden rounded-xl" key={`${activeTab}-${img}-${i}`}>
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-20 pointer-events-none"></div>
+                  <Image
+                    src={img}
+                    width="100%"
+                    height="100%"
+                    className="aspect-square object-cover"
+                    alt={`Gallery ${galleryData[activeTab].year} Image ${i + 1}`}
+                    loading="lazy"
+                    placeholder={
+                      <div className="w-full h-full bg-gray-200 animate-pulse flex items-center justify-center">
+                        <span className="text-gray-400">Loading...</span>
+                      </div>
+                    }
+                  />
+                  {/* Caption Overlay if available */}
+                  {galleryData[activeTab].captions && galleryData[activeTab].captions[i] && (
+                    <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white text-xs sm:text-sm md:text-base font-medium px-2 py-2 z-30 rounded-b-xl">
+                      {galleryData[activeTab].captions[i]}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>

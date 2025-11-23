@@ -1,19 +1,12 @@
 "use client";
 import React from 'react';
 import { Form, Input, Row, Col, Typography, Button, DatePicker, Table, Space } from 'antd';
+import { PlusOutlined, DeleteOutlined } from '@ant-design/icons';
 
 const { Text, Title } = Typography;
 
 const RequestForLoanForm = () => {
     const [form] = Form.useForm();
-    const outstandingLoanColumns = [
-        { title: 'S. No.', dataIndex: 'sno', key: 'sno', render: (text: any, record: any, index: number) => index + 1 },
-        { title: 'Amount', dataIndex: 'amount', key: 'amount', render: () => <Input /> },
-        { title: 'Date', dataIndex: 'date', key: 'date', render: () => <DatePicker style={{ width: '100%' }} /> },
-        { title: 'Course code', dataIndex: 'course_code', key: 'course_code', render: () => <Input /> },
-    ];
-
-    const outstandingLoanData = [ {key: '1'} ];
 
     return (
         <div className="font-inter">
@@ -31,7 +24,14 @@ const RequestForLoanForm = () => {
                 <div className="flex justify-end mb-4">
                     <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/9.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
                 </div>
-                <Form layout="vertical" name="request_for_loan_form">
+                <Form 
+                    layout="vertical" 
+                    name="request_for_loan_form"
+                    form={form}
+                    initialValues={{
+                        outstanding_loan_details: [{}]
+                    }}
+                >
                     <Row justify="end">
                         <Col><Text strong>CEC-08</Text></Col>
                     </Row>
@@ -41,10 +41,18 @@ const RequestForLoanForm = () => {
 
                     <div className="flex items-center mb-4">
                         <div className="border border-black p-1 flex">
-                            <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none', borderRight: '1px solid black' }} />
-                            <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none', borderRight: '1px solid black' }} />
-                            <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none', borderRight: '1px solid black' }} />
-                            <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none' }} />
+                            <Form.Item name={['employee_no', 'digit1']} noStyle>
+                                <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none', borderRight: '1px solid black' }} />
+                            </Form.Item>
+                            <Form.Item name={['employee_no', 'digit2']} noStyle>
+                                <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none', borderRight: '1px solid black' }} />
+                            </Form.Item>
+                            <Form.Item name={['employee_no', 'digit3']} noStyle>
+                                <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none', borderRight: '1px solid black' }} />
+                            </Form.Item>
+                            <Form.Item name={['employee_no', 'digit4']} noStyle>
+                                <Input maxLength={1} style={{ width: 40, textAlign: 'center', border: 'none' }} />
+                            </Form.Item>
                         </div>
                         <Text className="ml-4">Employee No.</Text>
                     </div>
@@ -66,8 +74,98 @@ const RequestForLoanForm = () => {
                         </Col>
                         <Col span={12}>
                             <div className="border p-2 h-full">
-                                <Form.Item name="outstanding_loan_details" label="9 (a) Details of outstanding loan (s):">
-                                    <Table columns={outstandingLoanColumns} dataSource={outstandingLoanData} pagination={false} bordered size="small" />
+                                <Form.Item label="9 (a) Details of outstanding loan (s):">
+                                    <Form.List name="outstanding_loan_details">
+                                        {(fields, { add, remove }) => {
+                                            const tableData = fields.map((field, index) => ({ ...field, key: field.key || index }));
+                                            return (
+                                                <>
+                                                    <Table 
+                                                        columns={[
+                                                            { 
+                                                                title: 'S. No.', 
+                                                                key: 'sno', 
+                                                                width: 60, 
+                                                                render: (_: any, __: any, index: number) => index + 1 
+                                                            },
+                                                            { 
+                                                                title: 'Amount', 
+                                                                dataIndex: 'amount', 
+                                                                key: 'amount',
+                                                                render: (_: any, record: any, index: number) => {
+                                                                    const field = fields[index];
+                                                                    if (!field) return null;
+                                                                    return (
+                                                                        <Form.Item name={[field.name, 'amount']} noStyle>
+                                                                            <Input />
+                                                                        </Form.Item>
+                                                                    );
+                                                                }
+                                                            },
+                                                            { 
+                                                                title: 'Date', 
+                                                                dataIndex: 'date', 
+                                                                key: 'date',
+                                                                render: (_: any, record: any, index: number) => {
+                                                                    const field = fields[index];
+                                                                    if (!field) return null;
+                                                                    return (
+                                                                        <Form.Item name={[field.name, 'date']} noStyle>
+                                                                            <DatePicker style={{ width: '100%' }} />
+                                                                        </Form.Item>
+                                                                    );
+                                                                }
+                                                            },
+                                                            { 
+                                                                title: 'Course code', 
+                                                                dataIndex: 'course_code', 
+                                                                key: 'course_code',
+                                                                render: (_: any, record: any, index: number) => {
+                                                                    const field = fields[index];
+                                                                    if (!field) return null;
+                                                                    return (
+                                                                        <Form.Item name={[field.name, 'course_code']} noStyle>
+                                                                            <Input />
+                                                                        </Form.Item>
+                                                                    );
+                                                                }
+                                                            },
+                                                            {
+                                                                title: 'Action',
+                                                                key: 'action',
+                                                                width: 80,
+                                                                render: (_: any, record: any, index: number) => (
+                                                                    <Button 
+                                                                        type="link" 
+                                                                        danger 
+                                                                        icon={<DeleteOutlined />} 
+                                                                        onClick={() => remove(fields[index].name)}
+                                                                        disabled={fields.length === 1}
+                                                                    >
+                                                                        Remove
+                                                                    </Button>
+                                                                )
+                                                            }
+                                                        ]}
+                                                        dataSource={tableData}
+                                                        pagination={false}
+                                                        bordered
+                                                        size="small"
+                                                        footer={() => (
+                                                            <Button 
+                                                                type="dashed" 
+                                                                onClick={() => add()} 
+                                                                icon={<PlusOutlined />} 
+                                                                style={{ width: '100%' }}
+                                                            >
+                                                                Add Row
+                                                            </Button>
+                                                        )}
+                                                    />
+                                                </>
+                                            );
+                                        }}
+                                    </Form.List>
                                 </Form.Item>
                                 <Form.Item name="reason_for_non_adjustment" label="9 (b) Reason for non-adjustment:" className="mt-4">
                                     <Input.TextArea rows={4} />
@@ -85,7 +183,15 @@ const RequestForLoanForm = () => {
                     <Form.Item className="mt-8 text-center">
                         <Button type="primary" htmlType="submit" className='bg-blue-600' onClick={async () => {
                             try {
-                                const values = await form.validateFields();
+                                // Use getFieldsValue(true) to get all nested form data including Form.List
+                                const values = form.getFieldsValue(true);
+                                
+                                // Combine employee_no digits into a single string
+                                if (values.employee_no) {
+                                    values.employee_no = `${values.employee_no.digit1 || ''}${values.employee_no.digit2 || ''}${values.employee_no.digit3 || ''}${values.employee_no.digit4 || ''}`;
+                                }
+                                
+                                console.log('Request for Loan Form Data:', values);
                                 
                                 // Import the configuration mapping function
                                 const { mapRequestForLoanDataToConfig } = await import('../../api/generate-pdf/request-for-loan-config');

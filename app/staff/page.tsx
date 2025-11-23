@@ -1,7 +1,7 @@
 "use client";
 
 import { Image } from "antd";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 // Define the type for the card data
@@ -60,28 +60,14 @@ const cardData: CardData[] = [
   },
 ];
 
-export default function StaffPage() {
+function StaffContent() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
   const tab = tabParam === "coordinator" ? "coordinator" : "staff";
   const coordinator = cardData.find((item) => item.name === "Prof. Kaushik Ghosh");
   const staff = cardData.filter((item) => item.name !== "Prof. Kaushik Ghosh");
   return (
-    <div className="w-full font-inter bg-white">
-      {/* Hero Section */}
-      <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center p-4">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-[url('/staff_background.jpeg')] bg-cover bg-center"
-          aria-hidden="true"
-        ></div>
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Centered Content Block */}
-        <div className="relative z-30 flex flex-col items-center text-center text-white">
-          <span className="text-4xl md:text-6xl font-bold mb-3">CEC STAFF</span>
-          <span className="text-2xl md:text-3xl font-medium">IIT Roorkee</span>
-        </div>
-      </section>
+    <>
       {/* Section Content */}
       {tab === 'coordinator' && coordinator && (
         <section className="py-12 bg-white">
@@ -145,6 +131,30 @@ export default function StaffPage() {
           </div>
         </section>
       )}
+    </>
+  );
+}
+
+export default function StaffPage() {
+  return (
+    <div className="w-full font-inter bg-white">
+      {/* Hero Section */}
+      <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center p-4">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-[url('/staff_background.jpeg')] bg-cover bg-center"
+          aria-hidden="true"
+        ></div>
+        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        {/* Centered Content Block */}
+        <div className="relative z-30 flex flex-col items-center text-center text-white">
+          <span className="text-4xl md:text-6xl font-bold mb-3">CEC STAFF</span>
+          <span className="text-2xl md:text-3xl font-medium">IIT Roorkee</span>
+        </div>
+      </section>
+      <Suspense fallback={<div className="py-12 bg-white text-center">Loading...</div>}>
+        <StaffContent />
+      </Suspense>
     </div>
   );
 }
