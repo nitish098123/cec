@@ -12,15 +12,8 @@ export const courseOpeningWithActualBudgetConfig = {
     // 3. Course Budget
     { label: '3. Course budget : Gross Amount :', value: '', type: 'text' as const },
     
-    // Budget Details
+    // Budget Details - will be rendered as a table
     { label: 'Budget Details:', value: '', type: 'text' as const },
-    { label: '1. Gross amount including GST = (G) received:', value: '', type: 'subfield' as const, indentLevel: 1 },
-    { label: '2. Less GST as applicable (presently GST @ 18%) (L):', value: '', type: 'subfield' as const, indentLevel: 1 },
-    { label: '3. (a) Contracted amount \'T\' = (G – L):', value: '', type: 'subfield' as const, indentLevel: 1 },
-    { label: '3. (b) Institute Overhead Charges (P) (20% of T):', value: '', type: 'subfield' as const, indentLevel: 1 },
-    { label: '4. Coordination Fee \'C\' [ max @20% of (T-P)]:', value: '', type: 'subfield' as const, indentLevel: 1 },
-    { label: '5. CEC Operational/Establishment cost \'O\'[@10% of (T-P)]:', value: '', type: 'subfield' as const, indentLevel: 1 },
-    { label: '6. TDS deduction, if any:', value: '', type: 'subfield' as const, indentLevel: 1 },
     
     // Expenses
     { label: '7. Expenses (E) : As per actuals:', value: '', type: 'text' as const },
@@ -38,6 +31,36 @@ export const courseOpeningWithActualBudgetConfig = {
   multilineFields: [
     // Transaction details note
     { label: 'Note:', value: 'Please attach Transaction details of the fund transferred to SRIC/IITR account', maxWidth: 450 },
+  ],
+  tables: [
+    {
+      label: 'Budget Details:',
+      data: {
+        columns: [
+          { header: 'No.', width: 40 },
+          { header: 'Budget Details', width: 400 },
+          { header: 'Amount (Rs.)', width: 110 }
+        ],
+        rows: [
+          ['1', 'Gross amount including GST = (G) received', ''],
+          ['2', 'Less GST as applicable (presently GST @ 18%) (L) [Note: L= (G / 1.18) * 18%]', ''],
+          ['3(a)', 'Contracted amount \'T\' = (G – L)', ''],
+          ['3(b)', 'Institute Overhead Charges (P) (20% of T)', ''],
+          ['4', 'Coordination Fee \'C\' [ max @20% of (T-P)]', ''],
+          ['5', 'CEC Operational/Establishment cost \'O\'[@10% of (T-P)]', ''],
+          ['6', 'TDS deduction, if any', ''],
+          ['7', 'Expenses (F): As per actuals:', ''],
+          ['i.', 'Cost of registration material (stationery, pen pad, bags, Xeroxing, typing etc.)', ''],
+          ['ii.', 'Contingency/miscellaneous expenses', ''],
+          ['iii.', 'Infrastructure charges including hall and equipment charges', ''],
+          ['iv.', 'Accommodation, boarding and lodging', ''],
+          ['v.', 'Transportation: TA/DA to outside experts/participants', ''],
+          ['vi.', 'Local travel / field trip / tour', ''],
+          ['vii.', 'Lab Staff/TA (please specify)', ''],
+          ['8', 'Amount for Honorarium to instructors/experts', '']
+        ]
+      }
+    }
   ],
   signatureSections: [
     {
@@ -73,27 +96,37 @@ export function mapCourseOpeningWithActualBudgetDataToConfig(formData: any) {
   config.fields[1].value = formData.courseNameAndDate || '';
   config.fields[2].value = formData.courseBudget || '';
   
-  // Budget details
-  config.fields[3].value = ''; // Section header
-  config.fields[4].value = formData.grossAmount?.toString() || '';
-  config.fields[5].value = formData.lessGst?.toString() || '';
-  config.fields[6].value = formData.contractedAmount?.toString() || '';
-  config.fields[7].value = formData.instituteOverhead?.toString() || '';
-  config.fields[8].value = formData.coordinationFee?.toString() || '';
-  config.fields[9].value = formData.cecOperationalCost?.toString() || '';
-  config.fields[10].value = formData.tdsDeduction?.toString() || '';
+  // Budget details - update table with form data
+  if (config.tables && config.tables[0]) {
+    config.tables[0].data.rows[0][2] = formData.grossAmount?.toString() || ''; // Row 1: Gross amount
+    config.tables[0].data.rows[1][2] = formData.lessGst?.toString() || ''; // Row 2: Less GST
+    config.tables[0].data.rows[2][2] = formData.contractedAmount?.toString() || ''; // Row 3: Contracted amount
+    config.tables[0].data.rows[3][2] = formData.instituteOverhead?.toString() || ''; // Row 4: Institute Overhead
+    config.tables[0].data.rows[4][2] = formData.coordinationFee?.toString() || ''; // Row 5: Coordination Fee
+    config.tables[0].data.rows[5][2] = formData.cecOperationalCost?.toString() || ''; // Row 6: CEC Operational Cost
+    config.tables[0].data.rows[6][2] = formData.tdsDeduction?.toString() || ''; // Row 7: TDS deduction
+    // Row 8: Expenses header (no value)
+    config.tables[0].data.rows[8][2] = formData.expenses?.registrationMaterial?.toString() || ''; // Row 9: Registration material
+    config.tables[0].data.rows[9][2] = formData.expenses?.contingency?.toString() || ''; // Row 10: Contingency
+    config.tables[0].data.rows[10][2] = formData.expenses?.infrastructure?.toString() || ''; // Row 11: Infrastructure
+    config.tables[0].data.rows[11][2] = formData.expenses?.accommodation?.toString() || ''; // Row 12: Accommodation
+    config.tables[0].data.rows[12][2] = formData.expenses?.transportation?.toString() || ''; // Row 13: Transportation
+    config.tables[0].data.rows[13][2] = formData.expenses?.localTravel?.toString() || ''; // Row 14: Local travel
+    config.tables[0].data.rows[14][2] = formData.expenses?.labStaff?.toString() || ''; // Row 15: Lab Staff/TA
+    config.tables[0].data.rows[15][2] = formData.honorarium?.toString() || ''; // Row 16: Honorarium
+  }
   
   // Expenses
-  config.fields[11].value = ''; // Section header
-  config.fields[12].value = formData.expenses?.registrationMaterial?.toString() || '';
-  config.fields[13].value = formData.expenses?.contingency?.toString() || '';
-  config.fields[14].value = formData.expenses?.infrastructure?.toString() || '';
-  config.fields[15].value = formData.expenses?.accommodation?.toString() || '';
-  config.fields[16].value = formData.expenses?.transportation?.toString() || '';
-  config.fields[17].value = formData.expenses?.localTravel?.toString() || '';
-  config.fields[18].value = formData.expenses?.labStaff?.toString() || '';
+  config.fields[3].value = ''; // Section header
+  config.fields[4].value = formData.expenses?.registrationMaterial?.toString() || '';
+  config.fields[5].value = formData.expenses?.contingency?.toString() || '';
+  config.fields[6].value = formData.expenses?.infrastructure?.toString() || '';
+  config.fields[7].value = formData.expenses?.accommodation?.toString() || '';
+  config.fields[8].value = formData.expenses?.transportation?.toString() || '';
+  config.fields[9].value = formData.expenses?.localTravel?.toString() || '';
+  config.fields[10].value = formData.expenses?.labStaff?.toString() || '';
   
-  config.fields[19].value = formData.honorarium?.toString() || '';
+  config.fields[11].value = formData.honorarium?.toString() || '';
   
   // Map multiline fields
   config.multilineFields![0].value = 'Please attach Transaction details of the fund transferred to SRIC/IITR account';

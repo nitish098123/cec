@@ -19,7 +19,7 @@ export const coordinationFeeCourseClosureConfig: FormConfig = {
         { label: "g. Honorarium to Instructor/s/Experts H", value: "", type: "text" },
         { label: "h. Expenditure already done E", value: "", type: "text" },
         { label: "i. Balance amount available (T-P-O-TD-H-E)", value: "", type: "text" },
-        { label: "i. CEC DDF component CEC-DDF-001 (in case of Open Participation course, if coordination fee amount is above Rs. 8 Lacs)", value: "", type: "text" },
+        { label: "i. CEC DDF component CEC-DDF-001", value: "", type: "text" },
         { label: "ii. Coordination fee 'C' maximum @ 20% of (T-P)* = Rs.", value: "", type: "text" },
         { label: "Remaining amount (if any) to DDF of CEC [CEC-DDF-001] = Rs.", value: "", type: "text" },
         { label: "This is final distribution and that the work has been completed. The final report has been sent vide letter No. _____________ Dated ____________ (Copy enclosed)", value: "", type: "text" },
@@ -67,7 +67,11 @@ export const coordinationFeeCourseClosureConfig: FormConfig = {
         },
         {
             title: "",
-            content: "(Note: whole or part can be transferred to PDF)\n\nDetails of distribution among Coordinators"
+            content: "(in case of Open Participation course, If coordination fee amount is above Rs. 8 Lacs)"
+        },
+        {
+            title: "",
+            content: "Coordination fee 'C' maximum @ 20% of (T-P)\n\nDetails of distribution among Coordinators"
         },
         {
             title: "Mention all the names as per approval even if the amount to be disbursed is NIL.",
@@ -174,7 +178,7 @@ export const mapCoordinationFeeCourseClosureDataToConfig = (formData: any): Form
             { label: "g. Honorarium to Instructor/s/Experts H", value: formData.honorarium?.toString() || "", type: "text" },
             { label: "h. Expenditure already done E", value: formData.expenditure_done?.toString() || "", type: "text" },
             { label: "i. Balance amount available (T-P-O-TD-H-E)", value: formData.balance_amount?.toString() || "", type: "text" },
-            { label: "i. CEC DDF component CEC-DDF-001 (in case of Open Participation course, if coordination fee amount is above Rs. 8 Lacs)", value: formData.cec_ddf_component?.toString() || "", type: "text" },
+            { label: "i. CEC DDF component CEC-DDF-001", value: formData.cec_ddf_component?.toString() || "", type: "text" },
             { label: "ii. Coordination fee 'C' maximum @ 20% of (T-P)* = Rs.", value: formData.coordination_fee?.toString() || "", type: "text" },
             { label: "Remaining amount (if any) to DDF of CEC [CEC-DDF-001] = Rs.", value: formData.remaining_amount?.toString() || "", type: "text" },
             { label: "This is final distribution and that the work has been completed. The final report has been sent vide letter No. _____________ Dated ____________ (Copy enclosed)", value: "", type: "text" },
@@ -222,7 +226,11 @@ export const mapCoordinationFeeCourseClosureDataToConfig = (formData: any): Form
             },
             {
                 title: "",
-                content: "(Note: whole or part can be transferred to PDF)\n\nDetails of distribution among Coordinators"
+                content: "(in case of Open Participation course, If coordination fee amount is above Rs. 8 Lacs)"
+            },
+            {
+                title: "",
+                content: "Coordination fee 'C' maximum @ 20% of (T-P)\n\nDetails of distribution among Coordinators"
             },
             {
                 title: "Mention all the names as per approval even if the amount to be disbursed is NIL.",

@@ -14,9 +14,11 @@ export const courseApprovalSponsoredConfig = {
     { label: '(i) Name:', value: '', type: 'subfield' as const, indentLevel: 1 },
     { label: 'Designation:', value: '', type: 'subfield' as const, indentLevel: 1 },
     { label: 'Deptt./Centre:', value: '', type: 'subfield' as const, indentLevel: 1 },
+    { label: 'Signature:', value: '', type: 'subfield' as const, indentLevel: 1 },
     { label: '(ii) Name:', value: '', type: 'subfield' as const, indentLevel: 1 },
     { label: 'Designation:', value: '', type: 'subfield' as const, indentLevel: 1 },
     { label: 'Deptt./Centre:', value: '', type: 'subfield' as const, indentLevel: 1 },
+    { label: 'Signature:', value: '', type: 'subfield' as const, indentLevel: 1 },
     
     // 2. Course Title
     { label: '2. Title of the Course:', value: '', type: 'text' as const },
@@ -122,12 +124,14 @@ export function mapCourseApprovalSponsoredDataToConfig(formData: any) {
   config.fields[5].value = formData.cocoordinator1Name || '';
   config.fields[6].value = formData.cocoordinator1Designation || '';
   config.fields[7].value = formData.cocoordinator1Dept || '';
-  config.fields[8].value = formData.cocoordinator2Name || '';
-  config.fields[9].value = formData.cocoordinator2Designation || '';
-  config.fields[10].value = formData.cocoordinator2Dept || '';
+  config.fields[8].value = ''; // Signature (empty for now)
+  config.fields[9].value = formData.cocoordinator2Name || '';
+  config.fields[10].value = formData.cocoordinator2Designation || '';
+  config.fields[11].value = formData.cocoordinator2Dept || '';
+  config.fields[12].value = ''; // Signature (empty for now)
   
-  config.fields[11].value = formData.courseTitle || '';
-  config.fields[12].value = formData.batchNo || '';
+  config.fields[13].value = formData.courseTitle || '';
+  config.fields[14].value = formData.batchNo || '';
   
   // Sponsorship Type mapping
   const sponsorshipTypeMap: { [key: string]: string } = {
@@ -137,10 +141,10 @@ export function mapCourseApprovalSponsoredDataToConfig(formData: any) {
     'foreign': 'Foreign Agency',
     'others': 'Others'
   };
-  config.fields[13].value = sponsorshipTypeMap[formData.sponsorshipType] || formData.sponsorshipType || '';
-  config.fields[14].value = formData.sponsorshipOther || '';
+  config.fields[15].value = sponsorshipTypeMap[formData.sponsorshipType] || formData.sponsorshipType || '';
+  config.fields[16].value = formData.sponsorshipOther || '';
   
-  config.fields[15].value = formData.gstDetails ? 'Attached' : '';
+  config.fields[17].value = formData.gstDetails ? 'Attached' : '';
   
   // Payment Terms mapping
   const paymentTermsMap: { [key: string]: string } = {
@@ -148,13 +152,13 @@ export function mapCourseApprovalSponsoredDataToConfig(formData: any) {
     'part': 'Part',
     'after_completion': 'After Completion of the course'
   };
-  config.fields[16].value = paymentTermsMap[formData.paymentTerms] || formData.paymentTerms || '';
+  config.fields[18].value = paymentTermsMap[formData.paymentTerms] || formData.paymentTerms || '';
   
-  config.fields[17].value = formData.commencementDate || '';
-  config.fields[18].value = formData.completionDate || '';
-  config.fields[19].value = ''; // Section header
-  config.fields[20].value = formData.duration?.weeks?.toString() || '';
-  config.fields[21].value = formData.duration?.hours?.toString() || '';
+  config.fields[19].value = formData.commencementDate || '';
+  config.fields[20].value = formData.completionDate || '';
+  config.fields[21].value = ''; // Section header
+  config.fields[22].value = formData.duration?.weeks?.toString() || '';
+  config.fields[23].value = formData.duration?.hours?.toString() || '';
   
   // Delivery Mode mapping
   const deliveryModeMap: { [key: string]: string } = {
@@ -163,16 +167,16 @@ export function mapCourseApprovalSponsoredDataToConfig(formData: any) {
     'self_paced': 'Self-paced',
     'hybrid': 'Hybrid'
   };
-  config.fields[22].value = deliveryModeMap[formData.modeOfDelivery] || formData.modeOfDelivery || '';
+  config.fields[24].value = deliveryModeMap[formData.modeOfDelivery] || formData.modeOfDelivery || '';
   
-  config.fields[23].value = (formData.expectedParticipants || '').toString();
-  config.fields[24].value = formData.scheduleAttached ? 'Attached' : '';
-  config.fields[25].value = formData.proposedBudget ? 'Attached' : '';
-  config.fields[26].value = formData.mouCopy ? 'Attached' : '';
-  config.fields[27].value = ''; // Section header
-  config.fields[28].value = ''; // Section header
-  config.fields[29].value = formData.correspondence ? 'Attached' : '';
-  config.fields[30].value = formData.specialApproval ? 'Attached' : '';
+  config.fields[25].value = (formData.expectedParticipants || '').toString();
+  config.fields[26].value = formData.scheduleAttached ? 'Attached' : '';
+  config.fields[27].value = formData.proposedBudget ? 'Attached' : '';
+  config.fields[28].value = formData.mouCopy ? 'Attached' : '';
+  config.fields[29].value = ''; // Section header
+  config.fields[30].value = ''; // Section header
+  config.fields[31].value = formData.correspondence ? 'Attached' : '';
+  config.fields[32].value = formData.specialApproval ? 'Attached' : '';
   
   // Map multiline fields
   config.multilineFields![0].value = formData.sponsorDetails || '';

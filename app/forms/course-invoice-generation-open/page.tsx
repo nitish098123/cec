@@ -35,6 +35,7 @@ const CourseInvoiceGenerationOpenForm = () => {
                 <Form layout="vertical" name="invoice_generation_open" onFinish={async (values) => {
                     // Prepare complete data for PDF
                     const payload = {
+                        dated: values.dated,
                         partner_details: values.partner_details,
                         course_code: values.course_code,
                         course_name: values.course_name,

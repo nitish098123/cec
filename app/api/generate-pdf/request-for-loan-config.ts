@@ -21,10 +21,10 @@ export const requestForLoanConfig: FormConfig = {
             label: "9 (a) Details of outstanding loan (s):",
             data: {
                 columns: [
-                    { header: "S. No.", width: 60 },
-                    { header: "Amount", width: 120 },
-                    { header: "Date", width: 120 },
-                    { header: "Course code", width: 150 }
+                    { header: "S. No.", width: 80 },
+                    { header: "Amount", width: 180 },
+                    { header: "Date", width: 180 },
+                    { header: "Course code", width: 220 }
                 ],
                 rows: []
             }
@@ -115,10 +115,10 @@ export const mapRequestForLoanDataToConfig = (formData: any): FormConfig => {
                 label: "9 (a) Details of outstanding loan (s):",
                 data: {
                     columns: [
-                        { header: "S. No.", width: 60 },
-                        { header: "Amount", width: 120 },
-                        { header: "Date", width: 120 },
-                        { header: "Course code", width: 150 }
+                        { header: "S. No.", width: 80 },
+                        { header: "Amount", width: 180 },
+                        { header: "Date", width: 180 },
+                        { header: "Course code", width: 220 }
                     ],
                     rows: tableRows
                 }

@@ -206,6 +206,16 @@ const courses: Course[] = [
   },
   // Miscellaneous
   {
+    id: 20,
+    name: "Samkhya and Yoga Sutras for Contemporary Life and Modern Science",
+    duration: "25 Hours",
+    mode: "Online",
+    students: "Open",
+    partner: "Open Course",
+    category: "Miscellaneous",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Samkhya.png",
+  },
+  {
     id: 14,
     name: "Data-Driven Frontiers: Blockchain, Social Networks, and Multimedia",
     duration: "June 01- 10, 2025",
@@ -808,10 +818,11 @@ export default function HomePage() {
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
                       course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
                       course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
+                      course.id === 20 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_Samkhya.pdf" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">

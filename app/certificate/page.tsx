@@ -1,7 +1,8 @@
 "use client";
 
-import { Form, Input, Button, Image, ConfigProvider, message } from "antd";
-import { useState } from "react";
+import { Form, Input, Button, ConfigProvider, message, Select } from "antd";
+import { useCallback } from "react";
+import Image from "next/image";
 
 // Certificate data
 const certificateData = [
@@ -9,104 +10,189 @@ const certificateData = [
     name: "Ojas",
     email: "ojaspsy@gmail.com",
     number: "9310313544",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/1.jpg"
   },
   {
     name: "G Saqlain Pasha",
     email: "gsaqlainpasha@zoho.com",
     number: "9993864927",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/2.jpg"
   },
   {
     name: "Santhosh MB",
     email: "santhoshmechery@gmail.com",
     number: "9446035457",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/3.jpg"
   },
   {
     name: "Dr. Binod Kumar Verma ",
     email: "drbkverma@gmail.com",
     number: "7903880832",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/4.jpg"
   },
   {
     name: "Murugeshwari ",
     email: "murugeshwarim2004@gmail.com",
     number: "9159400257",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/5.jpg"
   },
   {
     name: "Dr. Khushboo ",
     email: "khushboo030303@gmail.com",
     number: "8808459800",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/6.jpg"
   },
   {
     name: "Deepthika Shree",
     email: "deepthikashree@gmail.com",
     number: "8248620345",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/7.jpg"
   },
   {
     name: "Mohd. Muzafer Khan",
     email: "khn_mzfr@yahoo.co.in",
     number: "9419408588",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/8.jpg"
   },
   {
     name: "Dr. Syed Sajid Husain Kazmi ",
     email: "dr.shkazmi@gmail.com",
     number: "8565001786",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/9.jpg"
   },
   {
     name: "Shahana Parveen P.P",
     email: "shahanapp313@gmail.com",
     number: "8589922661",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/10.jpg"
   },
   {
     name: "Dr. Santwana Mani",
     email: "Santwanamani1705@gmail.com",
     number: "9818489746",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/11.jpg"
   },
   {
     name: "Archie Rathi ",
     email: "duhh.itzz.archie@gmail.com",
     number: "9810970849",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/12.jpg"
   },
   {
     name: "Kiranmala Phijam",
     email: "daisyphijam5@gmail.com",
     number: "7005666560",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/13.jpg"
   },
   {
     name: "Pragati Katoch ",
     email: "Pragatikatoch23@gmail.com",
     number: "8626837917",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/14.jpg"
   },
   {
     name: "Divya Kansal ",
     email: "divyakansal.0303@gmail.com",
     number: "9839226365",
+    courseName: "Responsible AI in Mental Health",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-35-2025-26/15.jpg"
+  },
+  {
+    name: "Abhishek Kumar Singh",
+    email: "abhisheksingh2412.email@gmail.com",
+    number: "",
+    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/02.jpg"
+  },
+  {
+    name: "Anand Kumar Singh",
+    email: "anand1994.singh@gmail.com",
+    number: "",
+    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/08.jpg"
+  },
+  {
+    name: "Kasireddi Vara Manikanta Vinay Kumar",
+    email: "kumarvmvinay@gmail.com",
+    number: "",
+    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/27.jpg"
+  },
+  {
+    name: "Milind Siddharth Vinkar",
+    email: "msvinkar@gmail.com",
+    number: "",
+    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/35.jpg"
+  },
+  {
+    name: "Pranshu Dhingra",
+    email: "dhingrap0707@gmail.com",
+    number: "",
+    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/48.jpg"
+  },
+  {
+    name: "Vidhi Sinha",
+    email: "vidhisinha24@gmail.com",
+    number: "7005666560",
+    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/74.jpg"
+  },
+  {
+    name: "Vignesh G",
+    email: "daisyphijam5@gmail.com",
+    number: "",
+    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/75.jpg"
   }
 ];
 
+// Memoize theme configuration outside component to avoid recreating on every render
+const buttonThemeConfig = {
+  components: {
+    Button: {
+      defaultBg: "#FFAE0E",
+      defaultHoverBg: "#E5893C",
+      defaultHoverColor: "#2C2C2C",
+    },
+  },
+};
+
+// Pre-compute unique course names outside component since certificateData is static
+const uniqueCourseNames = Array.from(
+  new Set(certificateData.map((cert) => cert.courseName))
+).map((courseName) => ({
+  value: courseName,
+  label: courseName,
+}));
+
 export default function CertificatePage() {
   const [form] = Form.useForm();
-  const [tab, setTab] = useState<"download" | "verify">("download");
 
-  const onFinish = (values: { phone: string; [key: string]: unknown }) => {
-    const phoneNumber = String(values.phone).trim().replace(/\s+/g, "");
+  const onFinish = useCallback((values: { email: string; courseName?: string; [key: string]: unknown }) => {
+    const emailAddress = String(values.email).trim().toLowerCase();
+    const selectedCourseName = values.courseName ? String(values.courseName).trim() : "";
     
-    // Find matching certificate by phone number
+    // First filter by course name, then find matching certificate by email
     const matchedCertificate = certificateData.find(
-      (cert) => String(cert.number).trim() === phoneNumber
+      (cert) => 
+        cert.courseName === selectedCourseName &&
+        String(cert.email).trim().toLowerCase() === emailAddress
     );
 
     if (matchedCertificate) {
@@ -115,9 +201,9 @@ export default function CertificatePage() {
       message.success("Certificate found! Opening download...");
     } else {
       // Show error message
-      message.error("Mobile number not matched");
+      message.error("Certificate not found. Please check your course name and email ID.");
     }
-  };
+  }, []);
   return (
     <div className="w-full">
       <section className="relative w-full h-[80vh] flex items-center justify-center">
@@ -131,11 +217,11 @@ export default function CertificatePage() {
         {/* Content */}
         <div className="relative flex items-center z-20">
           <Image
-            preview={false}
             alt="IITR Logo"
             src="/IITR_logo.png"
-            width="164px"
-            height="164px"
+            width={164}
+            height={164}
+            priority
             className=""
           />
           <div className="border-l pl-2 text-white">
@@ -162,114 +248,62 @@ export default function CertificatePage() {
             onFinish={onFinish}
             className="space-y-4"
           >
-            {/* Only show Download Certificate for now. Keep Verify Certificate code for future use. */}
-            {true ? (
-              <>
-                <Form.Item
-                  label="Course Name"
-                  name="courseName"
-                  rules={[
-                    { required: true, message: "Please enter your course name!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your course name" />
-                </Form.Item>
+            <Form.Item
+              label="Course Name"
+              name="courseName"
+              rules={[
+                { required: true, message: "Please select your course name!" },
+              ]}
+            >
+              <Select
+                placeholder="Select your course name"
+                showSearch
+                filterOption={(input, option) =>
+                  (option?.label ?? "").toLowerCase().includes(input.toLowerCase())
+                }
+                options={uniqueCourseNames}
+              />
+            </Form.Item>
 
-                <Form.Item
-                  label="Email"
-                  name="email"
-                  rules={[
-                    { required: true, message: "Please enter your email!" },
-                    { type: "email", message: "Please enter a valid email!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your email" />
-                </Form.Item>
+            <Form.Item
+              label="Email"
+              name="email"
+              rules={[
+                { required: true, message: "Please enter your email!" },
+                { type: "email", message: "Please enter a valid email!" },
+              ]}
+            >
+              <Input placeholder="Enter your email" />
+            </Form.Item>
 
-                <Form.Item
-                  label="Candidate Name"
-                  name="candidateName"
-                  rules={[
-                    { required: true, message: "Please enter your candidate name!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your candidate name" />
-                </Form.Item>
+            <Form.Item
+              label="Candidate Name"
+              name="candidateName"
+              rules={[
+                { required: true, message: "Please enter your candidate name!" },
+              ]}
+            >
+              <Input placeholder="Enter your candidate name" />
+            </Form.Item>
 
-                <Form.Item
-                  label="Phone Number"
-                  name="phone"
-                  rules={[
-                    { required: true, message: "Please enter your phone number!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your phone number" />
-                </Form.Item>
-              </>
-            ) : (
-              <>
-                <Form.Item
-                  label="Candidate Name"
-                  name="candidateName"
-                  rules={[
-                    { required: true, message: "Please enter your candidate name!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your candidate name" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Email"
-                  name="email"
-                  rules={[
-                    { required: true, message: "Please enter your email!" },
-                    { type: "email", message: "Please enter a valid email!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your email" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Enrollment Number"
-                  name="enrollmentNumber"
-                  rules={[
-                    { required: true, message: "Please enter your enrollment number!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your enrollment number" />
-                </Form.Item>
-
-                <Form.Item
-                  label="Certificate ID"
-                  name="certificateId"
-                  rules={[
-                    { required: true, message: "Please enter your certificate ID!" },
-                  ]}
-                >
-                  <Input placeholder="Enter your certificate ID" />
-                </Form.Item>
-              </>
-            )}
+            <Form.Item
+              label="Phone Number"
+              name="phone"
+              rules={[
+                { required: true, message: "Please enter your phone number!" },
+              ]}
+            >
+              <Input placeholder="Enter your phone number" />
+            </Form.Item>
 
             <Form.Item>
-              <ConfigProvider
-                theme={{
-                  components: {
-                    Button: {
-                      defaultBg: "#FFAE0E",
-                      defaultHoverBg: "#E5893C",
-                      defaultHoverColor: "#2C2C2C",
-                    },
-                  },
-                }}
-              >
+              <ConfigProvider theme={buttonThemeConfig}>
                 <Button
                   type="default"
                   htmlType="submit"
                   className="border-none w-full py-2.5 px-6 text-black text-lg font-normal tracking-wide"
                 >
-                  {/* Only show Download Certificate for now. Keep Verify Certificate code for future use. */}
-                  {true ? "Download Certificate" : "Verify Certificate"}
+                  Download Certificate
                 </Button>
               </ConfigProvider>
             </Form.Item>

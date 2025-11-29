@@ -33,12 +33,12 @@ export const remunerationHonorariumConfig: FormConfig = {
             label: "",
             data: {
                 columns: [
-                    { header: "4", width: 60 },
-                    { header: "Name and Address of Expert\n(In capital letter)\nMobile No.\nEmail :", width: 220 },
+                    { header: "", width: 60 },
+                    { header: "", width: 220 },
                     { header: "", width: 280 },
                 ],
                 rows: [
-                    ["", "", ""],
+                    ["4", "Name and Address of Expert\n(In capital letter)\nMobile No.\nEmail :", ""],
                 ]
             }
         },
@@ -57,6 +57,22 @@ export const remunerationHonorariumConfig: FormConfig = {
                 rows: [
                     ["(i)", "Lectures (L)/Interactions/*", "", "", "", ""],
                     ["(ii)", "PDF Amount (if applicable)", "", "", "", ""],
+                ]
+            }
+        },
+        // Payment details table (after signature section)
+        {
+            label: "",
+            data: {
+                columns: [
+                    { header: "", width: 250 },
+                    { header: "", width: 310 },
+                ],
+                rows: [
+                    ["Passed for Payment for Rs. :", ""],
+                    ["Rupees :", ""],
+                    ["Please debit to Course A/C No. :", ""],
+                    ["Ledger Code No. :", ""],
                 ]
             }
         },
@@ -141,8 +157,26 @@ export const mapRemunerationHonorariumDataToConfig = (formData: any): FormConfig
     // Map expert details to the first table (row 0, column 2 - third column)
     if (config.tables && config.tables.length > 0) {
         const expertTable = config.tables[0];
-        if (expertTable && expertTable.data && expertTable.data.rows.length > 0) {
-            // User data goes in the third column (index 2)
+        if (expertTable && expertTable.data) {
+            // Ensure rows array exists and has exactly one row with 3 columns
+            if (!expertTable.data.rows || expertTable.data.rows.length === 0) {
+                expertTable.data.rows = [["4", "Name and Address of Expert\n(In capital letter)\nMobile No.\nEmail :", ""]];
+            }
+            // Ensure we only have one row (remove any extra rows)
+            if (expertTable.data.rows.length > 1) {
+                expertTable.data.rows = [expertTable.data.rows[0]];
+            }
+            // Ensure the row has exactly 3 columns
+            if (expertTable.data.rows[0].length < 3) {
+                while (expertTable.data.rows[0].length < 3) {
+                    expertTable.data.rows[0].push("");
+                }
+            } else if (expertTable.data.rows[0].length > 3) {
+                expertTable.data.rows[0] = expertTable.data.rows[0].slice(0, 3);
+            }
+            // Set column 0 to "4", column 1 to label text, column 2 to expert details
+            expertTable.data.rows[0][0] = "4";
+            expertTable.data.rows[0][1] = "Name and Address of Expert\n(In capital letter)\nMobile No.\nEmail :";
             expertTable.data.rows[0][2] = formData.expert_details || "";
         }
     }
@@ -185,9 +219,32 @@ export const mapRemunerationHonorariumDataToConfig = (formData: any): FormConfig
         }
     }
     
-    // Map "For Office Use" table (3rd table, index 2)
+    // Map payment details table (3rd table, index 2) - after signature section
     if (config.tables && config.tables.length > 2) {
-        const officeUseTable = config.tables[2];
+        const paymentTable = config.tables[2];
+        if (paymentTable && paymentTable.data && paymentTable.data.rows.length > 0) {
+            paymentTable.data.rows[0] = [
+                "Passed for Payment for Rs. :",
+                formData.passed_for_payment || ""
+            ];
+            paymentTable.data.rows[1] = [
+                "Rupees :",
+                formData.rupees_in_words || ""
+            ];
+            paymentTable.data.rows[2] = [
+                "Please debit to Course A/C No. :",
+                formData.course_account_no || ""
+            ];
+            paymentTable.data.rows[3] = [
+                "Ledger Code No. :",
+                formData.ledger_code_no || ""
+            ];
+        }
+    }
+    
+    // Map "For Office Use" table (4th table, index 3)
+    if (config.tables && config.tables.length > 3) {
+        const officeUseTable = config.tables[3];
         if (officeUseTable && officeUseTable.data && officeUseTable.data.rows.length > 0) {
             officeUseTable.data.rows[0] = [
                 "",

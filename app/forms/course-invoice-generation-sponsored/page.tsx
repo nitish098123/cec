@@ -27,6 +27,7 @@ const CourseInvoiceGenerationSponsoredForm = () => {
                 <Form layout="vertical" name="invoice_generation_sponsored" onFinish={async (values) => {
                     // Prepare complete data for PDF
                     const payload = {
+                        dated: values.dated,
                         sponsoring_agency_details: values.sponsoring_agency_details,
                         course_code: values.course_code,
                         course_name: values.course_name,

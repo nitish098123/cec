@@ -241,8 +241,7 @@ export function mapFormDataToConfig(formData: any) {
   
   // Add Lectures table
   const lectureRows = (formData.lectures && Array.isArray(formData.lectures) && formData.lectures.length > 0)
-    ? formData.lectures.map((lec: any, index: number) => [
-        (index + 1).toString(), // Sl No.
+    ? formData.lectures.map((lec: any) => [
         lec.expert || '',
         lec.topic || '',
         lec.mode || '',
@@ -255,12 +254,11 @@ export function mapFormDataToConfig(formData: any) {
     label: '(i) Details of Lectures',
     data: {
       columns: [
-        { header: 'Sl No.', width: 35 },
-        { header: 'Name of IITR Expert/Industry Expert', width: 110 },
-        { header: 'Topic of Lecture', width: 110 },
-        { header: 'Mode (Live or offline)', width: 70 },
-        { header: 'No. of Hours', width: 55 },
-        { header: 'Date of Lecture/(Week No.)', width: 95 }
+        { header: 'Name of IITR Expert/Industry Expert', width: 125 },
+        { header: 'Topic of Lecture', width: 125 },
+        { header: 'Mode (Live or offline)', width: 80 },
+        { header: 'No. of Hours', width: 60 },
+        { header: 'Date of Lecture/(Week No.)', width: 110 }
       ],
       rows: lectureRows
     }
@@ -268,8 +266,7 @@ export function mapFormDataToConfig(formData: any) {
   
   // Add Hands-on table
   const handsOnRows = (formData.hands_on && Array.isArray(formData.hands_on) && formData.hands_on.length > 0)
-    ? formData.hands_on.map((ho: any, index: number) => [
-        (index + 1).toString(), // Sl No.
+    ? formData.hands_on.map((ho: any) => [
         ho.topic || '',
         ho.mode || '',
         ho.hours?.toString() || '',
@@ -281,11 +278,10 @@ export function mapFormDataToConfig(formData: any) {
     label: '(ii) Details of Hands-on/project/assignments/use cases',
     data: {
       columns: [
-        { header: 'Sl No.', width: 35 },
-        { header: 'Topic of Hands-on', width: 130 },
-        { header: 'Mode (Live or offline)', width: 85 },
-        { header: 'No. of Hours', width: 60 },
-        { header: 'Date of Hands-on/project/assignments/use cases /(Week No.)', width: 160 }
+        { header: 'Topic of Hands-on', width: 150 },
+        { header: 'Mode (Live or offline)', width: 100 },
+        { header: 'No. of Hours', width: 70 },
+        { header: 'Date of Hands-on/project/assignments/use cases /(Week No.)', width: 195 }
       ],
       rows: handsOnRows
     }
