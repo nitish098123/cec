@@ -155,7 +155,7 @@ const certificateData = [
   },
   {
     name: "Vignesh G",
-    email: "daisyphijam5@gmail.com",
+    email: "vigneshvarma1@gmail.com",
     number: "",
     courseName: "Post Gradurate Programme in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/75.jpg"
