@@ -134,16 +134,6 @@ const courses: Course[] = [
   },
   // Management
   {
-    id: 21,
-    name: "Post-Graduate Certificate Programme in AI-Driven FinTech (PGCPF)",
-    duration: "6 Months",
-    mode: "Online",
-    students: "New",
-    partner: "PhysicsWallah",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ai_driven_fintech.jpeg",
-  },
-  {
     id: 8,
     name: "HR Management and Analytics",
     duration: "6 Months",
@@ -829,11 +819,10 @@ export default function HomePage() {
                       course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
                       course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
                       course.id === 20 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_Samkhya.pdf" :
-                      course.id === 21 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-ai-driven-fintech--pgcpf--753625" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
