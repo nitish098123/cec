@@ -55,7 +55,7 @@ const cardData: CardData[] = [
   {
     image_url: "/staff/anand-singh.jpg",
     name: "Mr. Anand Singh",
-    designation: "Sybex Staff",
+    designation: "Updater Services Ltd. Staff",
     phone: "01332-285545",
   },
 ];

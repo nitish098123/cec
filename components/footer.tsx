@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
               </span>
             </p>
             <p>
-              Phone: <span>+91-133228-5545</span>
+              Phone: <span>+91-133228-5545, 4327</span>
             </p>
             <p>
               Email:{" "}

@@ -163,77 +163,77 @@ const certificateData = [
   {
     name: "Johar Tariq",
     email: "johartariq@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-14-2022-23/180.jpg"
   },
   {
     name: "Mayank Silori",
     email: "mayank.silori@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-14-2022-23/181.jpg"
   },
   {
     name: "Haridas K",
     email: "kharidas009@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-14-2022-23/182.jpg"
   },
   {
     name: "CH.Ramadevi",
     email: "Rama.kris22m@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-14-2022-23/183.jpg"
   },
   {
     name: "Tauseef Ejaz",
     email: "ejaz.tauseef@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/24.jpg"
   },
   {
     name: "Neha Singh",
     email: "neha1234online@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/25.jpg"
   },
   {
     name: "Revathy Haridass",
     email: "revathy92vanaja@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/26.jpg"
   },
   {
     name: "Abhi Chand",
     email: "chandabhi78@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/27.jpg"
   },
   {
     name: "Debasish Acharya",
     email: "debasish.acharya1234@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/28.jpg"
   },
   {
     name: "Gaurree Verma",
     email: "gaurreeverma@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/29.jpg"
   },
   {
     name: "Hardik Dogra",
     email: "hardikdogra2012@gmail.com",
-    number: "",
+    number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/30.jpg"
   }
