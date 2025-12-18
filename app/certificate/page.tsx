@@ -236,6 +236,832 @@ const certificateData = [
     number: " ",
     courseName: "Business Analytics for Strategic Decision Making",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-69-2023-24/30.jpg"
+  },
+  {
+    name: "Mahesh Kumar Sinha",
+    email: "mahi.suny@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/01.jpg"
+  },
+  {
+    name: "Santhosh A V",
+    email: "ambalesunny123@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/02.jpg"
+  },
+  {
+    name: "Amal Jose",
+    email: "amal007jose@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/03.jpg"
+  },
+  {
+    name: "Namrata Choubey",
+    email: "namratachoubey97@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/04.jpg"
+  },
+  {
+    name: "Yogesh Kumar Tiwari",
+    email: "ytiwari01@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/05.jpg"
+  },
+  {
+    name: "Rakesh Roshan",
+    email: "rakeshmani35@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/06.jpg"
+  },
+  {
+    name: "Rahul Das Survase",
+    email: "rahuldas11694@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/07.jpg"
+  },
+  {
+    name: "Shreyas G Trivikram",
+    email: "shreyas3vkram@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/08.jpg"
+  },
+  {
+    name: "Ponvel Periyur Kumarasamy",
+    email: "pkponvel@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/09.jpg"
+  },
+  {
+    name: "Chandravati Gupta",
+    email: "chandravatigupta0904@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/10.jpg"
+  },
+  {
+    name: "Mohammed Rizwan Nagauri",
+    email: "riz_nagauri@hotmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/11.jpg"
+  },
+  {
+    name: "Tarun kumar Singh",
+    email: "tksingh96@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/12.jpg"
+  },
+  {
+    name: "Krishna Balu Adi",
+    email: "dgkrishna0810@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/13.jpg"
+  },
+  {
+    name: "Piyush Kumar Jayant",
+    email: "piyushjayant4u@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/14.jpg"
+  },
+  {
+    name: "Yashpal Singh Slathia",
+    email: "yashpal.slathia@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/15.jpg"
+  },
+  {
+    name: "Harsh Shringi",
+    email: "harshs3791@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/16.jpg"
+  },
+  {
+    name: "Madhusudan Maheshwari",
+    email: "madhusudanmaheshwari20@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/17.jpg"
+  },
+  {
+    name: "Krishna gole",
+    email: "kgkgole02@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/18.jpg"
+  },
+  {
+    name: "Vishad  Chowbey",
+    email: "vishad.chowbey@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/19.jpg"
+  },
+  {
+    name: "Priya Ranjan Behera",
+    email: "priyaranjan.799@yahoo.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/20.jpg"
+  },
+  {
+    name: "Aditya Sharma",
+    email: "adityasharma9352@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/21.jpg"
+  },
+  {
+    name: "Shardendu Singh Butola",
+    email: "shardendu.butola7@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/22.jpg"
+  },
+  {
+    name: "Sanket Bhadange",
+    email: "sanketnb2404@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/23.jpg"
+  },
+  {
+    name: "Aniket Singh",
+    email: "aniketshanjul@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/24.jpg"
+  },
+  {
+    name: "K Nagarpramodh",
+    email: "pramodh4u96@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/25.jpg"
+  },
+  {
+    name: "Biswadeep Bhattacharjee",
+    email: "biswadeep9987@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/26.jpg"
+  },
+  {
+    name: "Stalin",
+    email: "nsbabu.n12@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/27.jpg"
+  },
+  {
+    name: "VINOD M",
+    email: "vinodmurugan12@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/28.jpg"
+  },
+  {
+    name: "Dimpee Shroha",
+    email: "dimpeeshroha1@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/29.jpg"
+  },
+  {
+    name: "Dheeraj Bagga",
+    email: "dheerajbagga@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/30.jpg"
+  },
+  {
+    name: "Puneeth SJ",
+    email: "puneeth.sj@hotmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/31.jpg"
+  },
+  {
+    name: "Ankit",
+    email: "shendeankit6@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/32.jpg"
+  },
+  {
+    name: "Arnab Das",
+    email: "arnab.das1993@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/33.jpg"
+  },
+  {
+    name: "Gouranga Jana",
+    email: "gouranga.egra@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/34.jpg"
+  },
+  {
+    name: "Richie Varghese",
+    email: "ric-v@outlook.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/35.jpg"
+  },
+  {
+    name: "Krishna Pratap Singh",
+    email: "kpsingh1234@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/36.jpg"
+  },
+  {
+    name: "Sheela N",
+    email: "jayasheelanarayanan@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/37.jpg"
+  },
+  {
+    name: "JAY PRAKASH DUTTA",
+    email: "bapi1.dutta@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/38.jpg"
+  },
+  {
+    name: "Gautam Varadarajan",
+    email: "gautam.10791@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/39.jpg"
+  },
+  {
+    name: "Mudit Shrivastava",
+    email: "mudit1318@outlook.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/40.jpg"
+  },
+  {
+    name: "Gururaja Kalmanje",
+    email: "gkalmanje@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/41.jpg"
+  },
+  {
+    name: "Pritam Kandula",
+    email: "pritam.kawr@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/42.jpg"
+  },
+  {
+    name: "siva raja",
+    email: "sivarajacr7@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/43.jpg"
+  },
+  {
+    name: "Jayakumar N",
+    email: "jayagma032@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/44.jpg"
+  },
+  {
+    name: "Akash",
+    email: "akash.ag8246@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/45.jpg"
+  },
+  {
+    name: "HariPrasad N",
+    email: "nhprasad@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/46.jpg"
+  },
+  {
+    name: "Kypa Pradeep Reddy",
+    email: "deepu462@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/47.jpg"
+  },
+  {
+    name: "JBharath S",
+    email: "jayabharathreddys@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/48.jpg"
+  },
+  {
+    name: "Razat Aggarwal",
+    email: "razat.javaprogrammer@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/49.jpg"
+  },
+  {
+    name: "Sayan Goswami",
+    email: "secretsayan@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/50.jpg"
+  },
+  {
+    name: "Rahul",
+    email: "rahulcks1@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/51.jpg"
+  },
+  {
+    name: "Sreedhar Punnamaraju",
+    email: "plssreedhar@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/52.jpg"
+  },
+  {
+    name: "Abhijit Borawake",
+    email: "abhijit_borawake@outlook.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/53.jpg"
+  },
+  {
+    name: "CHINNIAH",
+    email: "chinniah89@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/54.jpg"
+  },
+  {
+    name: "kedarnath",
+    email: "kedarnag@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/55.jpg"
+  },
+  {
+    name: "Manickam C",
+    email: "manickamchidhambaram@live.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/56.jpg"
+  },
+  {
+    name: "Manjunath",
+    email: "mryavanakiworkspace@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/57.jpg"
+  },
+  {
+    name: "Srinivasan Panneerselvam",
+    email: "svas258@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/58.jpg"
+  },
+  {
+    name: "Santosh Kumar Mohanty",
+    email: "santa.jyp@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/59.jpg"
+  },
+  {
+    name: "Vijayanand Ravi",
+    email: "vijayanandr2000@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/60.jpg"
+  },
+  {
+    name: "Keerthy M",
+    email: "keerthikasargunam@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/61.jpg"
+  },
+  {
+    name: "Manish",
+    email: "manishkyadava7@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/62.jpg"
+  },
+  {
+    name: "Siddharth Arwade",
+    email: "siddhartharwade@live.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/63.jpg"
+  },
+  {
+    name: "Harmeet Talreja",
+    email: "bhatia.harmeet11@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/64.jpg"
+  },
+  {
+    name: "prasad",
+    email: "varaprasad.motamarri212@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/65.jpg"
+  },
+  {
+    name: "Naga Sri Sai Chaitanya Kolluri",
+    email: "saichaitanya518@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/66.jpg"
+  },
+  {
+    name: "Raushan Kumar Singh",
+    email: "mailtoraushanpratap@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/67.jpg"
+  },
+  {
+    name: "Sreemol M",
+    email: "sreemolgagarinsera@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/68.jpg"
+  },
+  {
+    name: "Harman Singh Kapoor",
+    email: "harmansinghkapoor21@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/69.jpg"
+  },
+  {
+    name: "Roohitth Upadhyayuula",
+    email: "roohitth.upadhyayuula@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/70.jpg"
+  },
+  {
+    name: "Sivaram",
+    email: "sivaveluri15@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/71.jpg"
+  },
+  {
+    name: "indu sahu",
+    email: "indu.sahu19nov@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/72.jpg"
+  },
+  {
+    name: "Kapil Katiyar",
+    email: "kapil.bic@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/73.jpg"
+  },
+  {
+    name: "Kunal Singh Deo",
+    email: "kuunalsinghdeeo@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/74.jpg"
+  },
+  {
+    name: "Raviteja L",
+    email: "lraviteja10@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/75.jpg"
+  },
+  {
+    name: "Manoj SP",
+    email: "manojvsp12@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/76.jpg"
+  },
+  {
+    name: "Rajat Mishra",
+    email: "rajatmisra421@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/77.jpg"
+  },
+  {
+    name: "Sayantan Das",
+    email: "d.sayantan@outlook.in",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/78.jpg"
+  },
+  {
+    name: "Hitesh Jaisinghani",
+    email: "hiteshjaisinghani94@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/79.jpg"
+  },
+  {
+    name: "Mohamed Jubair",
+    email: "amzubair@live.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/80.jpg"
+  },
+  {
+    name: "Arun Kumar Panda",
+    email: "arun.k.panda@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/81.jpg"
+  },
+  {
+    name: "Deepak Sonthalia",
+    email: "deepakk.sonthalia@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/82.jpg"
+  },
+  {
+    name: "Saideep Kankarla",
+    email: "saideep.kankarla@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/83.jpg"
+  },
+  {
+    name: "Chetna",
+    email: "chetnakad@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/84.jpg"
+  },
+  {
+    name: "Tushar Raj",
+    email: "tusharrajglobus@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/85.jpg"
+  },
+  {
+    name: "Amol Brahme",
+    email: "amolsbrahme@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/86.jpg"
+  },
+  {
+    name: "Bakul Patel",
+    email: "bakul.payex@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/87.jpg"
+  },
+  {
+    name: "Mahesh J",
+    email: "maghi711@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/88.jpg"
+  },
+  {
+    name: "Sachin kumar",
+    email: "sachin.kumar.maheshwarappa@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/89.jpg"
+  },
+  {
+    name: "kumar Advait",
+    email: "advaitkr91@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/90.jpg"
+  },
+  {
+    name: "Denny Mathew",
+    email: "dennymathew.developer@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/91.jpg"
+  },
+  {
+    name: "Akhilesh Soni",
+    email: "akhileshsoni@outlook.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/92.jpg"
+  },
+  {
+    name: "kamal singh",
+    email: "kamalsingh246@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/93.jpg"
+  },
+  {
+    name: "Girija",
+    email: "gpp99371@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/94.jpg"
+  },
+  {
+    name: "Rahul",
+    email: "rahul_rungta2002@yahoo.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/95.jpg"
+  },
+  {
+    name: "Hemant Kumar",
+    email: "hemant11102219@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/96.jpg"
+  },
+  {
+    name: "Arunkumar Bandaru",
+    email: "kumararun.bandaru@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/97.jpg"
+  },
+  {
+    name: "Gangadhar",
+    email: "gangadharucet@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/98.jpg"
+  },
+  {
+    name: "Dastagiri Durgam",
+    email: "durgamdastagiri.tech@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/99.jpg"
+  },
+  {
+    name: "Ravindra babu jerripothu",
+    email: "ravindra.jerry@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/100.jpg"
+  },
+  {
+    name: "Kazi Arafat",
+    email: "arafatkazi2448@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/101.jpg"
+  },
+  {
+    name: "Eshan Akash",
+    email: "eshanakash13200@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/102.jpg"
+  },
+  {
+    name: "Sharath M",
+    email: "sharathre5751@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/103.jpg"
+  },
+  {
+    name: "ASHUTOSH",
+    email: "ashutoshgolwalkar@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/104.jpg"
+  },
+  {
+    name: "Balkaran Chandel",
+    email: "chandel0810@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/105.jpg"
+  },
+  {
+    name: "Mohd Jaweed",
+    email: "mdjaweed2010@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/106.jpg"
+  },
+  {
+    name: "Priyesh K",
+    email: "priyeshkaratha@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/107.jpg"
+  },
+  {
+    name: "Vaishnavi Rani",
+    email: "vaaishnavirani@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/108.jpg"
+  },
+  {
+    name: "Aman Jaiswal",
+    email: "amanjaiswal159.aj@icloud.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/109.jpg"
+  },
+  {
+    name: "Nikhil Wasnik",
+    email: "nikhilkumar.nv80@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/110.jpg"
+  },
+  {
+    name: "Shyam Zarikar",
+    email: "shyamzarikar@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/111.jpg"
+  },
+  {
+    name: "Pardeep Chahal",
+    email: "pardeepchahal89@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/112.jpg"
+  },
+  {
+    name: "Shri Krishna Prasad S",
+    email: "sgkrishna619@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/113.jpg"
+  },
+  {
+    name: "Sanketh P",
+    email: "sanketh52@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/114.jpg"
+  },
+  {
+    name: "Ankit Kumar",
+    email: "ankit.kr9819@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/115.jpg"
+  },
+  {
+    name: "akhil kv",
+    email: "akhilkv356@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/116.jpg"
+  },
+  {
+    name: "Prajwal",
+    email: "prajwaltikale@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/117.jpg"
+  },
+  {
+    name: "Kanishka Gupta",
+    email: "kanishkgupta13@gmail.com",
+    number: " ",
+    courseName: "Certificate Program in Advanced AI Engineering",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/118.jpg"
   }
 ];
 
