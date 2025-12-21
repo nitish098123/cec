@@ -1062,6 +1062,461 @@ const certificateData = [
     number: " ",
     courseName: "Certificate Program in Advanced AI Engineering",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-11-2025-26/118.jpg"
+  },
+  {
+    name: "Aadil Bashaa",
+    email: "bashaaadil11@gmail.com",
+    number: "7010458534",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/01.jpg"
+  },
+  {
+    name: "Abha Patil",
+    email: "abhapatil1724@gmail.com",
+    number: "9819465774",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/02.jpg"
+  },
+  {
+    name: "Adwaita Buch",
+    email: "adwaitabuch@gmail.com",
+    number: "9824228136",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/03.jpg"
+  },
+  {
+    name: "Agalya J",
+    email: "agalya3132@gmail.com",
+    number: "9071047361",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/04.jpg"
+  },
+  {
+    name: "Aindrila Roy",
+    email: "royaindrila221@gmail.com",
+    number: "8910356117",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/05.jpg"
+  },
+  {
+    name: "Amit Saini ",
+    email: "amit82saini2003@gmail.com",
+    number: "9719152975",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/06.jpg"
+  },
+  {
+    name: "Angel John",
+    email: "angel.john1983@gmail.com",
+    number: "85275 31505",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/07.jpg"
+  },
+  {
+    name: "Anisha Singh",
+    email: "anisha0124singh@gmail.com",
+    number: "9983001006",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/08.jpg"
+  },
+  {
+    name: "Anjali Saini",
+    email: "advanjalisaini24@gmail.com",
+    number: "8860840207",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/09.jpg"
+  },
+  {
+    name: "Annie Sharma",
+    email: "sharmaannie11@gmail.com",
+    number: "8860154883",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/10.jpg"
+  },
+  {
+    name: "Arvind Chidambaram",
+    email: "arvind95817@gmail.com",
+    number: "9080767277",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/11.jpg"
+  },
+  {
+    name: "Aryan Raj",
+    email: "aryaraj8847@gmail.com",
+    number: "9990360827",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/12.jpg"
+  },
+  {
+    name: "Bharathi Kannamma V",
+    email: "bharathikannamma22594@gmail.com",
+    number: "9600225940",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/13.jpg"
+  },
+  {
+    name: "Charvi Madaan",
+    email: "madaan.c6172@gmail.com",
+    number: "9034421093",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/14.jpg"
+  },
+  {
+    name: "Dahlia Das",
+    email: "dahlia.tdas@gmail.com",
+    number: "9985815222",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/15.jpg"
+  },
+  {
+    name: "Deepa Saran",
+    email: "deepasaran2806@gmail.com",
+    number: "9823142552",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/16.jpg"
+  },
+  {
+    name: "Harisha Danny",
+    email: "harishadanny23@gmail.com",
+    number: "8247855669",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/17.jpg"
+  },
+  {
+    name: "Harshita Saini",
+    email: "Ft70041harshitasaini@gmail.com",
+    number: "8827236444",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/18.jpg"
+  },
+  {
+    name: "Himanshu Bhagwanani",
+    email: "himanshubhagwanai96@gmail.com",
+    number: "96198 23322",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/19.jpg"
+  },
+  {
+    name: "Jaya Vyas",
+    email: "jayapurohitvyas23@gmail.com",
+    number: "8779387707",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/20.jpg"
+  },
+  {
+    name: "Manasi Singh",
+    email: "manasibsingh@gmail.com",
+    number: "9702116200",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/21.jpg"
+  },
+  {
+    name: "Medha Tyagi",
+    email: "tyagimedha11@gmail.com",
+    number: "9724240151",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/22.jpg"
+  },
+  {
+    name: "Mickey Doshi",
+    email: "doshi.mickey@gmail.com",
+    number: "8898558161",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/23.jpg"
+  },
+  {
+    name: "Mihir Soni",
+    email: "mihirsoni077@gmail.com",
+    number: "8291515896",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/24.jpg"
+  },
+  {
+    name: "Mitali Bane",
+    email: "mitalibane180303@gmail.com",
+    number: "9987109820",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/25.jpg"
+  },
+  {
+    name: "Mukesh Kumar Mandal",
+    email: "krmukesh773@gmail.com",
+    number: "6204484760",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/26.jpg"
+  },
+  {
+    name: "Muni Mukesh Kumar",
+    email: "mukesh.m10120@gmail.com",
+    number: "8056423633",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/27.jpg"
+  },
+  {
+    name: "Namrata Gamare",
+    email: "namrata.gamare733@gmail.com",
+    number: "9137286200",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/28.jpg"
+  },
+  {
+    name: "Nandhini G",
+    email: "nandhinig295@gmail.com",
+    number: "9080994139",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/29.jpg"
+  },
+  {
+    name: "Nauka Naik",
+    email: "nauka097@gmail.com",
+    number: "9825639922",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/30.jpg"
+  },
+  {
+    name: "Neha Gupta",
+    email: "hineha2016@gmail.com",
+    number: "9958614964",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/31.jpg"
+  },
+  {
+    name: "Nikitta Nataraj",
+    email: "nikittanataraj@gmail.com",
+    number: "8838441920",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/32.jpg"
+  },
+  {
+    name: "Oishy Chatterjee",
+    email: "oishyc03@gmail.com",
+    number: "9654413944",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/33.jpg"
+  },
+  {
+    name: "Pallavi Kumari",
+    email: "pallavikri708@gmail.com",
+    number: "7061592896",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/34.jpg"
+  },
+  {
+    name: "Parul Gupta",
+    email: "guccigupta1215@gmail.com",
+    number: "9679336888",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/35.jpg"
+  },
+  {
+    name: "Prabha M",
+    email: "prabha.m1995@gmail.com",
+    number: "9789065457",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/36.jpg"
+  },
+  {
+    name: "Pragati Bane",
+    email: "pragatibane06@gmail.com",
+    number: "8850664461",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/37.jpg"
+  },
+  {
+    name: "Pragya Pandey",
+    email: "iamppragya@gmail.com",
+    number: "8085644898",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/38.jpg"
+  },
+  {
+    name: "Pranavi Saini",
+    email: "Pranavi.saini11@gmail.com",
+    number: "8449079530",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/39.jpg"
+  },
+  {
+    name: "Prashant Mani Tripathi",
+    email: "prashantbatun72@yahoo.co.in",
+    number: "9098463337",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/40.jpg"
+  },
+  {
+    name: "Preeti Anand",
+    email: "preeti_angra@yahoo.com",
+    number: "9717420606",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/41.jpg"
+  },
+  {
+    name: "Preeti Jiandani ",
+    email: "jiandanipreeti56@gmail.com",
+    number: "9870745451",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/42.jpg"
+  },
+  {
+    name: "Prerana Jha",
+    email: "preranajha002018@gmail.com",
+    number: "8240014632",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/43.jpg"
+  },
+  {
+    name: "Priyanka Mukherjee",
+    email: "emailpriyankamukherjee@gmail.com",
+    number: "9036912587",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/44.jpg"
+  },
+  {
+    name: "Priyanka Jagtap",
+    email: "priyanka.vjag@gmail.com",
+    number: "6355406417",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/45.jpg"
+  },
+  {
+    name: "Priyanka Sen",
+    email: "priyanka.sen20@gmail.com",
+    number: "8802003366",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/46.jpg"
+  },
+  {
+    name: "Rajashree Parida",
+    email: "rajashree.hrd@gmail.com",
+    number: "8073431088",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/47.jpg"
+  },
+  {
+    name: "Rhythima Banerjee ",
+    email: "Rhythima.banerjee@gmail.com",
+    number: "9987357120",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/48.jpg"
+  },
+  {
+    name: "Ritu Kumari",
+    email: "ritu.khandka@gmail.com",
+    number: "9899755640",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/49.jpg"
+  },
+  {
+    name: "Sharon Pinto",
+    email: "pintosharon04@gmail.com",
+    number: "7022008523",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/50.jpg"
+  },
+  {
+    name: "Shivya Srivastava",
+    email: "shivya.shivya94@gmail.com",
+    number: "7572084600",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/51.jpg"
+  },
+  {
+    name: "Shradha Khedkar",
+    email: "shradhakk99@gmail.com",
+    number: "9923968520",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/52.jpg"
+  },
+  {
+    name: "Sonali Bindiya",
+    email: "sonali17bindiya@gmail.com",
+    number: "8447880983",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/53.jpg"
+  },
+  {
+    name: "Srabanti Roy",
+    email: "rsrabanti24@gmail.com",
+    number: "8942804241",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/54.jpg"
+  },
+  {
+    name: "Suha Subramanian",
+    email: "suhasubramanian@gmail.com",
+    number: "9962959946",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/55.jpg"
+  },
+  {
+    name: "Sunita Dhama",
+    email: "Sunita.dhama@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/56.jpg"
+  },
+  {
+    name: "Tandrita Saha",
+    email: "saha.piu95@gmail.com",
+    number: "8777250574",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/57.jpg"
+  },
+  {
+    name: "Tanvi Kolte",
+    email: "tanvikolte2003@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/58.jpg"
+  },
+  {
+    name: "Thanishka Pulipati",
+    email: "pulipatithanishka@gmail.com",
+    number: "87121 96342",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/59.jpg"
+  },
+  {
+    name: "Thulasi P R",
+    email: "thulasi0710@gmail.com",
+    number: "9791784203",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/60.jpg"
+  },
+  {
+    name: "Trisha Rao",
+    email: "trisha190405@gmail.com",
+    number: "7011519425",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/61.jpg"
+  },
+  {
+    name: "V Haridev",
+    email: "hari9047672950@gmail.com",
+    number: "9047672950",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/62.jpg"
+  },
+  {
+    name: "Vaishnavi Deomali",
+    email: "vdeomali@gmail.com",
+    number: "8265090306",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/63.jpg"
+  },
+  {
+    name: "Vidisha",
+    email: "vidujain1995@gmail.com",
+    number: "9650091392",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/64.jpg"
+  },
+  {
+    name: "Yerva Sriliptha Reddy",
+    email: "lipthareddy@gmail.com",
+    number: "9515477260",
+    courseName: "Certificate Program in Human Resource Management and Analytics",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/65.jpg"
   }
 ];
 
