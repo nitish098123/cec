@@ -1517,6 +1517,314 @@ const certificateData = [
     number: "9515477260",
     courseName: "Certificate Program in Human Resource Management and Analytics",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-08-2025-26/65.jpg"
+  },
+  {
+    name: "Aarti Garje",
+    email: "aartigarje7@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/01.jpg"
+  },
+  {
+    name: "Aditi Sharma",
+    email: "aditisharma0207@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/02.jpg"
+  },
+  {
+    name: "Akshay Palle",
+    email: "palleakshaykumar@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/03.jpg"
+  },
+  {
+    name: "Amal Francis",
+    email: "amalfrancis11@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/04.jpg"
+  },
+  {
+    name: "Anindya Pal",
+    email: "pal.anindya@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/05.jpg"
+  },
+  {
+    name: "Antonio Schuh",
+    email: "antonio.schuh@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/06.jpg"
+  },
+  {
+    name: "Anurag Sharma",
+    email: "anuraggcp93@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/07.jpg"
+  },
+  {
+    name: "Anusha Tagirisa",
+    email: "anusha.tagirisa@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/08.jpg"
+  },
+  {
+    name: "Anwesha Nanda",
+    email: "anweshananda25@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/09.jpg"
+  },
+  {
+    name: "Arunkumar Azhagudurai",
+    email: "speaktoarun@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/10.jpg"
+  },
+  {
+    name: "Atul Verma",
+    email: "atulkumarverma1980@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/11.jpg"
+  },
+  {
+    name: "Ayush Ramawat",
+    email: "ayushramawat29@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/12.jpg"
+  },
+  {
+    name: "Debojyoti Dey",
+    email: "deydebojyoti37@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/13.jpg"
+  },
+  {
+    name: "Habin Linu John",
+    email: "habinlinujohn@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/14.jpg"
+  },
+  {
+    name: "Harish Venkatram Saripella",
+    email: "venkatramharish@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/15.jpg"
+  },
+  {
+    name: "Jagannathan V",
+    email: "vjagan1090@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/16.jpg"
+  },
+  {
+    name: "Jones Selva Kumar Lazar",
+    email: "joneslazar56@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/17.jpg"
+  },
+  {
+    name: "Kusuma Durga Sai Manikanta Teja Gidijala",
+    email: "manikhanta0023@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/18.jpg"
+  },
+  {
+    name: "Lakshmi Ravichandran",
+    email: "lakshmi.cse.gct@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/19.jpg"
+  },
+  {
+    name: "Mohit Murthy",
+    email: "mmohit098765@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/20.jpg"
+  },
+  {
+    name: "Muralidhar HG",
+    email: "muralidharhg@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/21.jpg"
+  },
+  {
+    name: "Navneet Kaur",
+    email: "kaur.navi@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/22.jpg"
+  },
+  {
+    name: "Pavitra Kommineni",
+    email: "pavitra17.k@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/23.jpg"
+  },
+  {
+    name: "K K Pradeep",
+    email: "kkp.hellopm@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/24.jpg"
+  },
+  {
+    name: "Raghavendra Tejo Karthik Poluri",
+    email: "tejokarthikp@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/25.jpg"
+  },
+  {
+    name: "Resmi Murali",
+    email: "resmimurali81@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/26.jpg"
+  },
+  {
+    name: "Richa Chandra",
+    email: "richachandra07@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/27.jpg"
+  },
+  {
+    name: "Sarang Gurao",
+    email: "gurao.sarang@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/28.jpg"
+  },
+  {
+    name: "Sarveshwaran B",
+    email: "sarveshwaran4@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/29.jpg"
+  },
+  {
+    name: "Sayantani Mukherjee",
+    email: "sayantanim2022@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/30.jpg"
+  },
+  {
+    name: "Shantanu Shukla",
+    email: "shantanu1990@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/31.jpg"
+  },
+  {
+    name: "Shatorupa Ghosh",
+    email: "ms.shatorupa.ghosh@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/32.jpg"
+  },
+  {
+    name: "Shilpy Gupta",
+    email: "sgupta22@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/33.jpg"
+  },
+  {
+    name: "Shivangi Malviya",
+    email: "smalviya1105@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/34.jpg"
+  },
+  {
+    name: "Siddharth Shrivash",
+    email: "siddharthshrivash@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/35.jpg"
+  },
+  {
+    name: "Sriram Sattiraju",
+    email: "sriram.sattiraju9@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/36.jpg"
+  },
+  {
+    name: "Surabhi Tripathi",
+    email: "surabhitripathi1002@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/37.jpg"
+  },
+  {
+    name: "Suraj Guha",
+    email: "surajguha.official@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/38.jpg"
+  },
+  {
+    name: "Suswaram Sridhar",
+    email: "suswaramsridhar@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/39.jpg"
+  },
+  {
+    name: "Swapnendu Roy",
+    email: "swapnendu.productmgmt@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/40.jpg"
+  },
+  {
+    name: "Venkata Siva Rama Kirti Teja. Manduri",
+    email: "tjintouch77@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/41.jpg"
+  },
+  {
+    name: "Tharun Mani Teja Kotha",
+    email: "tarun.kotha007@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/42.jpg"
+  },
+  {
+    name: "Venkata Madhava Pavan Kumar Majeti",
+    email: "pavan.majeti@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/43.jpg"
+  },
+  {
+    name: "VIGNESH SUNDRAMURTHI",
+    email: "vigneshsundar086@gmail.com",
+    number: "",
+    courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/44.jpg"
   }
 ];
 
