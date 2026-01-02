@@ -1825,6 +1825,279 @@ const certificateData = [
     number: "",
     courseName: "PRODUCT MANAGEMENT ACCELERATOR PROGRAM",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-55-2025-26/44.jpg"
+  },
+  {
+    name: "Abhishek Bharti",
+    email: "bharti1988abhi@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/01.jpg"
+  },
+  {
+    name: "Ankur Singh",
+    email: "ankursingh@outlook.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/02.jpg"
+  },
+  {
+    name: "Aparna Arvind Waghade",
+    email: "aparnawaghade69450@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/03.jpg"
+  },
+  {
+    name: "Arjun I. T",
+    email: "arjunit10@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/04.jpg"
+  },
+  {
+    name: "ASHUTOSH SINGH CHAUHAN",
+    email: "asc0686@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/05.jpg"
+  },
+  {
+    name: "Darshil Parmar",
+    email: "darshil040@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/06.jpg"
+  },
+  {
+    name: "Deva Darshini S D",
+    email: "d.darshisd@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/07.jpg"
+  },
+  {
+    name: "Ekta Dhusia",
+    email: "ektadhusia@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/08.jpg"
+  },
+  {
+    name: "Gagandeep Kaur Khera",
+    email: "kheragagan01@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/09.jpg"
+  },
+  {
+    name: "Ijaz Fazil Syed Ahmed Kabir",
+    email: "ijaz0001@e.ntu.edu.sg",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/10.jpg"
+  },
+  {
+    name: "Isha Chawhan",
+    email: "ishachawhan33@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/11.jpg"
+  },
+  {
+    name: "Jyoti Chabra",
+    email: "jyotichhabra.55@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/12.jpg"
+  },
+  {
+    name: "Kuldeep Saxena",
+    email: "kuldeepsaxena3@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/13.jpg"
+  },
+  {
+    name: "KUMUD PANT",
+    email: "pant.kumud@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/14.jpg"
+  },
+  {
+    name: "Lalitha Tiwari",
+    email: "lalitha.tiwari@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/15.jpg"
+  },
+  {
+    name: "Mohit Walecha",
+    email: "mohit.walecha@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/16.jpg"
+  },
+  {
+    name: "Nandhini Ravi",
+    email: "nandhuedu2607@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/17.jpg"
+  },
+  {
+    name: "Nimish Kaundal",
+    email: "kumar.nimish1318@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/18.jpg"
+  },
+  {
+    name: "Pallavi Mind",
+    email: "pallavimind145@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/19.jpg"
+  },
+  {
+    name: "Priyanka Ghosal",
+    email: "priyanka.ghosal.182@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/20.jpg"
+  },
+  {
+    name: "Ranjan Garg",
+    email: "ranjangarg2012@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/21.jpg"
+  },
+  {
+    name: "Sahil Pahwa",
+    email: "connectsahilpahwa@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/22.jpg"
+  },
+  {
+    name: "Santosh Rajus",
+    email: "santoshrajus@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/23.jpg"
+  },
+  {
+    name: "Satya Narayana Anil Kumar Kuriseti",
+    email: "satyaanil1986@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/24.jpg"
+  },
+  {
+    name: "Satyam Kumar Pathak",
+    email: "satyam6395@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/25.jpg"
+  },
+  {
+    name: "Saurabh Bansal",
+    email: "saurabhba@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/26.jpg"
+  },
+  {
+    name: "Sayak Saha",
+    email: "sayak202105saha@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/27.jpg"
+  },
+  {
+    name: "Shailendra Kumar Suman",
+    email: "suman.shailendra@outlook.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/28.jpg"
+  },
+  {
+    name: "Shivendra Singh",
+    email: "shivendrasingh.nmims@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/29.jpg"
+  },
+  {
+    name: "Shrayansh Jain",
+    email: "shrayansh.j01@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/30.jpg"
+  },
+  {
+    name: "Siddhant Verma",
+    email: "siddhantverma.one@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/31.jpg"
+  },
+  {
+    name: "Sonal Sohni",
+    email: "sonal.sohni@es10.euroschoolindia.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/32.jpg"
+  },
+  {
+    name: "Soubheek Tewary",
+    email: "soubheek@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/33.jpg"
+  },
+  {
+    name: "Soumyadip Bhattacharya",
+    email: "soumyadip.b@gsl.in",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/34.jpg"
+  },
+  {
+    name: "Tarasankar Nayak",
+    email: "nayaktsbng@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/35.jpg"
+  },
+  {
+    name: "Varun Chopra",
+    email: "varunchopra360@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/36.jpg"
+  },
+  {
+    name: "Vineet Chawla",
+    email: "chawla.vinu@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/37.jpg"
+  },
+  {
+    name: "Vineet Kumar",
+    email: "singhxvineet@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/38.jpg"
+  },
+  {
+    name: "Vinod Nayak",
+    email: "vinodknayak10@gmail.com",
+    number: "",
+    courseName: "Data Science and Machine Learning",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/39.jpg"
   }
 ];
 
