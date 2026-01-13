@@ -135,23 +135,48 @@ function StaffContent() {
   );
 }
 
+function StaffHero() {
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
+  const tab = tabParam === "coordinator" ? "coordinator" : "staff";
+  const heroText = tab === "coordinator" ? "CEC Co-ordinator" : "CEC STAFF";
+  
+  return (
+    <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center p-4">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-[url('/staff_background.jpeg')] bg-cover bg-center"
+        aria-hidden="true"
+      ></div>
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      {/* Centered Content Block */}
+      <div className="relative z-30 flex flex-col items-center text-center text-white">
+        <span className="text-4xl md:text-6xl font-bold mb-3">{heroText}</span>
+        <span className="text-2xl md:text-3xl font-medium">IIT Roorkee</span>
+      </div>
+    </section>
+  );
+}
+
 export default function StaffPage() {
   return (
     <div className="w-full font-inter bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center p-4">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-[url('/staff_background.jpeg')] bg-cover bg-center"
-          aria-hidden="true"
-        ></div>
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Centered Content Block */}
-        <div className="relative z-30 flex flex-col items-center text-center text-white">
-          <span className="text-4xl md:text-6xl font-bold mb-3">CEC STAFF</span>
-          <span className="text-2xl md:text-3xl font-medium">IIT Roorkee</span>
-        </div>
-      </section>
+      <Suspense fallback={
+        <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center p-4">
+          <div
+            className="absolute inset-0 bg-[url('/staff_background.jpeg')] bg-cover bg-center"
+            aria-hidden="true"
+          ></div>
+          <div className="absolute inset-0 bg-black/60 z-10"></div>
+          <div className="relative z-30 flex flex-col items-center text-center text-white">
+            <span className="text-4xl md:text-6xl font-bold mb-3">CEC STAFF</span>
+            <span className="text-2xl md:text-3xl font-medium">IIT Roorkee</span>
+          </div>
+        </section>
+      }>
+        <StaffHero />
+      </Suspense>
       <Suspense fallback={<div className="py-12 bg-white text-center">Loading...</div>}>
         <StaffContent />
       </Suspense>

@@ -12,9 +12,21 @@ export const metadata: Metadata = {
   title: "CEC",
   description: "",
   icons: {
-    icon: "/IITR_logo.png",
+    icon: [
+      { url: "/IITR_logo.png", type: "image/png", sizes: "any" },
+      { url: "/IITR_logo.png", type: "image/png", sizes: "32x32" },
+      { url: "/IITR_logo.png", type: "image/png", sizes: "16x16" },
+      { url: "/icon.png", type: "image/png" },
+    ],
     shortcut: "/IITR_logo.png",
     apple: "/IITR_logo.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/IITR_logo.png",
+        type: "image/png",
+      },
+    ],
   },
 };
 

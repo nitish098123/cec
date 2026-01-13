@@ -265,6 +265,9 @@ const sponsors: Sponsor[] = [
         imageUrl: "/ed-tech-partners/talent-sprint.png",
       },
       { name: "EduXLL", imageUrl: "/ed-tech-partners/eduxll.png" },
+      { name: "eAsia Academy", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/easia.png" },
+      { name: "Physics Wallah", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Physics_wallah.png" },
+      { name: "Scaler", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Scaler_Logo.png" },
     ],
   },
 ];
@@ -321,12 +324,13 @@ function SponsorsContent() {
                         className="group overflow-hidden flex flex-col items-center justify-center p-4 min-h-[210px] md:min-h-[250px]"
                         styles={{ body: { padding: 0 } }}
                       >
-                        <div className="flex items-center justify-center w-full h-24 md:h-32">
+                        <div className="flex items-center justify-center w-full h-24 md:h-32 px-2">
                           <Image
                             src={imageUrl}
                             alt={name}
                             preview={false}
                             className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-110"
+                            style={name === "Physics Wallah" ? { maxWidth: "100px", maxHeight: "80px" } : { maxWidth: "150px" }}
                           />
                         </div>
                         <div className="mt-7 text-center w-full">

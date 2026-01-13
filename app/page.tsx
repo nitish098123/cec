@@ -113,10 +113,10 @@ const courses: Course[] = [
   },
   {
     id: 19,
-    name: "GenAI, Agentic AI & Data Science for Enterprises",
+    name: "Forward Deployed AI Engineering",
     duration: "7 Months",
     mode: "Online",
-    students: "600+",
+    students: "New",
     partner: "Futurense",
     category: "Emerging Technologies",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_GenAI.jpg",
@@ -206,13 +206,23 @@ const courses: Course[] = [
   // Sustainability
   {
     id: 13,
-    name: "Sustainability, ESG and GRI Standards",
-    duration: "5 Months",
+    name: "ESG & Sustainability Reporting",
+    duration: "4 Months",
     mode: "Online",
-    students: "350+",
-    partner: "Eduxll",
+    students: "New",
+    partner: "eAsia Academy",
     category: "Sustainability",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_sustain.jpg",
+  },
+  {
+    id: 22,
+    name: "Carbon Credits, Carbon Markets & Net-Zero Pathways",
+    duration: "4 Months",
+    mode: "Online",
+    students: "New",
+    partner: "eAsia Academy",
+    category: "Sustainability",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_carboncredits.jpeg",
   },
   // Miscellaneous
   {
@@ -303,12 +313,12 @@ const newsData: NewsItem[] = [
 
 const noticeItems = [
   {
-    text: "AICTE QIP PG Certificate Program on Wireless Technology and IoT at IIT Roorkee ",
+    text: "AICTE QIP PG Certificate Programmes ",
     link: "https://qippg.aicte.gov.in/"
   },
   {
-    text: "AICTE QIP PG Certificate Program on Advanced Digital Manufacturing: Integrating Precision, Composites, and Manufacturing Technology for Industry 4.0 ",
-    link: "https://qippg.aicte.gov.in/"
+    text: "Signed the partnership MoU with Physics Wallah (EdTech) ",
+    link: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/MoU_PW.jpg"
   },
   {
     text: "Signed the partnership MoU with Jaro Education (EdTech) ",
@@ -529,7 +539,7 @@ export default function HomePage() {
       {/* Notice Popup */}
       {showNoticePopup && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+          <div className="bg-sky-100 rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
             <div className="flex justify-between items-center p-6 border-b">
               <h2 className="text-2xl font-semibold text-gray-800">All Notices</h2>
               <button
@@ -547,7 +557,7 @@ export default function HomePage() {
                       href={item.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="block hover:bg-gray-50 p-3 rounded-lg transition-colors duration-200"
+                      className="block hover:bg-sky-200 p-3 rounded-lg transition-colors duration-200"
                     >
                       <div className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-[#FFAE0E] rounded-full mt-3 flex-shrink-0"></div>
@@ -821,19 +831,19 @@ export default function HomePage() {
                       course.id === 9 ? "https://hellopm.co/pm-accelerator-iitr/" :
                       course.id === 10 ? "https://imarticus.org/professional-certification-in-supply-chain-management-and-analytics-by-IIT-Roorkee/" :
                       course.id === 12 ? "https://www.jaroeducation.com/strategic-product-certification-iit-roorkee/" :
-                      course.id === 13 ? "https://www.eduxll.com/programmes/sustainability-esg-and-gri-standards" :
+                      course.id === 13 ? "https://www.easiaacademy.com/esg" :
                       course.id === 14 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Information_brochure.pdf" :
+                      course.id === 22 ? "https://www.easiaacademy.com/carbon" :
                       course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
                       course.id === 16 ? "https://zzstage.zerozeta.com/ai-organisational-growth" :
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
                       course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
-                      course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" :
                       course.id === 20 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_Samkhya.pdf" :
                       course.id === 21 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-ai-driven-fintech--pgcpf--753625" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 20 || course.id === 21 || course.id === 22 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 20 || course.id === 21 || course.id === 22 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
@@ -993,6 +1003,31 @@ export default function HomePage() {
                   alt="EduXLL"
                   preview={false}
                   src="/ed-tech-partners/eduxll.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="eAsia Academy"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/easia.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  width="auto"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Physics Wallah"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/Physics_wallah.png"
+                  style={{ flexShrink: 0, maxWidth: "120px", maxHeight: "40px" }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Scaler"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/Scaler_Logo.png"
                   style={{ flexShrink: 0 }}
                 />
                 

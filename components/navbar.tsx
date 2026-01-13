@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
       submenu: [
         { title: "International Sponsors", href: "/sponsors?category=International Sponsors" },
         { title: "National Sponsors", href: "/sponsors?category=National Sponsors" },
-        { title: "Ed-tech sponsers", href: "/sponsors?category=Ed-Tech Partners" },
+        { title: "Ed-Tech Partners", href: "/sponsors?category=Ed-Tech Partners" },
       ],
     },
     {
@@ -88,8 +88,7 @@ export const Navbar: React.FC = () => {
       target: "_blank",
       submenu: [
         { title: "About", href: "/qip", target: "_blank" },
-        { title: "Selected Candidates (Sponsored)", href: "/qip", target: "_blank" },
-        { title: "Selected Candidates (Self-Financed)", href: "/qip", target: "_blank" },
+        { title: "Current Courses", href: "https://qippg.aicte.gov.in/", target: "_blank" },
         { title: "NQCC Members", href: "/qip/nqcc-members" },
       ],
     },

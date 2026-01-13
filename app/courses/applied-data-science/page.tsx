@@ -112,7 +112,7 @@ export default function AppliedDataScienceCoursePage() {
               <div className="border border-gray-300 p-6 rounded-lg bg-white">
                 <h4 className="font-semibold text-lg mb-3">Course Coordinator</h4>
                 <hr className="my-3" />
-                <p>Prof. Sparsh Mittal, IIT Roorkee</p>
+                <p>Prof. Abhishek Samantray, IIT Roorkee</p>
               </div>
               <div className="border border-gray-300 p-6 rounded-lg bg-white">
                 <h4 className="font-semibold text-lg mb-3">Program Partner</h4>
@@ -147,15 +147,11 @@ export default function AppliedDataScienceCoursePage() {
               <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 mt-6">
                   <li>Learn from IIT Roorkee professors and industry experts</li>
                   <li>
-                    Access to Cloud Lab of CloudxLab (Lab comes pre-installed
-                    with all the software you will need to learn and practice.)
-                  </li>
-                  <li>
                     Students will have access to a Learning Management System for
                     referring to the content
                   </li>
                   <li>
-                    Guided projects and Timely Doubt Resolution from CloudxLab
+                    Guided projects and Timely Doubt Resolution from Jaro Education
                   </li>
                   <li>Certificate of completion from CEC IIT Roorkee</li>
                 </ul>
