@@ -121,6 +121,16 @@ const courses: Course[] = [
     category: "Emerging Technologies",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_GenAI.jpg",
   },
+  {
+    id: 23,
+    name: "AI Engineering & Intelligent Agents",
+    duration: "80 Hours",
+    mode: "Online",
+    students: "New",
+    partner: "Zerozeta",
+    category: "Emerging Technologies",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ai_engineering_agents.jpeg",
+  },
   // Hardware & IT
   {
     id: 7,
@@ -838,12 +848,14 @@ export default function HomePage() {
                       course.id === 16 ? "https://zzstage.zerozeta.com/ai-organisational-growth" :
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
                       course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
+                      course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-forward-deployed-ai-engineering" :
                       course.id === 20 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_Samkhya.pdf" :
                       course.id === 21 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-ai-driven-fintech--pgcpf--753625" :
+                      course.id === 23 ? "https://zerozeta.com/executive-program" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 20 || course.id === 21 || course.id === 22 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 20 || course.id === 21 || course.id === 22 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
@@ -1420,20 +1432,20 @@ export default function HomePage() {
                   <span className="text-gray-500 text-sm">12 Months</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-[#102a43]">
-                  Data Science and AI Certification Program
+                  AI Engineering on Cloud and AlOps
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Advanced certification program in Data Science and Artificial Intelligence with hands-on projects.
+                  Comprehensive program on AI Engineering on Cloud and AIOps for engineering professionals.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#FFAE0E] font-medium">CloudxLab</span>
+                  <span className="text-[#FFAE0E] font-medium">Futurense</span>
                   <a 
-                    href="https://cloudxlab.com/course/188/pg-certificate-program-in-data-science-ai-by-cec-iit-roorkee" 
+                    href="https://futurense.com/iit-roorkee/aiops" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 font-medium"
                   >
-                    Apply Now →
+                    Enroll Now →
                   </a>
                 </div>
               </div>

@@ -128,7 +128,6 @@ export const Navbar: React.FC = () => {
       submenu: [
         { title: "CEC new forms", href: "/forms" },
         { title: "CEC old forms", href: "/old-forms" },
-        { title: "Calendar", href: "/" },
       ],
     },
     {

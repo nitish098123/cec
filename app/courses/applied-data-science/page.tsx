@@ -37,21 +37,7 @@ export default function AppliedDataScienceCoursePage() {
                 The course on Applied Data Science & AI
               </h3>
               <p>
-                In recent years, the metrics used for optimizing and evaluating
-                AI algorithms are diversifying: along with accuracy, there is
-                increasing emphasis on the metrics such as energy efficiency and
-                model size. Given this, researchers working on data science can
-                no longer afford to ignore the computing system. Instead, the
-                knowledge of the potential and limitations of computing systems
-                can provide invaluable guidance to them in designing the most
-                efficient and accurate algorithms. This course aims to inform
-                students, practitioners and researchers in data science
-                algorithms about the potential and limitations of various
-                processor architectures for accelerating the data science
-                algorithms. At the same time, it seeks to motivate and even
-                challenge the engineers and professionals in the architecture
-                domain to optimize the processors according to the needs of
-                data science algorithms.
+                Applied data science and artificial intelligence help in analysing various types of real-world datasets to produce actionable insights for applications in business, economy, and society. In recent years, these skills have become highly valuable for all organizations. IIT Roorkee's Post Graduate Certificate Programme in Applied Data Science & AI (PGCP DSAI) is designed to upskill working professionals to understand the fundamentals of data science and AI, develop practical proficiency in related software technologies, and enhance their ability to prescribe the best course of action in various application contexts.
               </p>
               <div className="mt-12 flex gap-8 items-center">
                 <ConfigProvider
@@ -176,8 +162,7 @@ export default function AppliedDataScienceCoursePage() {
             </h2>
           <p className="mt-6 text-lg text-gray-700">
               Bachelor&apos;s degree with minimum 50% marks. No coding or
-              mathematics background is needed. However, an engineering degree is
-              highly desired.
+              mathematics background is needed.
             </p>
           </section>
 
