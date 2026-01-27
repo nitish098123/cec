@@ -115,49 +115,49 @@ const certificateData = [
     name: "Abhishek Kumar Singh",
     email: "abhisheksingh2412.email@gmail.com",
     number: "",
-    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/02.jpg"
   },
   {
     name: "Anand Kumar Singh",
     email: "anand1994.singh@gmail.com",
     number: "",
-    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/08.jpg"
   },
   {
     name: "Kasireddi Vara Manikanta Vinay Kumar",
     email: "kumarvmvinay@gmail.com",
     number: "",
-    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/27.jpg"
   },
   {
     name: "Milind Siddharth Vinkar",
     email: "msvinkar@gmail.com",
     number: "",
-    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/35.jpg"
   },
   {
     name: "Pranshu Dhingra",
     email: "dhingrap0707@gmail.com",
     number: "",
-    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/48.jpg"
   },
   {
     name: "Vidhi Sinha",
     email: "vidhisinha24@gmail.com",
     number: "7005666560",
-    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/74.jpg"
   },
   {
     name: "Vignesh G",
     email: "vigneshvarma1@gmail.com",
     number: "",
-    courseName: "Post Gradurate Programme in Applied Data Science & AI",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/75.jpg"
   },
   {
@@ -2098,6 +2098,377 @@ const certificateData = [
     number: "",
     courseName: "Data Science and Machine Learning",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-37-2024-25/39.jpg"
+  },
+  {
+    name: "Abdul Hakeem K",
+    email: "abdulaatik20@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/01.jpg"
+  },
+  {
+    name: "Akaash C Jacob",
+    email: "akaashcjacob@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/05.jpg"
+  },
+  {
+    name: "Akshai S",
+    email: "akshaikannan5@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/06.jpg"
+  },
+  {
+    name: "Amrita Ghatak",
+    email: "aniamrita1610@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/07.jpg"
+  },
+  {
+    name: "Ankit Singh",
+    email: "CHAUHANANKIT1992@GMAIL.COM",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/10.jpg"
+  },
+  {
+    name: "Athul M S",
+    email: "msathul95@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/12.jpg"
+  },
+  {
+    name: "Bhagya Narayanan",
+    email: "bhagyanarayanan07@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/13.jpg"
+  },
+  {
+    name: "Bhagyalaxmi Gorakh Panhale",
+    email: "bhagyalaxmip@outlook.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/14.jpg"
+  },
+  {
+    name: "Bitan Mukherjee",
+    email: "bitanmukherjee10@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/15.jpg"
+  },
+  {
+    name: "Dilish Babu J",
+    email: "dilishbabuautomotive@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/16.jpg"
+  },
+  {
+    name: "Divya Radhakrishnan",
+    email: "divyarada96@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/18.jpg"
+  },
+  {
+    name: "Hemant Ingle",
+    email: "inglehemant426@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/19.jpg"
+  },
+  {
+    name: "J S Vignesh",
+    email: "vigneshjshankaran@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/21.jpg"
+  },
+  {
+    name: "Janhavi Do",
+    email: "janhavi1693@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/22.jpg"
+  },
+  {
+    name: "Joel Durairaj G",
+    email: "joelappelles0@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/24.jpg"
+  },
+  {
+    name: "Jyotsna Gurjar",
+    email: "jyotsnagurjar1996@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/25.jpg"
+  },
+  {
+    name: "K Vigneshwaran",
+    email: "gawvicky@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/26.jpg"
+  },
+  {
+    name: "Kaushik B Jain",
+    email: "kaushikjainb@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/28.jpg"
+  },
+  {
+    name: "Korasika Vinay",
+    email: "korasikavinay@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/29.jpg"
+  },
+  {
+    name: "Kunal Singh",
+    email: "ksingh.jsr2006@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/31.jpg"
+  },
+  {
+    name: "Maria Elizabeth Baby",
+    email: "babymaria92@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/33.jpg"
+  },
+  {
+    name: "Mohankumar T S",
+    email: "mkmech32@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/36.jpg"
+  },
+  {
+    name: "Mrittika Sengupta",
+    email: "mrittikasengupta8@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/37.jpg"
+  },
+  {
+    name: "Mukul Dev Patra",
+    email: "mukuldevpatra@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/38.jpg"
+  },
+  {
+    name: "Nidhi Singh",
+    email: "nidhi127@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/42.jpg"
+  },
+  {
+    name: "Nitin Tyagi",
+    email: "ntyagi49@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/43.jpg"
+  },
+  {
+    name: "Patnala Deekshith",
+    email: "deekshith.patnala597@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/44.jpg"
+  },
+  {
+    name: "Payel Garai",
+    email: "payel.garai@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/45.jpg"
+  },
+  {
+    name: "Ponnana Sudheer Kumar",
+    email: "sudheer.ponnana@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/46.jpg"
+  },
+  {
+    name: "Pranay Puskuru",
+    email: "pranayp83@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/47.jpg"
+  },
+  {
+    name: "Prateek Sharma",
+    email: "prateeksharma.6458@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/49.jpg"
+  },
+  {
+    name: "Preeti Kumari",
+    email: "kumaripreeti602@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/50.jpg"
+  },
+  {
+    name: "Priyabrata Maity",
+    email: "maity.priyab0410@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/52.jpg"
+  },
+  {
+    name: "Rahul Pillai",
+    email: "rahul.pillai.bitsh@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/53.jpg"
+  },
+  {
+    name: "Rajasekar S",
+    email: "rajasekarsankar29@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/54.jpg"
+  },
+  {
+    name: "Rakesh Tahiliani",
+    email: "rakeshtahilianijmc@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/55.jpg"
+  },
+  {
+    name: "Sai Kumar Repala",
+    email: "repala.saikumar15@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/56.jpg"
+  },
+  {
+    name: "Sampath Kumar Pasupuleti",
+    email: "dezignslot@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/58.jpg"
+  },
+  {
+    name: "Samsanthosh Durairaj",
+    email: "d.samsanthosh@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/59.jpg"
+  },
+  {
+    name: "Santosh Kotakonda",
+    email: "santoshkotakonda65@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/61.jpg"
+  },
+  {
+    name: "Sapna Kumari Pan",
+    email: "sapnakumari16924@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/62.jpg"
+  },
+  {
+    name: "Seema Mangalesh Chavan",
+    email: "seemaharsha122@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/63.jpg"
+  },
+  {
+    name: "Sharvari Thakur",
+    email: "sharvari212@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/64.jpg"
+  },
+  {
+    name: "Snehal Mahadev Khandalkar",
+    email: "snehalkhandalkar123@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/65.jpg"
+  },
+  {
+    name: "Sriram Kamalakannan",
+    email: "sriramk86@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/67.jpg"
+  },
+  {
+    name: "Srishti Singh",
+    email: "ssingh17397@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/68.jpg"
+  },
+  {
+    name: "Subham Samantaray",
+    email: "subhamsamantaray047@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/69.jpg"
+  },
+  {
+    name: "Sunil Nilkanth Sonar",
+    email: "sunilsonarn@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/70.jpg"
+  },
+  {
+    name: "Sutanaya Chatterjee",
+    email: "csutanaya@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/71.jpg"
+  },
+  {
+    name: "Uddipan Mitra",
+    email: "uddi.mitra@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/72.jpg"
+  },
+  {
+    name: "Vanshika Sachdeva",
+    email: "vanshika3114@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/73.jpg"
+  },
+  {
+    name: "Vignesh Venkatesh",
+    email: "vellaviki@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/76.jpg"
+  },
+  {
+    name: "Vijayalakshmi Sridevy Kirupalani",
+    email: "vijje16@gmail.com",
+    number: "",
+    courseName: "Post Graduate certificate program in Applied Data Science & AI",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/77.jpg"
   }
 ];
 
