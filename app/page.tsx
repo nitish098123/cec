@@ -284,40 +284,39 @@ const testimonials = [
 const newsData: NewsItem[] = [
   {
     id: 1,
-    title: "IIT Roorkee to offer executive programme in Business Analytics for professionals",
-    description: "IIT Roorkee to offer executive programme in Business Analytics for professionals",
-    date: "11 July 2022",
-    source: "By Indianexpress",
+    title: "IIT Roorkee in tie up with Jaro Education to offer PG programme in Data Science, AI",
+    description: "Post Graduate Certificate Programme in Applied Data Science & AI at IIT Roorkee, offered by the Continuing Education Centre in collaboration with Jaro Education.",
+    date: "31 August 2024",
+    source: "By The Hindu",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/11July2022.png",
+    link: "https://www.thehindu.com/business/iit-roorkee-in-tie-up-with-jaro-education-to-offer-pg-programme-in-data-science-ai/article68582602.ece",
   },
   {
     id: 2,
-    title: "IIT Roorkee Partners With Coursera To Offer Online Programs In High Demand Fields",
-    description: "IIT Roorkee Partners With Coursera To Offer Online Programs In High Demand Fields",
-    date: "12 August 2020",
-    source: "By businessworld",
+    title: "IIT-Roorkee, Futurense announce GenAI-powered cybersecurity programme",
+    description: "India's first postgraduate certificate in AI/GenAI-powered cybersecurity, addressing deepfakes, AI-authored phishing, and LLM exploits.",
+    date: "21 August 2025",
+    source: "By Indian Express",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/12Aug2020.jpg",
-    link: "https://www.bweducation.com/article/iit-roorkee-partners-with-coursera-to-offer-online-programs-in-high-demand-fields-307893",
-  },
-  {
-    id: 4,
-    title:
-      "IIT-Roorkee joins hands with WileyNXT to curate 'AI in banking' Program",
-    description:
-      "Our state-of-the-art research labs are equipped with the latest technology, providing students with hands-on experience",
-    date: "06 Jul 2020",
-    source: "By Indianexpress",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/11July2022.png",
-    link: "https://indianexpress.com/article/education/iit-roorkee-to-offer-ai-in-banking-programme-6492581/?fbclid=IwAR2PUdH_2AzfsQjLIXCGNG5YLwmhdu27NU0bm5YQd7u3XOfgkT77iimWqkw",
+    link: "https://indianexpress.com/article/education/iit-roorkee-generative-ai-powered-cybersecurity-programme-artifiial-intelligence-course-jee-main-advanced-2026-10200303/",
   },
   {
     id: 3,
-    title: "IIT Roorkee inks MoU with CloudXLab on big data and AI",
-    description: "IIT Roorkee's Electronics and Information and Communications Technology Academy (E&ICT) Academy inked a memorandum of understanding with CloudxLab, a tech venture",
-    date: "12 August 2019",
-    source: "By TOI",
+    title: "IIT Roorkee, Scaler to Jointly Launch Advanced AI-Focused Courses",
+    description: "Advanced AI Engineering programme through CEC IIT Roorkee with Scaler—live online classes, hands-on projects, and two-day campus immersion.",
+    date: "12 May 2025",
+    source: "By Times Now",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/11July2022.png",
+    link: "https://www.timesnownews.com/education/iit-roorkee-scaler-to-jointly-launch-advanced-ai-focused-courses-article-151617477",
+  },
+  {
+    id: 4,
+    title: "IIT-Roorkee launches new advanced certificate course in Quantum Computing – Algorithms and AI/ML",
+    description: "6.5-month online programme in Quantum Computing with Qiskit, PennyLane, and IBM Quantum Systems, offered by CEC in collaboration with TimesPro.",
+    date: "16 October 2025",
+    source: "By Indian Express",
     image: "/IITR_building.jpeg",
-    link: "https://timesofindia.indiatimes.com/city/dehradun/iit-roorkee-inks-mou-with-cloudxlab-on-big-data-and-ai/articleshow/70810833.cms",
+    link: "https://indianexpress.com/article/education/iit-roorkee-launches-new-advanced-certificate-quantum-computing-algorithms-ai-ml-jee-main-2026-advanced-10307863/",
   },
 ];
 
@@ -1463,7 +1462,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="bg-[#FFAE0E] text-black px-6 py-3 rounded-lg font-medium hover:bg-[#E5893C] transition-colors duration-200"
                 >
-                  Download Course Brochure
+                  Download Brochure
                 </a>
                 <a
                   href="#explore-courses"
@@ -1503,7 +1502,7 @@ export default function HomePage() {
                       </p>
                     </div>
                     <a 
-                      href="https://indianexpress.com/article/education/iit-roorkee-to-offer-executive-program-in-business-analytics-for-professionals-8022611/" 
+                      href={newsData[0].link} 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-lg md:text-xl font-semibold text-[#102a43] hover:text-[#FFAE0E] transition-colors duration-200 block mb-3"

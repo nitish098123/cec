@@ -114,10 +114,7 @@ export default function FormsPage() {
       </section>
       <section className="w-full py-6">
         <div className="w-full p-4 bg-white container mx-auto">
-          <h1 className="text-4xl font-semibold text-center mb-2">NEW CEC FORMS</h1>
-          <p className="text-xl font-normal text-gray-500 text-center mb-12">
-            For the courses approved on March 08, 2022 onwards
-          </p>
+          <h1 className="text-4xl font-semibold text-center mb-12">NEW CEC FORMS</h1>
           <Table
             dataSource={data.map((item, index) => ({ ...item, key: index }))}
             columns={columns}

@@ -41,12 +41,6 @@ const cardData: CardData[] = [
     phone: "01332-285545",
   },
   {
-    image_url: "/staff/vipin-kumar.jpg",
-    name: "Mr. Vipin Kumar",
-    designation: "Ministerial Assistant",
-    phone: "01332-284327",
-  },
-  {
     image_url: "/staff/shakti-sahni.jpg",
     name: "Ms. Shakti Sahni",
     designation: "Computer Operator",
@@ -57,6 +51,12 @@ const cardData: CardData[] = [
     name: "Mr. Anand Singh",
     designation: "Updater Services Ltd. Staff",
     phone: "01332-285545",
+  },
+  {
+    image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/shubham.jpeg",
+    name: "Mr. Shubham",
+    designation: "Updater Services Ltd. Staff",
+    phone: "01332-284327",
   },
 ];
 
