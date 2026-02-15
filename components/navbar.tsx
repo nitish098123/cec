@@ -96,7 +96,7 @@ export const Navbar: React.FC = () => {
       label: "People",
       href: "/staff",
       submenu: [
-        { title: "Co-ordinator", href: "/staff?tab=coordinator" },
+        { title: "Coordinator", href: "/staff?tab=coordinator" },
         { title: "CEC Staff", href: "/staff?tab=staff" },
       ],
     },

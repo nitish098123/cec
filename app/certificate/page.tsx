@@ -2469,6 +2469,748 @@ const certificateData = [
     number: "",
     courseName: "Post Graduate certificate program in Applied Data Science & AI",
     certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-16-2024-25/77.jpg"
+  },
+  {
+    name: "Sam Jacob George",
+    email: "sam.jacob.george@outlook.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/01.jpg"
+  },
+  {
+    name: "Abhijeet K Shende ",
+    email: "abi.shende09@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/02.jpg"
+  },
+  {
+    name: "Raja Raja Chozhan C",
+    email: "crrchozhan@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/03.jpg"
+  },
+  {
+    name: "Subir Sen",
+    email: "subirsen786@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/04.jpg"
+  },
+  {
+    name: "Nivisha Sinha ",
+    email: "nivishasinha@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/05.jpg"
+  },
+  {
+    name: "Shailessh A Kudale ",
+    email: "Kudale101@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/06.jpg"
+  },
+  {
+    name: "Muthukumar Thambiraj",
+    email: "muthu4658@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/07.jpg"
+  },
+  {
+    name: "Hridya Mahajan",
+    email: "hridya.mahajan@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/08.jpg"
+  },
+  {
+    name: "Manjari Manisha",
+    email: "Manjarimanishadas@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/09.jpg"
+  },
+  {
+    name: "Sanjay Rajendralal Shil ",
+    email: "sanju.shil@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/10.jpg"
+  },
+  {
+    name: "Kiran Kumar JP ",
+    email: "kiran091@yahoo.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/11.jpg"
+  },
+  {
+    name: "Arunachalam R",
+    email: "arunachalam14@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/12.jpg"
+  },
+  {
+    name: "RITIKA MISHRA",
+    email: "ritika.mishra02@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/13.jpg"
+  },
+  {
+    name: "Shyam Bir Singh ",
+    email: "shyambirs086@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/14.jpg"
+  },
+  {
+    name: "N A Sudhakar",
+    email: "sumee@naszen.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/15.jpg"
+  },
+  {
+    name: "Virender ",
+    email: "Vir000181818@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/16.jpg"
+  },
+  {
+    name: "Vaibhav Kumar",
+    email: "Vaibhavtyagi19@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/17.jpg"
+  },
+  {
+    name: "Yogeshwar Chogale",
+    email: "chogaley@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/18.jpg"
+  },
+  {
+    name: "Shruti Prabha",
+    email: "shrutiprabha97@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/19.jpg"
+  },
+  {
+    name: "Chandra Kumar sen ",
+    email: "chandrakumarsen1994@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/20.jpg"
+  },
+  {
+    name: "Soniya Rawat",
+    email: "tech.rawat.mech@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/21.jpg"
+  },
+  {
+    name: "Chitra Srivastava ",
+    email: "AR.CHITRASRIVASTAVA@GMAIL.COM",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/22.jpg"
+  },
+  {
+    name: "Alok mishra",
+    email: "xpertelectrical@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/23.jpg"
+  },
+  {
+    name: "Dharmesh Gohel",
+    email: "gohel.dharmesh@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/24.jpg"
+  },
+  {
+    name: "Dakeshkumar Jayantibhai Patel",
+    email: "dj_patel31190@yahoo.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/25.jpg"
+  },
+  {
+    name: "Sudhir Vijay Sattigeri",
+    email: "Sudhirvs@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/26.jpg"
+  },
+  {
+    name: "Krishti Rudra ",
+    email: "rudra.krishti1@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/27.jpg"
+  },
+  {
+    name: "Jeevan Choudhary",
+    email: "choudhary.jeevan3@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/28.jpg"
+  },
+  {
+    name: "Suhas Ranjan",
+    email: "suhas.ranjan83@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/29.jpg"
+  },
+  {
+    name: "Gayathri A",
+    email: "gayathri.ashokan21@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/30.jpg"
+  },
+  {
+    name: "Sagarika Ghosal",
+    email: "ghosal25@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/31.jpg"
+  },
+  {
+    name: "Dipansh Jain",
+    email: "dipanshjain.noida@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/32.jpg"
+  },
+  {
+    name: "Rajasekaran Vairamani",
+    email: "rajasekaranvm@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/33.jpg"
+  },
+  {
+    name: "Prem Kumar",
+    email: "prem.kumar@punjabchemicals.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/34.jpg"
+  },
+  {
+    name: "Pravin Thakor ",
+    email: "pthakor1984@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/35.jpg"
+  },
+  {
+    name: "Ashish Panwar ",
+    email: "ashishpanwar807@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/36.jpg"
+  },
+  {
+    name: "Shreya Sharma",
+    email: "shreya11cg@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/37.jpg"
+  },
+  {
+    name: "Sushanta Kishore Tripathy",
+    email: "Tripathy79sushanta@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/38.jpg"
+  },
+  {
+    name: "Shivakumar M",
+    email: "shivuenv@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/39.jpg"
+  },
+  {
+    name: "Anushka Sahu ",
+    email: "anushkasahu980@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/40.jpg"
+  },
+  {
+    name: "Rai Sanket Mahendra",
+    email: "sanketrai16@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/41.jpg"
+  },
+  {
+    name: "Ashish Kumar Pandey",
+    email: "pandey.ashish@outlook.in",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/42.jpg"
+  },
+  {
+    name: "Kanak Wadhwani",
+    email: "kanak.swadhwani@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/43.jpg"
+  },
+  {
+    name: "Saurabh Agarwal",
+    email: "Saurabhbe.1971@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/44.jpg"
+  },
+  {
+    name: "Pavan Balasaheb Jadhav",
+    email: "pavan.jadhav@rishabh.co.in",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/45.jpg"
+  },
+  {
+    name: "Famida Khan",
+    email: "famprzm@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/46.jpg"
+  },
+  {
+    name: "Pawan Yadav",
+    email: "pawan.mgp@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/47.jpg"
+  },
+  {
+    name: "Tanmeet Kaur Ahuja",
+    email: "ahuja.tanmeet29@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/48.jpg"
+  },
+  {
+    name: "Murali Ravi",
+    email: "rmurali364@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/49.jpg"
+  },
+  {
+    name: "Amit Shekhar",
+    email: "meetamitshekhar@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/50.jpg"
+  },
+  {
+    name: "Rupesh Sinha",
+    email: "rupesh.sinha1@hotmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/51.jpg"
+  },
+  {
+    name: "Yashdeep Shukla",
+    email: "Yashdeepshukla89@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/52.jpg"
+  },
+  {
+    name: "Aradhana Mudgala",
+    email: "aradhanasharmamudgal@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/53.jpg"
+  },
+  {
+    name: "Nishi Gandha",
+    email: "nic_0715@yahoo.co.in",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/54.jpg"
+  },
+  {
+    name: "Muzaffar Ahmad ",
+    email: "mamf208@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/55.jpg"
+  },
+  {
+    name: "Puneet Trehan",
+    email: "puneet_trehan@yahoo.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/57.jpg"
+  },
+  {
+    name: "Prabuddha Maitreya",
+    email: "prabuddha.maitreya@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/59.jpg"
+  },
+  {
+    name: "ADHIKAR GUPTA",
+    email: "Adhikargupta@Live.In",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/60.jpg"
+  },
+  {
+    name: "Abhijeet Pratap Lahare",
+    email: "abhijeetlahare@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/61.jpg"
+  },
+  {
+    name: "Abir Bhattacharya",
+    email: "abirb1@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/62.jpg"
+  },
+  {
+    name: "Afak Ismail Shete",
+    email: "afaqueshete@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/63.jpg"
+  },
+  {
+    name: "Ajit Kumar Prusty",
+    email: "ajit_prusty2003@yahoo.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/64.jpg"
+  },
+  {
+    name: "Amit Kumar",
+    email: "77amitbhatia@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/65.jpg"
+  },
+  {
+    name: "Amit Suresh Badwar",
+    email: "amit.badwar@trinityholdings.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/66.jpg"
+  },
+  {
+    name: "Anand",
+    email: "pibtls@hckgroup.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/67.jpg"
+  },
+  {
+    name: "Arjun Singh Yadav",
+    email: "arjun.singh88@yahoo.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/68.jpg"
+  },
+  {
+    name: "Atharva",
+    email: "atharvanivadekar@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/69.jpg"
+  },
+  {
+    name: "Balasaheb Vilas Yadav",
+    email: "balasaheb.yadav1987@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/70.jpg"
+  },
+  {
+    name: "Bodalaga Pradeep Kumar",
+    email: "pradeepkumar777@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/71.jpg"
+  },
+  {
+    name: "Dama Sohanlal Savjibhai",
+    email: "damasohan81@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/72.jpg"
+  },
+  {
+    name: "Deepak Saini",
+    email: "consultant.sci.eng@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/73.jpg"
+  },
+  {
+    name: "Devika Santosh Chachad",
+    email: "devikachachad23@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/74.jpg"
+  },
+  {
+    name: "Dilip R Patel",
+    email: "dilip_patel123@yahoo.co.in",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/75.jpg"
+  },
+  {
+    name: "Dr. Harisadhan Malakar",
+    email: "malakarhari@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/76.jpg"
+  },
+  {
+    name: "Dr. Mohammad Sadre Alam Khan",
+    email: "sadresenes@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/77.jpg"
+  },
+  {
+    name: "Farzana P A",
+    email: "drfarzana.pa@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/78.jpg"
+  },
+  {
+    name: "Manju ",
+    email: "manjugill097@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/79.jpg"
+  },
+  {
+    name: "Mantu swain",
+    email: "mantu.swain83@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/80.jpg"
+  },
+  {
+    name: "Nilesh Pandey",
+    email: "nileshpande0707@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/81.jpg"
+  },
+  {
+    name: "Panneer Selvam",
+    email: "p.selvam@elsevier.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/82.jpg"
+  },
+  {
+    name: "Pranav",
+    email: "pranavmathan1998@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/83.jpg"
+  },
+  {
+    name: "Prashant Gaikwad",
+    email: "prashant.mpcb@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/84.jpg"
+  },
+  {
+    name: "prathamesh prabhakar gurav",
+    email: "guravprathamesh799@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/85.jpg"
+  },
+  {
+    name: "Prerna pandey",
+    email: "Prerna.pandey10@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/86.jpg"
+  },
+  {
+    name: "Prichay Mehta",
+    email: "parichay16@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/87.jpg"
+  },
+  {
+    name: "Rajkumar Rengaraj",
+    email: "rajellis.91@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/88.jpg"
+  },
+  {
+    name: "Rupali Lalit Shaiwale",
+    email: "rlshaiwale@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/89.jpg"
+  },
+  {
+    name: "Rutuja Adhau",
+    email: "rutujaadhau104@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/90.jpg"
+  },
+  {
+    name: "Sammeta Tanya sri",
+    email: "tanyasri990@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/91.jpg"
+  },
+  {
+    name: "Samptoor Venu Madhav",
+    email: "venusamptoor@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/92.jpg"
+  },
+  {
+    name: "Sanjay Vaman Deogharkar",
+    email: "sanjay.deogharkar@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/93.jpg"
+  },
+  {
+    name: "Shailaja Shah",
+    email: "shailajaamreliya@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/94.jpg"
+  },
+  {
+    name: "Sharia Durrani",
+    email: "sharia.durrani27@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/95.jpg"
+  },
+  {
+    name: "Shirly Thomas",
+    email: "shirlythomas.ils@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/96.jpg"
+  },
+  {
+    name: "Shivangi",
+    email: "shivangi21415@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/97.jpg"
+  },
+  {
+    name: "Shriyam Saurabh",
+    email: "shriyam1551@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/98.jpg"
+  },
+  {
+    name: "Siddhesh",
+    email: "siddhesh.adabal@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/99.jpg"
+  },
+  {
+    name: "Subhodeep Das",
+    email: "subhodeep7379@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/100.jpg"
+  },
+  {
+    name: "Surendra Kumar Yadaw",
+    email: "skyak1986@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/101.jpg"
+  },
+  {
+    name: "Sushma",
+    email: "sushmakata112@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/102.jpg"
+  },
+  {
+    name: "Uma rao",
+    email: "Umaforever9@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/103.jpg"
+  },
+  {
+    name: "Usman Mehmood",
+    email: "usman.m@trinityholdings.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/104.jpg"
+  },
+  {
+    name: "Venkata Krishnakanth Valluru",
+    email: "krishnakanth254@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/105.jpg"
+  },
+  {
+    name: "Vibha Rani",
+    email: "rvibha07@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/106.jpg"
+  },
+  {
+    name: "Vijay Purohit",
+    email: "purohit.vijay@rediffmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/107.jpg"
+  },
+  {
+    name: "Yadu Surya N P",
+    email: "npyadu@gmail.com",
+    number: "",
+    courseName: "Certificate Program in Sustainability, ESG and GRI Standards",
+    certificate_links: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/CA-06-2025-26/108.jpg"
   }
 ];
 

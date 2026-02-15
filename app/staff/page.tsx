@@ -91,7 +91,7 @@ function StaffContent() {
             </div>
             {/* Right: Message */}
             <div className="w-full md:w-2/3 bg-[#f5faff] p-4 md:p-8 rounded-lg shadow mt-6 md:mt-0">
-              <h3 className="text-xl font-semibold mb-2 text-[#1a237e]">Message from the Co-ordinator</h3>
+              <h3 className="text-xl font-semibold mb-2 text-[#1a237e]">Message from the Coordinator</h3>
               <p className="text-gray-700">
                 CEC IIT Roorkee, we are committed to making high-quality and transformational education accessible to all. Our programs are designed to provide executives, professionals, and aspiring individuals a launchpad for taking them to next level in their career. In addition to sponsored short-term courses, which form a large part of the training and upskilling effort, CEC IITR has launched a new major initiative to offer the longer duration programs (up to a year) having PG and Advanced Certifications. CEC IITR courses are available in both asynchronous and hybrid learning modes. Our courses are designed to provide learners a specialization, which will enable them to master in-demand skills needed to work on the latest problems in industry and research. These include Data Science, Machine Learning, Artificial Intelligence, 5G, Cyber Security, VLSI, DevOps, as well as emerging technologies in engineering, science, and management. Through these open participation programs, we aim to reach out to aspiring individuals and professionals to develop cutting-edge competencies in their professional careers. CEC has signed partnership MoUs with many organizations to offer courses and training programs in diverse areas. Some of our major partners for sponsored courses are SAIL, TATA Steel, NTPC, BEL, SAARC, NIC, etc. In the year 2024-2025, the CEC has introduced new sponsored courses for many organizations Department of Income Tax (Systems), New Delhi, IRDE Dehradun, DRDO, MeraYuva Bharat (MY BHARAT), New Delhi, Navodaya Vidyalaya Samiti, National Health Mission, Odisha, Tata Tisconm, National Mission for Clean Ganga (NMCG), New Delhi etc.
               </p>
@@ -112,12 +112,16 @@ function StaffContent() {
                     key={index}
                     className="rounded-xl p-6 flex flex-col items-center shadow-lg bg-[#E2F1FF] transition-transform transform hover:-translate-y-2 hover:bg-[#b3dafc] duration-200 h-full"
                   >
-                    <Image
-                      preview={false}
-                      alt={item.name}
-                      src={item.image_url}
-                      className="object-cover rounded-full w-36 h-36 mb-6 border-4 border-white shadow-md"
-                    />
+                    <div className="w-[260px] h-[340px] rounded-full overflow-hidden mb-6 border-4 border-white shadow-md shrink-0 bg-white">
+                      <Image
+                        preview={false}
+                        alt={item.name}
+                        src={item.image_url}
+                        width={260}
+                        height={340}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
                     <p className="text-xl font-semibold text-center text-black mb-1">{item.name}</p>
                     <p className="text-base font-normal text-center text-gray-700 mb-1">{item.designation}</p>
                     <p className="text-sm font-normal text-center text-gray-600 mb-1">Phone: {item.phone}</p>
@@ -139,7 +143,7 @@ function StaffHero() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
   const tab = tabParam === "coordinator" ? "coordinator" : "staff";
-  const heroText = tab === "coordinator" ? "CEC Co-ordinator" : "CEC STAFF";
+  const heroText = tab === "coordinator" ? "CEC Coordinator" : "CEC STAFF";
   
   return (
     <section className="relative w-full h-[50vh] md:h-[60vh] flex items-center justify-center p-4">

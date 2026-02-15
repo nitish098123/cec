@@ -632,6 +632,7 @@ export default function HomePage() {
                   <div className="flex flex-col items-start">
                     <p className="text-xl md:text-2xl font-semibold">250+</p>
                     <p className="text-lg md:text-xl font-normal">Courses</p>
+                    <p className="text-sm text-gray-500">In last 5 years</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-x-3 justify-center">
@@ -639,12 +640,13 @@ export default function HomePage() {
                   <div className="flex flex-col items-start">
                     <p className="text-xl md:text-2xl font-semibold">10000+</p>
                     <p className="text-lg md:text-xl font-normal">Participants</p>
+                    <p className="text-sm text-gray-500">In last 5 years</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-x-3 justify-center">
                   <Handshake className="w-8 h-8 md:w-10 md:h-10" />
                   <div className="flex flex-col items-start">
-                    <p className="text-xl md:text-2xl font-semibold">140+</p>
+                    <p className="text-xl md:text-2xl font-semibold">150+</p>
                     <p className="text-lg md:text-xl font-normal">Sponsors</p>
                   </div>
                 </div>
@@ -705,11 +707,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* New section: Message from the Co-ordinator */}
+        {/* New section: Message from the Coordinator */}
         <section className="py-16 bg-[#E2F1FF]">
           <div className="container mx-auto px-4">
             <div className="mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1a237e] mb-2">Message from the Co-ordinator</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a237e] mb-2">Message from the Coordinator</h2>
             </div>
             <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12">
               <div className="flex-shrink-0 flex flex-col items-center w-full md:w-auto">
@@ -963,9 +965,9 @@ export default function HomePage() {
                 <Image
                   height="40px"
                   className="object-contain mx-6 md:mx-8"
-                  alt="CloudxLab"
+                  alt="Teamlease"
                   preview={false}
-                  src="/ed-tech-partners/cloudxlab.png"
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/teamlease.png"
                   style={{ flexShrink: 0 }}
                 />
                 <Image
@@ -1105,6 +1107,102 @@ export default function HomePage() {
                   alt="Alstom"
                   preview={false}
                   src="/national-sponsors/alstom.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="ISRO"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/isro.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Odisha Sashan"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/odisha.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Indian Army"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/army.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="MoRTH"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/morth.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Larsen & Toubro"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/LT.jpg"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Flipkart"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/flipkart.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Navodaya Vidhyala"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/navodaya.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Bihar Board"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/bihar.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="PCBL"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/pcbl.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Maruti Suzuki"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/suzuki.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Deloitte"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/deloitte.png"
+                  style={{ flexShrink: 0 }}
+                />
+                <Image
+                  height="40px"
+                  className="object-contain mx-6 md:mx-8"
+                  alt="Namami Gange"
+                  preview={false}
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/namami.jpg"
                   style={{ flexShrink: 0 }}
                 />
                 

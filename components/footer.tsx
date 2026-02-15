@@ -90,17 +90,15 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 tracking-wider font-medium lg:col-span-2">
-          {/* Administration Section */}
           <div>
-            <h4 className="text-xl mb-3">Administration</h4>
             <ul className="text-base space-y-2 tracking-wide">
               {[
                 { name: "IITR Home", href: "https://www.iitr.ac.in/", target: "_blank" },
                 { name: "E Learning Center", href: "https://www.iitr.ac.in/elc/", target: "_blank" },
-                { name: "PG Admission", href: "#" },
-                { name: "PhD Admissions", href: "#" },
                 { name: "Webmail", href: "https://newwebmail.iitr.ac.in/?session=f9d8c490c90d969687b99fed91ea214a70efdf2ec9b086079795c442636b55fb46b2d4e450e72ddc9433083f15c23a4a70efdf2ec9b086079795c442636b55fb", target: "_blank" },
                 { name: "TOH (Trainee Officer Hostel)", href: "/trainee-officer-hostel" },
+                { name: "Guest House Booking", href: "https://ghbooking.iitr.ac.in/", target: "_blank" },
+                { name: "Library", href: "https://mgcl.iitr.ac.in/", target: "_blank" },
               ].map((link, index) => (
                 <li key={index}>
                   <Link
@@ -116,16 +114,11 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Departments Section */}
           <div>
-            <h4 className="text-xl mb-3">Departments</h4>
             <ul className="text-base space-y-2 tracking-tight">
               {[
                 { name: "DOSW", href: "https://www.iitr.ac.in/dosw/", target: "_blank" },
                 { name: "SRIC", href: "https://www.iitr.ac.in/sric/", target: "_blank" },
-                { name: "DADAM", href: "/not-found", target: "_blank" },
-                { name: "ADAA", href: "/not-found", target: "_blank" },
-                { name: "Telephone Directory", href: "/not-found", target: "_blank" },
               ].map((link, index) => (
                 <li key={index}>
                   <Link
@@ -141,16 +134,11 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Supporting Units Section */}
           <div>
-            <h4 className="text-xl mb-3">Supporting Units</h4>
             <ul className="text-base space-y-2 tracking-tight">
               {[
                 { name: "NPTEL", href: "https://onlinecourses.nptel.ac.in/", target: "_blank" },
-                { name: "GIAN", href: "https://gian.iitkgp.ac.in/", target: "_blank" },
                 { name: "AICTE", href: "https://www.aicte-india.org/", target: "_blank" },
-                { name: "TEQIP", href: "https://teqip.in/", target: "_blank" },
-                { name: "QIP Principal Coordinator", href: "https://www.iitg.ac.in/cet/qip.html", target: "_blank" },
               ].map((link, index) => (
                 <li key={index}>
                   <Link
