@@ -1,0 +1,100 @@
+import { FormConfig } from './route';
+
+export const advanceFormOldConfig: FormConfig = {
+    title: "REQUEST FOR ADVANCE",
+    subtitle: "(To attend/Meeting/Field Work/course expenses etc.)",
+    fields: [
+        { label: "Employee No.", value: "", type: "text" },
+        { label: "1. Name", value: "", type: "text" },
+        { label: "2. Designation", value: "", type: "text" },
+        { label: "3. Department", value: "", type: "text" },
+        { label: "4. Purpose of Advance", value: "", type: "multiline" },
+        { label: "5. Categorical Estimated Expenditure", value: "", type: "text" },
+        { label: "(i) T.A.(fare of entitled class):", value: "", type: "text" },
+        { label: "(ii) D.A. for _____ days:", value: "", type: "text" },
+        { label: "(iii) Purchases/Clearance of : documents through bank (tick one)", value: "", type: "text" },
+        { label: "Documents through bank", value: "", type: "text" },
+        { label: "(iv) Other items (specify):", value: "", type: "text" },
+        { label: "Total", value: "", type: "text" },
+        { label: "6. Amount of advance required Rs.", value: "", type: "text" },
+        { label: "(In words) Rupees", value: "", type: "text" },
+        { label: "7. Date by which cheque is required", value: "", type: "text" },
+        { label: "8. Date by which amount of advance will be submitted for adjustment", value: "", type: "text" },
+        { label: "9. Name of the course and dates", value: "", type: "text" },
+        { label: "10. Course code", value: "", type: "text" },
+        { label: "11. (a) Details of outstanding advance (s) :", value: "", type: "text" },
+        { label: "S.No", value: "", type: "text" },
+        { label: "Amount", value: "", type: "text" },
+        { label: "Date", value: "", type: "text" },
+        { label: "Purpose", value: "", type: "text" },
+        { label: "(b) Reason for non-adjustment:", value: "", type: "multiline" },
+        { label: "12. I have read and admitted instructions for adjustment of advance given on the reverse side of the proforma.", value: "", type: "text" },
+        { label: "(Signature)", value: "", type: "text" },
+        { label: "(Approval of competent Authority)", value: "", type: "text" },
+        { label: "(Recommendation of the Coordinator, CEC)", value: "", type: "text" },
+        { label: "SPACE FOR ACCOUNT OFFICE", value: "", type: "text" },
+        { label: "INSTRUCTIONS FOR ADJUSTMENT OF ADVANCE", value: "", type: "text" },
+        { label: "1. Account of advance with all related vouchers should be submitted through Head of the Department/Section by the date specified under sl. 8 or within 30 days to Accounts Office, whichever is earlier.", value: "", type: "text" },
+        { label: "However, it will not be applicable in case of imprests (permanent advance) and letter of credits, imprest should be closed at the end of financial year and fresh imprest may be applied in the beginning of the financial year. In case of letter of credit advance shall be adjusted within a month of receipt of material/equipment.", value: "", type: "text" },
+        { label: "2. Failure to comply with (1) above is a serious matter. The advance may be adjusted against the salary of the employee with penal intrest for the period of delay as per norms.", value: "", type: "text" },
+        { label: "3. Further advance may not be allowed if the account of the previous advance (s) has not been submitted, for consideration of adjustment.", value: "", type: "text" }
+    ],
+    multilineFields: [
+        { label: "4. Purpose of Advance", value: "", maxWidth: 400 },
+        { label: "(b) Reason for non-adjustment:", value: "", maxWidth: 400 },
+        { label: "1. Account of advance with all related vouchers should be submitted through Head of the Department/Section by the date specified under sl. 8 or within 30 days to Accounts Office, whichever is earlier.", value: "", maxWidth: 400 },
+        { label: "However, it will not be applicable in case of imprests (permanent advance) and letter of credits, imprest should be closed at the end of financial year and fresh imprest may be applied in the beginning of the financial year. In case of letter of credit advance shall be adjusted within a month of receipt of material/equipment.", value: "", maxWidth: 400 },
+        { label: "2. Failure to comply with (1) above is a serious matter. The advance may be adjusted against the salary of the employee with penal intrest for the period of delay as per norms.", value: "", maxWidth: 400 },
+        { label: "3. Further advance may not be allowed if the account of the previous advance (s) has not been submitted, for consideration of adjustment.", value: "", maxWidth: 400 }
+    ]
+};
+
+export const mapAdvanceFormOldDataToConfig = (formData: any): FormConfig => {
+    return {
+        ...advanceFormOldConfig,
+        fields: [
+            { label: "Employee No.", value: formData.employee_no || "", type: "text" },
+            { label: "1. Name", value: formData.name || "", type: "text" },
+            { label: "2. Designation", value: formData.designation || "", type: "text" },
+            { label: "3. Department", value: formData.department || "", type: "text" },
+            { label: "4. Purpose of Advance", value: formData.purpose || "", type: "multiline" },
+            { label: "5. Categorical Estimated Expenditure", value: "", type: "text" },
+            { label: "(i) T.A.(fare of entitled class):", value: formData.fare?.toString() || "", type: "text" },
+            { label: "(ii) D.A. for _____ days:", value: formData.da?.toString() || "", type: "text" },
+            { label: "(iii) Purchases/Clearance of : documents through bank (tick one)", value: "", type: "text" },
+            { label: "Documents through bank", value: formData.purchase_clearance ? "Checked" : "", type: "text" },
+            { label: "(iv) Other items (specify):", value: formData.other_items?.toString() || "", type: "text" },
+            { label: "Total", value: formData.total?.toString() || "", type: "text" },
+            { label: "6. Amount of advance required Rs.", value: formData.advance_amount?.toString() || "", type: "text" },
+            { label: "(In words) Rupees", value: formData.advance_in_words || "", type: "text" },
+            { label: "7. Date by which cheque is required", value: formData.cheque_date || "", type: "text" },
+            { label: "8. Date by which amount of advance will be submitted for adjustment", value: formData.adjustment_date || "", type: "text" },
+            { label: "9. Name of the course and dates", value: formData.course_name_dates || "", type: "text" },
+            { label: "10. Course code", value: formData.course_code || "", type: "text" },
+            { label: "11. (a) Details of outstanding advance (s) :", value: "", type: "text" },
+            { label: "S.No", value: formData.outstanding_advance_sno || "", type: "text" },
+            { label: "Amount", value: formData.outstanding_advance_amount?.toString() || "", type: "text" },
+            { label: "Date", value: formData.outstanding_advance_date || "", type: "text" },
+            { label: "Purpose", value: formData.outstanding_advance_purpose || "", type: "text" },
+            { label: "(b) Reason for non-adjustment:", value: formData.non_adjustment_reason || "", type: "multiline" },
+            { label: "12. I have read and admitted instructions for adjustment of advance given on the reverse side of the proforma.", value: "", type: "text" },
+            { label: "(Signature)", value: "", type: "text" },
+            { label: "(Approval of competent Authority)", value: "", type: "text" },
+            { label: "(Recommendation of the Coordinator, CEC)", value: "", type: "text" },
+            { label: "SPACE FOR ACCOUNT OFFICE", value: "", type: "text" },
+            { label: "INSTRUCTIONS FOR ADJUSTMENT OF ADVANCE", value: "", type: "text" },
+            { label: "1. Account of advance with all related vouchers should be submitted through Head of the Department/Section by the date specified under sl. 8 or within 30 days to Accounts Office, whichever is earlier.", value: "", type: "text" },
+            { label: "However, it will not be applicable in case of imprests (permanent advance) and letter of credits, imprest should be closed at the end of financial year and fresh imprest may be applied in the beginning of the financial year. In case of letter of credit advance shall be adjusted within a month of receipt of material/equipment.", value: "", type: "text" },
+            { label: "2. Failure to comply with (1) above is a serious matter. The advance may be adjusted against the salary of the employee with penal intrest for the period of delay as per norms.", value: "", type: "text" },
+            { label: "3. Further advance may not be allowed if the account of the previous advance (s) has not been submitted, for consideration of adjustment.", value: "", type: "text" }
+        ],
+        multilineFields: [
+            { label: "4. Purpose of Advance", value: formData.purpose || "", maxWidth: 400 },
+            { label: "(b) Reason for non-adjustment:", value: formData.non_adjustment_reason || "", maxWidth: 400 },
+            { label: "1. Account of advance with all related vouchers should be submitted through Head of the Department/Section by the date specified under sl. 8 or within 30 days to Accounts Office, whichever is earlier.", value: "", maxWidth: 400 },
+            { label: "However, it will not be applicable in case of imprests (permanent advance) and letter of credits, imprest should be closed at the end of financial year and fresh imprest may be applied in the beginning of the financial year. In case of letter of credit advance shall be adjusted within a month of receipt of material/equipment.", value: "", maxWidth: 400 },
+            { label: "2. Failure to comply with (1) above is a serious matter. The advance may be adjusted against the salary of the employee with penal intrest for the period of delay as per norms.", value: "", maxWidth: 400 },
+            { label: "3. Further advance may not be allowed if the account of the previous advance (s) has not been submitted, for consideration of adjustment.", value: "", maxWidth: 400 }
+        ]
+    };
+};
