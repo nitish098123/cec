@@ -144,6 +144,16 @@ const courses: Course[] = [
   },
   // Management
   {
+    id: 24,
+    name: "Post-Graduate Certificate Programme in Business Analytics & Generative AI",
+    duration: "6 Months",
+    mode: "Online",
+    students: "New",
+    partner: "PhysicsWallah",
+    category: "Management",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_businessAnalytics.jpeg",
+  },
+  {
     id: 21,
     name: "Post-Graduate Certificate Programme in AI-Driven FinTech (PGCPF)",
     duration: "6 Months",
@@ -212,16 +222,6 @@ const courses: Course[] = [
     partner: "Futurense",
     category: "Management",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Digital_Marketing&Martech.jpeg",
-  },
-  {
-    id: 24,
-    name: "Business Analytics & Generative AI",
-    duration: "6 Months",
-    mode: "Online",
-    students: "New",
-    partner: "PhysicsWallah",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_businessAnalytics.jpeg",
   },
   // Sustainability
   {
