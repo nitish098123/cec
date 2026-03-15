@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import { CourseSearchWrapper } from "@/components/CourseSearchWrapper";
 
 export const metadata: Metadata = {
   title: "Courses 2015-16 | CEC",
@@ -82,60 +83,68 @@ const Course201516Page = () => {
         <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 md:mb-12">
           LIST OF SHORT-TERM COURSES CONDUCTED DURING 2015-16
         </h2>
-        <div className="overflow-x-auto shadow-md sm:rounded-lg">
-          <table className="min-w-full bg-white border border-gray-200">
-            <thead className="bg-gray-800 text-white">
-              <tr>
-                <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">S.No.</th>
-                <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Course Name</th>
-                <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Course Coordinator</th>
-                <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Duration</th>
-                <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No. of Participants</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-200">
-              {mainCourses.map((course) => (
-                <tr key={course.sno} className="border-b hover:bg-gray-100">
-                  <td className="py-4 px-6 whitespace-nowrap">{course.sno}</td>
-                  <td className="py-4 px-6">{course.name}</td>
-                  <td className="py-4 px-6">{course.coordinator}</td>
-                  <td className="py-4 px-6 whitespace-nowrap">{course.duration}</td>
-                  <td className="py-4 px-6 whitespace-nowrap">{course.participants}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <CourseSearchWrapper courses={mainCourses as Record<string, unknown>[]}>
+          {(filteredCourses) => (
+            <div className="overflow-x-auto shadow-md sm:rounded-lg">
+              <table className="min-w-full bg-white border border-gray-200">
+                <thead className="bg-gray-800 text-white">
+                  <tr>
+                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">S.No.</th>
+                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Course Name</th>
+                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Course Coordinator</th>
+                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Duration</th>
+                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No. of Participants</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {filteredCourses.map((course: Record<string, unknown>) => (
+                    <tr key={String(course.sno)} className="border-b hover:bg-gray-100">
+                      <td className="py-4 px-6 whitespace-nowrap">{course.sno}</td>
+                      <td className="py-4 px-6">{course.name}</td>
+                      <td className="py-4 px-6">{course.coordinator}</td>
+                      <td className="py-4 px-6 whitespace-nowrap">{course.duration}</td>
+                      <td className="py-4 px-6 whitespace-nowrap">{course.participants}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </CourseSearchWrapper>
 
         <h2 className="text-3xl font-semibold text-center mb-12">
             Online Courses from September 2015 – January 2016
         </h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-200">
-            <thead className="bg-gray-800 text-white">
-              <tr>
-                <th className="py-3 px-4 text-left">S.No.</th>
-                <th className="py-3 px-4 text-left">Course Co-ordinator/(Deptt.)</th>
-                <th className="py-3 px-4 text-left">Course Name</th>
-                <th className="py-3 px-4 text-left">Course Coordinator (s)</th>
-                <th className="py-3 px-4 text-left">Duration</th>
-                <th className="py-3 px-4 text-left">No. of Participants</th>
-              </tr>
-            </thead>
-            <tbody>
-              {onlineCourses.map((course) => (
-                <tr key={course.sno} className="border-b hover:bg-gray-100">
-                  <td className="py-3 px-4">{course.sno}</td>
-                  <td className="py-3 px-4">{course.department}</td>
-                  <td className="py-3 px-4">{course.name}</td>
-                  <td className="py-3 px-4">{course.coordinator}</td>
-                  <td className="py-3 px-4">{course.duration}</td>
-                  <td className="py-3 px-4">{course.participants}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        <CourseSearchWrapper courses={onlineCourses as Record<string, unknown>[]}>
+          {(filteredCourses) => (
+            <div className="overflow-x-auto">
+              <table className="min-w-full bg-white border border-gray-200">
+                <thead className="bg-gray-800 text-white">
+                  <tr>
+                    <th className="py-3 px-4 text-left">S.No.</th>
+                    <th className="py-3 px-4 text-left">Course Co-ordinator/(Deptt.)</th>
+                    <th className="py-3 px-4 text-left">Course Name</th>
+                    <th className="py-3 px-4 text-left">Course Coordinator (s)</th>
+                    <th className="py-3 px-4 text-left">Duration</th>
+                    <th className="py-3 px-4 text-left">No. of Participants</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredCourses.map((course: Record<string, unknown>) => (
+                    <tr key={String(course.sno)} className="border-b hover:bg-gray-100">
+                      <td className="py-3 px-4">{course.sno}</td>
+                      <td className="py-3 px-4">{course.department}</td>
+                      <td className="py-3 px-4">{course.name}</td>
+                      <td className="py-3 px-4">{course.coordinator}</td>
+                      <td className="py-3 px-4">{course.duration}</td>
+                      <td className="py-3 px-4">{course.participants}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </CourseSearchWrapper>
       </div>
     </div>
   );

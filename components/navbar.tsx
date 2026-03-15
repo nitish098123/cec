@@ -57,10 +57,10 @@ export const Navbar: React.FC = () => {
         {
           title: "Past Courses",
           submenu: [
-            { title: "2024-25", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/2024-25.pdf", target: "_blank" },
-            { title: "2023-24", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/STC-CEC-2023-24.pdf", target: "_blank" },
-            { title: "2022-23", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/List_of_courses-2022-23.pdf", target: "_blank" },
-            { title: "2021-22", href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_2021-22.pdf", target: "_blank" },
+            { title: "2024-25", href: "/past-courses/2024-25" },
+            { title: "2023-24", href: "/past-courses/2023-24" },
+            { title: "2022-23", href: "/past-courses/2022-23" },
+            { title: "2021-22", href: "/past-courses/2021-22" },
             { title: "2020-21", href: "/course-2020-21" },
             { title: "2019-20", href: "/course-2019-20" },
             { title: "2018-19", href: "/course-2018-19" },
@@ -68,7 +68,6 @@ export const Navbar: React.FC = () => {
             { title: "2016-17", href: "/course-2016-17" },
             { title: "2015-16", href: "/course-2015-16" },
             { title: "2014-15", href: "/course-2014-15" },
-            { title: "2013-14", href: "/course-2013-14" },
           ],
         },
       ],

@@ -473,6 +473,43 @@ export default function HomePage() {
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent via-50% to-transparent z-10"></div>
 
+        {/* Social links - hero */}
+        <div className="absolute bottom-8 right-4 sm:right-8 md:right-12 flex items-center gap-4 z-30">
+          <a
+            href="https://x.com/iitroorkee"
+            aria-label="Twitter"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#FFAE0E] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg className="w-6 h-6 fill-current" viewBox="0 0 16 16">
+              <path d="M12.8 1.5h2.2l-5.1 5.8 6.1 7.7h-2.2l-3.7-4.8L3.5 15H1.3l5.5-6.2L1.3 1.5h3.9l3.3 4.4zm-0.9 12.2h1.2L5.1 2.9H3.9z"/>
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100082831977496#"
+            aria-label="Facebook"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#FFAE0E] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg className="w-6 h-6 fill-current" viewBox="0 0 16 16">
+              <path d="M15.5 8c0-4.1-3.4-7.5-7.5-7.5S0.5 3.9 0.5 8c0 3.9 2.9 7.1 6.6 7.7v-5.5h-2V8h2V6.2c0-2.1 1.3-3.2 3.1-3.2 0.9 0 1.8 0.2 1.8 0.2v2h-1.1c-1.1 0-1.4 0.7-1.4 1.4V8h2.3l-0.4 2.3h-1.9v5.5C12.6 15.1 15.5 11.9 15.5 8z"/>
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/ceciitr/"
+            aria-label="LinkedIn"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#FFAE0E] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg className="w-6 h-6 fill-current" viewBox="0 0 16 16">
+              <path d="M13.6 13.6h-2.4v-3.7c0-0.9-0.02-2-1.2-2-1.2 0-1.4 1-1.4 2v3.7H6.2V6.7h2.3v1h0.03c0.3-0.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v3.5zM3.6 5c-0.8 0-1.4-0.6-1.4-1.4 0-0.8 0.6-1.4 1.4-1.4s1.4 0.6 1.4 1.4c0 0.8-0.6 1.4-1.4 1.4zm1.2 8.7H2.4V6.7h2.4v7zM14.8 0H1.2C0.5 0 0 0.5 0 1.2v13.7C0 15.5 0.5 16 1.2 16h13.6C15.5 16 16 15.5 16 14.8V1.2C16 0.5 15.5 0 14.8 0z"/>
+            </svg>
+          </a>
+        </div>
+
         {/* Image Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
           {heroImages.map((_, index) => (
@@ -1483,18 +1520,18 @@ export default function HomePage() {
                   <span className="bg-[#FFAE0E] text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
                   </span>
-                  <span className="text-gray-500 text-sm">June 2025</span>
+                  <span className="text-gray-500 text-sm">6-8 Months</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-2 text-[#102a43]">
-                  Data-Driven Frontiers: Blockchain, Social Networks, and Multimedia
+                  Post Graduate Certificate Programme in Applied Data Science & AI
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  An intensive course covering cutting-edge technologies in blockchain, social network analysis, and multimedia processing.
+                  Upskills working professionals in data science and AI fundamentals, practical software technologies, and prescribing the best course of action across business and application contexts.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#FFAE0E] font-medium">Open Course</span>
+                  <span className="text-[#FFAE0E] font-medium">Jaro Education</span>
                   <a 
-                    href="https://cec.iitr.ac.in/Brochure/Information_brochure.pdf" 
+                    href="https://www.jaroeducation.com/applied-data-science-ai-certificate-iitr" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 font-medium"
@@ -1521,7 +1558,7 @@ export default function HomePage() {
                 <div className="flex items-center justify-between">
                   <span className="text-[#FFAE0E] font-medium">Futurense</span>
                   <a 
-                    href="https://futurense.com/iit-roorkee/pg-certificate-in-genai-agentic-ai-data-science-for-enterprises" 
+                    href="https://futurense.com/iit-roorkee/genai-and-agentic-ai-iit-rorkee" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 font-medium"

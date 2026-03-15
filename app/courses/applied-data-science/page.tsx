@@ -131,13 +131,13 @@ export default function AppliedDataScienceCoursePage() {
                   Course Features
                 </h2>
               <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 mt-6">
-                  <li>Learn from IIT Roorkee professors and industry experts</li>
+                  <li>Learn from IIT Roorkee professors</li>
                   <li>
                     Students will have access to a Learning Management System for
                     referring to the content
                   </li>
                   <li>
-                    Guided projects and Timely Doubt Resolution from Jaro Education
+                    Guided projects and Timely Doubt Resolution
                   </li>
                   <li>Certificate of completion from CEC IIT Roorkee</li>
                 </ul>
