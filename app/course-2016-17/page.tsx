@@ -2,6 +2,14 @@ import React from "react";
 import { Metadata } from "next";
 import { CourseSearchWrapper } from "@/components/CourseSearchWrapper";
 
+const courseColumns = [
+  { key: "sno", label: "S.No.", cellClassName: "whitespace-nowrap" },
+  { key: "name", label: "Course Name" },
+  { key: "coordinator", label: "Course Coordinator" },
+  { key: "duration", label: "Duration", cellClassName: "whitespace-nowrap" },
+  { key: "participants", label: "No. of Participants", cellClassName: "whitespace-nowrap" },
+];
+
 export const metadata: Metadata = {
   title: "Courses 2016-17 | CEC",
   description: "Continuing Education Centre, IIT Roorkee",
@@ -68,34 +76,10 @@ const Course201617Page = () => {
         <h2 className="text-2xl md:text-3xl font-semibold text-center mb-8 md:mb-12">
           LIST OF SHORT-TERM COURSES CONDUCTED DURING 2016-17
         </h2>
-        <CourseSearchWrapper courses={courses as Record<string, unknown>[]}>
-          {(filteredCourses) => (
-            <div className="overflow-x-auto shadow-md sm:rounded-lg">
-              <table className="min-w-full bg-white border border-gray-200">
-                <thead className="bg-gray-800 text-white">
-                  <tr>
-                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">S.No.</th>
-                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Course Name</th>
-                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Course Coordinator</th>
-                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">Duration</th>
-                    <th className="py-3 px-6 text-left text-xs font-medium uppercase tracking-wider">No. of Participants</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  {filteredCourses.map((course: Record<string, unknown>) => (
-                    <tr key={String(course.sno)} className="border-b hover:bg-gray-100">
-                      <td className="py-4 px-6 whitespace-nowrap">{course.sno}</td>
-                      <td className="py-4 px-6">{course.name}</td>
-                      <td className="py-4 px-6">{course.coordinator}</td>
-                      <td className="py-4 px-6 whitespace-nowrap">{course.duration}</td>
-                      <td className="py-4 px-6 whitespace-nowrap">{course.participants}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </CourseSearchWrapper>
+        <CourseSearchWrapper
+          courses={courses as Record<string, unknown>[]}
+          columns={courseColumns}
+        />
       </div>
     </div>
   );

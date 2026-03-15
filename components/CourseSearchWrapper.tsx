@@ -2,12 +2,23 @@
 
 import React, { useMemo, useState } from "react";
 
+export type CourseTableColumn = {
+  key: string;
+  label: string;
+  headerClassName?: string;
+  cellClassName?: string;
+};
+
 export function CourseSearchWrapper({
   courses,
-  children,
+  columns,
+  tableClassName = "min-w-full bg-white border border-gray-200",
+  theadClassName = "bg-gray-800 text-white",
 }: {
   courses: Record<string, unknown>[];
-  children: (filtered: Record<string, unknown>[]) => React.ReactNode;
+  columns: CourseTableColumn[];
+  tableClassName?: string;
+  theadClassName?: string;
 }) {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -79,7 +90,36 @@ export function CourseSearchWrapper({
           </p>
         )}
       </div>
-      {children(filtered)}
+      <div className="overflow-x-auto shadow-md sm:rounded-lg">
+        <table className={tableClassName}>
+          <thead className={theadClassName}>
+            <tr>
+              {columns.map((col) => (
+                <th
+                  key={col.key}
+                  className={`py-3 px-4 sm:px-6 text-left text-xs font-medium uppercase tracking-wider ${col.headerClassName ?? ""}`}
+                >
+                  {col.label}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-gray-200">
+            {filtered.map((course) => (
+              <tr key={String(course.sno ?? course.name ?? Math.random())} className="border-b hover:bg-gray-100">
+                {columns.map((col) => (
+                  <td
+                    key={col.key}
+                    className={`py-4 px-4 sm:px-6 ${col.cellClassName ?? ""}`}
+                  >
+                    {String(course[col.key] ?? "")}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }
