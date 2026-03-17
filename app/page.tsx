@@ -244,6 +244,16 @@ const courses: Course[] = [
     category: "Sustainability",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_carboncredits.jpeg",
   },
+  {
+    id: 25,
+    name: "ESG & Sustainability",
+    duration: "2-3 Months",
+    mode: "Online",
+    students: "New",
+    partner: "eAsia Academy",
+    category: "Sustainability",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_esg.png",
+  },
   // Miscellaneous
   {
     id: 20,
@@ -892,6 +902,7 @@ export default function HomePage() {
                       course.id === 13 ? "https://www.easiaacademy.com/esg" :
                       course.id === 14 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Information_brochure.pdf" :
                       course.id === 22 ? "https://www.easiaacademy.com/carbon" :
+                      course.id === 25 ? "https://easiaacademy.com/esgsustainability" :
                       course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
                       course.id === 16 ? "https://zzstage.zerozeta.com/ai-organisational-growth" :
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
@@ -903,8 +914,8 @@ export default function HomePage() {
                       course.id === 24 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-business-analytics-and-generative-ai-146599" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
