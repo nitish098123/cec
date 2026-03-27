@@ -174,6 +174,26 @@ const courses: Course[] = [
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_HR.jpg",
   },
   {
+    id: 28,
+    name: "AI for E-Commerce & Quick Commerce",
+    duration: "6 Months",
+    mode: "Online",
+    students: "New",
+    partner: "TeamLease",
+    category: "Management",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ecom.png",
+  },
+  {
+    id: 26,
+    name: "Sustainable Finance & ESG Investing",
+    duration: "3-4 Months",
+    mode: "Online",
+    students: "New",
+    partner: "eAsia Academy",
+    category: "Management",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_finance.png",
+  },
+  {
     id: 9,
     name: "Product Management Accelerator",
     duration: "2 Weeks",
@@ -253,6 +273,16 @@ const courses: Course[] = [
     partner: "eAsia Academy",
     category: "Sustainability",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_esg.png",
+  },
+  {
+    id: 27,
+    name: "Sustainable Finance & ESG Investing",
+    duration: "3-4 Months",
+    mode: "Online",
+    students: "New",
+    partner: "eAsia Academy",
+    category: "Sustainability",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_finance.png",
   },
   // Miscellaneous
   {
@@ -912,10 +942,12 @@ export default function HomePage() {
                       course.id === 21 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-ai-driven-fintech--pgcpf--753625" :
                       course.id === 23 ? "https://zerozeta.com/executive-program" :
                       course.id === 24 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-business-analytics-and-generative-ai-146599" :
+                      course.id === 28 ? "https://cep.digivarsity.com/iit-roorkee/executive-certificate-program-in-ai-for-ecommerce-and-quick-commerce.html" :
+                      course.id === 26 || course.id === 27 ? "https://easiaacademy.com/finance" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
