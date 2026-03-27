@@ -60,6 +60,10 @@ const data: DataItem[] = [
     apply_link: "#",
     download_pdf_link: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/12.pdf",
   },
+  {
+    title: "Other forms",
+    apply_link: "/forms/other-forms",
+  },
 ];
 
 export default function FormsPage() {
