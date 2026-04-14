@@ -16,7 +16,7 @@ interface CardData {
 // Sample data
 const cardData: CardData[] = [
   {
-    image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/kghosh.jpg",
+    image_url: "/staff/Prof-Soumitra.jpg",
     name: "Prof. Kaushik Ghosh",
     designation: "Coordinator CEC",
     phone: "01332-285227/5545",
