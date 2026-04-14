@@ -16,8 +16,8 @@ interface CardData {
 // Sample data
 const cardData: CardData[] = [
   {
-    image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/kghosh.jpg",
-    name: "Prof. Kaushik Ghosh",
+    image_url: "/staff/Prof-Soumitra.jpg",
+    name: "Prof. Soumitra Satapathi",
     designation: "Coordinator CEC",
     phone: "01332-285227/5545",
     email: "Coordinator.cec.qip@iitr.ac.in",
