@@ -803,13 +803,13 @@ export default function HomePage() {
             <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12">
               <div className="flex-shrink-0 flex flex-col items-center w-full md:w-auto">
                 <img
-                  src="/staff/kaushik-ghosh.png"
-                  alt="Prof. Kaushik Ghosh"
+                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/co-ordinator.jpeg"
+                  alt="Prof. Soumitra Satapathi"
                   className="object-cover rounded-2xl w-80 h-96 shadow-xl border-4 border-white"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 <div className="mt-4 text-center">
-                  <p className="text-xl md:text-2xl font-semibold text-black mb-1">Prof. Kaushik Ghosh</p>
+                  <p className="text-xl md:text-2xl font-semibold text-black mb-1">Prof. Soumitra Satapathi</p>
                   <p className="text-base md:text-lg font-normal text-gray-700 mb-1">Coordinator, Continuing Education Centre</p>
                   <p className="text-base md:text-lg font-normal text-gray-700 mb-1">IIT Roorkee</p>
                   <p className="text-base md:text-lg font-normal text-gray-700 mb-1">Phone no.: 01332-285227/5545</p>

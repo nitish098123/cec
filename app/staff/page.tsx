@@ -16,8 +16,8 @@ interface CardData {
 // Sample data
 const cardData: CardData[] = [
   {
-    image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/kghosh.jpg",
-    name: "Prof. Kaushik Ghosh",
+    image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/co-ordinator.jpeg",
+    name: "Prof. Soumitra Satapathi",
     designation: "Coordinator CEC",
     phone: "01332-285227/5545",
     email: "Coordinator.cec.qip@iitr.ac.in",
@@ -64,8 +64,8 @@ function StaffContent() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
   const tab = tabParam === "coordinator" ? "coordinator" : "staff";
-  const coordinator = cardData.find((item) => item.name === "Prof. Kaushik Ghosh");
-  const staff = cardData.filter((item) => item.name !== "Prof. Kaushik Ghosh");
+  const coordinator = cardData.find((item) => item.name === "Prof. Soumitra Satapathi");
+  const staff = cardData.filter((item) => item.name !== "Prof. Soumitra Satapathi");
   return (
     <>
       {/* Section Content */}
