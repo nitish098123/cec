@@ -126,7 +126,7 @@ const members: Member[] = [
     details: [
       "QIP Coordinator",
       "Quality Improvement Programme Indian Institute of Technology Bhubaneswar",
-      "Orissa",
+      "Odisha",
     ],
     phone: "674-7135158",
     email: "sroy@iitbbs.ac.in",
