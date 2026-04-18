@@ -297,10 +297,10 @@ const courses: Course[] = [
   },
   {
     id: 14,
-    name: "Data-Driven Frontiers: Blockchain, Social Networks, and Multimedia",
-    duration: "June 01- 10, 2025",
-    mode: "Online",
-    students: "250+",
+    name: "Swarupa & Swadharma: Understanding Oneself from IKS Perspective",
+    duration: "June 09- 12, 2026",
+    mode: "Offline",
+    students: "New",
     partner: "Open Course",
     category: "Miscellaneous",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Data-Driven.jpg",
@@ -930,7 +930,7 @@ export default function HomePage() {
                       course.id === 10 ? "https://imarticus.org/professional-certification-in-supply-chain-management-and-analytics-by-IIT-Roorkee/" :
                       course.id === 12 ? "https://www.jaroeducation.com/strategic-product-certification-iit-roorkee/" :
                       course.id === 13 ? "https://www.easiaacademy.com/esg" :
-                      course.id === 14 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Information_brochure.pdf" :
+                      course.id === 14 ? "https://forms.gle/GhDEA2uNyCpJ4Xdg7" :
                       course.id === 22 ? "https://www.easiaacademy.com/carbon" :
                       course.id === 25 ? "https://easiaacademy.com/esgsustainability" :
                       course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
