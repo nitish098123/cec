@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-const CERT_CDN_BASE =
-  'https://d1bm918zlnq37v.cloudfront.net/CECTemp/Certificates/'
-
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
   // Some shared links contain trailing spaces (encoded as %20), which break CDN lookups.
@@ -21,14 +18,20 @@ export function middleware(request: NextRequest) {
     /^\/cec\/((?:CEC|CA)-[^/]+\/[^/]+)$/i
   )
   if (cecWithPrefixMatch) {
-    return NextResponse.redirect(`${CERT_CDN_BASE}${cecWithPrefixMatch[1]}`, 308)
+    const rewriteUrl = request.nextUrl.clone()
+    rewriteUrl.pathname = '/certificate-view'
+    rewriteUrl.searchParams.set('certPath', cecWithPrefixMatch[1])
+    return NextResponse.rewrite(rewriteUrl)
   }
 
   const directFolderMatch = normalizedPathname.match(
     /^\/((?:CEC|CA)-[^/]+\/[^/]+)$/i
   )
   if (directFolderMatch) {
-    return NextResponse.redirect(`${CERT_CDN_BASE}${directFolderMatch[1]}`, 308)
+    const rewriteUrl = request.nextUrl.clone()
+    rewriteUrl.pathname = '/certificate-view'
+    rewriteUrl.searchParams.set('certPath', directFolderMatch[1])
+    return NextResponse.rewrite(rewriteUrl)
   }
 
   return NextResponse.next()
