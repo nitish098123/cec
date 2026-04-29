@@ -99,6 +99,7 @@ export const Footer: React.FC = () => {
                 { name: "TOH (Trainee Officer Hostel)", href: "/trainee-officer-hostel" },
                 { name: "Guest House Booking", href: "https://ghbooking.iitr.ac.in/", target: "_blank" },
                 { name: "Library", href: "https://mgcl.iitr.ac.in/", target: "_blank" },
+                { name: "Admin Login", href: "/admin-login", target: "_blank" },
               ].map((link, index) => (
                 <li key={index}>
                   <Link

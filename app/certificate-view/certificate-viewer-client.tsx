@@ -67,25 +67,8 @@ export default function CertificateViewerClient({
   };
 
   return (
-    <div className="min-h-[80vh] w-full flex flex-col items-center">
-      <div className="flex-1 w-full flex items-center justify-center px-1">
-        <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-neutral-100">
-          {certImageUrl ? (
-            // Using the same-domain API keeps the download/preview behind your app.
-            <img
-              src={certImageUrl}
-              alt="Certificate preview"
-              className="h-full w-full object-contain"
-            />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center text-gray-600">
-              Certificate not found.
-            </div>
-          )}
-        </div>
-      </div>
-
-      <div className="w-full flex justify-center pb-6">
+    <div className="w-full">
+      <div className="mb-4 flex w-full justify-end">
         <Button
           type="primary"
           disabled={!certPath || downloading}
@@ -94,6 +77,23 @@ export default function CertificateViewerClient({
         >
           Download
         </Button>
+      </div>
+
+      <div className="w-full px-1">
+        <div className="relative w-full overflow-hidden rounded-lg border border-gray-200 bg-neutral-100">
+          {certImageUrl ? (
+            // Using the same-domain API keeps the download/preview behind your app.
+            <img
+              src={certImageUrl}
+              alt="Certificate preview"
+              className="mx-auto h-auto max-h-[72vh] w-full object-contain"
+            />
+          ) : (
+            <div className="flex h-[60vh] w-full items-center justify-center text-gray-600">
+              Certificate not found.
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
