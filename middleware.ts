@@ -19,7 +19,8 @@ export function middleware(request: NextRequest) {
   )
   if (cecWithPrefixMatch) {
     const rewriteUrl = request.nextUrl.clone()
-    rewriteUrl.pathname = '/certificate-view'
+    // If the app is mounted under `/cec` in production, route must include the prefix.
+    rewriteUrl.pathname = '/cec/certificate-view'
     rewriteUrl.searchParams.set('certPath', cecWithPrefixMatch[1])
     return NextResponse.rewrite(rewriteUrl)
   }

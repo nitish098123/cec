@@ -9,9 +9,9 @@ type CertificateViewPageProps = {
 export default function CertificateViewPage({ searchParams }: CertificateViewPageProps) {
   const certPath = searchParams.certPath ?? "";
   const certUrl = certPath
-    ? `/api/certificate-download?certPath=${encodeURIComponent(certPath)}`
+    ? `api/certificate-download?certPath=${encodeURIComponent(certPath)}`
     : "";
-  const downloadUrl = `/api/certificate-download?certPath=${encodeURIComponent(certPath)}&download=1`;
+  const downloadUrl = `api/certificate-download?certPath=${encodeURIComponent(certPath)}&download=1`;
 
   return (
     <div className="min-h-screen bg-black px-4 py-8 sm:px-8">
