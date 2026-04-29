@@ -6,42 +6,40 @@ const CERT_CDN_BASE =
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+  // Some shared links contain trailing spaces (encoded as %20), which break CDN lookups.
+  const normalizedPathname = pathname.replace(/(?:%20|\s)+$/g, '')
 
   // Redirect favicon.ico to IIT logo
-  if (pathname === '/favicon.ico') {
+  if (normalizedPathname === '/favicon.ico') {
     return NextResponse.redirect(new URL('/IITR_logo.png', request.url), 301)
   }
 
   // Legacy IITR certificate URLs, e.g.
-  // https://iitr.ac.in/cec/CEC-1003-2021-22/cert-CEC-1003-2021-22-72.jpg
-  if (pathname.startsWith('/cec/CEC-')) {
-    const certPath = pathname.slice('/cec/'.length)
-    return NextResponse.redirect(`${CERT_CDN_BASE}${certPath}`)
+  // /cec/CEC-1003-2021-22/cert-CEC-1003-2021-22-72.jpg
+  // /CEC-1003-2021-22/cert-CEC-1003-2021-22-72.jpg
+  const cecWithPrefixMatch = normalizedPathname.match(
+    /^\/cec\/((?:CEC|CA)-[^/]+\/[^/]+)$/i
+  )
+  if (cecWithPrefixMatch) {
+    return NextResponse.redirect(`${CERT_CDN_BASE}${cecWithPrefixMatch[1]}`, 308)
   }
 
-  if (pathname.startsWith('/CEC-')) {
-    const certPath = pathname.slice(1)
-    return NextResponse.redirect(`${CERT_CDN_BASE}${certPath}`)
-  }
-
-  // Newer certificate paths, e.g. /CA-16-2024-25/02.jpg
-  if (pathname.startsWith('/CA')) {
-    const caPath = pathname.substring(1)
-    return NextResponse.redirect(`${CERT_CDN_BASE}${caPath}`)
+  const directFolderMatch = normalizedPathname.match(
+    /^\/((?:CEC|CA)-[^/]+\/[^/]+)$/i
+  )
+  if (directFolderMatch) {
+    return NextResponse.redirect(`${CERT_CDN_BASE}${directFolderMatch[1]}`, 308)
   }
 
   return NextResponse.next()
 }
 
 export const config = {
-  // Match all routes except static files and API routes; middleware filters cert paths
+  // Explicitly match certificate URL shapes and favicon.
   matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     */
-    '/((?!api|_next/static|_next/image).*)',
+    '/favicon.ico',
+    '/cec/:path*',
+    '/CEC-:path*',
+    '/CA-:path*',
   ],
 }
