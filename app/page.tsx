@@ -287,8 +287,8 @@ const courses: Course[] = [
   // Miscellaneous
   {
     id: 20,
-    name: "Samkhya and Yoga Sutras for Contemporary Life and Modern Science",
-    duration: "25 Hours",
+    name: "HRM - Ancient Wisdom - Contemporary Insights",
+    duration: "July 05- 11, 2026",
     mode: "Online",
     students: "Open",
     partner: "Open Course",
@@ -938,7 +938,7 @@ export default function HomePage() {
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
                       course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
                       course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-forward-deployed-ai-engineering" :
-                      course.id === 20 ? "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_Samkhya.pdf" :
+                      course.id === 20 ? "https://drive.google.com/file/d/1vYysj9kE_kMzDJlTkyJUe7RCfs8s10Cy/view?usp=sharing" :
                       course.id === 21 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-ai-driven-fintech--pgcpf--753625" :
                       course.id === 23 ? "https://zerozeta.com/executive-program" :
                       course.id === 24 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-business-analytics-and-generative-ai-146599" :
