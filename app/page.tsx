@@ -81,6 +81,18 @@ const courses: Course[] = [
     category: "Emerging Technologies",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Cybersecurity.png",
   },
+
+  {
+    id: 5,
+    name: "Advanced AI Engineering",
+    duration: "3 Months",
+    mode: "Online",
+    students: "400+",
+    partner: "Scaler",
+    category: "Emerging Technologies",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_VLSI.png",
+  },
+
   {
     id: 6,
     name: "Data Science, Machine Learning & Generative AI",
@@ -819,7 +831,7 @@ export default function HomePage() {
               <div className="flex-1">
                 <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl h-full flex items-center">
                   <p className="text-gray-800 text-base md:text-lg leading-relaxed">
-                    CEC IIT Roorkee, we are committed to making high-quality and transformational education accessible to all. Our programs are designed to provide executives, professionals, and aspiring individuals a launchpad for taking them to next level in their career. In addition to sponsored short-term courses, which form a large part of the training and upskilling effort, CEC IITR has launched a new major initiative to offer the longer duration programs (up to a year) having PG and Advanced Certifications. CEC IITR courses are available in both asynchronous and hybrid learning modes. Our courses are designed to provide learners a specialization, which will enable them to master in-demand skills needed to work on the latest problems in industry and research. These include Data Science, Machine Learning, Artificial Intelligence, 5G, Cyber Security, VLSI, DevOps, as well as emerging technologies in engineering, science, and management. Through these open participation programs, we aim to reach out to aspiring individuals and professionals to develop cutting-edge competencies in their professional careers. CEC has signed partnership MoUs with many organizations to offer courses and training programs in diverse areas. Some of our major partners for sponsored courses are SAIL, TATA Steel, NTPC, BEL, SAARC, NIC, etc. In the year 2024-2025, the CEC has introduced new sponsored courses for many organizations Department of Income Tax (Systems), New Delhi, IRDE Dehradun, DRDO, MeraYuva Bharat (MY BHARAT), New Delhi, Navodaya Vidyalaya Samiti, National Health Mission, Odisha, Tata Tisconm, National Mission for Clean Ganga (NMCG), New Delhi etc.
+                    CEC IIT Roorkee, we are committed to making high-quality and transformational education accessible to all. Our programs are designed to provide executives, professionals, and aspiring individuals a launchpad for taking them to next level in their career. In addition to sponsored short-term courses, which form a large part of the training and upskilling effort, CEC IITR has launched a new major initiative to offer the longer duration programs (up to a year) having PG and Advanced Certifications. CEC IITR courses are available in both asynchronous and hybrid learning modes. Our courses are designed to provide learners a specialization, which will enable them to master in-demand skills needed to work on the latest problems in industry and research. These include Data Science, Machine Learning, Artificial Intelligence, 5G, Cyber Security, VLSI, DevOps, as well as emerging technologies in engineering, science, and management. Through these open participation programs, we aim to reach out to aspiring individuals and professionals to develop cutting-edge competencies in their professional careers. CEC has signed partnership MoUs with many organizations to offer courses and training programs in diverse areas. Some of our major partners for sponsored courses are SAIL, TATA Steel, NTPC, BEL, SAARC, NIC, etc. In the year 2024-2025, the CEC has introduced new sponsored courses for many organizations Department of Income Tax (Systems), New Delhi, IRDE Dehradun, DRDO, MeraYuva Bharat (MY BHARAT), New Delhi, Navodaya Vidyalaya Samiti, National Health Mission, Odisha, Tata Tiscon, National Mission for Clean Ganga (NMCG), New Delhi etc.
                   </p>
                 </div>
               </div>
@@ -923,6 +935,7 @@ export default function HomePage() {
                       course.id === 2 ? "https://futurense.com/iit-roorkee/aiops" :
                       course.id === 3 ? "/courses/applied-data-science" :
                       course.id === 4 ? "https://futurense.com/iit-roorkee/ai-genai-cybersecurity-pg" :
+                      course.id === 5 ? "https://www.scaler.com/iit-roorkee-advanced-ai-engineering-course" :
                       course.id === 6 ? "/courses/data-science-ml" :
                       course.id === 7 ? "https://tejasiitr.com/" :
                       course.id === 8 ? "https://imarticus.org/certification-program-in-human-resource-management-and-analytics-iit-roorkee/" :
@@ -934,7 +947,7 @@ export default function HomePage() {
                       course.id === 22 ? "https://www.easiaacademy.com/carbon" :
                       course.id === 25 ? "https://easiaacademy.com/esgsustainability" :
                       course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
-                      course.id === 16 ? "https://zzstage.zerozeta.com/ai-organisational-growth" :
+                      course.id === 16 ? "https://zerozeta.com/ai-organisational-growth" :
                       course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
                       course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
                       course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-forward-deployed-ai-engineering" :
@@ -946,8 +959,8 @@ export default function HomePage() {
                       course.id === 26 || course.id === 27 ? "https://easiaacademy.com/finance" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
