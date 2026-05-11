@@ -293,7 +293,7 @@ const courses: Course[] = [
     students: "Open",
     partner: "Open Course",
     category: "Miscellaneous",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Samkhya.png",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Strategic.jpg",
   },
   {
     id: 14,
