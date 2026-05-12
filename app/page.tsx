@@ -71,6 +71,18 @@ const courses: Course[] = [
     category: "Emerging Technologies",
     image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_AppliedData.jpg",
   },
+
+  {
+    id: 11,
+    name: "Chief Technology & AI Officer Programme",
+    duration: "6-8 Months",
+    mode: "Online",
+    students: "New",
+    partner: "Jaro Education",
+    category: "Emerging Technologies",
+    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ai_engineering_agents.jpeg",
+  },
+
   {
     id: 4,
     name: "AI/GenAI Powered Cybersecurity",
@@ -941,6 +953,7 @@ export default function HomePage() {
                       course.id === 8 ? "https://imarticus.org/certification-program-in-human-resource-management-and-analytics-iit-roorkee/" :
                       course.id === 9 ? "https://hellopm.co/pm-accelerator-iitr/" :
                       course.id === 10 ? "https://imarticus.org/professional-certification-in-supply-chain-management-and-analytics-by-IIT-Roorkee/" :
+                      course.id === 11 ? "https://www.jaroeducation.com/post-graduate-chief-technology-ai-officer-programme" :
                       course.id === 12 ? "https://www.jaroeducation.com/strategic-product-certification-iit-roorkee/" :
                       course.id === 13 ? "https://www.easiaacademy.com/esg" :
                       course.id === 14 ? "https://forms.gle/GhDEA2uNyCpJ4Xdg7" :
@@ -959,8 +972,8 @@ export default function HomePage() {
                       course.id === 26 || course.id === 27 ? "https://easiaacademy.com/finance" :
                       "#"
                     }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "noopener noreferrer" : undefined}
+                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "_blank" : undefined}
+                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
