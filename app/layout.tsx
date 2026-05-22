@@ -15,7 +15,6 @@ export const metadata: Metadata = {
       { url: "/IITR_logo.png", type: "image/png", sizes: "any" },
       { url: "/IITR_logo.png", type: "image/png", sizes: "32x32" },
       { url: "/IITR_logo.png", type: "image/png", sizes: "16x16" },
-      { url: "/icon.png", type: "image/png" },
     ],
     shortcut: "/IITR_logo.png",
     apple: "/IITR_logo.png",

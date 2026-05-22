@@ -2,9 +2,38 @@
 
 import { Button, Tabs } from "antd";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+import CourseAdditionPanel from "./course-addition-panel";
 
 export default function AdminDashboardPage() {
   const router = useRouter();
+  const [authChecked, setAuthChecked] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/admin/auth/check", { cache: "no-store" })
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.authenticated) {
+          router.replace("/admin-login");
+          return;
+        }
+        setAuthChecked(true);
+      })
+      .catch(() => router.replace("/admin-login"));
+  }, [router]);
+
+  const handleLogout = async () => {
+    await fetch("/api/admin/auth/logout", { method: "POST" });
+    router.push("/admin-login");
+  };
+
+  if (!authChecked) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-[#102a43] text-white">
+        Loading admin dashboard...
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#102a43] via-[#0b1d2f] to-black px-3 py-10 sm:px-4 lg:px-6">
@@ -18,7 +47,7 @@ export default function AdminDashboardPage() {
               Welcome to the CEC admin panel.
             </p>
           </div>
-          <Button onClick={() => router.push("/admin-login")}>Log out</Button>
+          <Button onClick={handleLogout}>Log out</Button>
         </div>
 
         <Tabs
@@ -36,11 +65,7 @@ export default function AdminDashboardPage() {
             {
               key: "course-addition",
               label: "Course Addition",
-              children: (
-                <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-8 text-gray-700">
-                  Course addition module will be managed here.
-                </div>
-              ),
+              children: <CourseAdditionPanel />,
             },
           ]}
         />

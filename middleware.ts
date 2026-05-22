@@ -5,6 +5,22 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
   // Some shared links contain trailing spaces (encoded as %20), which break CDN lookups.
   const normalizedPathname = pathname.replace(/(?:%20|\s)+$/g, '')
+
+  // Skip Next internals and static assets (not certificate legacy URLs).
+  if (
+    normalizedPathname.startsWith('/_next') ||
+    normalizedPathname.startsWith('/api') ||
+    normalizedPathname === '/icon.png' ||
+    normalizedPathname === '/apple-icon.png' ||
+    /^\/[^/]+\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|woff2?)$/i.test(
+      normalizedPathname
+    )
+  ) {
+    if (normalizedPathname === '/favicon.ico') {
+      return NextResponse.redirect(new URL('/IITR_logo.png', request.url), 301)
+    }
+    return NextResponse.next()
+  }
   const normalizeLegacyCertPath = (rawPath: string): string | null => {
     const trimmed = rawPath.replace(/^\/+|(?:%20|\s)+$/g, '')
     const parts = trimmed.split('/').filter(Boolean)

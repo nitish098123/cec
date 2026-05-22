@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Image, Button, ConfigProvider, Input, Card, Row, Col } from "antd";
 import {
@@ -18,16 +18,9 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
-interface Course {
-  id: number;
-  name: string;
-  duration: string;
-  mode: string;
-  students: string;
-  partner: string;
-  category: string;
-  image?: string;
-}
+import type { PublicCourse } from "@/lib/course-enrich";
+import { INITIAL_COURSES } from "@/lib/initial-courses";
+import { enrichCoursesForPublic } from "@/lib/course-enrich";
 
 type NewsItem = {
   id: number;
@@ -38,298 +31,6 @@ type NewsItem = {
   image: string;
   link?: string;
 };
-
-const courses: Course[] = [
-  // Emerging Technologies
-  {
-    id: 1,
-    name: "GenAI/Agentic AI & ML Applications for Engineers",
-    duration: "11 Months",
-    mode: "Online",
-    students: "1000+",
-    partner: "Futurense",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_GenAI.jpg",
-  },
-  {
-    id: 2,
-    name: "AI Engineering on Cloud and AIOps",
-    duration: "9 Months",
-    mode: "Online",
-    students: "800+",
-    partner: "Futurense",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/cloud.jpg",
-  },
-  {
-    id: 3,
-    name: "Applied Data Science & AI",
-    duration: "6-8 Months",
-    mode: "Online",
-    students: "750+",
-    partner: "Jaro Education",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_AppliedData.jpg",
-  },
-
-  {
-    id: 11,
-    name: "Chief Technology & AI Officer Programme",
-    duration: "6-8 Months",
-    mode: "Online",
-    students: "New",
-    partner: "Jaro Education",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ai_engineering_agents.jpeg",
-  },
-
-  {
-    id: 4,
-    name: "AI/GenAI Powered Cybersecurity",
-    duration: "7-8 Months",
-    mode: "Online",
-    students: "600+",
-    partner: "Futurense",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Cybersecurity.png",
-  },
-
-  {
-    id: 5,
-    name: "Advanced AI Engineering",
-    duration: "3 Months",
-    mode: "Online",
-    students: "400+",
-    partner: "Scaler",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_VLSI.png",
-  },
-
-  {
-    id: 6,
-    name: "Data Science, Machine Learning & Generative AI",
-    duration: "8 Months",
-    mode: "Online",
-    students: "900+",
-    partner: "Times Pro",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_DataSci_ML.jpg",
-  },
-  {
-    id: 16,
-    name: "AI for Business Transformation",
-    duration: "4.5 Months",
-    mode: "Online",
-    students: "500+",
-    partner: "Zerozeta",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/AI_business_transformation.jpeg",
-  },
-  {
-    id: 17,
-    name: "IIT Roorkee Advanced Certificate in Quantum Computing: Algorithms & AIML",
-    duration: "6.5 Months",
-    mode: "Online",
-    students: "300+",
-    partner: "Timespro",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Quantum_computing.jpeg",
-  },
-  {
-    id: 19,
-    name: "Forward Deployed AI Engineering",
-    duration: "3 Months",
-    mode: "Online",
-    students: "New",
-    partner: "Futurense",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Courses_GenAI.jpg",
-  },
-  {
-    id: 23,
-    name: "AI Engineering & Intelligent Agents",
-    duration: "80 Hours",
-    mode: "Online",
-    students: "New",
-    partner: "Zerozeta",
-    category: "Emerging Technologies",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ai_engineering_agents.jpeg",
-  },
-  // Hardware & IT
-  {
-    id: 7,
-    name: "VLSI Training and Internship Program",
-    duration: "6 Months",
-    mode: "Online",
-    students: "400+",
-    partner: "FutureWiz",
-    category: "Hardware & IT",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_VLSI.png",
-  },
-  // Management
-  {
-    id: 24,
-    name: "Post-Graduate Certificate Programme in Business Analytics & Generative AI",
-    duration: "6 Months",
-    mode: "Online",
-    students: "New",
-    partner: "PhysicsWallah",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_businessAnalytics.jpeg",
-  },
-  {
-    id: 21,
-    name: "Post-Graduate Certificate Programme in AI-Driven FinTech (PGCPF)",
-    duration: "6 Months",
-    mode: "Online",
-    students: "New",
-    partner: "PhysicsWallah",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ai_driven_fintech.jpeg",
-  },
-  {
-    id: 8,
-    name: "HR Management and Analytics",
-    duration: "6 Months",
-    mode: "Online",
-    students: "500+",
-    partner: "Imarticus",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_HR.jpg",
-  },
-  {
-    id: 28,
-    name: "AI for E-Commerce & Quick Commerce",
-    duration: "6 Months",
-    mode: "Online",
-    students: "New",
-    partner: "TeamLease",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_ecom.png",
-  },
-  {
-    id: 26,
-    name: "Sustainable Finance & ESG Investing",
-    duration: "3-4 Months",
-    mode: "Online",
-    students: "New",
-    partner: "eAsia Academy",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_finance.png",
-  },
-  {
-    id: 9,
-    name: "Product Management Accelerator",
-    duration: "2 Weeks",
-    mode: "Online",
-    students: "300+",
-    partner: "HelloPM",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Product.jpg",
-  },
-  {
-    id: 10,
-    name: "SCM & Analytics",
-    duration: "6 Months",
-    mode: "Online",
-    students: "450+",
-    partner: "Imarticus",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_SCM.png",
-  },
-  {
-    id: 12,
-    name: "Strategic Product Management",
-    duration: "5 Months",
-    mode: "Online",
-    students: "400+",
-    partner: "Jaro Education",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Strategic.jpg",
-  },
-  {
-    id: 15,
-    name: "AI Driven Strategic HR Management",
-    duration: "6-8 Months",
-    mode: "Online",
-    students: "400+",
-    partner: "Jaro Education",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HR.jpg",
-  },
-  {
-    id: 18,
-    name: "AI-Enabled Digital Marketing & MarTech",
-    duration: "6 Months",
-    mode: "Online",
-    students: "500+",
-    partner: "Futurense",
-    category: "Management",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Digital_Marketing&Martech.jpeg",
-  },
-  // Sustainability
-  {
-    id: 13,
-    name: "ESG & Sustainability Reporting",
-    duration: "4 Months",
-    mode: "Online",
-    students: "New",
-    partner: "eAsia Academy",
-    category: "Sustainability",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_sustain.jpg",
-  },
-  {
-    id: 22,
-    name: "Carbon Credits, Carbon Markets & Net-Zero Pathways",
-    duration: "4 Months",
-    mode: "Online",
-    students: "New",
-    partner: "eAsia Academy",
-    category: "Sustainability",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_carboncredits.jpeg",
-  },
-  {
-    id: 25,
-    name: "ESG & Sustainability",
-    duration: "2-3 Months",
-    mode: "Online",
-    students: "New",
-    partner: "eAsia Academy",
-    category: "Sustainability",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_esg.png",
-  },
-  {
-    id: 27,
-    name: "Sustainable Finance & ESG Investing",
-    duration: "3-4 Months",
-    mode: "Online",
-    students: "New",
-    partner: "eAsia Academy",
-    category: "Sustainability",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/course_finance.png",
-  },
-  // Miscellaneous
-  {
-    id: 20,
-    name: "HRM - Ancient Wisdom - Contemporary Insights",
-    duration: "July 05- 11, 2026",
-    mode: "Online",
-    students: "Open",
-    partner: "Open Course",
-    category: "Miscellaneous",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Strategic.jpg",
-  },
-  {
-    id: 14,
-    name: "Swarupa & Swadharma: Understanding Oneself from IKS Perspective",
-    duration: "June 09- 12, 2026",
-    mode: "Offline",
-    students: "New",
-    partner: "Open Course",
-    category: "Miscellaneous",
-    image: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/courses_Data-Driven.jpg",
-  },
-];
 
 const testimonials = [
   {
@@ -415,7 +116,12 @@ const noticeItems = [
 const items = Array(10).fill(noticeItems).flat();
 
 export default function HomePage() {
-  const [filteredCourses, setFilteredCourses] = useState<Course[]>(courses);
+  const [courses, setCourses] = useState<PublicCourse[]>(
+    enrichCoursesForPublic(INITIAL_COURSES)
+  );
+  const [filteredCourses, setFilteredCourses] = useState<PublicCourse[]>(
+    enrichCoursesForPublic(INITIAL_COURSES)
+  );
   const [activeCategory, setActiveCategory] = useState<string>(
     "Emerging Technologies"
   );
@@ -425,6 +131,19 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [showNoticePopup, setShowNoticePopup] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/courses", { cache: "no-store" })
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data.courses) && data.courses.length > 0) {
+          setCourses(data.courses);
+        }
+      })
+      .catch(() => {
+        // Keep INITIAL_COURSES fallback when API is unavailable.
+      });
+  }, []);
 
   const heroImages = [
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HeroPhoto.JPG",
@@ -442,7 +161,7 @@ export default function HomePage() {
   ];
 
   useEffect(() => {
-    let filtered: Course[] = [];
+    let filtered: PublicCourse[] = [];
     if (searchTerm.trim()) {
       const searchLower = searchTerm.toLowerCase();
       filtered = courses.filter((course) =>
@@ -455,7 +174,7 @@ export default function HomePage() {
       filtered = courses.filter((course) => course.category === activeCategory);
     }
     setFilteredCourses(filtered);
-  }, [activeCategory, searchTerm]);
+  }, [activeCategory, searchTerm, courses]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -942,38 +661,9 @@ export default function HomePage() {
                 {filteredCourses.map((course) => (
                   <Link
                     key={course.id}
-                    href={
-                      course.id === 1 ? "https://futurense.com/iit-roorkee/genai-and-agentic-ai-iit-rorkee" :
-                      course.id === 2 ? "https://futurense.com/iit-roorkee/aiops" :
-                      course.id === 3 ? "/courses/applied-data-science" :
-                      course.id === 4 ? "https://futurense.com/iit-roorkee/ai-genai-cybersecurity-pg" :
-                      course.id === 5 ? "https://www.scaler.com/iit-roorkee-advanced-ai-engineering-course" :
-                      course.id === 6 ? "/courses/data-science-ml" :
-                      course.id === 7 ? "https://tejasiitr.com/" :
-                      course.id === 8 ? "https://imarticus.org/certification-program-in-human-resource-management-and-analytics-iit-roorkee/" :
-                      course.id === 9 ? "https://hellopm.co/pm-accelerator-iitr/" :
-                      course.id === 10 ? "https://imarticus.org/professional-certification-in-supply-chain-management-and-analytics-by-IIT-Roorkee/" :
-                      course.id === 11 ? "https://www.jaroeducation.com/post-graduate-chief-technology-ai-officer-programme" :
-                      course.id === 12 ? "https://www.jaroeducation.com/strategic-product-certification-iit-roorkee/" :
-                      course.id === 13 ? "https://www.easiaacademy.com/esg" :
-                      course.id === 14 ? "https://forms.gle/GhDEA2uNyCpJ4Xdg7" :
-                      course.id === 22 ? "https://www.easiaacademy.com/carbon" :
-                      course.id === 25 ? "https://easiaacademy.com/esgsustainability" :
-                      course.id === 15 ? "https://www.jaroeducation.com/pg-certificate-in-ai-driven-strategic-hr-management-iit-roorkee/" :
-                      course.id === 16 ? "https://zerozeta.com/ai-organisational-growth" :
-                      course.id === 17 ? "https://timespro.com/executive-education/iit-roorkee-advanced-certificate-quantum-computing-algorithms-ai-ml?action=apply_now&programNo=P-01691" :
-                      course.id === 18 ? "https://futurense.com/iit-roorkee/pg-certificate-ai-digital-marketing-martech" :
-                      course.id === 19 ? "https://futurense.com/iit-roorkee/pg-certificate-in-forward-deployed-ai-engineering" :
-                      course.id === 20 ? "https://drive.google.com/file/d/1vYysj9kE_kMzDJlTkyJUe7RCfs8s10Cy/view?usp=sharing" :
-                      course.id === 21 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-ai-driven-fintech--pgcpf--753625" :
-                      course.id === 23 ? "https://zerozeta.com/executive-program" :
-                      course.id === 24 ? "https://www.pwmedharthi.com/courses/post-graduate-certificate-programme-in-business-analytics-and-generative-ai-146599" :
-                      course.id === 28 ? "https://cep.digivarsity.com/iit-roorkee/executive-certificate-program-in-ai-for-ecommerce-and-quick-commerce.html" :
-                      course.id === 26 || course.id === 27 ? "https://easiaacademy.com/finance" :
-                      "#"
-                    }
-                    target={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "_blank" : undefined}
-                    rel={course.id === 1 || course.id === 2 || course.id === 4 || course.id === 5 || course.id === 7 || course.id === 8 || course.id === 9 || course.id === 10 || course.id === 11 || course.id === 12 || course.id === 13 || course.id === 14 || course.id === 15 || course.id === 16 || course.id === 17 || course.id === 18 || course.id === 19 || course.id === 20 || course.id === 21 || course.id === 22 || course.id === 23 || course.id === 24 || course.id === 25 || course.id === 26 || course.id === 27 || course.id === 28 ? "noopener noreferrer" : undefined}
+                    href={course.redirectHref || course.redirectLink || "#"}
+                    target={course.openInNewTab ? "_blank" : undefined}
+                    rel={course.openInNewTab ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
                     <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
@@ -992,7 +682,7 @@ export default function HomePage() {
                       >
                         <Image
                           preview={false}
-                          src={course.image || "/course.jpeg"}
+                          src={course.imageUrl || course.image || "/course.jpeg"}
                           alt={course.name}
                           className="h-40 w-full object-cover flex-shrink-0"
                           style={{ aspectRatio: "16/9" }}

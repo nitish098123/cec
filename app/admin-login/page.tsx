@@ -20,13 +20,26 @@ export default function AdminLoginPage() {
     const adminId = values.adminId.trim();
     const password = values.password.trim();
 
-    if (adminId === "admin-cec" && password === "admincec123") {
-      message.success("Login successful.");
-      router.push("/admin-dashboard");
-      return;
-    }
+    const login = async () => {
+      try {
+        const res = await fetch("/api/admin/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ adminId, password }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          message.error(data.error || "Invalid Admin ID or Password.");
+          return;
+        }
+        message.success("Login successful.");
+        router.push("/admin-dashboard");
+      } catch {
+        message.error("Login failed. Please try again.");
+      }
+    };
 
-    message.error("Invalid Admin ID or Password.");
+    login();
   };
 
   return (
