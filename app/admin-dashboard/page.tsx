@@ -3,6 +3,7 @@
 import { Button, Tabs } from "antd";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import CertificateUploadPanel from "./certificate-upload-panel";
 import CourseAdditionPanel from "./course-addition-panel";
 
 export default function AdminDashboardPage() {
@@ -52,15 +53,12 @@ export default function AdminDashboardPage() {
 
         <Tabs
           defaultActiveKey="certificate-upload"
+          className="admin-dashboard-tabs"
           items={[
             {
               key: "certificate-upload",
               label: "Certificate Upload",
-              children: (
-                <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-8 text-gray-700">
-                  Certificate upload module will be managed here.
-                </div>
-              ),
+              children: <CertificateUploadPanel />,
             },
             {
               key: "course-addition",

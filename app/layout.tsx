@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import AntdProvider from "@/components/AntdProvider";
-import AppShell from "@/components/app-shell";
+import AppShellGate from "@/components/app-shell-gate";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,7 +38,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <AntdRegistry>
           <AntdProvider>
-            <AppShell>{children}</AppShell>
+            <AppShellGate>{children}</AppShellGate>
           </AntdProvider>
         </AntdRegistry>
       </body>

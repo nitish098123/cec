@@ -140,6 +140,7 @@ export default function CourseAdditionPanel() {
       key: string;
       presignedViewUrl: string;
       copyUrl: string;
+      proxyPath: string;
     };
   };
 
@@ -168,7 +169,8 @@ export default function CourseAdditionPanel() {
       form.setFieldValue("redirectMediaKey", uploaded.key);
       form.setFieldValue("redirectSource", "s3");
       form.setFieldValue("redirectLink", "");
-      setRedirectCopyUrl(uploaded.copyUrl);
+      const copyUrl = `${window.location.origin}${uploaded.proxyPath}`;
+      setRedirectCopyUrl(copyUrl);
       message.success("Redirect media uploaded. Copy the link below.");
       return false;
     } catch (error) {

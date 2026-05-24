@@ -36,3 +36,21 @@ body {
   width: max-content;
   gap: 1.5rem;
 }
+
+.admin-dashboard-tabs .ant-tabs-nav::before {
+  border-bottom-color: #ffae0e33;
+}
+
+.admin-dashboard-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #102a43 !important;
+  font-weight: 600;
+}
+
+.admin-dashboard-tabs .ant-tabs-ink-bar {
+  background: #ffae0e !important;
+  height: 3px !important;
+}
+
+.admin-dashboard-tabs .ant-tabs-tab:hover .ant-tabs-tab-btn {
+  color: #ffae0e !important;
+}

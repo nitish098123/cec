@@ -8,6 +8,7 @@ import { deleteCourseS3Assets } from "@/lib/course-s3-cleanup";
 import { deleteCourse, getCourseById, updateCourse } from "@/lib/courses-store";
 import type { CourseInput } from "@/lib/course-types";
 import { deleteFromS3, resolveStoredImageKey } from "@/lib/s3";
+import { getSiteOrigin } from "@/lib/site-url";
 
 export const dynamic = "force-dynamic";
 
@@ -46,7 +47,10 @@ export async function PUT(request: NextRequest, context: RouteContext) {
       await deleteFromS3(oldMediaKey).catch(() => undefined);
     }
 
-    const enriched = await enrichCourseForAdmin(course, request.nextUrl.origin);
+    const enriched = await enrichCourseForAdmin(
+      course,
+      getSiteOrigin(request)
+    );
     return NextResponse.json({ course: enriched });
   } catch (error) {
     console.error("Update course failed:", error);

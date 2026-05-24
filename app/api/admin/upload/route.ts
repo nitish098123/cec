@@ -11,6 +11,7 @@ import {
   getPresignedGetUrl,
   uploadToS3,
 } from "@/lib/s3";
+import { getSiteOrigin } from "@/lib/site-url";
 
 export async function POST(request: NextRequest) {
   if (!isAdminAuthenticatedRequest(request)) {
@@ -48,7 +49,7 @@ export async function POST(request: NextRequest) {
     const prefix = isMedia ? getMediaPrefix() : getCoursePrefix();
     const uploaded = await uploadToS3(file, prefix);
     const presignedViewUrl = await getPresignedGetUrl(uploaded.key);
-    const origin = request.nextUrl.origin;
+    const origin = getSiteOrigin(request);
     const proxyPath = isMedia
       ? buildCourseMediaProxyPath(uploaded.key)
       : buildCourseImageProxyPath(uploaded.key);

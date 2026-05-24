@@ -6,21 +6,11 @@ export function middleware(request: NextRequest) {
   // Some shared links contain trailing spaces (encoded as %20), which break CDN lookups.
   const normalizedPathname = pathname.replace(/(?:%20|\s)+$/g, '')
 
-  // Skip Next internals and static assets (not certificate legacy URLs).
-  if (
-    normalizedPathname.startsWith('/_next') ||
-    normalizedPathname.startsWith('/api') ||
-    normalizedPathname === '/icon.png' ||
-    normalizedPathname === '/apple-icon.png' ||
-    /^\/[^/]+\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|woff2?)$/i.test(
-      normalizedPathname
-    )
-  ) {
-    if (normalizedPathname === '/favicon.ico') {
-      return NextResponse.redirect(new URL('/IITR_logo.png', request.url), 301)
-    }
-    return NextResponse.next()
+  const withPathHeader = (response: NextResponse) => {
+    response.headers.set("x-pathname", normalizedPathname)
+    return response
   }
+
   const normalizeLegacyCertPath = (rawPath: string): string | null => {
     const trimmed = rawPath.replace(/^\/+|(?:%20|\s)+$/g, '')
     const parts = trimmed.split('/').filter(Boolean)
@@ -39,11 +29,6 @@ export function middleware(request: NextRequest) {
     return `${normalizedFolder}/${file}`
   }
 
-  // Redirect favicon.ico to IIT logo
-  if (normalizedPathname === '/favicon.ico') {
-    return NextResponse.redirect(new URL('/IITR_logo.png', request.url), 301)
-  }
-
   // Legacy IITR certificate URLs, e.g.
   // /cec/CEC-1003-2021-22/cert-CEC-1003-2021-22-72.jpg
   // /CEC-1003-2021-22/cert-CEC-1003-2021-22-72.jpg
@@ -52,12 +37,12 @@ export function middleware(request: NextRequest) {
   )
   if (cecWithPrefixMatch) {
     const certPath = normalizeLegacyCertPath(cecWithPrefixMatch[1])
-    if (!certPath) return NextResponse.next()
+    if (!certPath) return withPathHeader(NextResponse.next())
     const rewriteUrl = request.nextUrl.clone()
     // If the app is mounted under `/cec` in production, route must include the prefix.
     rewriteUrl.pathname = '/cec/certificate-view'
     rewriteUrl.searchParams.set('certPath', certPath)
-    return NextResponse.rewrite(rewriteUrl)
+    return withPathHeader(NextResponse.rewrite(rewriteUrl))
   }
 
   const directFolderMatch = normalizedPathname.match(
@@ -65,22 +50,21 @@ export function middleware(request: NextRequest) {
   )
   if (directFolderMatch) {
     const certPath = normalizeLegacyCertPath(directFolderMatch[1])
-    if (!certPath) return NextResponse.next()
+    if (!certPath) return withPathHeader(NextResponse.next())
     const rewriteUrl = request.nextUrl.clone()
     // Keep this aligned with `/cec/...` handling so both domains/environments
     // render through the same certificate viewer page.
     rewriteUrl.pathname = '/cec/certificate-view'
     rewriteUrl.searchParams.set('certPath', certPath)
-    return NextResponse.rewrite(rewriteUrl)
+    return withPathHeader(NextResponse.rewrite(rewriteUrl))
   }
 
-  return NextResponse.next()
+  return withPathHeader(NextResponse.next())
 }
 
 export const config = {
-  // Run middleware for all paths so legacy certificate links like
-  // `/CA-.../10.jpg` are always intercepted before Next.js 404 handling.
+  // Attach pathname for server layout chrome, but skip Next.js static assets.
   matcher: [
-    '/:path*',
+    "/((?!_next/static|_next/image|favicon.ico).*)",
   ],
-}
+};

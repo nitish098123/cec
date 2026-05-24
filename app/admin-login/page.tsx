@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#102a43] via-black to-black px-4 pb-10 pt-28 sm:px-8 sm:pt-32">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#102a43] via-black to-black px-4 py-10 sm:px-8">
       <div className="mx-auto w-full max-w-md rounded-xl border border-white/20 bg-white/95 p-6 shadow-xl sm:p-8">
         <h1 className="mb-2 text-center text-2xl font-semibold text-gray-900">
           Admin Login

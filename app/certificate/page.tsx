@@ -1,7 +1,7 @@
 "use client";
 
 import { Form, Input, Button, ConfigProvider, message, Select } from "antd";
-import { useCallback } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 
 // Certificate data
@@ -3225,34 +3225,63 @@ const buttonThemeConfig = {
   },
 };
 
-// Pre-compute unique course names outside component since certificateData is static
-const uniqueCourseNames = Array.from(
-  new Set(certificateData.map((cert) => cert.courseName))
-).map((courseName) => ({
-  value: courseName,
-  label: courseName,
-}));
-
 export default function CertificatePage() {
   const [form] = Form.useForm();
+  const [apiCourses, setApiCourses] = useState<string[]>([]);
 
-  const onFinish = useCallback((values: { email: string; courseName?: string; [key: string]: unknown }) => {
+  useEffect(() => {
+    fetch("/api/certificates", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : { courses: [] }))
+      .then((data) => setApiCourses(data.courses || []))
+      .catch(() => setApiCourses([]));
+  }, []);
+
+  const courseOptions = useMemo(() => {
+    const merged = new Set([
+      ...certificateData.map((cert) => cert.courseName),
+      ...apiCourses,
+    ]);
+    return Array.from(merged).map((courseName) => ({
+      value: courseName,
+      label: courseName,
+    }));
+  }, [apiCourses]);
+
+  const onFinish = useCallback(async (values: { email: string; courseName?: string; [key: string]: unknown }) => {
     const emailAddress = String(values.email).trim().toLowerCase();
     const selectedCourseName = values.courseName ? String(values.courseName).trim() : "";
-    
-    // First filter by course name, then find matching certificate by email
+
+    try {
+      const res = await fetch("/api/certificates", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: emailAddress,
+          courseName: selectedCourseName,
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.found && data.certificateUrl) {
+          window.open(`${window.location.origin}${data.certificateUrl}`, "_blank");
+          message.success("Certificate found! Opening download...");
+          return;
+        }
+      }
+    } catch {
+      // Fall back to legacy static data below.
+    }
+
     const matchedCertificate = certificateData.find(
-      (cert) => 
+      (cert) =>
         cert.courseName === selectedCourseName &&
         String(cert.email).trim().toLowerCase() === emailAddress
     );
 
     if (matchedCertificate) {
-      // Redirect to certificate link
       window.open(matchedCertificate.certificate_links, "_blank");
       message.success("Certificate found! Opening download...");
     } else {
-      // Show error message
       message.error("Certificate not found. Please check your course name and email ID.");
     }
   }, []);
@@ -3313,7 +3342,7 @@ export default function CertificatePage() {
                 filterOption={(input, option) =>
                   (option?.label ?? "").toLowerCase().includes(input.toLowerCase())
                 }
-                options={uniqueCourseNames}
+                options={courseOptions}
               />
             </Form.Item>
 

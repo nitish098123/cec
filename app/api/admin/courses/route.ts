@@ -6,6 +6,7 @@ import {
 import { enrichCoursesForAdmin } from "@/lib/course-enrich";
 import { createCourse, getAllCourses } from "@/lib/courses-store";
 import type { CourseInput } from "@/lib/course-types";
+import { getSiteOrigin } from "@/lib/site-url";
 
 export const dynamic = "force-dynamic";
 
@@ -14,7 +15,7 @@ export async function GET(request: NextRequest) {
     return unauthorizedResponse();
   }
 
-  const baseUrl = request.nextUrl.origin;
+  const baseUrl = getSiteOrigin(request);
   const courses = await enrichCoursesForAdmin(await getAllCourses(), baseUrl);
   return NextResponse.json({ courses });
 }
