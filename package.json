@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.2",
-    "@aws-sdk/client-s3": "^3.1052.0",
+    "@aws-sdk/client-s3": "^3.1053.0",
     "@aws-sdk/s3-request-presigner": "^3.1052.0",
     "antd": "^5.22.7",
     "docx": "^9.5.1",
