@@ -12,6 +12,346 @@ export type PastCourse = {
 };
 
 const PAST_COURSES: Record<string, PastCourse[]> = {
+
+  "2025-26": [  
+    {
+    sno: 1,
+    department: "Computer Science and Engineering",
+    course: "Capability Building Program on Application of AI, ML & IIoT",
+    coordinator: "Prof. Rahul Thakur",
+    duration: "November 25, 2024 to June 10, 2025",
+    sponsor: "Larsen & Toubro Limited, Mumbai"
+  },
+  {
+    sno: 2,
+    department: "Computer Science and Engineering",
+    course: "Capability Building Program on Application of AI, ML & IIoT",
+    coordinator: "Prof. Rahul Thakur",
+    duration: "May 12, 2025 to November 08, 2026",
+    sponsor: "Larsen & Toubro Limited, Mumbai"
+  },
+  {
+    sno: 3,
+    department: "Centre for Sustainable Energy",
+    course: "Certificate Program on Battery Storage, EV's & Charging Stations",
+    coordinator: "Prof. Yogesh Kumar Sharma",
+    duration: "May 30, 2025 to August 22, 2025",
+    sponsor: "NTPC, Power Management Institute Noida"
+  },
+  {
+    sno: 4,
+    department: "Computer Science and Engineering",
+    course: "Capability Building Program on Applications of AI, ML IIOT (Batch-3)",
+    coordinator: "Prof. Rahul Thakur",
+    duration: "June 1, 2025 to January 31, 2026",
+    sponsor: "Larsen & Toubro Limited, Mumbai"
+  },
+  {
+    sno: 5,
+    department: "Electronics and Communication Engineering",
+    course: "Programming in RISC-V Assembly Language",
+    coordinator: "Prof. Sparsh Mittal",
+    duration: "June 05-08, 2025",
+    sponsor: "Open"
+  },
+  {
+    sno: 6,
+    department: "Mechanical and Industrial Engineering",
+    course: "Certificate Course on Cyber Security and AI, ML",
+    coordinator: "Prof. Akshay Dvivedi",
+    duration: "June 30, 2025 to July 05, 2025",
+    sponsor: "Vivekananda Institute of Professional Studies, Delhi"
+  },
+  {
+    sno: 7,
+    department: "Electronics and Communication Engineering",
+    course: "Antenna Design Using CST Studio",
+    coordinator: "Prof. Utpal Dey",
+    duration: "July 01 - 04, 2025",
+    sponsor: "Bharat Electronics Limited (BEL), Bengaluru"
+  },
+  {
+    sno: 8,
+    department: "Metallurgical and Materials Engineering",
+    course: "Workshop on TEM Sample Preparation & HR - TEM Operation",
+    coordinator: "Prof. B.S.S. Daniel",
+    duration: "July 07-11, 2025",
+    sponsor: "JEOL India & Ametek Instruments"
+  },
+  {
+    sno: 9,
+    department: "Computer Science and Engineering",
+    course: "Advanced Certificate Programme on Data Science & Machine Learning",
+    coordinator: "Prof. Sandeep Kumar",
+    duration: "July 26, 2025 to October 11, 2025",
+    sponsor: "Ministry of Defence, New Delhi"
+  },
+  {
+    sno: 10,
+    department: "Polymer and Process Engineering",
+    course: "Certificate Course on Advance in Membrane Science & Separation Technologies",
+    coordinator: "Prof. Abhijit Maiti",
+    duration: "July 28, 2025 to August 02, 2025",
+    sponsor: "Open"
+  },
+  {
+    sno: 11,
+    department: "Computer Science and Engineering",
+    course: "MDP on AI,ML & Big Data Analytics",
+    coordinator: "Prof. Pravendra Singh",
+    duration: "August 4-23, 2025",
+    sponsor: "Army Training Command (HQ) Shimla"
+  },
+  {
+    sno: 12,
+    department: "Applied Mathematics and Scientific Computing",
+    course: "Certificate Course in AI & Machine Learning",
+    coordinator: "Prof. Millie Pant",
+    duration: "August 28, 2025 to September 17, 2025",
+    sponsor: "Deloitte, Consulting India Pvt. Ltd., Hyderabad"
+  },
+  {
+    sno: 13,
+    department: "Continuing Education Centre",
+    course: "2-days Workshop on Electron Microscopy",
+    coordinator: "Prof. Kaushik Ghosh",
+    duration: "Sept. 2-3, 2025",
+    sponsor: "CEC-DDF"
+  },
+  {
+    sno: 14,
+    department: "Computer Science and Engineering",
+    course: "2-days Capability Building Program on Internet of Things: Concepts to Deployment",
+    coordinator: "Prof. Rahul Thakur",
+    duration: "Sept. 6-7, 2025",
+    sponsor: "Power Grid Corporation of India Limited"
+  },
+  {
+    sno: 15,
+    department: "Earthquake Engineering",
+    course: "Constructive Insights Workshop on Steel & New-Age Construction Best Practices",
+    coordinator: "Prof. P.C. Ashwinkumar",
+    duration: "Sept. 11-12, 2025",
+    sponsor: "Neelkanth Steel & Alloyes"
+  },
+  {
+    sno: 16,
+    department: "Electronics and Communication Engineering",
+    course: "RF Measurements & Analytics",
+    coordinator: "Prof. Utpal Dey",
+    duration: "Sept. 11-13, 2025",
+    sponsor: "Bharat Electronics Limited (BEL), Bengaluru"
+  },
+  {
+    sno: 17,
+    department: "Electronics and Communication Engineering",
+    course: "RF & Microwave Circuit Design",
+    coordinator: "Prof. Utpal Dey",
+    duration: "Sept. 15-18, 2025",
+    sponsor: "Bharat Electronics Limited (BEL), Bengaluru"
+  },
+  {
+    sno: 18,
+    department: "Architecture and Planning",
+    course: "06 days Exposure Cum Study Tour Program for Newly Appointed Assistant Architects (Batch - 1)",
+    coordinator: "Prof. Mahua Mukherjee",
+    duration: "Sept. 22-27, 2025",
+    sponsor: "BIPARD, Gaya, Govt. of Bihar"
+  },
+  {
+    sno: 19,
+    department: "Dean Student Welfare",
+    course: "Responsible AI in Mental Health",
+    coordinator: "Prof. Avlokita Agrawal",
+    duration: "Oct. 12, 2025",
+    sponsor: "Open"
+  },
+  {
+    sno: 20,
+    department: "Architecture and Planning",
+    course: "06 days Exposure Cum Study Tour Program for Newly Appointed Assistant Architects (Batch - 2)",
+    coordinator: "Prof. Mahua Mukherjee",
+    duration: "Oct. 13-18, 2025",
+    sponsor: "BIPARD, Gaya, Govt. of Bihar"
+  },
+  {
+    sno: 21,
+    department: "Continuing Education Centre",
+    course: "Workshop on Spectroscopy for the Characterization of Molecules to Materials",
+    coordinator: "Prof. Kaushik Ghosh",
+    duration: "Oct. 15-17, 2025",
+    sponsor: "Self Sponsored"
+  },
+  {
+    sno: 22,
+    department: "Management Studies",
+    course: "Applications of Artificial Intelligence and Machine Learning in Trade Data",
+    coordinator: "Prof. Manu Gupta",
+    duration: "Oct. 27-29, 2025",
+    sponsor: "DGCIS, Kolkata"
+  },
+  {
+    sno: 23,
+    department: "Computer Science and Engineering",
+    course: "Capability Building Program on Introduction to Security",
+    coordinator: "Prof. Awanish Pandey",
+    duration: "Oct. 30 to Nov. 1, 2025",
+    sponsor: "Power Grid Corporation of India Limited"
+  },
+  {
+    sno: 24,
+    department: "Hydro and Renewable Energy",
+    course: "STC on Pumped Storage Plants for Officers of Bhakra Beas Management Board",
+    coordinator: "Prof. Himanshu Jain",
+    duration: "Nov. 03-07, 2025",
+    sponsor: "Bhakra Beas Management Board (BBMB), Chandigarh"
+  },
+  {
+    sno: 25,
+    department: "Computer Science and Engineering",
+    course: "MDP on AI,ML & Big Data Analytics (Batch - 02)",
+    coordinator: "Prof. Pravendra Singh",
+    duration: "Nov. 03-22, 2025",
+    sponsor: "Army Training Command (HQ) Shimla"
+  },
+  {
+    sno: 26,
+    department: "Continuing Education Centre",
+    course: "Chemistry Teachers of PM SHRI School of Navodaya Vidyalaya Samiti (NVS)",
+    coordinator: "Prof. Kaushik Ghosh",
+    duration: "Nov. 10-14, 2025",
+    sponsor: "Navodaya Vidyalaya Samiti (NVS), Noida"
+  },
+  {
+    sno: 27,
+    department: "Mechanical & Industrial Engineering",
+    course: "Training Program on Recent Advancements in 3D Printing",
+    coordinator: "Prof. Kaushik Pal",
+    duration: "Nov. 11-22, 2025",
+    sponsor: "DRDO, New Delhi"
+  },
+  {
+    sno: 28,
+    department: "Electronics and Communication Engineering",
+    course: "Microwave PCB Design & Packaging Techniques",
+    coordinator: "Prof. Utpal Dey",
+    duration: "November 12 - 14, 2025",
+    sponsor: "Bharat Electronics Limited (BEL), Bengaluru"
+  },
+  {
+    sno: 29,
+    department: "Earthquake Engineering",
+    course: "Special Training Programme on Rail Bridge Dynamics",
+    coordinator: "Prof. Yogendra Singh",
+    duration: "Nov. 17-20, 2025",
+    sponsor: "RDSO, Lucknow"
+  },
+  {
+    sno: 30,
+    department: "Continuing Education Centre",
+    course: "Certificate Program in AI in Action: Powering the Energy Value Chain",
+    coordinator: "Prof. Kaushik Ghosh",
+    duration: "Dec. 1-2, 2025",
+    sponsor: "Hydrocarbon Sector Skill Council (HSSC), Noida"
+  },
+  {
+    sno: 31,
+    department: "Management Studies",
+    course: "Enhancing Presentation Skills",
+    coordinator: "Prof. Rajat Agrawal",
+    duration: "Dec. 9-10, 2025",
+    sponsor: "WHO, New Delhi"
+  },
+  {
+    sno: 32,
+    department: "Electronics and Communication Engineering",
+    course: "Satellite & Optical Communication Technologies",
+    coordinator: "Prof. Darshak Bhatt",
+    duration: "December 16-18, 2025",
+    sponsor: "Bharat Electronics Limited (BEL), Bengaluru"
+  },
+  {
+    sno: 33,
+    department: "Hydro and Renewable Energy",
+    course: "Training of Trainers under Jal Urja Mitra Skill Development Programme",
+    coordinator: "Prof. Arun Kumar",
+    duration: "January 5-15, 2026",
+    sponsor: "MNRE, New Delhi"
+  },
+  {
+    sno: 34,
+    department: "Earthquake Engineering",
+    course: "Specialized Training Programme on Dynamic Analysis of Bridges under Moving Loads",
+    coordinator: "Prof. Yogendra Singh",
+    duration: "Feb. 16-18, 2026",
+    sponsor: "RDSO, Lucknow"
+  },
+  {
+    sno: 35,
+    department: "Mechanical & Industrial Engineering",
+    course: "System Engineering",
+    coordinator: "Prof. Kaushik Pal",
+    duration: "Feb. 17-28, 2026",
+    sponsor: "DRDO, Ministry of Defence"
+  },
+  {
+    sno: 36,
+    department: "Hydrology",
+    course: "Training Program on Springshed Management",
+    coordinator: "Prof. Sumit Sen",
+    duration: "March 9-13, 2026",
+    sponsor: "Uttarakhand Climate Responsive Rain-fed Farming Project (UCRRFP)"
+  },
+  {
+    sno: 37,
+    department: "ADCI",
+    course: "6-Day Workshop on Data Science and Artificial Intelligence",
+    coordinator: "Prof. Amit Agarwal",
+    duration: "March 9-14, 2026",
+    sponsor: "Power Grid Centre of Excellence"
+  },
+  {
+    sno: 38,
+    department: "Continuing Education Centre",
+    course: "Instrumentation (Data Analysis and Interpretation – LCMS & NMR and other Advance Technologies)",
+    coordinator: "Prof. Kaushik Ghosh",
+    duration: "March 16-20, 2026",
+    sponsor: "Indian Council of Forestry Research and Education, Dehradun"
+  },
+  {
+    sno: 39,
+    department: "Mechanical & Industrial Engineering",
+    course: "Capacity Building in Emerging Technologies for Women in STEM",
+    coordinator: "Prof. Akshay Dvivedi",
+    duration: "March 17-20, 2026",
+    sponsor: "NITI Aayog"
+  },
+  {
+    sno: 40,
+    department: "Architecture and Planning",
+    course: "DAKSH - Architectural Interior Design of Industrial Office & Residential Building",
+    coordinator: "Prof. Saptarshi Kolay",
+    duration: "March 21-22, 2026",
+    sponsor: "Indian Oil Corporation Ltd."
+  },
+  {
+    sno: 41,
+    department: "Water Resources Development and Management",
+    course: "Sustainable Natural Resource Entrepreneurship",
+    coordinator: "Prof. Ashish Pandey",
+    duration: "March 26-28, 2026",
+    sponsor: "Uttar Pradesh Forest Corporation, Lucknow"
+  },
+  {
+    sno: 42,
+    department: "CoEDMM",
+    course: "Artificial Intelligence / Machine Learning, Python Programming and Big Data Analytics",
+    coordinator: "Prof. Sudip Roy",
+    duration: "March 30 - May 08, 2026",
+    sponsor: "National Communications Academy (NCA-T), Department of Telecommunications, Ministry of Communications"
+  },
+],
+
   "2024-25": [
     { sno: 1, department: "Computer Science & Engineering", course: "Big Data Analytics, Batch - I", coordinator: "Prof. Partha Pratim Roy", duration: "April 01-26, 2024", sponsor: "National Telecommunications Institute, Ghaziabad" },
     { sno: 2, department: "Civil Engineering", course: "Mix Design Concepts and Quality Control Practices in Pavement Construction", coordinator: "Prof. Nikhil Saboo", duration: "April 4-7, 2024", sponsor: "Open IITR Participation" },
@@ -221,6 +561,36 @@ export type LongTermCourse = {
 };
 
 const PAST_LONG_TERM_COURSES: Record<string, LongTermCourse[]> = {
+
+  "2025-26": [
+
+{ sno: 1, courseName: "PG Certificate Program in Applied Data Science & AI", batchNo: "III", durationStatus: "6 months", from: "21.06.2025", to: "28.02.2026", partnerInstitute: "Jaro", coordinator: "Prof. Abhishek Samantray" },
+{ sno: 2, courseName: "Sustainability, ESG & GRI Standards", batchNo: "I", durationStatus: "4 months", from: "01.05.2025", to: "30.08.2025", partnerInstitute: "EduXLL", coordinator: "Prof. S. Satapathi" },
+{ sno: 3, courseName: "Sustainability, ESG & GRI Standards", batchNo: "II", durationStatus: "4 months", from: "01.09.2025", to: "01.01.2026", partnerInstitute: "EduXLL", coordinator: "Prof. Kaushik Ghosh" },
+{ sno: 4, courseName: "Certificate Program in HR Analytics and Management", batchNo: "IV", durationStatus: "6 months", from: "01.07.2025", to: "31.12.2025", partnerInstitute: "Imarticus", coordinator: "Prof. R.L Dhar" },
+{ sno: 5, courseName: "Certificate Program in HR Analytics and Management", batchNo: "V", durationStatus: "6 months", from: "01.11.2025", to: "30.04.2026", partnerInstitute: "Imarticus", coordinator: "Prof. R.L Dhar" },
+{ sno: 6, courseName: "Advanced AI Engineering Certificate Program", batchNo: "I", durationStatus: "3 months", from: "01.07.2025", to: "30.09.2025", partnerInstitute: "Scalar", coordinator: "Prof. Pravendra Singh" },
+{ sno: 7, courseName: "PM Accelerator Skill for Impact", batchNo: "I", durationStatus: "2 months", from: "01.06.2025", to: "30.07.2025", partnerInstitute: "Hello PM India", coordinator: "Prof. Sourabh Arora" },
+{ sno: 8, courseName: "Advanced Certificate in Quantum Computing Algorithm and Machine Learning", batchNo: "I", durationStatus: "6 months", from: "07.10.2025", to: "25.04.2026", partnerInstitute: "TIMESPRO", coordinator: "Prof. Sandeep K. Singh" },
+{ sno: 9, courseName: "Advanced PGCP in AI Engg. on Clound and AIOps", batchNo: "I", durationStatus: "6 months", from: "23.08.2025", to: "23.05.2026", partnerInstitute: "Futurense", coordinator: "Prof. Neetesh Kumar" },
+{ sno: 10, courseName: "PGCP in AI Driven Strategic HR Managment", batchNo: "I", durationStatus: "6 months", from: "11.10.2025", to: "10.03.2026", partnerInstitute: "Jaro", coordinator: "Prof. Usha Lenka" },
+{ sno: 11, courseName: "PGCP in AI Enabled Digital Marketing and MarTech", batchNo: "I", durationStatus: "6 months", from: "11.10.2025", to: "10.03.2026", partnerInstitute: "Futurense", coordinator: "Prof. Kalpak Kulkarni" },
+{ sno: 12, courseName: "PGCP in AI-Gen AI Powered Cybersecurity", batchNo: "I", durationStatus: "6 months", from: "11.10.2025", to: "10.03.2026", partnerInstitute: "Futurense", coordinator: "Prof. Gaurav Kumar Nayak" },
+{ sno: 13, courseName: "PM Accelerator Skill for Impact", batchNo: "I", durationStatus: "2 months", from: "01.06.2025", to: "30.07.2025", partnerInstitute: "Hello PM India", coordinator: "Prof. Kalpak Kulkarni" },
+{ sno: 14, courseName: "PGCP in GenAI, Agentic AI & Data Science for Enterprises", batchNo: "I", durationStatus: "8 months", from: "01.11.2025", to: "31.07.2026", partnerInstitute: "Futurense Technologies", coordinator: "Prof. Gaurav Dixit" },
+{ sno: 15, courseName: "Advanced Certificate in Supply Chain Management and Analytics", batchNo: "IX", durationStatus: "6 months", from: "28.02.2026", to: "28.08.2026", partnerInstitute: "Imarticus", coordinator: "Prof. Rajat Agrawal" },
+{ sno: 16, courseName: "PGCP in DSML", batchNo: "X", durationStatus: "8 months", from: "14.02.2026", to: "13.10.2026", partnerInstitute: "TIMESPRO", coordinator: "Prof. Alok Bhardwaj" },
+{ sno: 17, courseName: "Certificate Course on AI for Business Transformation", batchNo: "I", durationStatus: "5 months", from: "05.10.2025", to: "15.02.2026", partnerInstitute: "Zero Code Technology", coordinator: "Prof. P.K. Jha" },
+{ sno: 18, courseName: "Certificate Course on AI for Business Transformation", batchNo: "II", durationStatus: "5 months", from: "09.11.2025", to: "15.03.2026", partnerInstitute: "Zero Code Technology", coordinator: "Prof. P.K. Jha" },
+{ sno: 19, courseName: "Advanced PG Certificate in AI Engineering on Cloud and AIOPs", batchNo: "II", durationStatus: "10 months", from: "01.12.2025", to: "30.09.2026", partnerInstitute: "Futurense", coordinator: "Prof. Neetesh Kumar" },
+{ sno: 20, courseName: "Samakhya and Yoga Sutras for Contemporary Life and Modern Science", batchNo: "I", durationStatus: "1 month", from: "12.12.2025", to: "11.01.2026", partnerInstitute: "Institute for Science and Spirituality", coordinator: "Prof. Soham Chakrabarty" },
+{ sno: 21, courseName: "Certificate Program on AI in Action : Powering the Energy Value Chain", batchNo: "I", durationStatus: "2 days", from: "01.12.2025", to: "02.12.2025", partnerInstitute: "HSSC Noida", coordinator: "Prof. Kaushik Ghosh" },
+{ sno: 22, courseName: "Certificate Program on PM Accelerator Skills for Impact", batchNo: "III", durationStatus: "9 days", from: "29.11.2025", to: "07.12.2025", partnerInstitute: "Hello PM, India", coordinator: "Prof. Sourabh Arora" },
+{ sno: 23, courseName: "PGCP in Forward Deployed AI Engineering", batchNo: "I", durationStatus: "5 months", from: "01.02.2026", to: "30.06.2026", partnerInstitute: "Futurense", coordinator: "Prof. Gaurav Dixit" },
+{ sno: 24, courseName: "PGCP in AI Driven FinTech", batchNo: "I", durationStatus: "7 months", from: "01.03.2026", to: "30.09.2026", partnerInstitute: "Physics Wallah", coordinator: "Prof. A.K. Sharma" },
+
+  ],
+  
   "2024-25": [
     { sno: 1, courseName: "AI for Managers (Self-Paced)", batchNo: "II", durationStatus: "11 months", from: "01.04.2024", to: "31.12.2024", partnerInstitute: "CloudXLab", coordinator: "Prof. Z. Rahman" },
     { sno: 2, courseName: "Accelerator for Deep Learning", batchNo: "II", durationStatus: "12 months", from: "01.04.2024", to: "31.12.2024", partnerInstitute: "CloudxLab", coordinator: "Prof. Sparsh Mittal" },
@@ -302,7 +672,7 @@ const PAST_LONG_TERM_COURSES: Record<string, LongTermCourse[]> = {
   ],
 };
 
-export const PAST_COURSE_YEARS = ["2024-25", "2023-24", "2022-23", "2021-22"] as const;
+export const PAST_COURSE_YEARS = ["2025-26", "2024-25", "2023-24", "2022-23", "2021-22"] as const;
 export type PastCourseYear = (typeof PAST_COURSE_YEARS)[number];
 
 export function getPastCourses(year: string): PastCourse[] {

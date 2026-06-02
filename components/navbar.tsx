@@ -57,6 +57,7 @@ export const Navbar: React.FC = () => {
         {
           title: "Past Courses",
           submenu: [
+            { title: "2025-26", href: "/past-courses/2025-26" },
             { title: "2024-25", href: "/past-courses/2024-25" },
             { title: "2023-24", href: "/past-courses/2023-24" },
             { title: "2022-23", href: "/past-courses/2022-23" },
