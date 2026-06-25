@@ -19,7 +19,7 @@ export default function DataScienceMLCoursePage() {
             COURSES
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4">
-            Data Science, Machine Learning & Generative AI
+            Data Science, Machine Learning & Generative AI (Batch-11)
           </h1>
         </div>
       </section>
@@ -143,7 +143,7 @@ export default function DataScienceMLCoursePage() {
               <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl">
                 <Image
                   preview={false}
-                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/SampleCert.jpg"
+                  src="https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1782386221963-f8f680a0-6a61-4c43-b2d8-4d21206a89cc-sample_certificate.jpg"
                   alt="Certificate"
                   className="rounded-lg shadow-lg"
                 />
@@ -154,12 +154,18 @@ export default function DataScienceMLCoursePage() {
 
         {/* Eligibility Criteria */}
         <section className="px-4 sm:px-8 md:px-16 lg:px-28 mb-16 md:mb-20 lg:mb-24">
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
-            Eligibility criteria
-          </h2>
-          <p className="mt-6 text-base sm:text-lg text-gray-700">
-            [Eligibility criteria to be provided]
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+                Eligibility Criteria
+              </h2>
+              <ul className="list-disc list-inside space-y-4 text-base sm:text-lg text-gray-700 mt-6">
+                <li>Bachelor's degree with minimum 50%</li>
+                <li>Learners with prior background in Engineering, Technology, Computer Science, IT, Mathematical Sciences and related disciplines will be preferred</li>
+                <li>Minimum 1 years of experience preferably in IT, software, technology or engineering domain</li>
+              </ul>
+            </div>
+            </div>
         </section>
 
         {/* Application Process */}
