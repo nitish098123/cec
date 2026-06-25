@@ -12,6 +12,7 @@ import {
   MapPin,
   Pen,
   CalendarMinus2,
+  CalendarClock,
 } from "lucide-react";
 import { SearchOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
@@ -21,6 +22,8 @@ import Link from "next/link";
 import type { PublicCourse } from "@/lib/course-enrich";
 import { INITIAL_COURSES } from "@/lib/initial-courses";
 import { enrichCoursesForPublic } from "@/lib/course-enrich";
+import { TEAM_MEMBERS } from "@/lib/team-members";
+import { TeamMemberGrid } from "@/components/TeamMemberGrid";
 
 type NewsItem = {
   id: number;
@@ -115,6 +118,39 @@ const noticeItems = [
 ];
 const items = Array(10).fill(noticeItems).flat();
 
+const COORDINATOR_IMAGE_URL =
+  "https://d1bm918zlnq37v.cloudfront.net/CECTemp/co-ordinator.jpeg";
+
+const DIRECTOR_IMAGE_URL =
+  "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Director.jpeg";
+
+const directorMessage =
+  "One of the key goals of IIT Roorkee and CEC IIT Roorkee is to ensure that the impact of cutting-edge research and knowledge creation at IIT Roorkee extends beyond its campus. In addition to the short-term courses, a major new initiative of offering open participation long-duration courses in specialized domains such as AI/ML, Data Science, Cyber Security, 5G, and allied technologies has been started. The objective of these programs is to fill the gap in the availability of trained manpower in the latest and in-demand areas that the country needs. CEC IITR has also partnered with leading EdTechs to expand IITR outreach in delivering high-quality content for a wider audience nationally and internationally. Recently, several new courses sponsored by organizations like Deloitte, Indian Army, BEL, etc are planned to be organized by CEC. I appeal to our faculty members to come forward with their suggestions and course proposals to various calls for courses by Govt. departments/ public/ private organisations to disseminate the research knowledge beyond the campus.";
+
+const coordinatorMessage =
+  "CEC IIT Roorkee, we are committed to making high-quality and transformational education accessible to all. Our programs are designed to provide executives, professionals, and aspiring individuals a launchpad for taking them to next level in their career. In addition to sponsored short-term courses, which form a large part of the training and upskilling effort, CEC IITR has launched a new major initiative to offer the longer duration programs (up to a year) having PG and Advanced Certifications. CEC IITR courses are available in both asynchronous and hybrid learning modes. Our courses are designed to provide learners a specialization, which will enable them to master in-demand skills needed to work on the latest problems in industry and research. These include Data Science, Machine Learning, Artificial Intelligence, 5G, Cyber Security, VLSI, DevOps, as well as emerging technologies in engineering, science, and management. Through these open participation programs, we aim to reach out to aspiring individuals and professionals to develop cutting-edge competencies in their professional careers. CEC has signed partnership MoUs with many organizations to offer courses and training programs in diverse areas. Some of our major partners for sponsored courses are SAIL, TATA Steel, NTPC, BEL, SAARC, NIC, etc. In the year 2024-2025, the CEC has introduced new sponsored courses for many organizations Department of Income Tax (Systems), New Delhi, IRDE Dehradun, DRDO, MeraYuva Bharat (MY BHARAT), New Delhi, Navodaya Vidyalaya Samiti, National Health Mission, Odisha, Tata Tiscon, National Mission for Clean Ganga (NMCG), New Delhi etc.";
+
+const leadershipProfiles = [
+  {
+    title: "Message from Director",
+    name: "Prof. Kamal Kishore Pant",
+    role: "Director, IIT Roorkee",
+    institute: "IIT Roorkee",
+    image: DIRECTOR_IMAGE_URL,
+    imageAlt: "Prof. Kamal Kishore Pant",
+    message: directorMessage,
+  },
+  {
+    title: "Message from Coordinator",
+    name: "Prof. Soumitra Satapathi",
+    role: "Coordinator, Continuing Education Centre",
+    institute: "IIT Roorkee",
+    image: COORDINATOR_IMAGE_URL,
+    imageAlt: "Prof. Soumitra Satapathi",
+    message: coordinatorMessage,
+  },
+];
+
 export default function HomePage() {
   const [courses, setCourses] = useState<PublicCourse[]>(
     enrichCoursesForPublic(INITIAL_COURSES)
@@ -131,6 +167,9 @@ export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [showNoticePopup, setShowNoticePopup] = useState(false);
+  const [courseViewTab, setCourseViewTab] = useState<"ongoing" | "upcoming">(
+    "ongoing"
+  );
 
   useEffect(() => {
     fetch("/api/courses", { cache: "no-store" })
@@ -239,7 +278,7 @@ export default function HomePage() {
 
   return (
     <div className="w-full font-inter">
-      <section className="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[60vh] md:h-[80vh] overflow-hidden">
         {/* Background Images Slider */}
         {heroImages.map((image, index) => (
           <div
@@ -254,14 +293,20 @@ export default function HomePage() {
             aria-hidden="true"
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent via-50% to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 z-10"></div>
+
+        <div className="absolute bottom-20 md:bottom-28 left-1/2 -translate-x-1/2 z-20 w-full max-w-5xl px-4 sm:px-8 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            Build future-ready skills with CEC, IIT Roorkee
+          </h1>
+        </div>
 
         {/* Social links - hero */}
         <div className="absolute bottom-8 right-4 sm:right-8 md:right-12 flex items-center gap-4 z-30">
           <a
             href="https://x.com/iitroorkee"
             aria-label="Twitter"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#FFAE0E] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -272,7 +317,7 @@ export default function HomePage() {
           <a
             href="https://www.facebook.com/profile.php?id=100082831977496#"
             aria-label="Facebook"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#FFAE0E] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -283,7 +328,7 @@ export default function HomePage() {
           <a
             href="https://www.linkedin.com/company/ceciitr/"
             aria-label="LinkedIn"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#FFAE0E] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -311,7 +356,7 @@ export default function HomePage() {
       </section>
 
       {/* Notice section */}
-      <section className="bg-[#F5F5F5] relative">
+      <section className="bg-[#E2F1FF] relative">
         {/* Mobile Notice Ticker */}
         <div className="md:hidden px-4 py-4">
           <div className="w-full overflow-hidden">
@@ -321,12 +366,12 @@ export default function HomePage() {
                   key={`${item.text}-${index}`}
                   className="flex items-center gap-2 pr-6 whitespace-nowrap text-sm"
                 >
-                  <span className="w-2 h-2 bg-[#FFAE0E] rounded-full flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-[#2441B6] rounded-full flex-shrink-0"></span>
                   <a
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-gray-800 hover:text-[#FFAE0E] transition-colors duration-200"
+                    className="font-medium text-gray-800 hover:text-[#2441B6] transition-colors duration-200"
                   >
                     {item.text}
                   </a>
@@ -336,7 +381,7 @@ export default function HomePage() {
           </div>
           <button
             onClick={() => setShowNoticePopup(true)}
-            className="mt-3 w-full bg-[#FFAE0E] hover:bg-[#E5893C] text-black py-2 font-medium text-base underline transition-all duration-200 shadow-[0_4px_12px_rgba(255,174,14,0.3)] hover:shadow-[0_8px_20px_rgba(255,174,14,0.4)]"
+            className="mt-3 w-full bg-[#2441B6] hover:bg-[#2441B6] text-white py-2 font-medium text-base underline transition-all duration-200 shadow-[0_4px_12px_rgba(36,65,182,0.3)] hover:shadow-[0_8px_20px_rgba(36,65,182,0.4)]"
           >
             View All
           </button>
@@ -353,7 +398,7 @@ export default function HomePage() {
                       href={item.link} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="hover:text-[#FFAE0E] transition-colors duration-200 cursor-pointer"
+                      className="hover:text-[#2441B6] transition-colors duration-200 cursor-pointer"
                     >
                       {item.text}
                     </a>
@@ -368,7 +413,7 @@ export default function HomePage() {
         <div className="hidden md:block absolute right-0 top-0 h-full z-10">
           <button
             onClick={() => setShowNoticePopup(true)}
-            className="bg-[#FFAE0E] hover:bg-[#E5893C] text-black px-6 h-full font-medium text-lg underline transition-all duration-200 shadow-[0_4px_12px_rgba(255,174,14,0.3)] hover:shadow-[0_8px_20px_rgba(255,174,14,0.4)]"
+            className="bg-[#2441B6] hover:bg-[#2441B6] text-white px-6 h-full font-medium text-lg underline transition-all duration-200 shadow-[0_4px_12px_rgba(36,65,182,0.3)] hover:shadow-[0_8px_20px_rgba(36,65,182,0.4)]"
           >
             View All
           </button>
@@ -399,9 +444,9 @@ export default function HomePage() {
                       className="block hover:bg-sky-200 p-3 rounded-lg transition-colors duration-200"
                     >
                       <div className="flex items-start gap-3">
-                        <div className="w-2 h-2 bg-[#FFAE0E] rounded-full mt-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-[#2441B6] rounded-full mt-3 flex-shrink-0"></div>
                         <div className="flex-1">
-                          <p className="text-lg font-medium text-gray-800 hover:text-[#FFAE0E] transition-colors duration-200">
+                          <p className="text-lg font-medium text-gray-800 hover:text-[#2441B6] transition-colors duration-200">
                             {item.text}
                           </p>
                           <p className="text-sm text-gray-500 mt-1">
@@ -421,25 +466,17 @@ export default function HomePage() {
       {/*  */}
       <section className="py-8 md:py-16 space-y-8 md:space-y-16">
         {/* Header Section */}
-        <section className="px-4 sm:px-8 md:px-16 py-8 md:py-12">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-8">
-            <div className="flex items-center justify-center">
-              <div className="bg-[#E2F1FF] p-4 max-w-sm -rotate-2 space-y-1">
-                <Image
-                  preview={false}
-                  src="/AboutUsImage.png?v=2"
-                  alt="Continuing Education Center"
-                  className="w-full object-cover aspect-square"
-                />
-                <p className="font-semibold text-lg md:text-xl">
-                  Continuing Education Center
-                </p>
-                <p className="font-normal text-sm md:text-base">
-                  Mon to Fri - 8.45 am to 5.30 pm
-                </p>
-              </div>
+        <section className="px-4 sm:px-6 md:px-10 lg:pl-6 lg:pr-16 py-8 md:py-12">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-8 lg:gap-12 items-center">
+            <div className="flex w-full items-center justify-start">
+              <Image
+                preview={false}
+                src={heroImages[0]}
+                alt="Continuing Education Centre, IIT Roorkee"
+                className="w-full lg:w-[90%] rounded-2xl shadow-xl object-cover aspect-[4/3] lg:aspect-auto lg:min-h-[480px] xl:min-h-[540px]"
+              />
             </div>
-            <div className="text-center md:text-left">
+            <div className="text-center lg:text-left flex flex-col justify-center">
               <p className="mb-4 text-3xl md:text-4xl font-semibold tracking-wide">
                 Dream Big, Achieve More at CEC
               </p>
@@ -492,9 +529,10 @@ export default function HomePage() {
                     theme={{
                       components: {
                         Button: {
-                          defaultBg: "#FFAE0E",
-                          defaultHoverBg: "#E5893C",
-                          defaultHoverColor: "#2C2C2C",
+                          defaultBg: "#2441B6",
+                        defaultHoverBg: "#2441B6",
+                        defaultColor: "#FFFFFF",
+                        defaultHoverColor: "#FFFFFF",
                           fontWeight: 600,
                         },
                       },
@@ -502,7 +540,7 @@ export default function HomePage() {
                   >
                     <Button
                       type="default"
-                      className="border-none w-full py-4 px-8 text-black text-base md:text-lg tracking-wide"
+                      className="border-none w-full py-4 px-8 text-white text-base md:text-lg tracking-wide"
                       style={{ fontWeight: 600 }}
                     >
                       Download Brochure
@@ -514,11 +552,11 @@ export default function HomePage() {
                     theme={{
                       components: {
                         Button: {
-                          defaultColor: "#FFAE0E",
-                          defaultBorderColor: "#FFAE0E",
+                          defaultColor: "#2441B6",
+                          defaultBorderColor: "#2441B6",
                           defaultHoverBg: "#FFFFFF",
-                          defaultHoverColor: "#FFAE0E",
-                          defaultHoverBorderColor: "#FFAE0E",
+                          defaultHoverColor: "#2441B6",
+                          defaultHoverBorderColor: "#2441B6",
                         },
                       },
                     }}
@@ -537,35 +575,50 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* New section: Message from the Coordinator */}
+        {/* Messages from Director & Coordinator */}
         <section className="py-16 bg-[#E2F1FF]">
           <div className="container mx-auto px-4">
-            <div className="mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1a237e] mb-2">Message from the Coordinator</h2>
-            </div>
-            <div className="flex flex-col md:flex-row items-start gap-10 md:gap-12">
-              <div className="flex-shrink-0 flex flex-col items-center w-full md:w-auto">
-                <img
-                  src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/co-ordinator.jpeg"
-                  alt="Prof. Soumitra Satapathi"
-                  className="object-cover rounded-2xl w-80 h-96 shadow-xl border-4 border-white"
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                />
-                <div className="mt-4 text-center">
-                  <p className="text-xl md:text-2xl font-semibold text-black mb-1">Prof. Soumitra Satapathi</p>
-                  <p className="text-base md:text-lg font-normal text-gray-700 mb-1">Coordinator, Continuing Education Centre</p>
-                  <p className="text-base md:text-lg font-normal text-gray-700 mb-1">IIT Roorkee</p>
-                  <p className="text-base md:text-lg font-normal text-gray-700 mb-1">Phone no.: 01332-285227/5545</p>
-                  <p className="text-base md:text-lg font-normal text-gray-700 mb-0">Email id: coordinator.cec.qip@iitr.ac.in</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
+              {leadershipProfiles.map((profile) => (
+                <div key={profile.title} className="flex flex-col gap-6">
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#1a237e] text-center">
+                    {profile.title}
+                  </h2>
+                  <div className="flex w-full flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-10">
+                    <img
+                      src={profile.image}
+                      alt={profile.imageAlt}
+                      className="flex-shrink-0 self-center object-cover rounded-2xl w-32 h-40 sm:w-36 sm:h-44 md:w-40 md:h-52 shadow-xl border-4 border-white"
+                    />
+                    <div className="flex min-h-40 sm:min-h-44 md:min-h-52 max-w-[14rem] sm:max-w-xs flex-col justify-center text-left pl-2 sm:pl-4 lg:pl-6">
+                      <p className="text-base sm:text-lg md:text-xl font-semibold text-black mb-1">
+                        {profile.name}
+                      </p>
+                      <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-1">
+                        {profile.role}
+                      </p>
+                      <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-1">
+                        {profile.institute}
+                      </p>
+                      {"phone" in profile && profile.phone && (
+                        <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-1 break-words">
+                          Phone no.: {profile.phone}
+                        </p>
+                      )}
+                      {"email" in profile && profile.email && (
+                        <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-0 break-words">
+                          Email id: {profile.email}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="bg-white p-5 md:p-6 rounded-2xl shadow-xl w-full">
+                    <p className="text-gray-800 text-sm md:text-base leading-relaxed text-justify">
+                      {profile.message}
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex-1">
-                <div className="bg-white p-6 md:p-10 rounded-2xl shadow-xl h-full flex items-center">
-                  <p className="text-gray-800 text-base md:text-lg leading-relaxed">
-                    CEC IIT Roorkee, we are committed to making high-quality and transformational education accessible to all. Our programs are designed to provide executives, professionals, and aspiring individuals a launchpad for taking them to next level in their career. In addition to sponsored short-term courses, which form a large part of the training and upskilling effort, CEC IITR has launched a new major initiative to offer the longer duration programs (up to a year) having PG and Advanced Certifications. CEC IITR courses are available in both asynchronous and hybrid learning modes. Our courses are designed to provide learners a specialization, which will enable them to master in-demand skills needed to work on the latest problems in industry and research. These include Data Science, Machine Learning, Artificial Intelligence, 5G, Cyber Security, VLSI, DevOps, as well as emerging technologies in engineering, science, and management. Through these open participation programs, we aim to reach out to aspiring individuals and professionals to develop cutting-edge competencies in their professional careers. CEC has signed partnership MoUs with many organizations to offer courses and training programs in diverse areas. Some of our major partners for sponsored courses are SAIL, TATA Steel, NTPC, BEL, SAARC, NIC, etc. In the year 2024-2025, the CEC has introduced new sponsored courses for many organizations Department of Income Tax (Systems), New Delhi, IRDE Dehradun, DRDO, MeraYuva Bharat (MY BHARAT), New Delhi, Navodaya Vidyalaya Samiti, National Health Mission, Odisha, Tata Tiscon, National Mission for Clean Ganga (NMCG), New Delhi etc.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -582,19 +635,49 @@ export default function HomePage() {
                 goals.
               </p>
             </div>
-            {/* Search Bar */}
-            <Input
-              placeholder="Search Courses"
-              prefix={<SearchOutlined />}
-              className="w-full md:w-1/3 lg:w-1/4"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              allowClear
-            />
+            {courseViewTab === "ongoing" && (
+              <Input
+                placeholder="Search Courses"
+                prefix={<SearchOutlined />}
+                className="w-full md:w-1/3 lg:w-1/4"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                allowClear
+              />
+            )}
           </div>
 
+          <div className="container mx-auto space-y-6">
+            {/* Ongoing / Upcoming */}
+            <div className="flex w-full flex-col sm:flex-row gap-3 md:gap-4">
+              <button
+                type="button"
+                onClick={() => setCourseViewTab("ongoing")}
+                className={`flex-1 py-3 md:py-3.5 px-4 text-center text-base md:text-xl transition-all duration-200 ${
+                  courseViewTab === "ongoing"
+                    ? "bg-[#2441B6] text-white font-semibold border-2 border-[#2441B6] shadow-sm"
+                    : "bg-white text-[#102a43] font-normal border-2 border-gray-300 hover:border-[#2441B6]/40 hover:bg-[#E2F1FF]/60"
+                }`}
+              >
+                Ongoing Courses
+              </button>
+              <button
+                type="button"
+                onClick={() => setCourseViewTab("upcoming")}
+                className={`flex-1 py-3 md:py-3.5 px-4 text-center text-base md:text-xl transition-all duration-200 ${
+                  courseViewTab === "upcoming"
+                    ? "bg-[#2441B6] text-white font-semibold border-2 border-[#2441B6] shadow-sm"
+                    : "bg-white text-[#102a43] font-normal border-2 border-gray-300 hover:border-[#2441B6]/40 hover:bg-[#E2F1FF]/60"
+                }`}
+              >
+                Upcoming Courses
+              </button>
+            </div>
+
+          {courseViewTab === "ongoing" && (
+            <>
           {/* Search and Categories */}
-          <div className="flex flex-wrap items-center justify-start gap-3 md:gap-x-6 mb-6 container mx-auto">
+          <div className="flex flex-wrap items-center justify-start gap-3 md:gap-x-6">
             <div
               className={`${
                 activeCategory === "Emerging Technologies"
@@ -648,7 +731,7 @@ export default function HomePage() {
           </div>
 
           {/* Courses List */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 container mx-auto" style={{ gridAutoRows: '1fr' }}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style={{ gridAutoRows: '1fr' }}>
             {filteredCourses.length > 0 ? (
               <>
                 {searchTerm && (
@@ -666,7 +749,7 @@ export default function HomePage() {
                     rel={course.openInNewTab ? "noopener noreferrer" : undefined}
                     className="block h-full"
                   >
-                    <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(255,174,14,0.4)] hover:scale-[1.02] rounded-md h-full">
+                    <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(36,65,182,0.4)] hover:scale-[1.02] rounded-md h-full">
                       <Card
                         hoverable={false}
                         className="border rounded-md shadow-md h-full flex flex-col overflow-hidden cursor-pointer"
@@ -716,7 +799,7 @@ export default function HomePage() {
                                 <p className="text-base font-medium">{course.partner}</p>
                                 <p className="font-light text-base">Program Partner</p>
                               </div>
-                              <div className="text-[#FFAE0E] mt-2 inline-block text-base font-medium self-end">
+                              <div className="text-[#2441B6] mt-2 inline-block text-base font-medium self-end">
                                 Know More
                               </div>
                             </div>
@@ -743,7 +826,7 @@ export default function HomePage() {
                   {searchTerm && (
                     <button
                       onClick={() => setSearchTerm("")}
-                      className="text-[#FFAE0E] hover:text-[#E5893C] font-medium"
+                      className="text-[#2441B6] hover:text-[#2441B6] font-medium"
                     >
                       Clear search
                     </button>
@@ -752,10 +835,27 @@ export default function HomePage() {
               </div>
             )}
           </div>
+            </>
+          )}
+
+          {courseViewTab === "upcoming" && (
+              <div className="rounded-lg bg-[#E2F1FF] px-6 py-16 md:py-20 text-center">
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm">
+                  <CalendarClock className="h-7 w-7 text-[#2441B6]" />
+                </div>
+                <p className="text-lg md:text-xl font-semibold text-[#102a43] mb-1">
+                  Currently no upcoming courses
+                </p>
+                <p className="text-base font-medium text-[#2441B6]">
+                  Coming soon..
+                </p>
+              </div>
+          )}
+          </div>
 
           {/* Sponsors Section */}
           <div className="mt-12">
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center border-b-4 max-w-max mx-auto pb-2 border-b-[#FFC758] tracking-wide">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-center border-b-4 max-w-max mx-auto pb-2 border-b-[#2441B6] tracking-wide">
               Sponsors & EdTech Partners
             </h2>
             <div className="w-full overflow-hidden">
@@ -1085,7 +1185,7 @@ export default function HomePage() {
             <div className="text-center mt-6">
               <Link
                 href="/sponsors"
-                className="inline-flex items-center gap-2 text-[#FFAE0E] hover:text-[#E5893C] font-medium transition-colors duration-200"
+                className="inline-flex items-center gap-2 text-[#2441B6] hover:text-[#2441B6] font-medium transition-colors duration-200"
               >
                 View All
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1093,6 +1193,16 @@ export default function HomePage() {
                 </svg>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Our Team Section */}
+        <section className="py-12 md:py-16 bg-[#FFFAF1]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#102a43] mb-10 md:mb-12">
+              Our Team
+            </h2>
+            <TeamMemberGrid members={TEAM_MEMBERS} />
           </div>
         </section>
 
@@ -1276,7 +1386,7 @@ export default function HomePage() {
               {/* Featured Event 1 */}
               <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="bg-[#FFAE0E] text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-[#2441B6] text-white px-3 py-1 rounded-full text-sm font-medium">
                     Featured
                   </span>
                   <span className="text-gray-500 text-sm">6-8 Months</span>
@@ -1288,7 +1398,7 @@ export default function HomePage() {
                   Upskills working professionals in data science and AI fundamentals, practical software technologies, and prescribing the best course of action across business and application contexts.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#FFAE0E] font-medium">Jaro Education</span>
+                  <span className="text-[#2441B6] font-medium">Jaro Education</span>
                   <a 
                     href="https://www.jaroeducation.com/applied-data-science-ai-certificate-iitr" 
                     target="_blank" 
@@ -1315,7 +1425,7 @@ export default function HomePage() {
                   Comprehensive program on Generative AI and Machine Learning applications for engineering professionals.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#FFAE0E] font-medium">Futurense</span>
+                  <span className="text-[#2441B6] font-medium">Futurense</span>
                   <a 
                     href="https://futurense.com/iit-roorkee/genai-and-agentic-ai-iit-rorkee" 
                     target="_blank" 
@@ -1342,7 +1452,7 @@ export default function HomePage() {
                   Comprehensive program on AI Engineering on Cloud and AIOps for engineering professionals.
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-[#FFAE0E] font-medium">Futurense</span>
+                  <span className="text-[#2441B6] font-medium">Futurense</span>
                   <a 
                     href="https://futurense.com/iit-roorkee/aiops" 
                     target="_blank" 
@@ -1365,13 +1475,13 @@ export default function HomePage() {
                   href="https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC-brochure.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-[#FFAE0E] text-black px-6 py-3 rounded-lg font-medium hover:bg-[#E5893C] transition-colors duration-200"
+                  className="bg-[#2441B6] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#2441B6] transition-colors duration-200"
                 >
                   Download Brochure
                 </a>
                 <a
                   href="#explore-courses"
-                  className="border-2 border-[#FFAE0E] text-[#FFAE0E] px-6 py-3 rounded-lg font-medium hover:bg-[#FFAE0E] hover:text-black transition-colors duration-200"
+                  className="border-2 border-[#2441B6] text-[#2441B6] px-6 py-3 rounded-lg font-medium hover:bg-[#2441B6] hover:text-white transition-colors duration-200"
                 >
                   View All Courses
                 </a>
@@ -1410,7 +1520,7 @@ export default function HomePage() {
                       href={newsData[0].link} 
                       target="_blank" 
                       rel="noopener noreferrer" 
-                      className="text-lg md:text-xl font-semibold text-[#102a43] hover:text-[#FFAE0E] transition-colors duration-200 block mb-3"
+                      className="text-lg md:text-xl font-semibold text-[#102a43] hover:text-[#2441B6] transition-colors duration-200 block mb-3"
                     >
                       {newsData[0].title}
                     </a>
@@ -1449,7 +1559,7 @@ export default function HomePage() {
                           href={news.link} 
                           target="_blank" 
                           rel="noopener noreferrer" 
-                          className="text-base md:text-lg font-semibold text-[#102a43] hover:text-[#FFAE0E] transition-colors duration-200 block mb-2"
+                          className="text-base md:text-lg font-semibold text-[#102a43] hover:text-[#2441B6] transition-colors duration-200 block mb-2"
                         >
                           {news.title}
                         </a>
@@ -1470,7 +1580,7 @@ export default function HomePage() {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 bg-[#FFAE0E] text-black p-3 rounded-full shadow-lg hover:bg-[#E5893C] transition-all duration-300 z-50"
+          className="fixed bottom-8 right-8 bg-[#2441B6] text-white p-3 rounded-full shadow-lg hover:bg-[#2441B6] transition-all duration-300 z-50"
           aria-label="Back to top"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

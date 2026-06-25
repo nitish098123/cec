@@ -9,7 +9,7 @@ const CourseClosingForm = () => {
 
     return (
         <div className="font-inter">
-            <div className="bg-gray-800 text-white pt-28 pb-6">
+            <div className="bg-gray-800 text-white pt-8 pb-6">
                 <div className="container mx-auto px-4 text-center">
                     <Title level={3} style={{ color: 'white' }}>CONTINUING EDUCATION CENTRE</Title>
                     <Title level={4} style={{ color: 'white' }}>INDIAN INSTITUTE OF TECHNOLOGY ROORKEE</Title>
@@ -19,7 +19,7 @@ const CourseClosingForm = () => {
 
             <div className="container mx-auto p-8 bg-white mt-4">
                 <div className="flex justify-end mb-4">
-                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/4.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/4.pdf', '_blank')} className="bg-[#2441B6] text-white font-semibold">Download PDF</Button>
                 </div>
                 <Form layout="vertical" name="course_closing_form">
                     <Title level={4} className="text-center border border-black p-2">PROPOSAL FOR DISTRIBUTION OF HRD/ CONSULTANCY COURSE FUND</Title>

@@ -91,14 +91,14 @@ export default function FormsPage() {
             href={record.download_pdf_link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#FFAE0E] hover:text-[#FFAE0E] hover:underline"
+            className="text-[#2441B6] hover:text-[#2441B6] hover:underline"
           >
             Download PDF
           </a>
         ) : (
           <Link
             href={link}
-            className="text-[#FFAE0E] hover:text-[#FFAE0E] hover:underline"
+            className="text-[#2441B6] hover:text-[#2441B6] hover:underline"
           >
             Apply now
           </Link>

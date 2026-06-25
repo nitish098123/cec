@@ -274,12 +274,12 @@ export default function CertificateUploadPanel() {
 
   return (
     <div className="space-y-8">
-      <section className="overflow-hidden rounded-xl border border-[#FFAE0E]/25 shadow-sm">
-        <div className="border-b-4 border-[#FFAE0E] bg-[#FFE3AC] px-5 py-4">
-          <h2 className="text-xl font-medium tracking-wide text-gray-900">
+      <section className="overflow-hidden rounded-xl border border-[#2441B6]/25 shadow-sm">
+        <div className="border-b-4 border-[#2441B6] bg-[#2441B6] px-5 py-4">
+          <h2 className="text-xl font-medium tracking-wide text-white">
             Upload Certificate
           </h2>
-          <p className="mt-1 text-sm text-gray-700">
+          <p className="mt-1 text-sm text-white/90">
             Upload to S3 under a folder you choose. Candidates can download via
             course name and email on the public certificate page.
           </p>
@@ -294,7 +294,7 @@ export default function CertificateUploadPanel() {
             requiredMark={(label, { required }) =>
               required ? (
                 <>
-                  {label} <span className="text-[#FFAE0E]">*</span>
+                  {label} <span className="text-[#2441B6]">*</span>
                 </>
               ) : (
                 label
@@ -325,7 +325,7 @@ export default function CertificateUploadPanel() {
                   type="default"
                   icon={<PlusOutlined />}
                   onClick={() => setAddCourseOpen(true)}
-                  className="mb-4 border-[#FFAE0E] text-gray-800 hover:!border-[#E5893C] hover:!text-gray-900"
+                  className="mb-4 border-[#2441B6] text-gray-800 hover:!border-[#2441B6] hover:!text-gray-900"
                 >
                   Add New Course
                 </Button>
@@ -413,14 +413,14 @@ export default function CertificateUploadPanel() {
             </Form.Item>
 
             {previewUrl && (
-              <div className="mb-4 rounded-lg border border-[#FFAE0E]/30 bg-white/70 p-4">
+              <div className="mb-4 rounded-lg border border-[#2441B6]/30 bg-white/70 p-4">
                 <p className="mb-2 text-sm font-medium text-gray-800">Preview</p>
                 {form.getFieldValue("contentType") === "application/pdf" ? (
                   <a
                     href={previewUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-medium text-[#102a43] underline hover:text-[#FFAE0E]"
+                    className="font-medium text-[#102a43] underline hover:text-[#2441B6]"
                   >
                     Open uploaded PDF
                   </a>
@@ -429,14 +429,14 @@ export default function CertificateUploadPanel() {
                   <img
                     src={previewUrl}
                     alt="Certificate preview"
-                    className="max-h-48 rounded-md border border-[#FFAE0E]/20"
+                    className="max-h-48 rounded-md border border-[#2441B6]/20"
                   />
                 )}
               </div>
             )}
 
             {legacyUrl && (
-              <div className="mb-5 flex flex-wrap items-center gap-2 rounded-lg border border-[#FFAE0E]/40 bg-[#FFE3AC]/40 p-4">
+              <div className="mb-5 flex flex-wrap items-center gap-2 rounded-lg border border-[#2441B6]/40 bg-[#2441B6]/40 p-4">
                 <span className="text-sm font-medium text-gray-800">
                   Public certificate link:
                 </span>
@@ -458,7 +458,7 @@ export default function CertificateUploadPanel() {
               htmlType="submit"
               loading={saving}
               size="large"
-              className="min-w-[220px] border-none bg-[#FFAE0E] font-medium tracking-wide hover:!bg-[#E5893C]"
+              className="min-w-[220px] border-none bg-[#2441B6] text-white font-medium tracking-wide hover:!bg-[#2441B6] hover:!text-white"
             >
               Save Certificate Record
             </Button>

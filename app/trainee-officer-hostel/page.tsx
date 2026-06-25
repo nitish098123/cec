@@ -186,7 +186,7 @@ export default function CertificatePage() {
                 bathroom with bath amenities like Dental kit, Shaving kit, soap &amp; Shampoo, 24
                 hours dining and laundry service.
               </p>
-              <p className="text-lg font-semibold text-[#E5893C]">₹ 1200 – 1400 per room + GST</p>
+              <p className="text-lg font-semibold text-[#2441B6]">₹ 1200 – 1400 per room + GST</p>
             </div>
             <div className="shadow-md bg-white p-6 md:p-8 rounded-md">
               <p className="text-lg md:text-xl font-semibold mb-4">Executive Standard Room</p>
@@ -200,7 +200,7 @@ export default function CertificatePage() {
                 bathroom with bath amenities like Dental kit, Shaving kit, soap &amp; Shampoo, 24
                 hours dining and laundry services.
               </p>
-              <p className="text-lg font-semibold text-[#E5893C]">₹ 900 – 1200 per room + GST</p>
+              <p className="text-lg font-semibold text-[#2441B6]">₹ 900 – 1200 per room + GST</p>
             </div>
           </div>
         </section>
@@ -219,7 +219,7 @@ export default function CertificatePage() {
                 bathroom with bath amenities like Dental kit, Shaving kit, soap &amp; Shampoo, 24
                 hours dining and laundry service.
               </p>
-              <p className="text-xl font-semibold text-[#E5893C]">₹ 1200 – 1400 per room + GST</p>
+              <p className="text-xl font-semibold text-[#2441B6]">₹ 1200 – 1400 per room + GST</p>
             </div>
             <div className="flex justify-center items-center lg:justify-end">
               <Image
@@ -250,7 +250,7 @@ export default function CertificatePage() {
                 bathroom with bath amenities like Dental kit, Shaving kit, soap &amp; Shampoo, 24
                 hours dining and laundry services.
               </p>
-              <p className="text-xl font-semibold text-[#E5893C]">₹ 900 – 1200 per room + GST</p>
+              <p className="text-xl font-semibold text-[#2441B6]">₹ 900 – 1200 per room + GST</p>
             </div>
           </div>
         </section>

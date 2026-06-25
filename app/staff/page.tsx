@@ -1,71 +1,22 @@
 "use client";
 
 import { Image } from "antd";
-import { useState, Suspense } from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-// Define the type for the card data
-interface CardData {
-  image_url: string;
-  name: string;
-  designation: string;
-  phone: string;
-  email?: string;
-}
-
-// Sample data
-const cardData: CardData[] = [
-  {
-    image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/co-ordinator.jpeg",
-    name: "Prof. Soumitra Satapathi",
-    designation: "Coordinator CEC",
-    phone: "01332-285227/5545",
-    email: "Coordinator.cec.qip@iitr.ac.in",
-  },
-  {
-    image_url: "/staff/sonal-kumar.png",
-    name: "Mr. Sonal Kumar",
-    designation: "Jr. Superintendent",
-    phone: "01332-285247",
-  },
-  {
-    image_url: "/staff/prabhat-nautiyal.jpg",
-    name: "Mr. Prabhat Nautiyal",
-    designation: "Jr. Assistant",
-    phone: "01332-284327",
-  },
-  {
-    image_url: "/staff/sharad-sharma.jpg",
-    name: "Mr. Sharad Sharma",
-    designation: "Project Associate",
-    phone: "01332-285545",
-  },
-  {
-    image_url: "/staff/shakti-sahni.jpg",
-    name: "Ms. Shakti Sahni",
-    designation: "Computer Operator",
-    phone: "01332-285545",
-  },
-  {
-    image_url: "/staff/anand-singh.jpg",
-    name: "Mr. Anand Singh",
-    designation: "Updater Services Ltd. Staff",
-    phone: "01332-285545",
-  },
-  {
-    image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/shubham.jpeg",
-    name: "Mr. Shubham",
-    designation: "Updater Services Ltd. Staff",
-    phone: "01332-284327",
-  },
-];
+import { TeamMemberGrid } from "@/components/TeamMemberGrid";
+import { TEAM_MEMBERS } from "@/lib/team-members";
 
 function StaffContent() {
   const searchParams = useSearchParams();
   const tabParam = searchParams.get("tab");
   const tab = tabParam === "coordinator" ? "coordinator" : "staff";
-  const coordinator = cardData.find((item) => item.name === "Prof. Soumitra Satapathi");
-  const staff = cardData.filter((item) => item.name !== "Prof. Soumitra Satapathi");
+  const coordinator = TEAM_MEMBERS.find(
+    (item) => item.name === "Prof. Soumitra Satapathi"
+  );
+  const staff = TEAM_MEMBERS.filter(
+    (item) => item.name !== "Prof. Soumitra Satapathi"
+  );
   return (
     <>
       {/* Section Content */}
@@ -99,39 +50,14 @@ function StaffContent() {
           </div>
         </section>
       )}
-      {tab === 'staff' && (
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-center text-3xl md:text-4xl font-semibold mb-12">CEC Staff Members</h2>
+      {tab === "staff" && (
+        <section className="py-12 md:py-16 bg-[#FFFAF1]">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-3xl md:text-4xl font-semibold text-[#102a43] mb-10 md:mb-12">
+              CEC Staff Members
+            </h2>
 
-            {/* Design 1: Modern Card Grid with Hover Effects */}
-            <div className="mb-16">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {staff.map((item, index) => (
-                  <div
-                    key={index}
-                    className="rounded-xl p-6 flex flex-col items-center shadow-lg bg-[#E2F1FF] transition-transform transform hover:-translate-y-2 hover:bg-[#b3dafc] duration-200 h-full"
-                  >
-                    <div className="w-[260px] h-[340px] rounded-full overflow-hidden mb-6 border-4 border-white shadow-md shrink-0 bg-white">
-                      <Image
-                        preview={false}
-                        alt={item.name}
-                        src={item.image_url}
-                        width={260}
-                        height={340}
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <p className="text-xl font-semibold text-center text-black mb-1">{item.name}</p>
-                    <p className="text-base font-normal text-center text-gray-700 mb-1">{item.designation}</p>
-                    <p className="text-sm font-normal text-center text-gray-600 mb-1">Phone: {item.phone}</p>
-                    {item.email && (
-                      <p className="text-xs font-normal text-center text-gray-600 break-all">Email: {item.email}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
+            <TeamMemberGrid members={staff} />
           </div>
         </section>
       )}

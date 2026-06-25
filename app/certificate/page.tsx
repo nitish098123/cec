@@ -3218,9 +3218,10 @@ const certificateData = [
 const buttonThemeConfig = {
   components: {
     Button: {
-      defaultBg: "#FFAE0E",
-      defaultHoverBg: "#E5893C",
-      defaultHoverColor: "#2C2C2C",
+      defaultBg: "#2441B6",
+                        defaultHoverBg: "#2441B6",
+                        defaultColor: "#FFFFFF",
+                        defaultHoverColor: "#FFFFFF",
     },
   },
 };
@@ -3315,9 +3316,9 @@ export default function CertificatePage() {
       <section className="bg-[#FFFAF1] pb-6">
         <div className="w-full mb-6">
           <div
-            className={`flex-grow pt-6 pb-4 cursor-pointer bg-[#FFE3AC] border-b-4 border-[#FFAE0E]`}
+            className={`flex-grow pt-6 pb-4 cursor-pointer bg-[#2441B6] border-b-4 border-[#2441B6]`}
           >
-            <h2 className="text-2xl font-medium text-center tracking-wide">
+            <h2 className="text-2xl font-medium text-center tracking-wide text-white">
               Download Certificate
             </h2>
           </div>
@@ -3382,7 +3383,7 @@ export default function CertificatePage() {
                 <Button
                   type="default"
                   htmlType="submit"
-                  className="border-none w-full py-2.5 px-6 text-black text-lg font-normal tracking-wide"
+                  className="border-none w-full py-2.5 px-6 text-white text-lg font-normal tracking-wide"
                 >
                   Download Certificate
                 </Button>

@@ -38,7 +38,7 @@ body {
 }
 
 .admin-dashboard-tabs .ant-tabs-nav::before {
-  border-bottom-color: #ffae0e33;
+  border-bottom-color: #2441B633;
 }
 
 .admin-dashboard-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
@@ -47,10 +47,10 @@ body {
 }
 
 .admin-dashboard-tabs .ant-tabs-ink-bar {
-  background: #ffae0e !important;
+  background: #2441B6 !important;
   height: 3px !important;
 }
 
 .admin-dashboard-tabs .ant-tabs-tab:hover .ant-tabs-tab-btn {
-  color: #ffae0e !important;
+  color: #2441B6 !important;
 }

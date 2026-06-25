@@ -23,7 +23,7 @@ const OtherFormsPage = () => {
 
   return (
     <div className="font-inter">
-      <div className="bg-[#102a43] text-white pt-28 pb-12">
+      <div className="bg-[#102a43] text-white pt-8 pb-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold text-center mb-2">
             CONTINUING EDUCATION CENTRE, IIT ROORKEE
@@ -189,7 +189,7 @@ const OtherFormsPage = () => {
             <Form.Item className="pt-2">
               <Button
                 htmlType="submit"
-                className="bg-[#FFAE0E] text-black font-semibold border-none hover:!bg-[#E5893C] hover:!text-black"
+                className="bg-[#2441B6] text-white font-semibold border-none hover:!bg-[#2441B6] hover:!text-white"
               >
                 Submit
               </Button>

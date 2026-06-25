@@ -58,7 +58,7 @@ export function CourseSearchWrapper({
             placeholder="Search courses..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFAE0E] focus:border-[#FFAE0E] outline-none text-gray-800 placeholder-gray-500"
+            className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2441B6] focus:border-[#2441B6] outline-none text-gray-800 placeholder-gray-500"
           />
           {searchTerm && (
             <button

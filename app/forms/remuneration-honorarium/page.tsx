@@ -128,7 +128,7 @@ const RemunerationHonorariumForm = () => {
     return (
         <div className="font-inter">
             {/* Header */}
-            <div className="bg-[#8B0000] text-white pt-28 pb-6">
+            <div className="bg-[#8B0000] text-white pt-8 pb-6">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-2xl font-bold">CONTINUING EDUCATION CENTRE, INDIAN INSTITUTE OF TECHNOLOGY, ROORKEE</h1>
                     <p className="text-lg">
@@ -139,7 +139,7 @@ const RemunerationHonorariumForm = () => {
 
             <div className="container mx-auto p-8">
                 <div className="flex justify-end mb-4">
-                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/7.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/7.pdf', '_blank')} className="bg-[#2441B6] text-white font-semibold">Download PDF</Button>
                 </div>
                 <Form layout="vertical" name="remuneration_honorarium_form" form={form}>
                      <Row justify="end">

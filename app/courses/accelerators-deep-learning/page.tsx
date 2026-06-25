@@ -15,7 +15,7 @@ export default function AcceleratorsDeepLearningCoursePage() {
 
         {/* Content */}
         <div className="relative z-20 text-center text-white">
-          <p className="inline-block text-4xl font-bold tracking-wider text-[#FFC758] border-b-4 border-[#FFC758] pb-1">
+          <p className="inline-block text-4xl font-bold tracking-wider text-[#2441B6] border-b-4 border-[#2441B6] pb-1">
             COURSES
           </p>
           <h1 className="text-5xl font-bold mt-4">
@@ -28,7 +28,7 @@ export default function AcceleratorsDeepLearningCoursePage() {
       <main className="py-20">
         {/* About the course */}
         <section className="px-28 mb-24">
-          <h2 className="text-2xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+          <h2 className="text-2xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
             ABOUT THE COURSE
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mt-6">
@@ -44,9 +44,10 @@ export default function AcceleratorsDeepLearningCoursePage() {
                   theme={{
                     components: {
                       Button: {
-                        defaultBg: "#FFAE0E",
-                        defaultHoverBg: "#E5893C",
-                        defaultHoverColor: "#2C2C2C",
+                        defaultBg: "#2441B6",
+                        defaultHoverBg: "#2441B6",
+                        defaultColor: "#FFFFFF",
+                        defaultHoverColor: "#FFFFFF",
                       },
                     },
                   }}
@@ -59,7 +60,7 @@ export default function AcceleratorsDeepLearningCoursePage() {
                     <Button
                       type="default"
                       size="large"
-                      className="border-none w-44 text-black tracking-wide"
+                      className="border-none w-44 text-white tracking-wide"
                       style={{ fontWeight: 'bold', height: '45px', fontSize: '19px' }}
                     >
                       Apply
@@ -127,7 +128,7 @@ export default function AcceleratorsDeepLearningCoursePage() {
         <section className="px-28 mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+              <h2 className="text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
                 Course Features
               </h2>
               <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 mt-6">
@@ -161,7 +162,7 @@ export default function AcceleratorsDeepLearningCoursePage() {
 
         {/* Eligibility Criteria */}
         <section className="px-28 mb-24">
-          <h2 className="text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+          <h2 className="text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
             Eligibility criteria
           </h2>
           <p className="mt-6 text-lg text-gray-700">
@@ -173,7 +174,7 @@ export default function AcceleratorsDeepLearningCoursePage() {
 
         {/* Application Process */}
         <section className="px-28 mb-16">
-          <h2 className="text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+          <h2 className="text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
             Application Process
           </h2>
           <p className="mt-6 text-lg text-gray-700 mb-6">

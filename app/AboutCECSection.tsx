@@ -45,8 +45,8 @@ export default function AboutCECSection() {
             </div>
           </div>
           <div className="w-full flex gap-x-12 mt-6">
-            <button className="border-none w-full py-2.5 px-6 text-black text-lg font-normal tracking-wide bg-[#FFAE0E] hover:bg-[#E5893C] hover:text-[#2C2C2C] rounded">Download Brochure</button>
-            <button className="w-full py-2.5 px-6 text-lg font-normal tracking-wide border border-[#FFAE0E] text-[#FFAE0E] hover:bg-white hover:text-[#FFAE0E] hover:border-[#FFAE0E] rounded">Know More</button>
+            <button className="border-none w-full py-2.5 px-6 text-white text-lg font-normal tracking-wide bg-[#2441B6] hover:bg-[#2441B6] hover:text-white rounded">Download Brochure</button>
+            <button className="w-full py-2.5 px-6 text-lg font-normal tracking-wide border border-[#2441B6] text-[#2441B6] hover:bg-white hover:text-[#2441B6] hover:border-[#2441B6] rounded">Know More</button>
           </div>
         </div>
         <div className="flex justify-center items-center">

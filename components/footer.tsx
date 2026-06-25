@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
               Email:{" "}
               <Link
                 href="mailto:contd@iitr.ac.in"
-                className="hover:text-[#FFAE0E] hover:underline font-normal"
+                className="hover:text-[#2441B6] hover:underline font-normal"
               >
                 contd@iitr.ac.in
               </Link>
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="w-5 h-5 fill-current text-white hover:text-[#FFAE0E] transition-colors duration-200" viewBox="0 0 16 16">
+              <svg className="w-5 h-5 fill-current text-white hover:text-[#2441B6] transition-colors duration-200" viewBox="0 0 16 16">
                 <path d="M12.8 1.5h2.2l-5.1 5.8 6.1 7.7h-2.2l-3.7-4.8L3.5 15H1.3l5.5-6.2L1.3 1.5h3.9l3.3 4.4zm-0.9 12.2h1.2L5.1 2.9H3.9z"/>
               </svg>
             </Link>
@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="w-5 h-5 fill-current text-white hover:text-[#FFAE0E] transition-colors duration-200" viewBox="0 0 16 16">
+              <svg className="w-5 h-5 fill-current text-white hover:text-[#2441B6] transition-colors duration-200" viewBox="0 0 16 16">
                 <path d="M15.5 8c0-4.1-3.4-7.5-7.5-7.5S0.5 3.9 0.5 8c0 3.9 2.9 7.1 6.6 7.7v-5.5h-2V8h2V6.2c0-2.1 1.3-3.2 3.1-3.2 0.9 0 1.8 0.2 1.8 0.2v2h-1.1c-1.1 0-1.4 0.7-1.4 1.4V8h2.3l-0.4 2.3h-1.9v5.5C12.6 15.1 15.5 11.9 15.5 8z"/>
               </svg>
             </Link>
@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg className="w-5 h-5 fill-current text-white hover:text-[#FFAE0E] transition-colors duration-200" viewBox="0 0 16 16">
+              <svg className="w-5 h-5 fill-current text-white hover:text-[#2441B6] transition-colors duration-200" viewBox="0 0 16 16">
                 <path d="M13.6 13.6h-2.4v-3.7c0-0.9-0.02-2-1.2-2-1.2 0-1.4 1-1.4 2v3.7H6.2V6.7h2.3v1h0.03c0.3-0.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v3.5zM3.6 5c-0.8 0-1.4-0.6-1.4-1.4 0-0.8 0.6-1.4 1.4-1.4s1.4 0.6 1.4 1.4c0 0.8-0.6 1.4-1.4 1.4zm1.2 8.7H2.4V6.7h2.4v7zM14.8 0H1.2C0.5 0 0 0.5 0 1.2v13.7C0 15.5 0.5 16 1.2 16h13.6C15.5 16 16 15.5 16 14.8V1.2C16 0.5 15.5 0 14.8 0z"/>
               </svg>
             </Link>
@@ -106,7 +106,7 @@ export const Footer: React.FC = () => {
                     href={link.href}
                     target={link.target || undefined}
                     rel={link.target ? "noopener noreferrer" : undefined}
-                    className="transition-all duration-200 ease-in-out hover:text-[#FFAE0E] active:scale-95"
+                    className="transition-all duration-200 ease-in-out hover:text-[#2441B6] active:scale-95"
                   >
                     {link.name}
                   </Link>
@@ -126,7 +126,7 @@ export const Footer: React.FC = () => {
                     href={link.href}
                     target={link.target || undefined}
                     rel={link.target ? "noopener noreferrer" : undefined}
-                    className="transition-all duration-200 ease-in-out hover:text-[#FFAE0E] active:scale-95"
+                    className="transition-all duration-200 ease-in-out hover:text-[#2441B6] active:scale-95"
                   >
                     {link.name}
                   </Link>
@@ -146,7 +146,7 @@ export const Footer: React.FC = () => {
                     href={link.href}
                     target={link.target || undefined}
                     rel={link.target ? "noopener noreferrer" : undefined}
-                    className="transition-all duration-200 ease-in-out hover:text-[#FFAE0E] active:scale-95"
+                    className="transition-all duration-200 ease-in-out hover:text-[#2441B6] active:scale-95"
                   >
                     {link.name}
                   </Link>

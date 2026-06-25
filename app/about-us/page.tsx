@@ -147,7 +147,7 @@ export default function AboutUsPage() {
         <section className="bg-[#0B2447] text-white py-12 md:py-16">
           <div className="container mx-auto grid grid-cols-2 sm:grid-cols-4 gap-8 text-center px-4">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#FFA500] mb-4">10000+</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2441B6] mb-4">10000+</h2>
               <p className="text-sm">
                 Participants Trained
                 <br className="hidden sm:inline" />
@@ -155,7 +155,7 @@ export default function AboutUsPage() {
               </p>
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#FFA500] mb-4">250+</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2441B6] mb-4">250+</h2>
               <p className="text-sm">
                 Courses
                 <br className="hidden sm:inline" />
@@ -163,11 +163,11 @@ export default function AboutUsPage() {
               </p>
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#FFA500] mb-4">40+</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2441B6] mb-4">40+</h2>
               <p className="text-sm">International Sponsors</p>
             </div>
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#FFA500] mb-4">100+</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#2441B6] mb-4">100+</h2>
               <p className="text-sm">National Sponsors</p>
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function AboutUsPage() {
               </p>
             </div>
 
-            <hr className="border-[#FFAE0E] border-dotted" />
+            <hr className="border-[#2441B6] border-dotted" />
 
             <div>
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">Fee Structure</h2>
@@ -203,7 +203,7 @@ export default function AboutUsPage() {
               </p>
             </div>
 
-            <hr className="border-[#FFAE0E] border-dotted" />
+            <hr className="border-[#2441B6] border-dotted" />
 
             <div>
               <h2 className="text-2xl md:text-3xl font-semibold mb-4">Venue</h2>

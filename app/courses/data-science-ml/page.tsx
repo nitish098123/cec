@@ -15,7 +15,7 @@ export default function DataScienceMLCoursePage() {
 
         {/* Content */}
         <div className="relative z-20 text-center text-white px-4">
-          <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-[#FFC758] border-b-4 border-[#FFC758] pb-1">
+          <p className="inline-block text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-[#2441B6] border-b-4 border-[#2441B6] pb-1">
             COURSES
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4">
@@ -28,7 +28,7 @@ export default function DataScienceMLCoursePage() {
       <main className="py-12 md:py-20">
         {/* About the course */}
         <section className="px-4 sm:px-8 md:px-16 lg:px-28 mb-16 md:mb-20 lg:mb-24">
-          <h2 className="text-2xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+          <h2 className="text-2xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
             ABOUT THE COURSE
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start mt-6">
@@ -44,9 +44,10 @@ export default function DataScienceMLCoursePage() {
                   theme={{
                     components: {
                       Button: {
-                        defaultBg: "#FFAE0E",
-                        defaultHoverBg: "#E5893C",
-                        defaultHoverColor: "#2C2C2C",
+                        defaultBg: "#2441B6",
+                        defaultHoverBg: "#2441B6",
+                        defaultColor: "#FFFFFF",
+                        defaultHoverColor: "#FFFFFF",
                       },
                     },
                   }}
@@ -59,7 +60,7 @@ export default function DataScienceMLCoursePage() {
                     <Button
                       type="default"
                       size="large"
-                      className="border-none w-full sm:w-44 text-black tracking-wide"
+                      className="border-none w-full sm:w-44 text-white tracking-wide"
                       style={{ fontWeight: 'bold', height: '45px', fontSize: '19px' }}
                     >
                       Apply
@@ -127,7 +128,7 @@ export default function DataScienceMLCoursePage() {
         <section className="px-4 sm:px-8 md:px-16 lg:px-28 mb-16 md:mb-20 lg:mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
                 Course Features
               </h2>
               <ul className="list-disc list-inside space-y-4 text-base sm:text-lg text-gray-700 mt-6">
@@ -156,21 +157,21 @@ export default function DataScienceMLCoursePage() {
         <section className="px-4 sm:px-8 md:px-16 lg:px-28 mb-16 md:mb-20 lg:mb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+              <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
                 Eligibility Criteria
               </h2>
               <ul className="list-disc list-inside space-y-4 text-base sm:text-lg text-gray-700 mt-6">
-                <li>Bachelor's degree with minimum 50%</li>
+                <li>Bachelor&apos;s degree with minimum 50%</li>
                 <li>Learners with prior background in Engineering, Technology, Computer Science, IT, Mathematical Sciences and related disciplines will be preferred</li>
                 <li>Minimum 1 years of experience preferably in IT, software, technology or engineering domain</li>
               </ul>
             </div>
-            </div>
+          </div>
         </section>
 
         {/* Application Process */}
         <section className="px-4 sm:px-8 md:px-16 lg:px-28 mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#FFC758] pb-1">
+          <h2 className="text-2xl sm:text-3xl font-semibold mb-4 max-w-max border-b-4 border-b-[#2441B6] pb-1">
             Application Process
           </h2>
           <p className="mt-6 text-base sm:text-lg text-gray-700 mb-6">

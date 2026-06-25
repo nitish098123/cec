@@ -105,7 +105,7 @@ export function PastCoursesClient({
               placeholder="Search by department, course name, coordinator, duration or sponsor..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFAE0E] focus:border-[#FFAE0E] outline-none text-gray-800 placeholder-gray-500"
+              className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2441B6] focus:border-[#2441B6] outline-none text-gray-800 placeholder-gray-500"
             />
             {searchTerm && (
               <button
@@ -130,7 +130,7 @@ export function PastCoursesClient({
         {/* Table */}
         <div className="overflow-x-auto shadow-md sm:rounded-lg border border-gray-200 rounded-lg">
           {hasPlaceholderOnly && !searchTerm ? (
-            <div className="bg-[#FFFAF1] border border-[#FFAE0E]/30 rounded-lg p-8 text-center">
+            <div className="bg-[#FFFAF1] border border-[#2441B6]/30 rounded-lg p-8 text-center">
               <p className="text-gray-600 mb-1">
                 Course list for {year} will be updated here soon.
               </p>

@@ -17,7 +17,7 @@ const AdvanceForm = () => {
 
     return (
         <div className="font-inter">
-            <div className="bg-gray-800 text-white pt-28 pb-6">
+            <div className="bg-gray-800 text-white pt-8 pb-6">
                 <div className="container mx-auto px-4 text-center">
                     <Title level={3} style={{ color: 'white' }}>INDIAN INSTITUTE OF TECHNOLOGY ROORKEE</Title>
                     <Title level={4} style={{ color: 'white' }}>ROORKEE- 247667</Title>
@@ -26,7 +26,7 @@ const AdvanceForm = () => {
 
             <div className="container mx-auto p-8 bg-white mt-4">
                 <div className="flex justify-end mb-4">
-                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/2.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_OldForm/2.pdf', '_blank')} className="bg-[#2441B6] text-white font-semibold">Download PDF</Button>
                 </div>
                 <Form layout="vertical" name="advance_form">
                     <div className="text-right mb-4">

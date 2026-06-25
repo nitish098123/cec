@@ -105,11 +105,11 @@ const CourseApprovalFormOpen = () => {
 
     return (
         <div className="font-inter">
-            <div className="bg-[#102a43] text-white pt-28 pb-12">
+            <div className="bg-[#102a43] text-white pt-8 pb-12">
                 <div className="container mx-auto px-4">
                     <h1 className="text-3xl font-bold text-center mb-2">CONTINUING EDUCATION CENTRE, IIT ROORKEE</h1>
                     <p className="text-center text-lg mb-4">
-                        <a href="https://iitr.ac.in/cec" target="_blank" rel="noopener noreferrer" className="hover:text-[#FFAE0E]">HTTPS://IITR.AC.IN/CEC</a>, CONTD@IITR.AC.IN Ph: 4327
+                        <a href="https://iitr.ac.in/cec" target="_blank" rel="noopener noreferrer" className="hover:text-[#2441B6]">HTTPS://IITR.AC.IN/CEC</a>, CONTD@IITR.AC.IN Ph: 4327
                     </p>
                     <h2 className="text-2xl font-semibold text-center">COURSE APPROVAL FORM FOR OPEN PARTICIPATION COURSES*</h2>
                     <p className="text-center text-sm mt-2">*(Course approval can be taken even without receipt of funds)</p>
@@ -118,7 +118,7 @@ const CourseApprovalFormOpen = () => {
 
             <div className="container mx-auto p-8">
                 <div className="flex justify-end mb-4">
-                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/1.pdf', '_blank')} className="bg-[#FFAE0E] text-black font-semibold">Download PDF</Button>
+                    <Button type="default" onClick={() => window.open('https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC_NewForm/1.pdf', '_blank')} className="bg-[#2441B6] text-white font-semibold">Download PDF</Button>
                 </div>
                 <div className="bg-yellow-200 text-yellow-800 p-4 rounded-md mb-6 border border-yellow-400">
                     <p><strong>Note:</strong> Please do not delete any item in the form, provide details as applicable, wherever information is not available mention N.A. The form may need to be sent back for corrections if any item is changed or deleted.</p>
@@ -405,7 +405,7 @@ const CourseApprovalFormOpen = () => {
 
 
                     <Form.Item className="mt-12 text-center">
-                        <Button type="primary" htmlType="submit" className="bg-[#FFAE0E] text-black font-semibold w-full mt-6">
+                        <Button type="primary" htmlType="submit" className="bg-[#2441B6] text-white font-semibold w-full mt-6">
                             Submit and Download Form
                         </Button>
                     </Form.Item>

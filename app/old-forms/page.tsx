@@ -57,7 +57,7 @@ export default function OldFormsPage() {
             href={pdfLinks[link as keyof typeof pdfLinks]}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#FFAE0E] hover:text-[#FFAE0E] hover:underline"
+            className="text-[#2441B6] hover:text-[#2441B6] hover:underline"
           >
             Download PDF
           </a>
