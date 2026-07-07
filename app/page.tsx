@@ -24,6 +24,7 @@ import { INITIAL_COURSES } from "@/lib/initial-courses";
 import { enrichCoursesForPublic } from "@/lib/course-enrich";
 import { TEAM_MEMBERS } from "@/lib/team-members";
 import { TeamMemberGrid } from "@/components/TeamMemberGrid";
+import { LeadershipMessageCard } from "@/components/LeadershipMessageCard";
 
 type NewsItem = {
   id: number;
@@ -151,6 +152,10 @@ const leadershipProfiles = [
   },
 ];
 
+const UPCOMING_DEMO_COURSES = enrichCoursesForPublic(
+  [15, 22].map((id) => INITIAL_COURSES.find((course) => course.id === id)!)
+);
+
 export default function HomePage() {
   const [courses, setCourses] = useState<PublicCourse[]>(
     enrichCoursesForPublic(INITIAL_COURSES)
@@ -189,6 +194,7 @@ export default function HomePage() {
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header1.png",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header2.png",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header3.png",
+    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header4.png",
   ];
 
   const heroTexts = [
@@ -275,6 +281,75 @@ export default function HomePage() {
       behavior: 'smooth'
     });
   };
+
+  const renderCourseCard = (course: PublicCourse) => (
+    <Link
+      key={course.id}
+      href={course.redirectHref || course.redirectLink || "#"}
+      target={course.openInNewTab ? "_blank" : undefined}
+      rel={course.openInNewTab ? "noopener noreferrer" : undefined}
+      className="block h-full"
+    >
+      <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(36,65,182,0.4)] hover:scale-[1.02] rounded-md h-full">
+        <Card
+          hoverable={false}
+          className="border rounded-md shadow-md h-full flex flex-col overflow-hidden cursor-pointer"
+          styles={{
+            body: {
+              padding: 0,
+              display: "flex",
+              flexDirection: "column",
+              flexGrow: 1,
+              height: "100%",
+            }
+          }}
+        >
+          <Image
+            preview={false}
+            src={course.imageUrl || course.image || "/course.jpeg"}
+            alt={course.name}
+            className="h-40 w-full object-cover flex-shrink-0"
+            style={{ aspectRatio: "16/9" }}
+          />
+
+          <div className="p-4 flex flex-col h-full">
+            <div>
+              <h3 className="font-semibold text-xl">{course.name}</h3>
+
+              <div className="w-full flex justify-between items-center my-2 text-base font-normal">
+                <p className="flex items-center gap-1">
+                  <Clock className="w-[16px] h-[16px]" />
+                  {course.duration}
+                </p>
+                <p className="flex items-center gap-1">
+                  <Wifi className="w-[16px] h-[16px]" />
+                  {course.mode}
+                </p>
+                <p className="flex items-center gap-1">
+                  <GraduationCap className="w-[16px] h-[16px]" />
+                  {course.students}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex-grow"></div>
+
+            <div>
+              <div className="w-full flex justify-between items-center mt-2">
+                <div>
+                  <p className="text-base font-medium">{course.partner}</p>
+                  <p className="font-light text-base">Program Partner</p>
+                </div>
+                <div className="text-[#2441B6] mt-2 inline-block text-base font-medium self-end">
+                  Know More
+                </div>
+              </div>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </Link>
+  );
 
   return (
     <div className="w-full font-inter">
@@ -576,48 +651,29 @@ export default function HomePage() {
         </section>
 
         {/* Messages from Director & Coordinator */}
-        <section className="py-16 bg-[#E2F1FF]">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
-              {leadershipProfiles.map((profile) => (
-                <div key={profile.title} className="flex flex-col gap-6">
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#1a237e] text-center">
-                    {profile.title}
-                  </h2>
-                  <div className="flex w-full flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-10">
-                    <img
-                      src={profile.image}
-                      alt={profile.imageAlt}
-                      className="flex-shrink-0 self-center object-cover rounded-2xl w-32 h-40 sm:w-36 sm:h-44 md:w-40 md:h-52 shadow-xl border-4 border-white"
-                    />
-                    <div className="flex min-h-40 sm:min-h-44 md:min-h-52 max-w-[14rem] sm:max-w-xs flex-col justify-center text-left pl-2 sm:pl-4 lg:pl-6">
-                      <p className="text-base sm:text-lg md:text-xl font-semibold text-black mb-1">
-                        {profile.name}
-                      </p>
-                      <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-1">
-                        {profile.role}
-                      </p>
-                      <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-1">
-                        {profile.institute}
-                      </p>
-                      {"phone" in profile && profile.phone && (
-                        <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-1 break-words">
-                          Phone no.: {profile.phone}
-                        </p>
-                      )}
-                      {"email" in profile && profile.email && (
-                        <p className="text-xs sm:text-sm md:text-base font-normal text-gray-700 mb-0 break-words">
-                          Email id: {profile.email}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                  <div className="bg-white p-5 md:p-6 rounded-2xl shadow-xl w-full">
-                    <p className="text-gray-800 text-sm md:text-base leading-relaxed text-justify">
-                      {profile.message}
-                    </p>
-                  </div>
-                </div>
+        <section className="bg-gray-50 py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="mb-10 text-center md:mb-12">
+              <h2 className="text-2xl font-semibold text-gray-900 md:text-3xl">
+                Leadership Messages
+              </h2>
+              <p className="mt-2 text-base text-gray-500 md:text-lg">
+                Insights from our Director and Continuing Education Coordinator
+              </p>
+            </div>
+            <div className="grid grid-cols-1 items-stretch gap-8 lg:grid-cols-2 lg:gap-10">
+              {leadershipProfiles.map((profile, index) => (
+                <LeadershipMessageCard
+                  key={profile.title}
+                  title={profile.title}
+                  name={profile.name}
+                  role={profile.role}
+                  institute={profile.institute}
+                  image={profile.image}
+                  imageAlt={profile.imageAlt}
+                  message={profile.message}
+                  index={index}
+                />
               ))}
             </div>
           </div>
@@ -625,7 +681,7 @@ export default function HomePage() {
 
         {/* Courses Section */}
         <section id="explore-courses" className="px-4 sm:px-8 md:px-16 py-8 md:py-12">
-          <div className="flex flex-col md:flex-row justify-between md:items-end mb-8 container mx-auto">
+          <div className="flex flex-col md:flex-row justify-between md:items-start mb-8 container mx-auto gap-6">
             <div className="mb-4 md:mb-0">
               <h1 className="text-3xl md:text-4xl font-semibold mb-2">
                 Explore Our Courses
@@ -634,12 +690,46 @@ export default function HomePage() {
                 Find the right course to advance your education and career
                 goals.
               </p>
+              <div
+                className="mt-5 inline-flex items-center rounded-full bg-white p-1 border border-gray-200 shadow-sm"
+                role="tablist"
+                aria-label="Course availability"
+              >
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={courseViewTab === "ongoing"}
+                  onClick={() => setCourseViewTab("ongoing")}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm md:text-base font-medium transition-all duration-200 ${
+                    courseViewTab === "ongoing"
+                      ? "bg-[#2441B6] text-white shadow-sm"
+                      : "text-gray-600 hover:text-[#2441B6] hover:bg-[#E2F1FF]/50"
+                  }`}
+                >
+                  <GraduationCap className="h-4 w-4 shrink-0" />
+                  Ongoing
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={courseViewTab === "upcoming"}
+                  onClick={() => setCourseViewTab("upcoming")}
+                  className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 text-sm md:text-base font-medium transition-all duration-200 ${
+                    courseViewTab === "upcoming"
+                      ? "bg-[#2441B6] text-white shadow-sm"
+                      : "text-gray-600 hover:text-[#2441B6] hover:bg-[#E2F1FF]/50"
+                  }`}
+                >
+                  <CalendarClock className="h-4 w-4 shrink-0" />
+                  Upcoming
+                </button>
+              </div>
             </div>
             {courseViewTab === "ongoing" && (
               <Input
                 placeholder="Search Courses"
                 prefix={<SearchOutlined />}
-                className="w-full md:w-1/3 lg:w-1/4"
+                className="w-full md:w-1/3 lg:w-1/4 md:mt-1"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 allowClear
@@ -648,32 +738,6 @@ export default function HomePage() {
           </div>
 
           <div className="container mx-auto space-y-6">
-            {/* Ongoing / Upcoming */}
-            <div className="flex w-full flex-col sm:flex-row gap-3 md:gap-4">
-              <button
-                type="button"
-                onClick={() => setCourseViewTab("ongoing")}
-                className={`flex-1 py-3 md:py-3.5 px-4 text-center text-base md:text-xl transition-all duration-200 ${
-                  courseViewTab === "ongoing"
-                    ? "bg-[#2441B6] text-white font-semibold border-2 border-[#2441B6] shadow-sm"
-                    : "bg-white text-[#102a43] font-normal border-2 border-gray-300 hover:border-[#2441B6]/40 hover:bg-[#E2F1FF]/60"
-                }`}
-              >
-                Ongoing Courses
-              </button>
-              <button
-                type="button"
-                onClick={() => setCourseViewTab("upcoming")}
-                className={`flex-1 py-3 md:py-3.5 px-4 text-center text-base md:text-xl transition-all duration-200 ${
-                  courseViewTab === "upcoming"
-                    ? "bg-[#2441B6] text-white font-semibold border-2 border-[#2441B6] shadow-sm"
-                    : "bg-white text-[#102a43] font-normal border-2 border-gray-300 hover:border-[#2441B6]/40 hover:bg-[#E2F1FF]/60"
-                }`}
-              >
-                Upcoming Courses
-              </button>
-            </div>
-
           {courseViewTab === "ongoing" && (
             <>
           {/* Search and Categories */}
@@ -741,74 +805,7 @@ export default function HomePage() {
                     </p>
                   </div>
                 )}
-                {filteredCourses.map((course) => (
-                  <Link
-                    key={course.id}
-                    href={course.redirectHref || course.redirectLink || "#"}
-                    target={course.openInNewTab ? "_blank" : undefined}
-                    rel={course.openInNewTab ? "noopener noreferrer" : undefined}
-                    className="block h-full"
-                  >
-                    <div className="transition-all duration-300 hover:shadow-[0_0_12px_rgba(36,65,182,0.4)] hover:scale-[1.02] rounded-md h-full">
-                      <Card
-                        hoverable={false}
-                        className="border rounded-md shadow-md h-full flex flex-col overflow-hidden cursor-pointer"
-                        styles={{
-                          body: {
-                            padding: 0,
-                            display: "flex",
-                            flexDirection: "column",
-                            flexGrow: 1,
-                            height: "100%",
-                          }
-                        }}
-                      >
-                        <Image
-                          preview={false}
-                          src={course.imageUrl || course.image || "/course.jpeg"}
-                          alt={course.name}
-                          className="h-40 w-full object-cover flex-shrink-0"
-                          style={{ aspectRatio: "16/9" }}
-                        />
-
-                        <div className="p-4 flex flex-col h-full">
-                          <div>
-                            <h3 className="font-semibold text-xl">{course.name}</h3>
-
-                            <div className="w-full flex justify-between items-center my-2 text-base font-normal">
-                              <p className="flex items-center gap-1">
-                                <Clock className="w-[16px] h-[16px]" />
-                                {course.duration}
-                              </p>
-                              <p className="flex items-center gap-1">
-                                <Wifi className="w-[16px] h-[16px]" />
-                                {course.mode}
-                              </p>
-                              <p className="flex items-center gap-1">
-                                <GraduationCap className="w-[16px] h-[16px]" />
-                                {course.students}
-                              </p>
-                            </div>
-                          </div>
-
-                          <div className="flex-grow"></div>
-
-                          <div>
-                            <div className="w-full flex justify-between items-center mt-2">
-                              <div>
-                                <p className="text-base font-medium">{course.partner}</p>
-                                <p className="font-light text-base">Program Partner</p>
-                              </div>
-                              <div className="text-[#2441B6] mt-2 inline-block text-base font-medium self-end">
-                                Know More
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Card>
-                    </div>
-                  </Link>
-                ))}
+                {filteredCourses.map(renderCourseCard)}
               </>
             ) : (
               <div className="col-span-full text-center py-12">
@@ -839,17 +836,12 @@ export default function HomePage() {
           )}
 
           {courseViewTab === "upcoming" && (
-              <div className="rounded-lg bg-[#E2F1FF] px-6 py-16 md:py-20 text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-sm">
-                  <CalendarClock className="h-7 w-7 text-[#2441B6]" />
-                </div>
-                <p className="text-lg md:text-xl font-semibold text-[#102a43] mb-1">
-                  Currently no upcoming courses
-                </p>
-                <p className="text-base font-medium text-[#2441B6]">
-                  Coming soon..
-                </p>
-              </div>
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              style={{ gridAutoRows: "1fr" }}
+            >
+              {UPCOMING_DEMO_COURSES.map(renderCourseCard)}
+            </div>
           )}
           </div>
 
