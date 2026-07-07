@@ -53,7 +53,7 @@ export default function DataScienceMLCoursePage() {
                   }}
                 >
                   <a 
-                    href="https://timespro.com/executive-education/iit-roorkee-post-graduate-certificate-programme-in-data-science-and-machine-learning"
+                    href="https://timespro.com/executive-education/iit-roorkee-post-graduate-certificate-programme-in-data-science-machine-learning-and-generative-ai?utm_source=Institute&utm_campaign=IITRK_PGCDSMLAI_11_Institute_P-02050"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -68,7 +68,7 @@ export default function DataScienceMLCoursePage() {
                   </a>
                 </ConfigProvider>
                 <a 
-                  href="https://timespro.com/executive-education/iit-roorkee-post-graduate-certificate-programme-in-data-science-and-machine-learning"
+                  href="https://timespro.com/executive-education/iit-roorkee-post-graduate-certificate-programme-in-data-science-machine-learning-and-generative-ai?utm_source=Institute&utm_campaign=IITRK_PGCDSMLAI_11_Institute_P-02050"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base sm:text-lg underline sm:self-center"
@@ -181,7 +181,7 @@ export default function DataScienceMLCoursePage() {
             informed through the confirmation mail.
           </p>
           <a 
-            href="https://timespro.com/executive-education/iit-roorkee-post-graduate-certificate-programme-in-data-science-and-machine-learning"
+            href="https://timespro.com/executive-education/iit-roorkee-post-graduate-certificate-programme-in-data-science-machine-learning-and-generative-ai?utm_source=Institute&utm_campaign=IITRK_PGCDSMLAI_11_Institute_P-02050"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg md:text-xl font-semibold underline mt-6 inline-block"
