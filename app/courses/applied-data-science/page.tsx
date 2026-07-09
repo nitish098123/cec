@@ -147,7 +147,7 @@ export default function AppliedDataScienceCoursePage() {
               <div className="w-3/4">
                   <Image
                     preview={false}
-                    src="https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1782386221963-f8f680a0-6a61-4c43-b2d8-4d21206a89cc-sample_certificate.jpg"
+                    src="https://cec-qip-bucket.s3.ap-south-1.amazonaws.com/CECTemp/CourseMedia/1783595642133-1effd35a-d7b7-485c-b839-8eed200ace59-Certificate_sample_DSAI.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT4QCDQEC4AWM7BQH%2F20260709%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20260709T111545Z&X-Amz-Expires=3600&X-Amz-Signature=3a9ae84e36d76544099c44fa4c284d34fa1f1fedcfff8d8662abaf1be2863f24&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
                     alt="Certificate"
                     className="rounded-lg shadow-lg"
                   />
