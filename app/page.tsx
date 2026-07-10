@@ -371,7 +371,7 @@ export default function HomePage() {
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 z-10"></div>
 
-        <div className="absolute bottom-20 md:bottom-28 left-1/2 -translate-x-1/2 z-20 w-full max-w-5xl px-4 sm:px-8 text-center">
+       <div className="absolute bottom-20 md:bottom-28 left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl px-4 sm:px-8 text-center">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
             Build future-ready skills with CEC, IIT Roorkee
           </h1>
@@ -547,7 +547,7 @@ export default function HomePage() {
             <div className="flex w-full items-center justify-start">
               <Image
                 preview={false}
-                src={heroImages[0]}
+                src="https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1783596836139-7c0de7ad-5f02-4c7c-ae1c-a23e03d81345-cec_image.jpg"
                 alt="Continuing Education Centre, IIT Roorkee"
                 className="w-full lg:w-[90%] rounded-2xl shadow-xl object-cover aspect-[4/3] lg:aspect-auto lg:min-h-[480px] xl:min-h-[540px]"
               />
