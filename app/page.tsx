@@ -579,7 +579,7 @@ export default function HomePage() {
             <div className="flex w-full items-center justify-start lg:-ml-2">
               <Image
                 preview={false}
-                src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC-Image.png"
+                src="https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1783596836139-7c0de7ad-5f02-4c7c-ae1c-a23e03d81345-cec_image.jpg"
                 alt="Continuing Education Centre, IIT Roorkee"
                 className="w-full rounded-2xl shadow-xl object-contain h-auto"
               />
