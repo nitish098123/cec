@@ -152,9 +152,41 @@ const leadershipProfiles = [
   },
 ];
 
-const UPCOMING_DEMO_COURSES = enrichCoursesForPublic(
-  [15, 22].map((id) => INITIAL_COURSES.find((course) => course.id === id)!)
-);
+const upcomingEvents = [
+  {
+    badge: "Featured",
+    badgeClass: "bg-[#2441B6] text-white",
+    duration: "6-8 Months",
+    title: "Post Graduate Certificate Programme in Applied Data Science & AI",
+    description:
+      "Upskills working professionals in data science and AI fundamentals, practical software technologies, and prescribing the best course of action across business and application contexts.",
+    partner: "Jaro Education",
+    ctaLabel: "Learn More →",
+    href: "https://www.jaroeducation.com/applied-data-science-ai-certificate-iitr",
+  },
+  {
+    badge: "New",
+    badgeClass: "bg-green-500 text-white",
+    duration: "Ongoing",
+    title: "GenAI/Agentic AI & ML Applications for Engineers",
+    description:
+      "Comprehensive program on Generative AI and Machine Learning applications for engineering professionals.",
+    partner: "Futurense",
+    ctaLabel: "Enroll Now →",
+    href: "https://futurense.com/iit-roorkee/genai-and-agentic-ai-iit-rorkee",
+  },
+  {
+    badge: "Popular",
+    badgeClass: "bg-blue-500 text-white",
+    duration: "12 Months",
+    title: "AI Engineering on Cloud and AlOps",
+    description:
+      "Comprehensive program on AI Engineering on Cloud and AIOps for engineering professionals.",
+    partner: "Futurense",
+    ctaLabel: "Enroll Now →",
+    href: "https://futurense.com/iit-roorkee/aiops",
+  },
+];
 
 export default function HomePage() {
   const [courses, setCourses] = useState<PublicCourse[]>(
@@ -195,7 +227,7 @@ export default function HomePage() {
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header1.png",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header2.png",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header3.png",
-    
+    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header5.png",
   ];
 
   const heroTexts = [
@@ -371,51 +403,51 @@ export default function HomePage() {
         ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30 z-10"></div>
 
-       <div className="absolute bottom-20 md:bottom-28 left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl px-4 sm:px-8 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+       <div className="absolute bottom-28 md:bottom-28 left-1/2 -translate-x-1/2 z-20 w-full max-w-7xl px-2 sm:px-8 text-center">
+          <h1 className="whitespace-nowrap text-[clamp(10px,3.4vw,3rem)] font-bold text-white leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
             Build future-ready skills with CEC, IIT Roorkee
           </h1>
         </div>
 
         {/* Social links - hero */}
-        <div className="absolute bottom-8 right-4 sm:right-8 md:right-12 flex items-center gap-4 z-30">
+        <div className="absolute bottom-14 md:bottom-8 right-3 sm:right-8 md:right-12 flex items-center gap-2.5 md:gap-4 z-30">
           <a
             href="https://x.com/iitroorkee"
             aria-label="Twitter"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            className="w-9 h-9 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg className="w-6 h-6 fill-current" viewBox="0 0 16 16">
+            <svg className="w-4 h-4 md:w-6 md:h-6 fill-current" viewBox="0 0 16 16">
               <path d="M12.8 1.5h2.2l-5.1 5.8 6.1 7.7h-2.2l-3.7-4.8L3.5 15H1.3l5.5-6.2L1.3 1.5h3.9l3.3 4.4zm-0.9 12.2h1.2L5.1 2.9H3.9z"/>
             </svg>
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=100082831977496#"
             aria-label="Facebook"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            className="w-9 h-9 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg className="w-6 h-6 fill-current" viewBox="0 0 16 16">
+            <svg className="w-4 h-4 md:w-6 md:h-6 fill-current" viewBox="0 0 16 16">
               <path d="M15.5 8c0-4.1-3.4-7.5-7.5-7.5S0.5 3.9 0.5 8c0 3.9 2.9 7.1 6.6 7.7v-5.5h-2V8h2V6.2c0-2.1 1.3-3.2 3.1-3.2 0.9 0 1.8 0.2 1.8 0.2v2h-1.1c-1.1 0-1.4 0.7-1.4 1.4V8h2.3l-0.4 2.3h-1.9v5.5C12.6 15.1 15.5 11.9 15.5 8z"/>
             </svg>
           </a>
           <a
             href="https://www.linkedin.com/company/ceciitr/"
             aria-label="LinkedIn"
-            className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
+            className="w-9 h-9 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm text-white hover:text-[#2441B6] hover:bg-white/20 transition-all duration-200 hover:scale-110"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg className="w-6 h-6 fill-current" viewBox="0 0 16 16">
+            <svg className="w-4 h-4 md:w-6 md:h-6 fill-current" viewBox="0 0 16 16">
               <path d="M13.6 13.6h-2.4v-3.7c0-0.9-0.02-2-1.2-2-1.2 0-1.4 1-1.4 2v3.7H6.2V6.7h2.3v1h0.03c0.3-0.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v3.5zM3.6 5c-0.8 0-1.4-0.6-1.4-1.4 0-0.8 0.6-1.4 1.4-1.4s1.4 0.6 1.4 1.4c0 0.8-0.6 1.4-1.4 1.4zm1.2 8.7H2.4V6.7h2.4v7zM14.8 0H1.2C0.5 0 0 0.5 0 1.2v13.7C0 15.5 0.5 16 1.2 16h13.6C15.5 16 16 15.5 16 14.8V1.2C16 0.5 15.5 0 14.8 0z"/>
             </svg>
           </a>
         </div>
 
         {/* Image Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-30 flex space-x-2">
           {heroImages.map((_, index) => (
             <button
               key={index}
@@ -542,14 +574,14 @@ export default function HomePage() {
       {/*  */}
       <section className="py-8 md:py-16 space-y-8 md:space-y-16">
         {/* Header Section */}
-        <section className="px-4 sm:px-6 md:px-10 lg:pl-6 lg:pr-16 py-8 md:py-12">
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-8 lg:gap-12 items-center">
-            <div className="flex w-full items-center justify-start">
+        <section className="px-4 sm:px-6 md:px-10 lg:pl-2 lg:pr-16 py-8 md:py-12">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] container mx-auto gap-8 lg:gap-10 items-center">
+            <div className="flex w-full items-center justify-start lg:-ml-2">
               <Image
                 preview={false}
-                src="https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1783596836139-7c0de7ad-5f02-4c7c-ae1c-a23e03d81345-cec_image.jpg"
+                src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC-Image.png"
                 alt="Continuing Education Centre, IIT Roorkee"
-                className="w-full lg:w-[90%] rounded-2xl shadow-xl object-cover aspect-[4/3] lg:aspect-auto lg:min-h-[480px] xl:min-h-[540px]"
+                className="w-full rounded-2xl shadow-xl object-contain h-auto"
               />
             </div>
             <div className="text-center lg:text-left flex flex-col justify-center">
@@ -837,11 +869,45 @@ export default function HomePage() {
           )}
 
           {courseViewTab === "upcoming" && (
-            <div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-              style={{ gridAutoRows: "1fr" }}
-            >
-              {UPCOMING_DEMO_COURSES.map(renderCourseCard)}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {upcomingEvents.map((event) => (
+                <article
+                  key={event.title}
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-[#d6e4f5] bg-gradient-to-b from-[#F5F9FF] to-white transition-all duration-300 hover:-translate-y-1 hover:border-[#2441B6]/40 hover:shadow-xl"
+                >
+                  <div className="h-1.5 w-full bg-[#2441B6]" />
+                  <div className="flex flex-1 flex-col p-6">
+                    <div className="mb-4 flex items-center justify-between gap-3">
+                      <span className="rounded-md border border-[#2441B6]/30 bg-white px-2.5 py-1 text-xs font-semibold uppercase tracking-wide text-[#2441B6]">
+                        {event.badge}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-sm text-gray-500">
+                        <CalendarClock className="h-4 w-4 shrink-0 text-[#2441B6]" />
+                        {event.duration}
+                      </span>
+                    </div>
+
+                    <p className="mb-2 text-sm font-medium text-[#2441B6]">
+                      {event.partner}
+                    </p>
+                    <h3 className="mb-3 text-lg font-semibold leading-snug text-[#102a43] md:text-xl">
+                      {event.title}
+                    </h3>
+                    <p className="mb-6 flex-1 text-sm leading-relaxed text-gray-600 md:text-base">
+                      {event.description}
+                    </p>
+
+                    <a
+                      href={event.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto inline-flex w-full items-center justify-center rounded-lg bg-[#2441B6] px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c3494]"
+                    >
+                      {event.ctaLabel.replace(" →", "")}
+                    </a>
+                  </div>
+                </article>
+              ))}
             </div>
           )}
           </div>
@@ -1376,86 +1442,36 @@ export default function HomePage() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Featured Event 1 */}
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-[#2441B6] text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Featured
-                  </span>
-                  <span className="text-gray-500 text-sm">6-8 Months</span>
+              {upcomingEvents.map((event) => (
+                <div
+                  key={event.title}
+                  className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 flex flex-col"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <span
+                      className={`${event.badgeClass} px-3 py-1 rounded-full text-sm font-medium`}
+                    >
+                      {event.badge}
+                    </span>
+                    <span className="text-gray-500 text-sm">{event.duration}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-[#102a43]">
+                    {event.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4 flex-1">{event.description}</p>
+                  <div className="flex items-center justify-between mt-auto">
+                    <span className="text-[#2441B6] font-medium">{event.partner}</span>
+                    <a
+                      href={event.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 font-medium"
+                    >
+                      {event.ctaLabel}
+                    </a>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-[#102a43]">
-                  Post Graduate Certificate Programme in Applied Data Science & AI
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Upskills working professionals in data science and AI fundamentals, practical software technologies, and prescribing the best course of action across business and application contexts.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#2441B6] font-medium">Jaro Education</span>
-                  <a 
-                    href="https://www.jaroeducation.com/applied-data-science-ai-certificate-iitr" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    Learn More →
-                  </a>
-                </div>
-              </div>
-
-              {/* Featured Event 2 */}
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    New
-                  </span>
-                  <span className="text-gray-500 text-sm">Ongoing</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-[#102a43]">
-                  GenAI/Agentic AI & ML Applications for Engineers
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Comprehensive program on Generative AI and Machine Learning applications for engineering professionals.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#2441B6] font-medium">Futurense</span>
-                  <a 
-                    href="https://futurense.com/iit-roorkee/genai-and-agentic-ai-iit-rorkee" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    Enroll Now →
-                  </a>
-                </div>
-              </div>
-
-              {/* Featured Event 3 */}
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                    Popular
-                  </span>
-                  <span className="text-gray-500 text-sm">12 Months</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-[#102a43]">
-                  AI Engineering on Cloud and AlOps
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Comprehensive program on AI Engineering on Cloud and AIOps for engineering professionals.
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-[#2441B6] font-medium">Futurense</span>
-                  <a 
-                    href="https://futurense.com/iit-roorkee/aiops" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    Enroll Now →
-                  </a>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Call to Action */}

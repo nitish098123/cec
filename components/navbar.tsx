@@ -147,34 +147,33 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-[#2441B6] py-2 text-white font-inter shadow-sm">
-      <div className="flex items-center pl-4 sm:pl-6 lg:pl-8">
+    <nav className="sticky top-0 z-50 w-full bg-[#2441B6] text-white font-inter shadow-sm">
+      <div className="relative flex items-center justify-between gap-3 px-3 sm:px-5 lg:px-6 xl:px-8 py-2">
         {/* Logo */}
-        <Link href="/" className="relative flex shrink-0 items-center gap-2 sm:gap-3 z-10">
+        <Link href="/" className="flex shrink-0 items-center gap-2 sm:gap-3">
           <Image
             preview={false}
             src="/IITR_logo.png"
             width="56px"
             height="56px"
-            className="!w-12 !h-12 sm:!w-14 sm:!h-14"
+            className="!w-10 !h-10 sm:!w-12 sm:!h-12 lg:!w-14 lg:!h-14"
             alt="IITR Logo"
           />
-          <span className="font-bold text-lg sm:text-xl md:text-2xl text-white whitespace-nowrap">
+          <span className="font-bold text-base sm:text-lg lg:text-xl text-white whitespace-nowrap">
             CEC IITR
           </span>
         </Link>
-      </div>
 
-      {/* Desktop Navigation Links */}
-      <div className="hidden md:flex absolute right-3 sm:right-5 lg:right-8 xl:right-10 top-1/2 -translate-y-1/2 items-center gap-x-5 lg:gap-x-7 xl:gap-x-9">
+        {/* Desktop Navigation Links */}
+        <div className="hidden lg:flex min-w-0 flex-1 items-center justify-end gap-x-0.5 xl:gap-x-1.5">
           {navLinks.map((item) => (
-            <div key={item.label} className="relative group">
+            <div key={item.label} className="relative group shrink-0">
               <Link
                 href={item.href}
-                className={`py-1.5 text-sm lg:text-[15px] text-white transition-colors duration-200 whitespace-nowrap ${
+                className={`rounded-md px-1.5 xl:px-2.5 py-1.5 text-[12px] xl:text-sm text-white transition-all duration-200 whitespace-nowrap ${
                   isActive(item.label.toLowerCase())
-                    ? "font-semibold underline underline-offset-4"
-                    : "hover:text-white/80"
+                    ? "bg-white/20 font-semibold"
+                    : "hover:bg-white/10 hover:text-white"
                 }`}
                 target={item.target || undefined}
               >
@@ -225,29 +224,30 @@ export const Navbar: React.FC = () => {
           ))}
         </div>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden absolute right-3 sm:right-5 top-1/2 -translate-y-1/2">
+        {/* Mobile / Tablet Menu Button */}
+        <div className="lg:hidden shrink-0">
           <button
             type="button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white"
+            className="text-white p-1"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
+      </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#1f2937] text-white mt-2 py-4">
+        <div className="lg:hidden w-full bg-[#1f2937] text-white py-4 border-t border-white/10">
           {navLinks.map((item) => (
             <div key={item.label} className="px-4 py-2">
               <Link
                 href={item.href}
-                className={`block text-white ${
+                className={`block rounded-md px-3 py-2 text-white transition-all duration-200 ${
                   isActive(item.label.toLowerCase())
-                    ? "font-semibold underline underline-offset-4"
-                    : "hover:text-white/80"
+                    ? "bg-white/15 font-semibold"
+                    : "hover:bg-white/10 hover:text-white"
                 }`}
                 target={item.target || undefined}
               >
