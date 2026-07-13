@@ -16,7 +16,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     email: "Coordinator.cec.qip@iitr.ac.in",
   },
   {
-    image_url: "/staff/sonal-kumar.png",
+    image_url: "/staff/ss.jpg",
     name: "Mr. Sonal Kumar",
     designation: "Jr. Superintendent",
     phone: "01332-285247",
