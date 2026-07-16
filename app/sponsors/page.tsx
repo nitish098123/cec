@@ -69,10 +69,7 @@ const sponsors: Sponsor[] = [
         name: "Loughborough University, U.K.",
         imageUrl: "/international-sponsors/loughborough.png",
       },
-      {
-        name: "Ministry of Urban Development and Sacred Area Development SRILANKA",
-        imageUrl: "/international-sponsors/mud-sl.png",
-      },
+      
       {
         name: "Ministry of Agriculture, Irrigation and Livestock (MAIL), Govt. of Afghanistan",
         imageUrl: "/international-sponsors/mail.png",
@@ -224,6 +221,10 @@ const sponsors: Sponsor[] = [
         imageUrl: "/national-sponsors/uaa.png",
       },
       {
+        name: "IOCL",
+        imageUrl: "/national-sponsors/iocl.jpg",
+      },
+      {
         name: "Xerox Modi Corp. Ltd",
         imageUrl: "/national-sponsors/xerox.png",
       },
@@ -234,7 +235,7 @@ const sponsors: Sponsor[] = [
       { name: "Larsen & Toubro", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/LT.jpg" },
       { name: "Flipkart", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/flipkart.png" },
       { name: "Navodaya Vidhyala", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/navodaya.png" },
-      { name: "Bihar Board", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/bihar.png" },
+      { name: "BIPARD", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/bihar.png" },
       { name: "PCBL", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/pcbl.png" },
       { name: "Maruti Suzuki", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/suzuki.png" },
       { name: "Deloitte", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/NationalSponser/deloitte.png" },
@@ -257,6 +258,7 @@ const sponsors: Sponsor[] = [
       { name: "Teamlease", imageUrl: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/teamlease.png" },
       { name: "Coursera Inc.", imageUrl: "/ed-tech-partners/coursera.png" },
       { name: "Jaro Education", imageUrl: "/ed-tech-partners/jaro.png" },
+      { name: "TimesPro", imageUrl: "/ed-tech-partners/times.png" },
       {
         name: "Imarticus Learning Pvt. Ltd.",
         imageUrl: "/ed-tech-partners/imarticus.png",
