@@ -120,7 +120,7 @@ const noticeItems = [
 const items = Array(10).fill(noticeItems).flat();
 
 const COORDINATOR_IMAGE_URL =
-  "https://d1bm918zlnq37v.cloudfront.net/CECTemp/co-ordinator.jpeg";
+ "/staff/ss_ceciitr.png";
 
 const DIRECTOR_IMAGE_URL =
   "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Director.jpeg";
@@ -154,10 +154,10 @@ const leadershipProfiles = [
 
 const upcomingEvents = [
   {
-    badge: "Featured",
+    badge: "New Batch",
     badgeClass: "bg-[#2441B6] text-white",
     duration: "6-8 Months",
-    title: "Post Graduate Certificate Programme in Applied Data Science & AI",
+    title: "PG Certificate Programme in Applied Data Science & AI",
     description:
       "Upskills working professionals in data science and AI fundamentals, practical software technologies, and prescribing the best course of action across business and application contexts.",
     partner: "Jaro Education",
@@ -165,25 +165,25 @@ const upcomingEvents = [
     href: "https://www.jaroeducation.com/applied-data-science-ai-certificate-iitr",
   },
   {
-    badge: "New",
+    badge: "New Batch",
     badgeClass: "bg-green-500 text-white",
-    duration: "Ongoing",
+    duration: "11 Months",
     title: "GenAI/Agentic AI & ML Applications for Engineers",
     description:
       "Comprehensive program on Generative AI and Machine Learning applications for engineering professionals.",
     partner: "Futurense",
-    ctaLabel: "Enroll Now →",
+    ctaLabel: "Learn More →",
     href: "https://futurense.com/iit-roorkee/genai-and-agentic-ai-iit-rorkee",
   },
   {
-    badge: "Popular",
+    badge: "New Batch",
     badgeClass: "bg-blue-500 text-white",
-    duration: "12 Months",
+    duration: "9 Months",
     title: "AI Engineering on Cloud and AlOps",
     description:
       "Comprehensive program on AI Engineering on Cloud and AIOps for engineering professionals.",
     partner: "Futurense",
-    ctaLabel: "Enroll Now →",
+    ctaLabel: "Learn More →",
     href: "https://futurense.com/iit-roorkee/aiops",
   },
 ];
@@ -222,12 +222,11 @@ export default function HomePage() {
   }, []);
 
   const heroImages = [
-    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HeroPhoto.JPG",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header4.png",
+    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HeroPhoto.JPG",
+     "/ed-tech-partners/sl.jpg",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header1.png",
-    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header2.png",
-    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header3.png",
-    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header5.png",
+  
   ];
 
   const heroTexts = [

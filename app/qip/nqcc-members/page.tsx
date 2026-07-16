@@ -52,7 +52,7 @@ const members: Member[] = [
   },
   {
     sno: 4,
-    name: "Prof. Kaushik Ghosh",
+    name: "Prof. Soumitra Satapathi",
     details: [
       "Coordinator, QIP/CEC",
       "Indian Institute of Technology Roorkee",
@@ -60,7 +60,7 @@ const members: Member[] = [
     ],
     phone: "01332-285241/ 285247 01332-286691/ 273560",
     email: "qip@iitr.ac.in",
-    website: "https://www.iitr.ac.in/qip",
+    website: "https://cec.iitr.ac.in/",
   },
   {
     sno: 5,
