@@ -147,7 +147,7 @@ export default function AppliedDataScienceCoursePage() {
               <div className="w-3/4">
                   <Image
                     preview={false}
-                    src="https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1783935218709-c33a3ba8-8cb8-40f1-9b3c-339ecd146339-Certificate_sample_DSAI.jpg"
+                    src="/ed-tech-partners/Certificate_sample_DSAI.jpg"
                     alt="Certificate"
                     className="rounded-lg shadow-lg"
                   />

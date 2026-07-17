@@ -144,7 +144,7 @@ export default function DataScienceMLCoursePage() {
               <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl">
                 <Image
                   preview={false}
-                  src="https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1782386221963-f8f680a0-6a61-4c43-b2d8-4d21206a89cc-sample_certificate.jpg"
+                  src="/ed-tech-partners/1.jpg"
                   alt="Certificate"
                   className="rounded-lg shadow-lg"
                 />

@@ -138,7 +138,7 @@ export const Navbar: React.FC = () => {
         { title: "Download Certificate", href: "/certificate" },
         {
           title: "Sample Certificate",
-          href: "https://cec.iitr.ac.in/api/course-media?key=CECTemp%2FCourseMedia%2F1782386221963-f8f680a0-6a61-4c43-b2d8-4d21206a89cc-sample_certificate.jpg",
+           href: "/ed-tech-partners/1.jpg",
           target: "_blank",
         },
       ],
