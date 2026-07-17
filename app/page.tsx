@@ -225,7 +225,7 @@ export default function HomePage() {
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header4.png",
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HeroPhoto.JPG",
      "/ed-tech-partners/sl.jpg",
-       "/ed-tech-partners/fintech1.png",
+       "/ed-tech-partners/new_fin.png",
         "/ed-tech-partners/m1.png",
        
   ];
