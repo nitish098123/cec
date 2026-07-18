@@ -581,7 +581,7 @@ export default function HomePage() {
   <div className="relative w-full overflow-hidden rounded-2xl shadow-xl aspect-video">
     <iframe
       className="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/jxPHXwp-Bgw"
+     src="https://www.youtube.com/embed/jxPHXwp-Bgw?autoplay=1&mute=1&start=4&rel=0"
       title="Continuing Education Centre, IIT Roorkee"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen
