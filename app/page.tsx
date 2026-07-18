@@ -577,12 +577,17 @@ export default function HomePage() {
         <section className="px-4 sm:px-6 md:px-10 lg:pl-2 lg:pr-16 py-8 md:py-12">
           <div className="w-full grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] container mx-auto gap-8 lg:gap-10 items-center">
             <div className="flex w-full items-center justify-start lg:-ml-2">
-              <Image
-                preview={false}
-                 src="/ed-tech-partners/cec_image.jpg"
-                alt="Continuing Education Centre, IIT Roorkee"
-                className="w-full rounded-2xl shadow-xl object-contain h-auto"
-              />
+              <div className="flex w-full items-center justify-start lg:-ml-2">
+  <div className="relative w-full overflow-hidden rounded-2xl shadow-xl aspect-video">
+    <iframe
+      className="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/jxPHXwp-Bgw"
+      title="Continuing Education Centre, IIT Roorkee"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
             </div>
             <div className="text-center lg:text-left flex flex-col justify-center">
               <p className="mb-4 text-3xl md:text-4xl font-semibold tracking-wide">
