@@ -12,7 +12,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
       "/staff/sscec.jpg",
     name: "Prof. Soumitra Satapathi",
     designation: "Coordinator CEC",
-    phone: "01332-285227/5545",
+    phone: "01332-285227",
     email: "Coordinator.cec.qip@iitr.ac.in",
   },
   {
@@ -25,7 +25,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     image_url: "/staff/prabhat-nautiyal.jpg",
     name: "Mr. Prabhat Nautiyal",
     designation: "Jr. Assistant",
-    phone: "01332-284327",
+    phone: "01332-285227",
   },
   {
     image_url: "/staff/sharad-sharma.jpg",
@@ -43,7 +43,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     image_url: "/staff/anand-singh.jpg",
     name: "Mr. Anand Singh",
     designation: "Updater Services Ltd. Staff",
-    phone: "01332-285545",
+    phone: "01332-284341",
   },
   {
     image_url: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/shubham.jpeg",

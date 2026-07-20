@@ -144,6 +144,13 @@ export const Navbar: React.FC = () => {
       ],
     },
     { label: "Gallery", href: "/gallery", submenu: [] },
+     {
+      label: "Contact",
+      href: "/contact",
+      submenu: [],
+    },
+    
+
   ];
 
   return (
