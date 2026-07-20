@@ -123,12 +123,12 @@ export const Navbar: React.FC = () => {
       ],
     },
     {
-      label: "Apply Forms",
+      label: "Forms",
       href: "/forms",
       submenu: [
         { title: "CEC new forms", href: "/forms" },
         { title: "CEC old forms", href: "/old-forms" },
-        { title: "Other forms", href: "/forms/other-forms" },
+        
       ],
     },
     {

@@ -9,7 +9,7 @@ export interface TeamMember {
 export const TEAM_MEMBERS: TeamMember[] = [
   {
     image_url:
-      "/staff/ss_ceciitr.png",
+      "/staff/sscec.jpg",
     name: "Prof. Soumitra Satapathi",
     designation: "Coordinator CEC",
     phone: "01332-285227/5545",

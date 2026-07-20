@@ -120,7 +120,7 @@ const noticeItems = [
 const items = Array(10).fill(noticeItems).flat();
 
 const COORDINATOR_IMAGE_URL =
- "/staff/ss_ceciitr.png";
+ "/staff/sscec.jpg";
 
 const DIRECTOR_IMAGE_URL =
   "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Director.jpeg";
