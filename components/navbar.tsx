@@ -100,28 +100,7 @@ export const Navbar: React.FC = () => {
         { title: "CEC Staff", href: "/staff?tab=staff" },
       ],
     },
-    {
-      label: "Newsletter",
-      href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC-IITR_Newsletter_V1.pdf",
-      target: "_blank",
-      submenu: [
-        {
-          title: "Volume 1",
-          href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC-IITR_Newsletter_V1.pdf",
-          target: "_blank",
-        },
-        {
-          title: "Volume 2",
-          href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC-IITR_Newsletter_V2.pdf",
-          target: "_blank",
-        },
-        {
-          title: "Volume 3",
-          href: "https://d1bm918zlnq37v.cloudfront.net/CECTemp/CEC-IITR_Newsletter_V3.pdf",
-          target: "_blank",
-        },
-      ],
-    },
+  
     {
       label: "Forms",
       href: "/forms",
@@ -131,18 +110,7 @@ export const Navbar: React.FC = () => {
         
       ],
     },
-    {
-      label: "Certificate",
-      href: "/certificate",
-      submenu: [
-        { title: "Download Certificate", href: "/certificate" },
-        {
-          title: "Sample Certificate",
-           href: "/ed-tech-partners/1.jpg",
-          target: "_blank",
-        },
-      ],
-    },
+   
     { label: "Gallery", href: "/gallery", submenu: [] },
      {
       label: "Contact",

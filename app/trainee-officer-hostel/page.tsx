@@ -86,8 +86,8 @@ export default function CertificatePage() {
               </p>
               <p className="mb-4 text-gray-600 text-base md:text-lg text-justify">
                 Continuing Education Centre of IITR runs a well-furnished
-                Trainee Officer&apos;s Hostel. It has two Air Conditioned (AC)
-                VIP Suites, 34 Air Conditioned rooms, and 1 fully Air
+                Trainee Officer&apos;s Hostel. It has 2 Air Conditioned (AC)
+                VIP Suites, 48 Air Conditioned rooms, and 1 fully Air
                 Conditioned Conference Hall. All the rooms are having Satellite
                 T.V. These are mainly intended for accommodating the
                 participants of the programmes conducted under the auspices of
@@ -99,11 +99,7 @@ export default function CertificatePage() {
                 in room. In addition to this Pantry service (Tea/Coffee) is
                 available round the clock in the Hostel.
               </p>
-              <p className="text-gray-600 text-base md:text-lg text-justify">
-                Hostel and dining facilities is free of cost for participants of
-                AICTE sponsored courses and having nominal charges for
-                self-sponsored agencies/organization.
-              </p>
+              
               <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-6 md:gap-8">
                 <div className="flex items-center gap-x-3">
                   <Hotel className="w-10 h-10 md:w-12 md:h-12" />
@@ -234,7 +230,7 @@ export default function CertificatePage() {
             <div className="flex justify-center items-center lg:justify-start row-start-2 lg:row-start-1">
               <Image
                 preview={false}
-                src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/Toh_Image3.jpg"
+                src="https://d1bm918zlnq37v.cloudfront.net/CECTemp/TOH_Image1.jpg"
                 alt="Executive Standard Room"
                 className="w-full max-w-md object-cover rounded-lg"
               />
