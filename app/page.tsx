@@ -223,11 +223,10 @@ export default function HomePage() {
 
   const heroImages = [
     "https://d1bm918zlnq37v.cloudfront.net/CECTemp/Header4.png",
-    "https://d1bm918zlnq37v.cloudfront.net/CECTemp/HeroPhoto.JPG",
+   "/ed-tech-partners/cecs.png",  
      "/ed-tech-partners/sl.jpg",
        "/ed-tech-partners/new_fin.png",
-        "/ed-tech-partners/m1.png",
-       
+        "/ed-tech-partners/m1.png",   
   ];
 
   const heroTexts = [
