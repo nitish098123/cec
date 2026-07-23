@@ -63,12 +63,7 @@ export const Navbar: React.FC = () => {
             { title: "2022-23", href: "/past-courses/2022-23" },
             { title: "2021-22", href: "/past-courses/2021-22" },
             { title: "2020-21", href: "/course-2020-21" },
-            { title: "2019-20", href: "/course-2019-20" },
-            { title: "2018-19", href: "/course-2018-19" },
-            { title: "2017-18", href: "/course-2017-18" },
-            { title: "2016-17", href: "/course-2016-17" },
-            { title: "2015-16", href: "/course-2015-16" },
-            { title: "2014-15", href: "/course-2014-15" },
+           
           ],
         },
       ],
